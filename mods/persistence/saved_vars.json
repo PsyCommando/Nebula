@@ -1771,9 +1771,11 @@
 		"path":"/obj/machinery",
 		"vars":[
 			"stat",
+			"reason_broken",
 			"emagged",
 			"malf_upgraded",
 			"use_power",
+			"component_parts",
 			"uid",
 			"panel_open",
 			"anchored",
