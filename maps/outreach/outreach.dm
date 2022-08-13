@@ -15,6 +15,8 @@
 	#include "outreach_jobs.dm"
 	#include "outreach_exoplanet.dm"
 	#include "outreach_network.dm"
+	#include "outreach_elevators.dm"
+	#include "outreach_machinery.dm"
 
 	#define USING_MAP_DATUM /datum/map/outreach
 #elif !defined(MAP_OVERRIDE)

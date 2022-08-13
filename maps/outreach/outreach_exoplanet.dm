@@ -52,7 +52,7 @@
 	daycolumn++
 	if(daycolumn > maxx)
 		daycolumn = 0
-	
+
 
 /obj/effect/overmap/visitable/sector/exoplanet/outreach/generate_habitability()
 	habitability_class = HABITABILITY_BAD
@@ -62,8 +62,16 @@
 
 /obj/effect/overmap/visitable/sector/exoplanet/outreach/generate_atmosphere()
 	atmosphere = new
-	atmosphere.adjust_gas(/decl/material/gas/chlorine, MOLES_CELLSTANDARD * 0.17)
-	atmosphere.adjust_gas(/decl/material/gas/carbon_dioxide, MOLES_CELLSTANDARD * 0.11)
-	atmosphere.adjust_gas(/decl/material/gas/nitrogen, MOLES_CELLSTANDARD * 0.63)
+	var/list/ratios = OutreachAtmosRatios()
+	for(var/gas in ratios)
+		atmosphere.adjust_gas(gas, ratios[gas] * MOLES_CELLSTANDARD)
 	atmosphere.temperature = T0C + 7
 	atmosphere.update_values()
+
+/**Returns a list with the ratio (0 to 1) for each gases in the atmosphere of outreach. */
+/proc/OutreachAtmosRatios()
+	return list(
+		/decl/material/gas/chlorine       = 0.17,
+		/decl/material/gas/nitrogen       = 0.63,
+		/decl/material/gas/carbon_dioxide = 0.11,
+		)
