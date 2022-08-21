@@ -85,12 +85,6 @@
 	var/poster_type
 	var/ruined = 0
 
-/obj/structure/sign/poster/bay_9
-	poster_type = /decl/poster/bay_9
-
-/obj/structure/sign/poster/bay_50
-	poster_type = /decl/poster/bay_50
-
 /obj/structure/sign/poster/Initialize(mapload, var/placement_dir = null, var/give_poster_type = null)
 	. = ..(mapload)
 	if(!poster_type)
@@ -99,18 +93,21 @@
 		else
 			poster_type = pick(subtypesof(/decl/poster))
 	set_poster(poster_type)
+	set_dir(placement_dir)
 
+/obj/structure/sign/poster/set_dir(ndir)
+	. = ..()
 	pixel_x = 0
 	pixel_y = 0
-	switch (placement_dir)
+	switch (ndir)
 		if (NORTH)
-			default_pixel_y = 32
+			default_pixel_y = WORLD_ICON_SIZE
 		if (SOUTH)
-			default_pixel_y = -32
+			default_pixel_y = -WORLD_ICON_SIZE
 		if (EAST)
-			default_pixel_x = 32
+			default_pixel_x = WORLD_ICON_SIZE
 		if (WEST)
-			default_pixel_x = -32
+			default_pixel_x = -WORLD_ICON_SIZE
 	reset_offsets(0)
 
 /obj/structure/sign/poster/proc/set_poster(var/poster_type)
