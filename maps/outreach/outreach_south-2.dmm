@@ -1,13 +1,14 @@
-"a" = (/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"b" = (/turf/unsimulated/wall,/area/exoplanet/outreach/mines/exits)
-"c" = (/obj/structure/stairs/long/west,/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"d" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"e" = (/turf/exterior/barren,/area/exoplanet/outreach/mines/depth_1)
-"f" = (/turf/exterior/open,/area/exoplanet/outreach/mines/exits)
-"g" = (/obj/structure/stairs/long/west,/obj/structure/railing/mapped,/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"h" = (/obj/structure/railing/mapped,/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"i" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 8},/turf/exterior/barren,/area/exoplanet/outreach/mines/exits)
-"j" = (/turf/exterior/planet_edge,/area/exoplanet/outreach/mines/depth_1)
+"a" = (/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"b" = (/turf/unsimulated/wall,/area/exoplanet/outreach/underground/mines/stairwell)
+"c" = (/obj/structure/stairs/long/west,/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"d" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"e" = (/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/b1)
+"f" = (/turf/exterior/open,/area/exoplanet/outreach/underground/mines/stairwell)
+"g" = (/obj/structure/stairs/long/west,/obj/structure/railing/mapped,/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"h" = (/obj/structure/railing/mapped,/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"i" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 8},/turf/exterior/barren,/area/exoplanet/outreach/underground/mines/stairwell)
+"j" = (/turf/exterior/planet_edge,/area/exoplanet/outreach/underground/mines/b1)
+"k" = (/obj/abstract/level_data/player_level/outreach_2/south,/turf/exterior/planet_edge,/area/exoplanet/outreach/underground/mines/b1)
 
 (1,1,1) = {"
 jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
@@ -209,5 +210,5 @@ jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 "}

@@ -45,7 +45,7 @@ SUBSYSTEM_DEF(ambience)
 		var/obj/effect/overmap/visitable/sector/exoplanet/planet = global.overmap_sectors["[z]"]
 		if(istype(planet))
 			if(planet.lightlevel)
-				set_ambient_light(COLOR_WHITE, planet.lightlevel)
+				set_ambient_light(planet.starlight_color, planet.lightlevel)
 				return TRUE
 		else
 			if(config.starlight)

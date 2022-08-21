@@ -2,15 +2,46 @@
 //Planet
 ///////////////////////////////////////////////////
 /area/exoplanet/outreach
-	name = "outreach"
+	name      = "Outreach Surface"
+	sound_env = QUARRY
+	ambience  = list(
+		'sound/effects/wind/desert0.ogg',
+		'sound/effects/wind/desert1.ogg',
+		'sound/effects/wind/desert2.ogg',
+		'sound/effects/wind/desert3.ogg',
+		'sound/effects/wind/desert4.ogg',
+		'sound/effects/wind/desert5.ogg',
+	)
+
 /area/exoplanet/outreach/sky
-	name = "Outreach Sky"
+	name       = "Outreach Sky"
 	icon_state = "blueold"
+	alpha      = 128
+	sound_env  = PLAIN
+	ambience   = list(
+		'sound/effects/wind/wind_2_1.ogg',
+		'sound/effects/wind/wind_2_2.ogg',
+		'sound/effects/wind/wind_3_1.ogg',
+		'sound/effects/wind/wind_4_1.ogg',
+		'sound/effects/wind/wind_4_2.ogg',
+		'sound/effects/wind/wind_5_1.ogg',
+	)
+
 /area/exoplanet/outreach/underground
-	name = "Outreach Underground"
+	name           = "Outreach Underground"
+	area_flags     = AREA_FLAG_IS_BACKGROUND | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	show_starlight = FALSE
+	is_outside     = OUTSIDE_NO
+	sound_env      = CAVE //STONE_CORRIDOR
+	ambience       = list(
+		'sound/ambience/spookyspace1.ogg',
+		'sound/ambience/spookyspace2.ogg'
+	)
+
 /area/exoplanet/outreach/underground/d1
 	name = "Outreach Sedimentary Layer"
 	icon_state = "dk_yellow"
+
 /area/exoplanet/outreach/underground/d2
 	name = "Outreach Substrate Layer"
 	icon_state = "purple"
@@ -18,76 +49,131 @@
 ///////////////////////////////////////////////////
 //Mines
 ///////////////////////////////////////////////////
-/area/exoplanet/outreach/mines
-	name = "Deep Underground"
-	icon_state = "unknown"
+/area/exoplanet/outreach/underground/mines
+	name                = "Outreach Mines"
+	icon_state          = "cave"
 	ignore_mining_regen = FALSE
+	sound_env           = CAVE
+	ambience            = list(
+		'sound/ambience/ominous1.ogg',
+		'sound/ambience/ominous2.ogg',
+		'sound/ambience/ominous3.ogg'
+	)
 
-/area/exoplanet/outreach/mines/depth_1
-	icon_state = "cave"
+/area/exoplanet/outreach/underground/mines/b2
+	name = "Outreach Abyss"
+/area/exoplanet/outreach/underground/mines/b1
+	name = "Outreach Subterrane"
+/area/exoplanet/outreach/underground/mines/gf
+	name = "Outreach Excavation"
+	base_turf = /turf/exterior/volcanic/mining
 
-/area/exoplanet/outreach/mines/depth_2
-	icon_state = "cave"
-
-/area/exoplanet/outreach/mines/exits
-	icon_state = "exit"
+/area/exoplanet/outreach/mine_entrance
+	name                = "Outreach Mines Access"
+	icon_state          = "exit"
+	ignore_mining_regen = TRUE
+	sound_env           = HALLWAY
+/area/exoplanet/outreach/underground/mines/stairwell
+	name                = "Outreach Mines Stairwell"
+	icon_state          = "exit"
 	ignore_mining_regen = TRUE
 
 ///////////////////////////////////////////////////
 //Outpost
 ///////////////////////////////////////////////////
+/area/outreach
+	name       = "DONT USE ME"
+	icon_state = "toilet"
+	area_flags = AREA_FLAG_ION_SHIELDED | AREA_FLAG_RAD_SHIELDED
+
 /area/outreach/outpost
-	//safe_zone = TRUE
+	name      = "Outpost"
+	base_turf = /turf/exterior/barren
 
 ///////////////////////////////////////////////////
 //Cryo
 ///////////////////////////////////////////////////
 /area/outreach/outpost/sleeproom
-	name = "OB 1B Cyrogenic Storage"
+	name       = "OB 1B Cyrogenic Storage"
 	icon_state = "cryo"
+	sound_env  = ROOM
+	ambience   = list()
 
 ///////////////////////////////////////////////////
 //Controls
 ///////////////////////////////////////////////////
 /area/outreach/outpost/control
-	name = "OB 1B Control Room"
+	name       = "OB 1B Control Room"
 	icon_state = "server"
+	sound_env  = ROOM
 /area/outreach/outpost/control/servers
-	name = "OB 1B Servers Room"
+	name       = "OB 1B Servers Room"
 	icon_state = "server"
+/area/outreach/outpost/control/storage
+	name            = "OB 1B Servers Storage Room"
+	icon_state      = "server"
 /area/outreach/outpost/control/cooling
-	name = "OB 1B Cooling Systems Room"
-	icon_state = "server"
+	name            = "OB 1B Cooling Systems Room"
+	icon_state      = "server"
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
+
+///////////////////////////////////////////////////
+//Chemistry Lab
+///////////////////////////////////////////////////
+/area/outreach/outpost/lab
+	name       = "OB 1B Chemistry Lab"
+	icon_state = "chem"
+	sound_env  = ROOM
+/area/outreach/outpost/lab/entrance
+	name       = "OB 1B Chemistry Lab Entrance"
+	icon_state = "labwing"
+	sound_env  = STONEROOM
+/area/outreach/outpost/lab/storage
+	name       = "OB 1B Chemistry Storage"
+	icon_state = "auxstorage"
+	sound_env  = ROOM
 
 ///////////////////////////////////////////////////
 //Medbay
 ///////////////////////////////////////////////////
 /area/outreach/outpost/medbay
-	name = "OB 1B Medbay"
+	name       = "OB 1B Medbay"
 	icon_state = "medbay"
 
 /area/outreach/outpost/medbay/storage
-	name = "OB 1B Medbay Storage"
+	name       = "OB 1B Medbay Storage"
 	icon_state = "medbay3"
+/area/outreach/outpost/medbay/storage/custodial
+	name      = "OB 1B Medbay Custodial Storage"
+	sound_env = SMALL_ENCLOSED
+/area/outreach/outpost/medbay/storage/equipment
+	name = "OB 1B Medbay Equipment Storage"
+/area/outreach/outpost/medbay/storage/medical
+	name = "OB 1B Medbay Medical Storage"
 
 /area/outreach/outpost/medbay/cloning
-	name = "OB 1B Medbay Storage"
-	icon_state = "medbay3"
-
-/area/outreach/outpost/medbay/chemistry
-	name = "OB 1B Medbay Chemistry"
-	icon_state = "medbay3"
+	name       = "OB 1B Medbay Cloning"
+	icon_state = "cloning"
+	sound_env  = ROOM
 
 /area/outreach/outpost/medbay/lobby
-	name = "OB 1B Medbay Lobby"
+	name       = "OB 1B Medbay Lobby"
 	icon_state = "medbay2"
+	sound_env  = AUDITORIUM
 
 /area/outreach/outpost/medbay/main_hall
-	name = "OB 1B Medbay Main Hall"
+	name       = "OB 1B Medbay Hall"
 	icon_state = "exam_room"
+	sound_env  = AUDITORIUM
+
+/area/outreach/outpost/medbay/triage
+	name       = "OB 1B Medbay Triage"
+	icon_state = "patients"
+	sound_env  = ROOM
 
 /area/outreach/outpost/medbay/op_room
 	icon_state = "surgery"
+	sound_env  = ROOM
 /area/outreach/outpost/medbay/op_room/a
 	name = "OB 1B Medbay Operation Room A"
 /area/outreach/outpost/medbay/op_room/b
@@ -96,16 +182,26 @@
 	name = "OB 1B Medbay Operation Room C"
 
 /area/outreach/outpost/medbay/morgue
-	name = "OB 1B Medbay Morgue"
+	name       = "OB 1B Medbay Morgue"
 	icon_state = "morgue"
+	sound_env  = ROOM
+
+/area/outreach/outpost/medbay/crematorium
+	name       = "OB 1B Medbay Crematorium"
+	icon_state = "morgue"
+	sound_env  = SMALL_ENCLOSED
 
 /area/outreach/outpost/medbay/office
-	name = "OB 1B Medbay Office"
+	name       = "OB 1B Medbay Office"
 	icon_state = "CMO"
+	sound_env  = LIVINGROOM
 
 ///////////////////////////////////////////////////
 //Hallways
 ///////////////////////////////////////////////////
+/area/outreach/outpost/hallway
+	area_flags = AREA_FLAG_HALLWAY
+	sound_env  = HALLWAY
 
 //South == Aft
 /area/outreach/outpost/hallway/south
@@ -171,8 +267,10 @@
 //Stairwell
 ///////////////////////////////////////////////////
 /area/outreach/outpost/stairwell
-	name = "OH Stairwell"
+	name       = "OH Stairwell"
 	icon_state = "purple"
+	sound_env  = CONCERT_HALL
+	area_flags = AREA_FLAG_HALLWAY
 
 /area/outreach/outpost/stairwell/basement2
 	name = "OH 2B Stairwell"
@@ -187,8 +285,10 @@
 //Maintenance
 ///////////////////////////////////////////////////
 /area/outreach/outpost/maint
-	name = "OB 1B Maintenance"
+	name       = "OB 1B Maintenance"
 	icon_state = "maintcentral"
+	sound_env  = TUNNEL_ENCLOSED
+	area_flags = AREA_FLAG_MAINTENANCE
 
 /area/outreach/outpost/maint/passage
 	name = "OB 1B Maintenance Passage"
@@ -246,7 +346,6 @@
 	name = "OB 1F SE Maint Passage"
 	icon_state = "asmaint"
 
-
 /area/outreach/outpost/maint/storage
 	name = "OB 1B Maintenance Storage"
 	icon_state = "auxstorage"
@@ -301,67 +400,93 @@
 //Kitchen
 ///////////////////////////////////////////////////
 /area/outreach/outpost/cafeteria
-	name = "OB 1B Cafeteria"
+	name       = "OB 1B Cafeteria"
 	icon_state = "cafeteria"
+	sound_env  = AUDITORIUM
+/area/outreach/outpost/cafeteria/common
+	name       = "OB 1B Common Room"
 
 /area/outreach/outpost/cafeteria/kitchen
-	name = "OB 1B Kitchen"
+	name       = "OB 1B Kitchen"
 	icon_state = "kitchen"
+	sound_env  = LIVINGROOM
+/area/outreach/outpost/cafeteria/kitchen/backroom
+	name       = "OB 1B Kitchen Storeroom"
+	sound_env  = ROOM
+/area/outreach/outpost/cafeteria/kitchen/freezer
+	name       = "OB 1B Kitchen Freezer"
+	sound_env  = SMALL_ENCLOSED
 
 ///////////////////////////////////////////////////
 //Hydroponics
 ///////////////////////////////////////////////////
 /area/outreach/outpost/hydroponics
-	name = "OB 1B Hydroponics"
+	name       = "OB 1B Hydroponics"
 	icon_state = "hydro"
 
 ///////////////////////////////////////////////////
 //Engineering
 ///////////////////////////////////////////////////
 /area/outreach/outpost/engineering
-	name = "OB 1B Engineering"
+	name       = "OB 1B Engineering"
 	icon_state = "engineering"
+	sound_env  = STANDARD_STATION
 
 /area/outreach/outpost/engineering/b1/workshop
-	name = "OB 1B Engineering Workshop"
+	name       = "OB 1B Engineering Workshop"
 	icon_state = "engineering_workshop"
+	sound_env  = HANGAR
 
 /area/outreach/outpost/engineering/b1/storage
-	name = "OB 1B Engineering Storage"
+	name       = "OB 1B Engineering Storage"
 	icon_state = "engineering_storage"
 
 /area/outreach/outpost/engineering/b2/smes
-	name = "OB 2B Power Storage"
+	name       = "OB 2B Power Storage"
 	icon_state = "engine_smes"
 
 /area/outreach/outpost/engineering/b2/geothermals
-	name = "OB 2B Geothermals"
-	icon_state = "engine"
+	name            = "OB 2B Geothermals"
+	icon_state      = "engine"
+	sound_env       = STONEROOM
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
 
 ///////////////////////////////////////////////////
 //Atmos
 ///////////////////////////////////////////////////
 /area/outreach/outpost/atmospherics
 	icon_state = "atmos"
+	sound_env  = HANGAR
 
 /area/outreach/outpost/atmospherics/b1/storage
-	name = "OB 1B Atmos Storage"
+	name       = "OB 1B Atmos Storage"
 	icon_state = "atmos"
+	sound_env  = STANDARD_STATION
 /area/outreach/outpost/atmospherics/b1/hall
-	name = "OB 1B Atmospherics Hall"
+	name       = "OB 1B Atmospherics Hall"
 	icon_state = "atmos"
+	sound_env  = HALLWAY
 /area/outreach/outpost/atmospherics/b1/supply
-	name = "OB 1B Atmos Air Supply"
-	icon_state = "atmos"
+	name            = "OB 1B Atmos Air Supply"
+	icon_state      = "atmos"
+	sound_env       = HALLWAY
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
 /area/outreach/outpost/atmospherics/b1/treatment
-	name = "OB 1B Atmos Air Treatment"
-	icon_state = "atmos"
+	name            = "OB 1B Atmos Air Treatment"
+	icon_state      = "atmos"
+	sound_env       = HALLWAY
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
 /area/outreach/outpost/atmospherics/b1/tank_access
-	name = "OB 1B Atmos Tank Control"
-	icon_state = "atmos"
+	name            = "OB 1B Atmos Tank Control"
+	icon_state      = "atmos"
+	sound_env       = HANGAR
+	ambience        = null
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
+
 /area/outreach/outpost/atmospherics/b2/tank_outer
-	name = "OB 2B Atmos Tanks Perimeter"
+	name       = "OB 2B Atmos Tanks Perimeter"
 	icon_state = "atmos"
+	sound_env  = CAVE
 
 
 ///////////////////////////////////////////////////
@@ -369,14 +494,18 @@
 ///////////////////////////////////////////////////
 /area/outreach/outpost/security
 	icon_state = "security"
+	sound_env  = STANDARD_STATION
+	area_flags = AREA_FLAG_SECURITY
 /area/outreach/outpost/security/b1
-	name = "OB 1B Security"
+	name       = "OB 1B Security"
 /area/outreach/outpost/security/b1/office
-	name = "OB 1B Security Office"
+	name       = "OB 1B Security Office"
 	icon_state = "checkpoint"
 /area/outreach/outpost/security/b1/cell
-	name = "OB 1B Brig"
+	name       = "OB 1B Brig"
 	icon_state = "brig"
+	sound_env  = PADDED_CELL
+	area_flags = AREA_FLAG_PRISON
 
 ///////////////////////////////////////////////////
 //Mining
@@ -384,29 +513,32 @@
 /area/outreach/outpost/mining
 	icon_state = "mining"
 /area/outreach/outpost/mining/b1/processing
-	name = "OB 1B Ore Processing"
+	name       = "OB 1B Ore Processing"
 	icon_state = "mining_production"
+	sound_env  = HANGAR
 /area/outreach/outpost/mining/b1/storage
-	name = "OB 1B Mining Storage"
+	name       = "OB 1B Mining Storage"
 /area/outreach/outpost/mining/b1/foyer
-	name = "OB 1B Mining Foyer"
+	name       = "OB 1B Mining Foyer"
 	icon_state = "mining_living"
 /area/outreach/outpost/mining/b1/workshop
-	name = "OB 1B Mining Workshop"
+	name       = "OB 1B Mining Workshop"
+	sound_env  = HANGAR
 
 ///////////////////////////////////////////////////
 //Cargo
 ///////////////////////////////////////////////////
 /area/outreach/outpost/cargo
-	name = "OB 1B Cargo"
+	name       = "OB 1B Cargo"
 	icon_state = "quart"
 
 ///////////////////////////////////////////////////
 //Airlock
 ///////////////////////////////////////////////////
 /area/outreach/outpost/airlock
-	name = "Airlock"
+	name       = "Airlock"
 	icon_state = "entry_1"
+	sound_env  = ROOM
 /area/outreach/outpost/airlock/basement2
 	name = "OH 2B Airlock"
 /area/outreach/outpost/airlock/basement1/east
@@ -426,25 +558,38 @@
 //Janitor
 ///////////////////////////////////////////////////
 /area/outreach/outpost/janitorial
-	name = "OH 1B Custodial Storeroom"
+	name       = "OH 1B Custodial Storeroom"
 	icon_state = "janitor"
+	sound_env  = HALLWAY
 /area/outreach/outpost/janitorial/hall
-	name = "OH 1B Custodial Office"
+	name       = "OH 1B Custodial Office"
 	icon_state = "janitor"
+	sound_env  = HALLWAY
 
 ///////////////////////////////////////////////////
 //Restrooms
 ///////////////////////////////////////////////////
 /area/outreach/outpost/restrooms
-	name = "OB 1B Restroom"
+	name       = "OB 1B Restroom"
 	icon_state = "restrooms"
+	sound_env  = BATHROOM
+
+///////////////////////////////////////////////////
+//Laundry Room
+///////////////////////////////////////////////////
+/area/outreach/outpost/laundry
+	name       = "OB 1B Laundry Room"
+	icon_state = "conference"
+	sound_env  = BATHROOM
 
 ///////////////////////////////////////////////////
 //Crew Quarters
 ///////////////////////////////////////////////////
 /area/outreach/outpost/crew_quarters
-	name = "OB 1B Crew Quarters"
+	name       = "OB 1B Crew Quarters"
 	icon_state = "crew_quarters"
+	sound_env  = LIVINGROOM
+	ambience   = null
 
 /area/outreach/outpost/crew_quarters/north/q1
 	name = "OB 1B Crew Quarters North A"
@@ -481,6 +626,7 @@
 ///////////////////////////////////////////////////
 /area/outreach/outpost/lockers
 	icon_state = "locker"
+	sound_env  = ROOM
 /area/outreach/outpost/lockers/north
 	name = "OB 1B North Lockers"
 /area/outreach/outpost/lockers/south
@@ -491,10 +637,26 @@
 ///////////////////////////////////////////////////
 /area/outreach/outpost/hangar
 	icon_state = "hangar"
+	sound_env  = HANGAR
 /area/outreach/outpost/hangar/south
 	name = "OB GF South Maintenance Hangar"
+/area/outreach/outpost/hangar/south/shuttle_area
+	name = "OB GF South Hangar Shuttle"
 /area/outreach/outpost/hangar/north
 	name = "OB GF North Maintenance Hangar"
+/area/outreach/outpost/hangar/north/shuttle_area
+	name = "OB GF North Hangar Shuttle"
+
+///////////////////////////////////////////////////
+//Shed
+///////////////////////////////////////////////////
+/area/outreach/outpost/storage_shed
+	icon_state = "hangar"
+	sound_env  = HANGAR
+/area/outreach/outpost/storage_shed/gf/north
+	name = "OB GF North Maintenance Shed"
+/area/outreach/outpost/storage_shed/gf/south
+	name = "OB GF South Maintenance Shed"
 
 ///////////////////////////////////////////////////
 //Vacant
@@ -509,6 +671,7 @@
 //Prevents unit tests from complaining about vents/scrubbers/etc
 /area/outreach/outpost/ext_vents
 	icon_state = "blue-red-d"
+	sound_env  = PLAIN
 /area/outreach/outpost/ext_vents/b2
 	name = "Outreach 2B Airlock Vents"
 /area/outreach/outpost/ext_vents/b1/east
@@ -528,11 +691,35 @@
 ///////////////////////////////////////////////////
 //Elevators
 ///////////////////////////////////////////////////
-/area/turbolift/outreach_b2
-	name = "OB Elevator 2nd Basement"
-/area/turbolift/outreach_b1
-	name = "OB Elevator 1st Basement"
-/area/turbolift/outreach_ground_floor
-	name = "OB Elevator Ground Floor"
-/area/turbolift/outreach_f1
-	name = "OB Elevator 1st Floor"
+/area/turbolift/outreach
+	arrival_sound   = 'sound/machines/elevator_door_bell.ogg'
+	//forced_ambience = list('sound/music/elevatormusic.ogg')
+	ambience        = null
+
+/area/turbolift/outreach/Initialize()
+	if(!length(lift_announce_str))
+		lift_announce_str = "[length(lift_floor_name)? lift_floor_name : initial(lift_announce_str)]!"
+	. = ..()
+
+/area/turbolift/outreach/b2
+	name            = "OB Elevator 2nd Basement"
+	lift_floor_name = "2nd Basement"
+/area/turbolift/outreach/b1
+	name            = "OB Elevator 1st Basement"
+	lift_floor_name = "1st Basement"
+/area/turbolift/outreach/ground_floor
+	name            = "OB Elevator Ground Floor"
+	lift_floor_name = "Ground Floor"
+/area/turbolift/outreach/f1
+	name            = "OB Elevator 1st Floor"
+	lift_floor_name = "1st Floor"
+
+///////////////////////////////////////////////////
+//Misc
+///////////////////////////////////////////////////
+/area/supply_shuttle_dock
+	name       = "Supply Shuttle Dock"
+	icon_state = "yellow"
+	base_turf  = /turf/simulated/floor/plating //Needed for shuttles
+	open_turf  = /turf/exterior/barren
+	area_flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FLAG_IS_BACKGROUND | AREA_FLAG_ION_SHIELDED | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_EXTERNAL

@@ -1,8 +1,3 @@
-#define ZLEVEL_STATION BITFLAG(0)
-#define ZLEVEL_ADMIN   BITFLAG(1)
-#define ZLEVEL_CONTACT BITFLAG(2)
-#define ZLEVEL_PLAYER  BITFLAG(3)
-#define ZLEVEL_SEALED  BITFLAG(4)
 
 var/global/list/levels_by_z =  list()
 var/global/list/levels_by_id = list()
@@ -52,7 +47,7 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data)
 
 /obj/abstract/level_data/proc/find_connected_levels(var/list/found)
 	for(var/other_id in connects_to)
-		var/obj/abstract/level_data/neighbor = global.levels_by_id[other_id] 
+		var/obj/abstract/level_data/neighbor = global.levels_by_id[other_id]
 		neighbor.add_connected_levels(found)
 
 /obj/abstract/level_data/proc/add_connected_levels(var/list/found)
@@ -79,8 +74,3 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data)
 	name = "Player Level"
 	level_flags = (ZLEVEL_CONTACT|ZLEVEL_PLAYER)
 
-#undef ZLEVEL_STATION
-#undef ZLEVEL_ADMIN
-#undef ZLEVEL_CONTACT
-#undef ZLEVEL_PLAYER
-#undef ZLEVEL_SEALED
