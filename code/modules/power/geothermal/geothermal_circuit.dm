@@ -8,3 +8,4 @@
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stack/cable_coil =        5
 	)
+	additional_spawn_components = null
