@@ -116,3 +116,29 @@
 /decl/material/solid/stone/cult/reinforced
 	name = "runic inscriptions"
 	uid = "solid_runes_cult"
+
+/decl/material/solid/stone/granite
+	name                    = "granite"
+	uid                     = "solid_granite"
+	lore_text               = "A common and very hard igneous rock."
+	color                   = "#615f5f"
+	weight                  = MAT_VALUE_VERY_HEAVY
+	wall_support_value      = MAT_VALUE_VERY_HEAVY
+	hardness                = MAT_VALUE_VERY_HARD
+	reflectiveness          = MAT_VALUE_SHINY
+	construction_difficulty = MAT_VALUE_HARD_DIY
+	brute_armor             = 6
+	exoplanet_rarity        = MAT_RARITY_MUNDANE
+	integrity               = 275
+
+/decl/material/solid/stone/slate
+	name                    = "slate"
+	uid                     = "solid_slate"
+	lore_text               = "A metamorphic rock."
+	color                   = "#2b2b2b"
+	weight                  = MAT_VALUE_VERY_HEAVY
+	wall_support_value      = MAT_VALUE_NORMAL
+	hardness                = MAT_VALUE_RIGID
+	reflectiveness          = MAT_VALUE_DULL
+	construction_difficulty = MAT_VALUE_NORMAL_DIY
+	exoplanet_rarity        = MAT_RARITY_UNCOMMON
