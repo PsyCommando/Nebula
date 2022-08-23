@@ -8,6 +8,7 @@
 	var/area/planetary_area
 
 	var/lightlevel = 0 		//This default makes turfs not generate light. Adjust to have exoplanents be lit.
+	var/starlight_color = COLOR_WHITE //Color of the lighting on the planet
 	var/night = TRUE
 	var/daycycle 			//How often do we change day and night
 	var/daycolumn = 0 		//Which column's light needs to be updated next?

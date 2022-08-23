@@ -43,5 +43,6 @@
 			if(istype(O))
 				O.build_level() //We have to force outreach to update now, otherwise it won't set its atmosphere
 				outreach_initialized = TRUE
+				break
 	. = ..()
 	

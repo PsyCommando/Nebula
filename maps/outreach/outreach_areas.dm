@@ -3,8 +3,10 @@
 ///////////////////////////////////////////////////
 /area/exoplanet/outreach
 	name      = "Outreach Surface"
+	base_turf = /turf/exterior/barren
+	open_turf = /turf/exterior/barren //Prevent people from creating free holes everywhere
 	sound_env = QUARRY
-	ambience  = list(
+	forced_ambience  = list(
 		'sound/effects/wind/desert0.ogg',
 		'sound/effects/wind/desert1.ogg',
 		'sound/effects/wind/desert2.ogg',
@@ -17,6 +19,8 @@
 	name       = "Outreach Sky"
 	icon_state = "blueold"
 	alpha      = 128
+	base_turf  = /turf/exterior/open
+	open_turf  = /turf/exterior/open
 	sound_env  = PLAIN
 	ambience   = list(
 		'sound/effects/wind/wind_2_1.ogg',
@@ -53,6 +57,8 @@
 	name                = "Outreach Mines"
 	icon_state          = "cave"
 	ignore_mining_regen = FALSE
+	base_turf           = /turf/exterior/barren/mining
+	open_turf           = /turf/exterior/barren/mining //Prevents people from creating free holes everywhere
 	sound_env           = CAVE
 	ambience            = list(
 		'sound/ambience/ominous1.ogg',
@@ -65,8 +71,9 @@
 /area/exoplanet/outreach/underground/mines/b1
 	name = "Outreach Subterrane"
 /area/exoplanet/outreach/underground/mines/gf
-	name = "Outreach Excavation"
+	name      = "Outreach Excavation"
 	base_turf = /turf/exterior/volcanic/mining
+	open_turf = /turf/exterior/volcanic/mining //Prevents people from creating free holes everywhere
 
 /area/exoplanet/outreach/mine_entrance
 	name                = "Outreach Mines Access"
@@ -85,19 +92,20 @@
 	name       = "DONT USE ME"
 	icon_state = "toilet"
 	area_flags = AREA_FLAG_ION_SHIELDED | AREA_FLAG_RAD_SHIELDED
+	base_turf  = /turf/exterior/barren
+	open_turf  = /turf/exterior/open
 
 /area/outreach/outpost
 	name      = "Outpost"
-	base_turf = /turf/exterior/barren
 
 ///////////////////////////////////////////////////
 //Cryo
 ///////////////////////////////////////////////////
 /area/outreach/outpost/sleeproom
-	name       = "OB 1B Cyrogenic Storage"
-	icon_state = "cryo"
-	sound_env  = ROOM
-	ambience   = list()
+	name            = "OB 1B Cyrogenic Storage"
+	icon_state      = "cryo"
+	sound_env       = ROOM
+	forced_ambience = list('sound/machines/refrigerator_hum_loop.ogg')
 
 ///////////////////////////////////////////////////
 //Controls
@@ -524,6 +532,14 @@
 /area/outreach/outpost/mining/b1/workshop
 	name       = "OB 1B Mining Workshop"
 	sound_env  = HANGAR
+/area/outreach/outpost/mining/b1/office
+	name       = "OB 1B Mining Office"
+	icon_state = "quartoffice"
+	sound_env  = LIVINGROOM
+/area/outreach/outpost/mining/b1/eva
+	name       = "OB 1B Mining Eva"
+	icon_state = "mining_eva"
+	sound_env  = SMALL_ENCLOSED
 
 ///////////////////////////////////////////////////
 //Cargo

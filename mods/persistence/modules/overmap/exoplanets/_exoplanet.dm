@@ -1,3 +1,5 @@
+//#TODO: Gotta fix this so we just run the exoplanet's gen code on startup instead to properly update areas and stuff for unsaved turfs.
+
 /obj/effect/overmap/visitable/sector/exoplanet/on_saving_start()
 	start_x = x
 	start_y = y

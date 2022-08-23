@@ -84,7 +84,7 @@
 
 /turf/exterior/return_air()
 	var/datum/gas_mixture/gas
-	if(owner)
+	if(owner?.atmosphere) //Need this check because world edges trigger endless updates before the overmap is initialized
 		gas = new
 		gas.copy_from(owner.atmosphere)
 	else

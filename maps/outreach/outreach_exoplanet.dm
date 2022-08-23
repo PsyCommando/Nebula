@@ -1,3 +1,12 @@
+/**Returns a list with the ratio (0 to 1) for each gases in the atmosphere of outreach. */
+/proc/OutreachAtmosRatios()
+	return list(
+		/decl/material/gas/chlorine       = 0.17,
+		/decl/material/gas/nitrogen       = 0.63,
+		/decl/material/gas/carbon_dioxide = 0.11,
+		)
+
+
 /obj/effect/overmap/visitable/sector/exoplanet/outreach
 	name                  = "\improper Outreach"
 	desc                  = "A barren mining world covered in chlorine deserts, home to those lost in space."
@@ -91,13 +100,10 @@
 	for(var/gtype in atmo)
 		LAZYSET(., gtype, (atmo[gtype] * molestotal))
 
-/**Returns a list with the ratio (0 to 1) for each gases in the atmosphere of outreach. */
-/proc/OutreachAtmosRatios()
-	return list(
-		/decl/material/gas/chlorine       = 0.17,
-		/decl/material/gas/nitrogen       = 0.63,
-		/decl/material/gas/carbon_dioxide = 0.11,
-		)
+/obj/effect/overmap/visitable/sector/exoplanet/outreach/build_level(max_x, max_y)
+	. = ..()
+	SetName("Planet [initial(name)]") //Base class renames the planet
+	planetary_area.SetName(initial(planetary_area.name))
 
 //
 // Mining Stuff

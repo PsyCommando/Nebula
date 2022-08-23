@@ -39,6 +39,7 @@
 	#include "outreach_elevators.dm"
 	#include "outreach_machinery.dm"
 	#include "outreach_weather.dm"
+	#include "outreach_structures.dm"
 
 	#define USING_MAP_DATUM /datum/map/outreach
 #elif !defined(MAP_OVERRIDE)
