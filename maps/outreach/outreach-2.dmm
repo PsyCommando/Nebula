@@ -658,7 +658,7 @@
 "mH" = (/obj/structure/cable/yellow{icon_state = "1-2"},/obj/structure/cable/yellow,/obj/machinery/light/small/wired{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/tiled/techmaint,/area/exoplanet/outreach/underground/d1)
 "mI" = (/obj/structure/cable/yellow,/obj/machinery/light/small/wired{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/tiled/techmaint,/area/exoplanet/outreach/underground/d1)
 "mJ" = (/obj/structure/cable/yellow,/obj/machinery/light/small/wired{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/tiled/techmaint,/area/exoplanet/outreach/underground/d1)
-"mK" = (/obj/structure/door,/turf/exterior/concrete,/area/exoplanet/outreach/underground/d1)
+"mK" = (/obj/structure/door/osmium,/turf/exterior/concrete,/area/exoplanet/outreach/underground/d1)
 "mL" = (/obj/effect/floor_decal/stoneborder{icon_state = "stoneborder"; dir = 4},/turf/exterior/concrete,/area/exoplanet/outreach/underground/d1)
 "mM" = (/obj/effect/floor_decal/stoneborder{icon_state = "stoneborder"; dir = 8},/turf/exterior/concrete,/area/exoplanet/outreach/underground/d1)
 "mN" = (/obj/structure/cable/yellow{icon_state = "1-2"},/obj/machinery/door/airlock/external/glass{dir = 1; icon_state = "closed"; id_tag = "OH_l2_n_alck_outer"},/turf/simulated/floor/tiled/steel_ridged,/area/outreach/outpost/airlock/basement1/north)
