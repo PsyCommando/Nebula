@@ -82,3 +82,25 @@
 /turf/simulated/wall/r_wall/prepainted/atmos
 	color        = COLOR_CYAN
 	stripe_color = COLOR_CYAN
+
+///////////////////////////////////////////////////////////////////////////////////
+// Mining Turfs
+///////////////////////////////////////////////////////////////////////////////////
+/turf/exterior/barren/mining/outreach/subterrane
+	color = "#223053"
+/turf/exterior/barren/mining/outreach/abyss
+	color = "#223053"
+
+/turf/exterior/wall/volcanic/outreach
+	strata = /decl/strata/outreach/mountain
+/turf/exterior/wall/outreach/subterrane
+	strata = /decl/strata/outreach/subterrane
+/turf/exterior/wall/outreach/abyss
+	strata = /decl/strata/outreach/abyssal
+
+/turf/exterior/wall/random/outreach/abyss
+	strata = /decl/strata/outreach/abyssal
+/turf/exterior/wall/random/outreach/subterrane
+	strata = /decl/strata/outreach/subterrane
+/turf/exterior/wall/random/outreach/mountain
+	strata = /decl/strata/outreach/mountain

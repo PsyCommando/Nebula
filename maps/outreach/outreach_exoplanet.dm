@@ -6,13 +6,12 @@
 		/decl/material/gas/carbon_dioxide = 0.11,
 		)
 
-
 /obj/effect/overmap/visitable/sector/exoplanet/outreach
 	name                  = "\improper Outreach"
 	desc                  = "A barren mining world covered in chlorine deserts, home to those lost in space."
 	color                 = "#c9df9f"
 	planetary_area        = /area/exoplanet/outreach
-	daycycle              = 25 MINUTES
+	daycycle              = 30 MINUTES
 	night                 = TRUE
 	lightlevel            = 0.7
 	starlight_color       = COLOR_YELLOW_GRAY
@@ -105,9 +104,9 @@
 	SetName("Planet [initial(name)]") //Base class renames the planet
 	planetary_area.SetName(initial(planetary_area.name))
 
-//
+//////////////////////////////////////////////////////////////////////////
 // Mining Stuff
-//
+//////////////////////////////////////////////////////////////////////////
 /obj/abstract/level_data
 	var/datum/random_map/automata/cave_system/level_gen_type //Map generator for mining regen subsystem
 
@@ -119,38 +118,22 @@
 	mineral_turf = /turf/exterior/wall/random/outreach/abyss
 
 /datum/random_map/automata/cave_system/outreach/subterrane
-	iterations = 3
+	iterations = 5
 	descriptor = "outreach subterrane caves"
 	wall_type =  /turf/exterior/wall/outreach/subterrane
 	floor_type = /turf/exterior/barren/mining/outreach/subterrane
 	mineral_turf = /turf/exterior/wall/random/outreach/subterrane
 
 /datum/random_map/automata/cave_system/outreach/mountain
-	iterations = 3
+	iterations = 5
 	descriptor = "outreach mountain caves"
 	wall_type =  /turf/exterior/wall/volcanic/outreach
 	floor_type = /turf/exterior/volcanic/mining
 	mineral_turf = /turf/exterior/wall/random/outreach/mountain
 
-/turf/exterior/barren/mining/outreach/subterrane
-	color = "#223053"
-/turf/exterior/barren/mining/outreach/abyss
-	color = "#223053"
-
-/turf/exterior/wall/volcanic/outreach
-	strata = /decl/strata/outreach/mountain
-/turf/exterior/wall/outreach/subterrane
-	strata = /decl/strata/outreach/subterrane
-/turf/exterior/wall/outreach/abyss
-	strata = /decl/strata/outreach/abyssal
-
-/turf/exterior/wall/random/outreach/abyss
-	strata = /decl/strata/outreach/abyssal
-/turf/exterior/wall/random/outreach/subterrane
-	strata = /decl/strata/outreach/subterrane
-/turf/exterior/wall/random/outreach/mountain
-	strata = /decl/strata/outreach/mountain
-
+//////////////////////////////////////////////////////////////////////////
+// Strata
+//////////////////////////////////////////////////////////////////////////
 /decl/strata/outreach
 	default_strata_candidate = TRUE
 
