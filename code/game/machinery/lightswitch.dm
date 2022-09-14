@@ -42,6 +42,9 @@
 /obj/machinery/light_switch/LateInitialize()
 	. = ..()
 	connected_area?.set_lightswitch(on)
+	//Don't mess with mapped offsets, otherwise move us to the wall
+	if(!pixel_x && !pixel_y)
+		update_wall_offset()
 	update_icon()
 
 /obj/machinery/light_switch/on_update_icon()
@@ -85,3 +88,19 @@
 		to_chat(user, SPAN_NOTICE("You flick \the [src] with \the [I]."))
 		interface_interact(user)
 		return TRUE
+
+/obj/machinery/light_switch/proc/update_wall_offset()
+	var/_pixel_x = 0
+	var/_pixel_y = 0
+	switch(dir)
+		if(NORTH)
+			_pixel_y -= WORLD_ICON_SIZE - 12
+		if(SOUTH)
+			_pixel_y += WORLD_ICON_SIZE - 8
+		if(EAST)
+			_pixel_x -= WORLD_ICON_SIZE - 8
+		if(WEST)
+			_pixel_x += WORLD_ICON_SIZE - 8
+	default_pixel_x = _pixel_x
+	default_pixel_y = _pixel_y
+	reset_offsets(0)

@@ -126,22 +126,7 @@
 	var/pressure
 
 /obj/machinery/airlock_sensor/buildable
-	uncreated_component_parts = list(
-		/obj/item/stock_parts/power/apc = 1
-	)
-
-/obj/machinery/airlock_sensor/Initialize(mapload, d, populate_parts)
-	. = ..()
-	update_icon()
-
-/obj/machinery/airlock_sensor/examine(mob/user, distance, infix, suffix)
-	. = ..()
-	if(distance < 2)
-		to_chat(user, SPAN_INFO("The pressure indicator reads '[pressure? round(pressure, 0.1) : 0] kPa'."))
-	if(master_cycling)
-		to_chat(user, SPAN_WARNING("It's warning that the master airlock is cycling!"))
-	if(alert)
-		to_chat(user, SPAN_WARNING("The low-pressure warning light is blinking!"))
+	uncreated_component_parts = null
 
 /obj/machinery/airlock_sensor/on_update_icon()
 	cut_overlays()

@@ -55,6 +55,8 @@
 /obj/item/radio/intercom/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
+	if(!pixel_x && !pixel_y)
+		update_wall_offset()
 	update_icon()
 
 /obj/item/radio/intercom/department/medbay/Initialize()
@@ -168,6 +170,26 @@
 /obj/item/radio/intercom/ToggleReception()
 	..()
 	update_icon()
+
+/obj/item/radio/intercom/proc/update_wall_offset()
+	var/_pixel_x = 0
+	var/_pixel_y = 0
+	switch(dir)
+		if(NORTH)
+			_pixel_y = max(_pixel_y, WORLD_ICON_SIZE/4)
+			_pixel_y -= WORLD_ICON_SIZE
+		if(SOUTH)
+			_pixel_y = min(_pixel_y, WORLD_ICON_SIZE/4)
+			_pixel_y += WORLD_ICON_SIZE
+		if(EAST)
+			_pixel_x = max(_pixel_x, 0)
+			_pixel_x -= WORLD_ICON_SIZE
+		if(WEST)
+			_pixel_x = min(_pixel_x, 0)
+			_pixel_x += WORLD_ICON_SIZE
+	default_pixel_x = _pixel_x
+	default_pixel_y = _pixel_y
+	reset_offsets(0)
 
 /obj/item/radio/intercom/broadcasting
 	broadcasting = 1
