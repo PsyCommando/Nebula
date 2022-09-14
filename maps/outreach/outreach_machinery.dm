@@ -61,9 +61,13 @@
 
 /obj/machinery/atmospherics/unary/tank/air/airlock
 	name = "Pressure Tank (Air)"
-	icon_state = "air"
-	start_pressure = ONE_ATMOSPHERE / 2
+	icon_state = "air_mapped"
+	start_pressure = ONE_ATMOSPHERE / 4
 	filling = list(/decl/material/gas/oxygen = O2STANDARD, /decl/material/gas/nitrogen = N2STANDARD)
+
+/obj/machinery/atmospherics/unary/tank/air/airlock/Initialize()
+	. = ..()
+	icon_state = "air"
 
 ////////////////////////////////////////////////////////////////////////
 // Exterior lights

@@ -28,7 +28,7 @@
 	icon = 'icons/atmos/tank.dmi' //Clear mapper icon
 	air_contents.volume = volume
 	air_contents.temperature = T20C
-	
+
 	if(filling)
 		var/list/gases = list()
 		for(var/gas in filling)
@@ -90,7 +90,7 @@
 	name =  "Pressure Tank"
 	desc = "A large vessel containing pressurized gas."
 	color =  PIPE_COLOR_WHITE
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL	
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL
 	w_class = ITEM_SIZE_STRUCTURE
 	density = 1
 	level = 1
