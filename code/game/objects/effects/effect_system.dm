@@ -69,7 +69,8 @@ steam.start() -- spawns the effect
 /datum/effect/effect/system/steam_spread/start()
 	var/i = 0
 	for(i=0, i<src.number, i++)
-		addtimer(CALLBACK(src, /datum/effect/effect/system/proc/spread, i), 0)
+		spread(i)
+		//addtimer(CALLBACK(src, /datum/effect/effect/system/proc/spread, i), 0)
 
 /datum/effect/effect/system/steam_spread/spread(var/i)
 	set waitfor = 0
