@@ -1,3 +1,4 @@
+//#REMOVEME: Has been replaced by /obj/machinery/nuclear_cylinder_storage
 /obj/structure/closet/secure_closet/nuke_wall
 	name = "nuclear cylinder closet"
 	desc = "It's a secure wall-mounted storage unit for storing the nuclear cylinders."
