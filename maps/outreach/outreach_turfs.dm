@@ -22,29 +22,38 @@
 	/decl/material/gas/nitrogen       = 0.63 * ((ONE_ATMOSPHERE/2) * CELL_VOLUME/(T0C * R_IDEAL_GAS_EQUATION)),\
 	/decl/material/gas/carbon_dioxide = 0.11 * ((ONE_ATMOSPHERE/2) * CELL_VOLUME/(T0C * R_IDEAL_GAS_EQUATION)),\
 )
+#define OUTREACH_TEMP T0C
 
 /turf/simulated/floor/tiled/techfloor/grid/outreach
 	initial_gas = OUTREACH_ATMOS
-	temperature = T0C
+	temperature = OUTREACH_TEMP
 /turf/simulated/floor/tiled/techfloor/outreach
 	initial_gas = OUTREACH_ATMOS
-	temperature = T0C
+	temperature = OUTREACH_TEMP
 /turf/simulated/floor/tiled/steel_ridged/outreach
 	initial_gas = OUTREACH_ATMOS
-	temperature = T0C
+	temperature = OUTREACH_TEMP
 /turf/simulated/floor/tiled/dark/monotile/outreach
 	initial_gas = OUTREACH_ATMOS
-	temperature = T0C
+	temperature = OUTREACH_TEMP
 /turf/simulated/floor/asteroid/outreach
+	initial_gas          = OUTREACH_ATMOS
+	temperature          = OUTREACH_TEMP
+	heat_capacity        = 80000
+	thermal_conductivity = 0.005
+/turf/simulated/floor/plating/outreach
 	initial_gas = OUTREACH_ATMOS
-	temperature = T0C
+	temperature = OUTREACH_TEMP
+
+#undef OUTREACH_TEMP
+#undef OUTREACH_ATMOS
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Painted walls
 ///////////////////////////////////////////////////////////////////////////////////
 /turf/simulated/wall/ocp_wall/prepainted
 	paint_color    = COLOR_GUNMETAL
-	stripe_color   = COLOR_AMBER 
+	stripe_color   = COLOR_AMBER
 	material       = /decl/material/solid/metal/plasteel/ocp
 	reinf_material = /decl/material/solid/metal/plasteel/ocp
 
@@ -104,6 +113,201 @@
 	strata = /decl/strata/outreach/subterrane
 /turf/exterior/wall/random/outreach/mountain
 	strata = /decl/strata/outreach/mountain
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Surface Turfs
+///////////////////////////////////////////////////////////////////////////////////
+/turf/exterior/barren/outreach
+/turf/exterior/wall/outreach
+/turf/exterior/chlorine_sand/outreach
+
+
+//
+// Turf Initializers
+//
+/decl/turf_initializer/outreach_surface
+	var/list/surface_props_probs = list(
+		/obj/effect/decal/cleanable/lichen = 40,
+		/obj/effect/decal/cleanable/ash    = 20,
+		/obj/structure/boulder             = 30,
+		/obj/structure/leech_spawner       = 5,
+	)
+	var/list/mob_probs = list(
+		/mob/living/simple_animal/hostile/slug                 = 1,
+		/mob/living/simple_animal/hostile/retaliate/giant_crab = 3,
+	)
+	var/list/allowed_turfs = list(
+		/turf/exterior/barren,
+		/turf/exterior/chlorine_sand,
+	)
+
+/decl/turf_initializer/outreach_surface/InitializeTurf(var/turf/exterior/T)
+	if(!istype(T) || T.density)
+		return
+	if(!is_type_in_list(T, allowed_turfs))
+		return
+	//Don't place anything here, if there's anything on the turf already
+	if(locate(/obj, T))
+		return
+
+	var/list/possible_spawns = surface_props_probs|mob_probs
+	if(rand(0, 50) != 50)
+		return //No prop for this tile
+
+	for(var/path in possible_spawns)
+		possible_spawns[path] = rand(0, possible_spawns[path])
+	sortTim(possible_spawns, .proc/cmp_numeric_dsc, TRUE)
+	var/spawn_type = possible_spawns[1]
+	new spawn_type(T)
+
+
+
+
+
+//
+// Simulated Volcanic
+//
+/turf/simulated/floor/volcanic
+	name             = "volcanic floor"
+	base_name        = "rock"
+	base_desc        = "Solidified magma."
+	icon             = 'icons/turf/exterior/volcanic.dmi'
+	icon_state       = "0"
+	base_icon_state  = "0"
+	footstep_type    = /decl/footsteps/asteroid
+	initial_flooring = null
+	initial_gas      = null
+	temperature      = TCMB
+	mineral          = /decl/material/solid/stone/slate
+
+/turf/simulated/floor/volcanic/can_engrave()
+	return FALSE
+
+/turf/simulated/floor/volcanic/explosion_act(severity)
+	SHOULD_CALL_PARENT(FALSE)
+	return
+
+/turf/simulated/floor/volcanic/attackby(obj/item/C, mob/user)
+	if(IS_WELDER(C) || istype(C, /obj/item/gun/energy/plasmacutter))
+		return //Prevents removing the floor with a welder..
+	. = ..()
+
+//
+// Magma
+//
+///A slightly more practical version of lava
+/turf/exterior/outreach_magma
+	name           = "magma"
+	icon           = 'icons/turf/exterior/lava.dmi'
+	movement_delay = 4
+	dirt_color     = COLOR_GRAY20
+	footstep_type  = /decl/footsteps/lava
+	diggable       = FALSE
+	temperature    = T0C + 800 //Temperature of lava
+	pathweight     = 200
+	open_turf_type = /turf/exterior/outreach_magma
+	prev_type      = /turf/exterior/outreach_magma
+	var/list/victims
+	///Cached object covering the lava on the last process tick
+	var/tmp/weakref/cached_lava_cover
+	/**Types that when present on the tile prevent other objects on the tile from getting hit with lava_act */
+	var/static/list/lava_cover_types = list(
+		/obj/structure/lattice,
+		/obj/structure/catwalk,
+		/obj/structure/wall_frame,
+		/obj/structure/stairs
+	)
+
+/turf/exterior/outreach_magma/Initialize()
+	. = ..()
+	set_light(2, l_color = LIGHT_COLOR_LAVA)
+
+/turf/exterior/outreach_magma/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/turf/exterior/outreach_magma/return_air() //#TODO: Would be neat if heat would be transfered to adjacent tiles
+	var/datum/gas_mixture/gas = ..()
+	gas.temperature = T0C + 800
+	return gas
+
+/turf/exterior/outreach_magma/attackby(obj/item/C, mob/user)
+	if(istype(C, /obj/item/stack/tile))
+		return //Don't let people build over this
+	. = ..()
+
+/turf/exterior/outreach_magma/explosion_act(severity)
+	SHOULD_CALL_PARENT(FALSE)
+	return
+
+/turf/exterior/outreach_magma/is_solid_structure()
+	return ..() || (locate(/obj/structure/catwalk) in src)
+
+/**
+ * Returns any valid covering objects protecting entities on the lava turf from the lava_act
+ */
+/turf/exterior/outreach_magma/proc/get_covering_object()
+	var/atom/movable/covering = cached_lava_cover?.resolve()
+	if(QDELETED(covering) || covering.loc != src)
+		for(var/atom/movable/thing in contents)
+			if(!QDELETED(thing) && is_type_in_list(thing, lava_cover_types))
+				cached_lava_cover = weakref(thing)
+				. = thing
+				break
+	else
+		. = covering
+
+/turf/exterior/outreach_magma/Entered(atom/movable/AM)
+	..()
+	//Check for anything covering the lava
+	if(get_covering_object())
+		return
+
+	var/mob/living/L = AM
+	if (istype(L) && L.can_overcome_gravity())
+		return
+	if(istype(AM, /obj/machinery/atmospherics/pipe)) //#TODO: Maybe find something better?
+		return
+	if(AM.is_burnable())
+		LAZYADD(victims, weakref(AM))
+		START_PROCESSING(SSobj, src)
+
+/turf/exterior/outreach_magma/Exited(atom/movable/AM)
+	. = ..()
+	LAZYREMOVE(victims, weakref(AM))
+
+/turf/exterior/outreach_magma/Process()
+	//Check if we have a covering object
+	if(get_covering_object())
+		return
+
+	for(var/weakref/W in victims)
+		var/atom/movable/AM = W.resolve()
+		if (AM == null || get_turf(AM) != src || AM.is_burnable() == FALSE)
+			victims -= W
+			continue
+		var/datum/gas_mixture/environment = return_air()
+		var/pressure = environment.return_pressure()
+		var/destroyed = AM.lava_act(environment, environment.temperature, pressure)
+		if(destroyed == TRUE)
+			victims -= W
+	if(!LAZYLEN(victims))
+		return PROCESS_KILL
+
+
+//
+//
+//
+/turf/unsimulated/rock
+	name                 = "impassable rock"
+	icon                 = 'icons/turf/walls.dmi'
+	icon_state           = "rock"
+	color                = COLOR_DARK_GRAY
+	blocks_air           = TRUE
+	density              = TRUE
+	opacity              = TRUE
+
 //
 //
 //
@@ -210,5 +414,6 @@
 	. = ..()
 	var/turf/NT = mimicx && mimicy && mimicz && locate(mimicx, mimicy, mimicz)
 	if(NT)
+		opacity = NT.opacity
 		//log_debug("[src]([x],[y],[z]) mirroring [NT]([NT.x],[NT.y],[NT.z])")
 		LAZYADD(., NT)

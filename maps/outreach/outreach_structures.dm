@@ -6,7 +6,7 @@
 		"[EAST ]" = list("x" = -24),
 		"[WEST ]" = list("x" =  24),
 	))
-	set_dir(dir)
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Painted Wall frames
@@ -60,7 +60,7 @@
 /obj/structure/wall_frame/ocp/prepainted/exterior
 	color          = COLOR_GUNMETAL
 	paint_color    = COLOR_GUNMETAL
-	stripe_color   = COLOR_AMBER 
+	stripe_color   = COLOR_AMBER
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Spawners
@@ -159,7 +159,10 @@
 	painted_color = COLOR_GRAY40
 
 ///////////////////////////////////////////////////////////////////////////////////
-// Railings
+// Barricades
 ///////////////////////////////////////////////////////////////////////////////////
 /obj/structure/barricade/wood
 	material = /decl/material/solid/wood/maple
+
+/obj/structure/door/osmium
+	material = /decl/material/solid/metal/osmium

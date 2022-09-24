@@ -2,10 +2,12 @@
 //Planet
 ///////////////////////////////////////////////////
 /area/exoplanet/outreach
-	name      = "Outreach Surface"
-	base_turf = /turf/exterior/barren
-	open_turf = /turf/exterior/barren //Prevent people from creating free holes everywhere
-	sound_env = QUARRY
+	name             = "Outreach Surface"
+	base_turf        = /turf/exterior/barren/outreach
+	open_turf        = /turf/exterior/barren/outreach //Prevent people from creating free holes everywhere
+	turf_initializer = /decl/turf_initializer/outreach_surface
+	sound_env        = QUARRY
+	ambience         = null
 	forced_ambience  = list(
 		'sound/effects/wind/desert0.ogg',
 		'sound/effects/wind/desert1.ogg',
@@ -22,7 +24,8 @@
 	base_turf  = /turf/exterior/open
 	open_turf  = /turf/exterior/open
 	sound_env  = PLAIN
-	ambience   = list(
+	ambience   = null
+	forced_ambience  = list(
 		'sound/effects/wind/wind_2_1.ogg',
 		'sound/effects/wind/wind_2_2.ogg',
 		'sound/effects/wind/wind_3_1.ogg',
@@ -32,12 +35,13 @@
 	)
 
 /area/exoplanet/outreach/underground
-	name           = "Outreach Underground"
-	area_flags     = AREA_FLAG_IS_BACKGROUND | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	show_starlight = FALSE
-	is_outside     = OUTSIDE_NO
-	sound_env      = CAVE //STONE_CORRIDOR
-	ambience       = list(
+	name            = "Outreach Underground"
+	area_flags      = AREA_FLAG_IS_BACKGROUND | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	show_starlight  = FALSE
+	is_outside      = OUTSIDE_NO
+	sound_env       = CAVE
+	forced_ambience = null
+	ambience        = list(
 		'sound/ambience/spookyspace1.ogg',
 		'sound/ambience/spookyspace2.ogg'
 	)
@@ -56,10 +60,10 @@
 /area/exoplanet/outreach/underground/mines
 	name                = "Outreach Mines"
 	icon_state          = "cave"
+	area_flags          = AREA_FLAG_IS_BACKGROUND | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	ignore_mining_regen = FALSE
-	base_turf           = /turf/exterior/barren/mining
-	open_turf           = /turf/exterior/barren/mining //Prevents people from creating free holes everywhere
-	sound_env           = CAVE
+	base_turf           = /turf/exterior/volcanic/mining
+	open_turf           = /turf/exterior/volcanic/mining //Prevents people from creating free holes everywhere
 	ambience            = list(
 		'sound/ambience/ominous1.ogg',
 		'sound/ambience/ominous2.ogg',
@@ -76,14 +80,42 @@
 	open_turf = /turf/exterior/volcanic/mining //Prevents people from creating free holes everywhere
 
 /area/exoplanet/outreach/mine_entrance
-	name                = "Outreach Mines Access"
+	name                = "Outreach Topside Mines Access"
 	icon_state          = "exit"
 	ignore_mining_regen = TRUE
-	sound_env           = HALLWAY
+	is_outside          = OUTSIDE_NO
+	sound_env           = QUARRY
+	forced_ambience     = null
+	base_turf           = /turf/exterior/volcanic
+	open_turf           = /turf/exterior/volcanic //Prevents people from creating free holes everywhere
+
 /area/exoplanet/outreach/underground/mines/stairwell
 	name                = "Outreach Mines Stairwell"
 	icon_state          = "exit"
 	ignore_mining_regen = TRUE
+	sound_env           = CAVE
+	base_turf           = /turf/exterior/volcanic
+	open_turf           = /turf/exterior/volcanic //Prevents people from creating free holes everywhere
+
+/area/exoplanet/outreach/underground/mines/stairwell/gf
+	name = "Outreach GF Mines Stairwell"
+/area/exoplanet/outreach/underground/mines/stairwell/b1
+	name = "Outreach 1B Mines Stairwell"
+/area/exoplanet/outreach/underground/mines/stairwell/b2
+	name = "Outreach 2B Mines Stairwell"
+
+/area/exoplanet/outreach/underground/mines/access
+	name                = "Outreach Mines Access"
+	icon_state          = "exit"
+	ignore_mining_regen = TRUE
+	sound_env           = CAVE
+	base_turf           = /turf/exterior/volcanic
+	open_turf           = /turf/exterior/volcanic //Prevents people from creating free holes everywhere
+
+/area/exoplanet/outreach/underground/mines/access/b1
+	name = "Outreach Subterrane Mine Access"
+/area/exoplanet/outreach/underground/mines/access/b2
+	name = "Outreach Abyss Mine Access"
 
 ///////////////////////////////////////////////////
 //Outpost
@@ -92,11 +124,14 @@
 	name       = "DONT USE ME"
 	icon_state = "toilet"
 	area_flags = AREA_FLAG_ION_SHIELDED | AREA_FLAG_RAD_SHIELDED
-	base_turf  = /turf/exterior/barren
+	base_turf  = /turf/exterior/barren/outreach
 	open_turf  = /turf/exterior/open
 
 /area/outreach/outpost
 	name      = "Outpost"
+	open_turf = /turf/simulated/open
+	base_turf = /turf/exterior/barren/outreach
+	///turf/simulated/floor/asteroid //Underground floors use this, and all floors above will use the open_turf instead
 
 ///////////////////////////////////////////////////
 //Cryo
@@ -104,8 +139,8 @@
 /area/outreach/outpost/sleeproom
 	name            = "OB 1B Cyrogenic Storage"
 	icon_state      = "cryo"
+	secure          = FALSE
 	sound_env       = ROOM
-	forced_ambience = list('sound/machines/refrigerator_hum_loop.ogg')
 
 ///////////////////////////////////////////////////
 //Controls
@@ -114,15 +149,25 @@
 	name       = "OB 1B Control Room"
 	icon_state = "server"
 	sound_env  = ROOM
+	secure     = TRUE
+	req_access = list(list(access_engine),list(access_heads))
+	ambience   = list(
+		'sound/ambience/ambigen3.ogg',
+		'sound/ambience/ambigen4.ogg',
+		'sound/ambience/signal.ogg',
+		'sound/ambience/sonar.ogg',
+	)
 /area/outreach/outpost/control/servers
 	name       = "OB 1B Servers Room"
 	icon_state = "server"
 /area/outreach/outpost/control/storage
 	name            = "OB 1B Servers Storage Room"
 	icon_state      = "server"
+	req_access      = list(list(access_engine))
 /area/outreach/outpost/control/cooling
 	name            = "OB 1B Cooling Systems Room"
 	icon_state      = "server"
+	req_access      = list(list(access_engine))
 	forced_ambience = list('sound/ambience/ambiatm1.ogg')
 
 ///////////////////////////////////////////////////
@@ -192,17 +237,17 @@
 /area/outreach/outpost/medbay/morgue
 	name       = "OB 1B Medbay Morgue"
 	icon_state = "morgue"
-	sound_env  = ROOM
-
-/area/outreach/outpost/medbay/crematorium
-	name       = "OB 1B Medbay Crematorium"
-	icon_state = "morgue"
 	sound_env  = SMALL_ENCLOSED
 
-/area/outreach/outpost/medbay/office
-	name       = "OB 1B Medbay Office"
-	icon_state = "CMO"
-	sound_env  = LIVINGROOM
+// /area/outreach/outpost/medbay/crematorium
+// 	name       = "OB 1B Medbay Crematorium"
+// 	icon_state = "morgue"
+// 	sound_env  = SMALL_ENCLOSED
+
+// /area/outreach/outpost/medbay/office
+// 	name       = "OB 1B Medbay Office"
+// 	icon_state = "CMO"
+// 	sound_env  = LIVINGROOM
 
 ///////////////////////////////////////////////////
 //Hallways
@@ -431,6 +476,7 @@
 /area/outreach/outpost/hydroponics
 	name       = "OB 1B Hydroponics"
 	icon_state = "hydro"
+	sound_env  = STANDARD_STATION
 
 ///////////////////////////////////////////////////
 //Engineering
@@ -456,15 +502,28 @@
 /area/outreach/outpost/engineering/b2/geothermals
 	name            = "OB 2B Geothermals"
 	icon_state      = "engine"
+	secure          = TRUE
+	req_access      = list(access_engine)
 	sound_env       = STONEROOM
-	forced_ambience = list('sound/ambience/ambiatm1.ogg')
-
+	ambience        = list(
+		'sound/ambience/ambieng1.ogg',
+		'sound/ambience/ambigen3.ogg',
+		'sound/ambience/ambigen4.ogg',
+		'sound/ambience/ambigen5.ogg',
+		'sound/ambience/ambigen6.ogg',
+		'sound/ambience/ambigen7.ogg',
+		'sound/ambience/ambigen8.ogg',
+		'sound/ambience/ambigen9.ogg',
+		'sound/ambience/ambigen10.ogg',
+		'sound/ambience/ambigen11.ogg',
+	)
 ///////////////////////////////////////////////////
 //Atmos
 ///////////////////////////////////////////////////
 /area/outreach/outpost/atmospherics
 	icon_state = "atmos"
 	sound_env  = HANGAR
+	req_access = list(access_atmospherics)
 
 /area/outreach/outpost/atmospherics/b1/storage
 	name       = "OB 1B Atmos Storage"
@@ -474,6 +533,8 @@
 	name       = "OB 1B Atmospherics Hall"
 	icon_state = "atmos"
 	sound_env  = HALLWAY
+	ambience   = null
+	forced_ambience = list('sound/ambience/ambiatm1.ogg')
 /area/outreach/outpost/atmospherics/b1/supply
 	name            = "OB 1B Atmos Air Supply"
 	icon_state      = "atmos"
@@ -496,16 +557,19 @@
 	icon_state = "atmos"
 	sound_env  = CAVE
 
-
 ///////////////////////////////////////////////////
 //Sec
 ///////////////////////////////////////////////////
 /area/outreach/outpost/security
 	icon_state = "security"
+	req_access = list(access_security)
+	secure     = TRUE
 	sound_env  = STANDARD_STATION
 	area_flags = AREA_FLAG_SECURITY
 /area/outreach/outpost/security/b1
 	name       = "OB 1B Security"
+	req_access = list()
+	secure     = FALSE
 /area/outreach/outpost/security/b1/office
 	name       = "OB 1B Security Office"
 	icon_state = "checkpoint"
@@ -682,6 +746,26 @@
 	icon_state = "red2"
 
 ///////////////////////////////////////////////////
+// Disposals
+///////////////////////////////////////////////////
+/area/outreach/outpost/disposals
+	name       = "OB 2B Disposals"
+	icon_state = "disposal"
+	sound_env  = ROOM
+
+///////////////////////////////////////////////////
+// EVA
+///////////////////////////////////////////////////
+/area/outreach/outpost/eva
+	name       = "OB GF EVA Storage"
+	icon_state = "locker"
+	sound_env  = SMALL_ENCLOSED
+/area/outreach/outpost/eva/gf/north
+	name       = "OB GF North EVA Storage"
+/area/outreach/outpost/eva/gf/south
+	name       = "OB GF South EVA Storage"
+
+///////////////////////////////////////////////////
 //Unit Test Areas
 ///////////////////////////////////////////////////
 //Prevents unit tests from complaining about vents/scrubbers/etc
@@ -703,6 +787,20 @@
 /area/outreach/outpost/ext_vents/f1
 	name = "Outreach 1F Airlock Vents"
 
+
+/area/outreach/outpost/southern_tunnel
+	name             = "OB GF South Tunnel"
+	icon_state       = "blue-red-d"
+	sound_env        = PARKING_LOT
+	ambience         = null
+	forced_ambience  = list(
+		'sound/effects/wind/desert0.ogg',
+		'sound/effects/wind/desert1.ogg',
+		'sound/effects/wind/desert2.ogg',
+		'sound/effects/wind/desert3.ogg',
+		'sound/effects/wind/desert4.ogg',
+		'sound/effects/wind/desert5.ogg',
+	)
 
 ///////////////////////////////////////////////////
 //Elevators

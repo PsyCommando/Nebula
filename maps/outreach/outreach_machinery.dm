@@ -23,10 +23,12 @@
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/power/terminal,
 		/obj/item/stock_parts/radio/transmitter/on_event/buildable,
+		/obj/item/stock_parts/radio/receiver/buildable,
 	)
 	stock_part_presets = list(
 		/decl/stock_part_preset/terminal_setup = 1,
 		/decl/stock_part_preset/radio/event_transmitter/access_button = 1,
+		/decl/stock_part_preset/radio/receiver/access_button = 1,
 	)
 
 /obj/machinery/button/access/wired/interior
@@ -86,9 +88,12 @@
 	)
 	stock_part_presets = list(/decl/stock_part_preset/terminal_setup)
 
-/obj/structure/door/osmium
-	material = /decl/material/solid/metal/osmium
-
+/obj/machinery/light/spot/wired
+	power_channel = LOCAL
+	uncreated_component_parts = list(
+		/obj/item/stock_parts/power/terminal,
+	)
+	stock_part_presets = list(/decl/stock_part_preset/terminal_setup)
 
 ////////////////////////////////////////////////////////////////////////
 // Buttons
@@ -115,7 +120,7 @@
 	)
 
 ////////////////////////////////////////////////////////////////////////
-// Network 
+// Network
 ////////////////////////////////////////////////////////////////////////
 /obj/machinery/internet_uplink/outreach
 	initial_id_tag     = "ob_uplink"
@@ -128,12 +133,17 @@
 
 /obj/machinery/network/area_controller/outreach
 	initial_network_id = "outnet"
+	tag_network_tag = "oh_actrl"
 	use_power = POWER_USE_ACTIVE
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil = 5,
 	)
 	var/list/area_names = list(
+		"OB 1B Servers Room",
 		"OB 1B Cyrogenic Storage",
+		"OB 1B Control Room",
+		"OB 2B Power Storage",
+		"OB 2B Geothermals",
 	)
 
 /obj/machinery/network/area_controller/outreach/Initialize()
@@ -142,6 +152,7 @@
 	for(var/area/A in world)
 		if(A.name in area_names)
 			add_protected_area(A)
+	update_use_power(POWER_USE_ACTIVE)
 
 /obj/machinery/network/area_controller/outreach/proc/add_protected_area(var/area/A)
 	var/datum/extension/network_device/D = get_extension(src, /datum/extension/network_device)
@@ -152,25 +163,36 @@
 
 /obj/machinery/network/acl/outreach
 	initial_network_id = "outnet"
-	preset_groups = list(ADMIN_PROTECTED_NET_GROUP = list())
+	tag_network_tag    = "oh_acl"
+	preset_groups      = list(ADMIN_PROTECTED_NET_GROUP = list())
+
+/obj/machinery/network/router/outreach
+	initial_network_id = "outnet"
+	tag_network_tag    = "oh_router"
 
 /obj/machinery/network/modem/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_modem"
 
 /obj/machinery/network/mainframe/files/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_mfrm_files"
 
 /obj/machinery/network/mainframe/account/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_mfrm_accounts"
 
 /obj/machinery/network/mainframe/logs/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_mfrm_logs"
 
 /obj/machinery/network/mainframe/records/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_mfrm_records"
 
 /obj/machinery/network/mainframe/software/outreach
 	initial_network_id = "outnet"
+	tag_network_tag    = "oh_mfrm_softwares"
 
 ////////////////////////////////////////////////////////////////////////
 // Telecomms
@@ -207,5 +229,116 @@
 	id = "ob_hub"
 	network = "outcom"
 	autolinkers = list("ob_hub","ob_receiver", "ob_broadcaster")
+
+////////////////////////////////////////////////////////////////////////
+// Suit Cyclers
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/suit_cycler/emergency/prepared
+	name                    = "work suit cycler unit"
+	buildable               = FALSE
+	initial_access          = list()
+	helmet                  = /obj/item/clothing/head/helmet/space/emergency
+	suit                    = /obj/item/clothing/suit/space/emergency
+	boots                   = /obj/item/clothing/shoes/workboots
+	available_bodytypes     = list(BODYTYPE_HUMANOID, BODYTYPE_MONKEY)
+	available_modifications = list(
+		/decl/item_modifier/space_suit/engineering,
+		/decl/item_modifier/space_suit/mining,
+		/decl/item_modifier/space_suit/medical,
+		/decl/item_modifier/space_suit/security,
+		/decl/item_modifier/space_suit/atmos,
+		/decl/item_modifier/space_suit/science,
+		/decl/item_modifier/space_suit/pilot,
+		/decl/item_modifier/space_suit/salvage,
+	)
+
+////////////////////////////////////////////////////////////////////////
+// Machine wall offsets
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/atm/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20),
+		"[SOUTH]" = list("y" =  32),
+		"[EAST ]" = list("x" = -24),
+		"[WEST ]" = list("x" =  24),
+	))
+
+/obj/machinery/button/Initialize(mapload, d, populate_parts)
+	. = ..()
+	var/turf/wallmaybe = get_step(loc, global.reverse_dir[dir])
+	if(wallmaybe?.is_wall())
+		set_extension(src, /datum/extension/base_wall_offset, list(
+			"[NORTH]" = list("y" = -20),
+			"[SOUTH]" = list("y" =  32),
+			"[EAST ]" = list("x" = -24),
+			"[WEST ]" = list("x" =  24),
+		))
+
+/obj/machinery/vending/wallmed1/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20), 
+		"[SOUTH]" = list("y" =  WORLD_ICON_SIZE), 
+		"[EAST]"  = list("x" = -24), 
+		"[WEST]"  = list("x" =  24),
+	))
+
+/obj/machinery/vending/wallmed2/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20), 
+		"[SOUTH]" = list("y" = WORLD_ICON_SIZE), 
+		"[EAST]"  = list("x" = -24), 
+		"[WEST]"  = list("x" =  24)
+	))
+
+/obj/machinery/light_switch/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20), 
+		"[SOUTH]" = list("y" = 28), 
+		"[EAST]"  = list("x" = -20), 
+		"[WEST]"  = list("x" =  20)
+	))
+
+/obj/machinery/recharger/wallcharger/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20), 
+		"[SOUTH]" = list("y" = 28), 
+		"[EAST]"  = list("x" = -20), 
+		"[WEST]"  = list("x" =  20)
+	))
+
+/obj/machinery/dummy_airlock_controller/Initialize(mapload, d, populate_parts)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -20), 
+		"[SOUTH]" = list("y" = WORLD_ICON_SIZE), 
+		"[EAST]"  = list("x" = -20), 
+		"[WEST]"  = list("x" =  20)
+	))
+
+////////////////////////////////////////////////////////////////////////
+// SMES
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/power/smes/buildable/preset/outreach
+	_fully_charged = TRUE
+	_input_maxed   = TRUE
+	_input_on      = TRUE
+	_output_maxed  = FALSE
+	_output_on     = TRUE
+	output_level   = 50000
+	uncreated_component_parts = list(
+		/obj/item/stock_parts/smes_coil/super_capacity = 5,
+		/obj/item/stock_parts/smes_coil/super_io       = 1,
+	)
+
+////////////////////////////////////////////////////////////////////////
+// Docking Beacon
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/docking_beacon/mapped
+	anchored = TRUE
 
 #undef ADMIN_PROTECTED_NET_GROUP

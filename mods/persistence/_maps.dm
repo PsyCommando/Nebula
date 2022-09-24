@@ -22,4 +22,4 @@
 	for(var/map_path in default_levels)
 		INCREMENT_WORLD_Z_SIZE
 		global.maploader.load_map(file(map_path), 1, 1, world.maxz, no_changeturf = TRUE)
-		report_progress("[src] loaded map file '[map_path]' at z [world.maxz].")
+		report_progress("Loaded map file '[map_path]' at z [world.maxz].")
