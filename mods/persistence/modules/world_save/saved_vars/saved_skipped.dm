@@ -29,5 +29,11 @@
 /datum/powernet
 	should_save = FALSE
 
+/sound
+	should_save = FALSE
+
+/datum/sound_token
+	should_save = FALSE
+ 
 /obj/item/tankassemblyproxy
 	should_save = FALSE

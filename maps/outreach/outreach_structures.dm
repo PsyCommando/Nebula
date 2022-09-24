@@ -7,6 +7,23 @@
 		"[WEST ]" = list("x" =  24),
 	))
 
+/obj/structure/sign/poster/Initialize(mapload, placement_dir, give_poster_type)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -WORLD_ICON_SIZE),
+		"[SOUTH]" = list("y" =  WORLD_ICON_SIZE),
+		"[EAST ]" = list("x" = -WORLD_ICON_SIZE),
+		"[WEST ]" = list("x" =  WORLD_ICON_SIZE),
+	))
+
+/obj/structure/sign/warning/Initialize(ml, _mat, _reinf_mat)
+	. = ..()
+	set_extension(src, /datum/extension/base_wall_offset, list(
+		"[NORTH]" = list("y" = -WORLD_ICON_SIZE),
+		"[SOUTH]" = list("y" =  WORLD_ICON_SIZE),
+		"[EAST ]" = list("x" = -WORLD_ICON_SIZE),
+		"[WEST ]" = list("x" =  WORLD_ICON_SIZE),
+	))
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Painted Wall frames

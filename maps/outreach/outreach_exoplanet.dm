@@ -12,7 +12,7 @@
 	color                 = "#c9df9f"
 	planetary_area        = /area/exoplanet/outreach
 	daycycle              = 30 MINUTES
-	night                 = TRUE
+	night                 = FALSE
 	lightlevel            = 0.7
 	starlight_color       = COLOR_YELLOW_GRAY
 	rock_colors           = list(COLOR_GRAY80, COLOR_PALE_GREEN_GRAY, COLOR_PALE_BTL_GREEN)
@@ -100,9 +100,30 @@
 		LAZYSET(., gtype, (atmo[gtype] * molestotal))
 
 /obj/effect/overmap/visitable/sector/exoplanet/outreach/build_level(max_x, max_y)
-	. = ..()
-	SetName("Planet [initial(name)]") //Base class renames the planet
-	planetary_area.SetName(initial(planetary_area.name))
+	maxx     = max_x ? max_x : world.maxx
+	maxy     = max_y ? max_y : world.maxy
+	x_origin = TRANSITIONEDGE + 1
+	y_origin = TRANSITIONEDGE + 1
+	x_size   = maxx - 2 * (TRANSITIONEDGE + 1)
+	y_size   = maxy - 2 * (TRANSITIONEDGE + 1)
+	landing_points_to_place = min(round(0.1 * (x_size * y_size) / (shuttle_size * shuttle_size)), 3)
+
+	SetName("Planet [initial(name)]")
+	planetary_area = new planetary_area()
+	global.using_map.area_purity_test_exempt_areas += planetary_area.type
+
+	if(ispath(weather_system, /decl/state/weather))
+		weather_system = new /obj/abstract/weather_system(null, map_z[1], weather_system)
+		weather_system.water_material = water_material
+		weather_system.ice_material = ice_material
+
+	generate_habitability()
+	generate_atmosphere()
+	generate_map()
+	generate_landing()
+	generate_daycycle()
+	generate_planet_image()
+	START_PROCESSING(SSobj, src)
 
 /obj/effect/overmap/visitable/sector/exoplanet/generate_map()
 	var/list/grasscolors = plant_colors.Copy()
