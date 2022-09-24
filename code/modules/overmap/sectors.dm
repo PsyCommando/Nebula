@@ -60,6 +60,7 @@ var/global/list/known_overmap_sectors
 	. = ..()
 
 /obj/effect/overmap/visitable/Initialize()
+	log_debug("[src]([x],[y],[z]) creating sector.") //#REMOVEME
 	. = ..()
 	if(. == INITIALIZE_HINT_QDEL)
 		return
@@ -125,6 +126,7 @@ var/global/list/known_overmap_sectors
 	return get_filtered_areas(list(/proc/area_belongs_to_zlevels = map_z))
 
 /obj/effect/overmap/visitable/proc/find_z_levels()
+	log_debug("[src]([x],[y],[z]) finding z levels. Current z is [z].") //#REMOVEME
 	map_z = GetConnectedZlevels(z)
 
 /obj/effect/overmap/visitable/proc/register_z_levels()
