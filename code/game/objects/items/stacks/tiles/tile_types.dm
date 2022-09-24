@@ -143,6 +143,15 @@
 /obj/item/stack/tile/mono/fifty
 	amount = 50
 
+/obj/item/stack/tile/mono/steel
+	name = "steel mono floor"
+	singular_name = "steel mono floor"
+	icon_state = "tile_freezer"
+	color = COLOR_DARK_BLUE_GRAY
+
+/obj/item/stack/tile/mono/steel/fifty
+	amount = 50
+
 /obj/item/stack/tile/mono/dark
 	name = "dark mono tile"
 	singular_name = "dark mono tile"
