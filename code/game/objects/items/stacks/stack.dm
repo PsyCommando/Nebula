@@ -379,16 +379,15 @@
 
 /obj/item/stack/attack_hand(mob/user)
 	if(user.is_holding_offhand(src) && can_split())
-		var/N = input("How many stacks of [src] would you like to split off?", "Split stacks", 1) as num|null
+		var/N = input("How many [plural_name] of [src] would you like to split off?", "Split stacks", 1) as num|null
 		if(N)
 			var/obj/item/stack/F = src.split(N)
 			if (F)
 				user.put_in_hands(F)
 				src.add_fingerprint(user)
 				F.add_fingerprint(user)
-				spawn(0)
-					if (src && usr.machine==src)
-						src.interact(usr)
+				if (!QDELETED(src) && usr.machine == src)
+					updateUsrDialog()
 				return TRUE
 		return FALSE
 	return ..()
@@ -397,14 +396,13 @@
 /obj/item/stack/attackby(obj/item/W, mob/user)
 	if (istype(W, /obj/item/stack) && can_merge())
 		var/obj/item/stack/S = W
-		. = src.transfer_to(S)
+		. = transfer_to(S)
 
-		spawn(0) //give the stacks a chance to delete themselves if necessary
-			if (S && usr.machine==S)
-				S.interact(usr)
-			if (src && usr.machine==src)
-				src.interact(usr)
-		return
+		if (!QDELETED(S) && usr.machine == S)
+			S.updateUsrDialog()
+		if (!QDELETED(src) && usr.machine == src)
+			updateUsrDialog()
+		return .
 
 	return ..()
 
