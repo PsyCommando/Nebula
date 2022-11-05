@@ -202,9 +202,9 @@
 	initial_flooring = /decl/flooring/tiling/mono/white
 
 /turf/simulated/floor/tiled/monofloor
-	name = "steel floor"
+	name = "floor"
 	icon_state = "steel_monofloor"
-	initial_flooring = /decl/flooring/tiling/mono/steel
+	initial_flooring = /decl/flooring/tiling/mono
 
 /turf/simulated/floor/tiled/white/airless
 	name = "airless floor"

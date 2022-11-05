@@ -170,10 +170,6 @@
 	icon_base = "monotile"
 	build_type = /obj/item/stack/tile/mono
 
-/decl/flooring/tiling/mono/steel
-	icon_base = "steel_monofloor"
-	build_type = /obj/item/stack/tile/mono/steel
-
 /decl/flooring/tiling/mono/dark
 	color = COLOR_DARK_GRAY
 	build_type = /obj/item/stack/tile/mono/dark
