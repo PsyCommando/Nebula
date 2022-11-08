@@ -41,8 +41,6 @@
 	if(program)
 		program.process()
 
-	//update_icon()
-
 /obj/machinery/embedded_controller/interface_interact(mob/user)
 	ui_interact(user)
 	return TRUE

@@ -1,4 +1,4 @@
-// Provides remote access to a controller (since they must be unique).
+///Provides remote access to a controller (since they must be unique).
 /obj/machinery/dummy_airlock_controller
 	name            = "airlock control terminal"
 	icon            = 'icons/obj/airlock_machines.dmi'
@@ -38,13 +38,6 @@
 	appearance = master_controller
 	master_controller.ui_interact(user, state = remote_state)
 	return TRUE
-
-// /obj/machinery/dummy_airlock_controller/powered(var/chan = -1, var/area/check_area = null)
-// 	. = ..()
-// 	if(master_controller)
-// 		var/area/A = get_area(master_controller)
-// 		return . && master_controller.powered(chan, A)
-
 
 /obj/machinery/dummy_airlock_controller/proc/setup_target_controller()
 	if(!id_tag)
