@@ -33,7 +33,7 @@
 	var/outreach_initialized = FALSE
 
 /datum/map/outreach/get_map_info()
-	return "You are en route to Outreach, a desolate planet previously targeted for mining operations, but now largely abandoned. Judges - corporate law enforcement - remain in the sector to keep the order. Colonists come from a wide variety of backgrounds, but universally with only the shirt on their backs."
+	return "You are en route to Outreach, a desolate planet previously targeted for mining operations, but now largely abandoned. Colonists come from a wide variety of backgrounds, but universally with only the shirt on their backs."
 
 /datum/map/outreach/build_exoplanets()
 	log_debug("MAP: building exoplanets!") //#REMOVEME
@@ -45,4 +45,3 @@
 				outreach_initialized = TRUE
 				break
 	. = ..()
-	
