@@ -179,13 +179,14 @@
 /decl/stock_part_preset/terminal_setup
 	expected_part_type = /obj/item/stock_parts/power/terminal
 
-/decl/stock_part_preset/terminal_setup/apply(obj/machinery/machine, var/obj/item/stock_parts/power/terminal/part)
+/decl/stock_part_preset/terminal_setup/apply(obj/machinery/machine, var/obj/item/stock_parts/power/terminal/part, var/turf/picked_turf)
 	if(isturf(machine.loc))
 		part.make_terminal(machine)
 
 //Offset terminals towards the owner's facing direction
-/decl/stock_part_preset/terminal_connect/offset_dir/apply(obj/machinery/machine, obj/item/stock_parts/power/terminal/part, turf/picked_turf)
+/decl/stock_part_preset/terminal_connect/offset_dir/apply(obj/machinery/machine, obj/item/stock_parts/power/terminal/part)
 	. = ..(machine, part, get_step(machine.loc, machine.dir))
 
 /decl/stock_part_preset/terminal_setup/offset_dir/apply(obj/machinery/machine, obj/item/stock_parts/power/terminal/part)
+	part.terminal_dir = machine.dir //Make the terminal in the direction we're facing
 	. = ..(machine, part)
