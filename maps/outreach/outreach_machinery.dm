@@ -361,9 +361,21 @@
 	_input_on      = TRUE
 	_output_maxed  = FALSE
 	_output_on     = TRUE
-	output_level   = 50000
+	output_level   = 150000
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_capacity = 5,
+		/obj/item/stock_parts/smes_coil/super_io       = 1,
+	)
+
+/obj/machinery/power/smes/buildable/preset/outreach/substation
+	_fully_charged = TRUE
+	_input_maxed   = TRUE
+	_input_on      = TRUE
+	_output_maxed  = FALSE
+	_output_on     = TRUE
+	output_level   = 100000
+	uncreated_component_parts = list(
+		/obj/item/stock_parts/smes_coil/super_capacity = 2,
 		/obj/item/stock_parts/smes_coil/super_io       = 1,
 	)
 

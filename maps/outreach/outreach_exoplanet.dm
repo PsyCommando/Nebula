@@ -21,7 +21,7 @@
 	water_color           = COLOR_BOTTLE_GREEN
 	water_material        = /decl/material/gas/chlorine
 	ice_material          = /decl/material/gas/chlorine
-	
+
 	//Sector Access
 	free_landing          = FALSE
 	instant_contact       = TRUE
@@ -67,7 +67,7 @@
 	generate_planet_image()
 	generate_daycycle()
 	START_PROCESSING(SSobj, src)
-#endif 
+#endif
 
 /obj/effect/overmap/visitable/sector/exoplanet/outreach/find_z_levels()
 	//Bypass the broken base code that prevents exoplanet from looking for their owned z-levels
@@ -197,7 +197,7 @@
 	iterations = 5
 	descriptor = "outreach abyssal caves"
 	wall_type =  /turf/exterior/wall/outreach/abyss
-	floor_type = /turf/exterior/barren/mining/outreach/abyss
+	floor_type = /turf/exterior/volcanic/mining/outreach/abyss
 	mineral_turf = /turf/exterior/wall/random/outreach/abyss
 
 /datum/random_map/automata/cave_system/outreach/subterrane
@@ -210,7 +210,7 @@
 /datum/random_map/automata/cave_system/outreach/mountain
 	iterations = 5
 	descriptor = "outreach mountain caves"
-	wall_type =  /turf/exterior/wall/volcanic/outreach
+	wall_type =  /turf/exterior/wall/outreach/mountain
 	floor_type = /turf/exterior/volcanic/mining
 	mineral_turf = /turf/exterior/wall/random/outreach/mountain
 

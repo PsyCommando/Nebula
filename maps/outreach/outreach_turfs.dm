@@ -52,6 +52,7 @@
 	temperature          = OUTREACH_TEMP
 	heat_capacity        = 80000
 	thermal_conductivity = 0.005
+	open_turf_type       = /turf/simulated/open
 
 #undef OUTREACH_TEMP
 #undef OUTREACH_ATMOS
@@ -106,30 +107,66 @@
 	stripe_color = COLOR_CYAN
 
 ///////////////////////////////////////////////////////////////////////////////////
+// Underground Turfs
+///////////////////////////////////////////////////////////////////////////////////
+
+//Underground Outpost Rock Floors
+/turf/simulated/floor/volcanic/outreach
+	name = "igneous rock floor"
+	open_turf_type = /turf/simulated/open
+
+//Outpost Rock Walls
+/turf/exterior/wall/outreach/mountain
+	name = "weathered sandstone wall"
+	strata   = /decl/strata/outreach/mountain
+	material = /decl/material/solid/stone/sandstone
+	floor_type = /turf/simulated/floor/asteroid/outreach
+	open_turf_type = /turf/simulated/open
+
+/turf/exterior/wall/outreach/subterrane
+	name = "erroded sandstone wall"
+	strata = /decl/strata/outreach/subterrane
+	material = /decl/material/solid/stone/sandstone
+	floor_type = /turf/simulated/floor/asteroid/outreach
+	open_turf_type = /turf/simulated/open
+
+/turf/exterior/wall/outreach/abyss
+	name = "compacted slate wall"
+	strata   = /decl/strata/outreach/abyssal
+	material = /decl/material/solid/stone/slate
+	floor_type = /turf/simulated/floor/volcanic/outreach
+	open_turf_type = /turf/simulated/magma
+
+///////////////////////////////////////////////////////////////////////////////////
 // Mining Turfs
 ///////////////////////////////////////////////////////////////////////////////////
+//Mining Floors
+/turf/exterior/barren/mining/outreach/mountain
+	color = "#d9c179"
+	open_turf_type = /turf/exterior/open
+
 /turf/exterior/barren/mining/outreach/subterrane
-	color = "#223053"
-/turf/exterior/barren/mining/outreach/abyss
-	color = "#223053"
+	color = "#d9c179"
+	open_turf_type = /turf/exterior/open
 
-//Underground turfs
-/turf/exterior/wall/volcanic/outreach
-	strata = /decl/strata/outreach/mountain
-/turf/exterior/wall/outreach/subterrane
-	strata = /decl/strata/outreach/subterrane
-/turf/exterior/wall/outreach/abyss
-	strata = /decl/strata/outreach/abyssal
+/turf/exterior/volcanic/mining/outreach/abyss
+	open_turf_type = /turf/exterior/open
 
-//Mining turfs
-/turf/exterior/wall/random/outreach
-/turf/exterior/wall/random/outreach/abyss
-	strata = /decl/strata/outreach/abyssal
-/turf/exterior/wall/random/outreach/subterrane
-	strata = /decl/strata/outreach/subterrane
+//Mining Walls
 /turf/exterior/wall/random/outreach/mountain
 	strata = /decl/strata/outreach/mountain
+	material = /decl/material/solid/stone/sandstone
+	floor_type = /turf/exterior/barren/mining/outreach/mountain
 
+/turf/exterior/wall/random/outreach/subterrane
+	strata = /decl/strata/outreach/subterrane
+	material = /decl/material/solid/stone/sandstone
+	floor_type = /turf/exterior/barren/mining/outreach/subterrane
+
+/turf/exterior/wall/random/outreach/abyss
+	strata   = /decl/strata/outreach/abyssal
+	material = /decl/material/solid/stone/slate
+	floor_type = /turf/exterior/volcanic/mining/outreach/abyss
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Surface Turfs
@@ -141,18 +178,16 @@
 /turf/exterior/wall/outreach
 	name           = "erroded wall"
 	open_turf_type = /turf/exterior/barren/outreach //Don't allow just removing this easily
-	prev_type      = /turf/exterior/barren/outreach
+	floor_type     = /turf/exterior/barren/outreach
 
 /turf/exterior/chlorine_sand/outreach
 	name           = "chlorine salts"
 	open_turf_type = /turf/exterior/barren/outreach //Don't allow just removing this easily
-	prev_type      = /turf/exterior/barren/outreach
 
 /turf/exterior/water/outreach
 	name           = "muriatic acid swamp"
 	reagent_type   = /decl/material/liquid/acid/hydrochloric
 	open_turf_type = /turf/exterior/chlorine_sand/outreach //Don't allow just removing this easily
-	prev_type      = /turf/exterior/chlorine_sand/outreach
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Turf Initializers
@@ -166,13 +201,23 @@
 		/obj/structure/boulder             = 30,
 		/obj/structure/leech_spawner       = 5,
 	)
+	var/list/underwater_props_probs = list(
+		/obj/structure/flora/seaweed/glow  = 5,
+		/obj/structure/flora/seaweed/large = 10,
+		/obj/structure/flora/seaweed/mid   = 20,
+		/obj/structure/flora/seaweed       = 40
+	)
 	var/list/mob_probs = list(
 		/mob/living/simple_animal/hostile/slug                 = 1,
+		/mob/living/simple_animal/hostile/retaliate/giant_crab = 3,
+	)
+	var/list/underwater_mob_probs = list(
 		/mob/living/simple_animal/hostile/retaliate/giant_crab = 3,
 	)
 	var/list/allowed_turfs = list(
 		/turf/exterior/barren,
 		/turf/exterior/chlorine_sand,
+		/turf/exterior/water/outreach,
 	)
 
 /decl/turf_initializer/outreach_surface/InitializeTurf(var/turf/exterior/T)
@@ -184,7 +229,7 @@
 	if(locate(/obj, T))
 		return
 
-	var/list/possible_spawns = surface_props_probs|mob_probs
+	var/list/possible_spawns = istype(T, /turf/exterior/water)? (underwater_props_probs|underwater_mob_probs) : (surface_props_probs|mob_probs)
 	if(rand(0, 50) != 50)
 		return //No prop for this tile
 
