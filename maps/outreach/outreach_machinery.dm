@@ -111,6 +111,38 @@
 	)
 
 ////////////////////////////////////////////////////////////////////////
+// Doors
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/door/airlock/external/glass/wired
+	stock_part_presets = list(
+		/decl/stock_part_preset/terminal_setup,
+		/decl/stock_part_preset/radio/receiver/airlock/external_air,
+		/decl/stock_part_preset/radio/event_transmitter/airlock/external_air
+	)
+	uncreated_component_parts = list(
+		/obj/item/stock_parts/power/terminal,
+		/obj/item/stock_parts/radio/transmitter/on_event/buildable,
+		/obj/item/stock_parts/radio/receiver/buildable
+	)
+
+////////////////////////////////////////////////////////////////////////
+// Blast Doors
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/door/blast/regular/wired
+	stock_part_presets = list(
+		/decl/stock_part_preset/terminal_setup,
+		/decl/stock_part_preset/radio/receiver/blast_door,
+	)
+	uncreated_component_parts = list(
+		/obj/item/stock_parts/power/terminal,
+		/obj/item/stock_parts/radio/receiver/buildable,
+	)
+
+/obj/machinery/door/blast/regular/wired/open
+	icon_state = "pdoor0"
+	begins_closed = FALSE
+
+////////////////////////////////////////////////////////////////////////
 // High volume air vent
 ////////////////////////////////////////////////////////////////////////
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock
