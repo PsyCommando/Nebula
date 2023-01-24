@@ -192,14 +192,53 @@
 
 	for(var/datum/exoplanet_theme/T in themes)
 		T.before_map_generation(src)
+
 	for(var/zlevel in map_z)
-		var/list/edges
-		edges += block(locate(1, 1, zlevel), locate(TRANSITIONEDGE, maxy, zlevel))
-		edges |= block(locate(maxx-TRANSITIONEDGE, 1, zlevel),locate(maxx, maxy, zlevel))
-		edges |= block(locate(1, 1, zlevel), locate(maxx, TRANSITIONEDGE, zlevel))
-		edges |= block(locate(1, maxy-TRANSITIONEDGE, zlevel),locate(maxx, maxy, zlevel))
-		for(var/turf/T in edges)
-			T.ChangeTurf(/turf/exterior/planet_edge)
+		//Blocks of all the turfs on a given edge
+		var/list/all_edges = list(
+			"[NORTH]" = block(locate(1, maxy-TRANSITIONEDGE, zlevel), locate(maxx, maxy, zlevel)),
+			"[SOUTH]" = block(locate(1, 1, zlevel),                   locate(maxx, TRANSITIONEDGE, zlevel)),
+			"[EAST]"  = block(locate(maxx-TRANSITIONEDGE, 1, zlevel), locate(maxx, maxy, zlevel)),
+			"[WEST]"  = block(locate(1, 1, zlevel),                   locate(TRANSITIONEDGE, maxy, zlevel)),
+		)
+		var/static/const/CON_LOOP = 0
+		var/static/const/CON_WALL = 1
+		var/static/const/CON_TRAN = 2
+		//The type of edge to apply in a given direction
+		var/list/edge_states = list(
+			"[NORTH]" = CON_LOOP,
+			"[SOUTH]" = CON_LOOP,
+			"[EAST]"  = CON_LOOP,
+			"[WEST]"  = CON_LOOP,
+		)
+		var/obj/abstract/level_data/data = global.levels_by_z["[zlevel]"]
+
+		//Change edge states for transition edges and edges opposite a transition edge
+		for(var/lvlid in data.connects_to)
+			var/direction = data.connects_to[lvlid]
+			if(direction & (UP|DOWN) || isnull(direction))
+				continue
+			var/opposite  = global.reverse_dir[direction]
+			edge_states["[direction]"] = CON_TRAN
+			//If we got a transistion edge, don't loop the opposite edge
+			if(edge_states["[opposite]"] == CON_LOOP)
+				edge_states["[opposite]"] = CON_WALL
+
+		for(var/edgedir in edge_states)
+			var/state = edge_states[edgedir]
+			var/turfpath
+			switch(state)
+				if(CON_LOOP)
+					turfpath = /turf/exterior/planet_edge
+				if(CON_WALL)
+					turfpath = /turf/unsimulated/mineral
+				if(CON_TRAN)
+					turfpath = /turf/exterior/transition_edge
+
+			log_debug("[src] [num2dir(text2num(edgedir))], z:[zlevel], edge is [(state == CON_LOOP)? "loop" : (state == CON_WALL? "wall" : "transition")]")
+			for(var/turf/T in all_edges[edgedir])
+				T.ChangeTurf(turfpath)
+
 		for(var/map_type in map_generators)
 			if(ispath(map_type, /datum/random_map/noise/exoplanet))
 				new map_type(x_origin, y_origin, zlevel, x_size, y_size, FALSE, TRUE, planetary_area, plant_colors)

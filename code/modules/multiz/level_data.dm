@@ -7,7 +7,7 @@ var/global/list/levels_by_id = list()
 	var/level_id
 	var/level_name
 	var/base_turf
-	var/list/connects_to
+	var/list/connects_to //Associative list with the level id as key, and the cardinal direction where the level is connected (UP, DOWN, NORTH, SOUTH, EAST, WEST), ex: "someplanet" = SOUTH, "someotherlvl" = DOWN.
 	var/level_flags
 
 INITIALIZE_IMMEDIATE(/obj/abstract/level_data)
@@ -58,7 +58,7 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data)
 	if(!length(connects_to))
 		return
 	for(var/other_id in connects_to)
-		var/obj/abstract/level_data/neighbor = global.levels_by_id[other_id] 
+		var/obj/abstract/level_data/neighbor = global.levels_by_id[other_id]
 		neighbor.add_connected_levels(found)
 
 // Mappable subtypes.
