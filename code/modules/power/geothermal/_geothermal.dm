@@ -216,7 +216,7 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            12000
 /obj/machinery/geothermal/on_update_icon()
 	cut_overlays()
 	var/output_ratio = current_pressure / 3000
-	var/glow_alpha   = Clamp(round((current_pressure / MAX_GEOTHERMAL_PRESSURE) * 255), 10, 255)
+	var/glow_alpha   = clamp(round((current_pressure / MAX_GEOTHERMAL_PRESSURE) * 255), 10, 255)
 	if(!glow)
 		glow = emissive_overlay(icon, "geothermal-glow")
 	if(!length(neighbor_connectors))
@@ -237,8 +237,8 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            12000
 		set_light(0)
 		return
 
-	set_light(1, Clamp(output_ratio, 0.2, 1.0), COLOR_RED)
-	add_overlay("geothermal-turbine-[Clamp(round(output_ratio * 3), 0, 3)]")
+	set_light(1, clamp(output_ratio, 0.2, 1.0), COLOR_RED)
+	add_overlay("geothermal-turbine-[clamp(round(output_ratio * 3), 0, 3)]")
 	glow.alpha = glow_alpha
 	add_overlay(glow)
 

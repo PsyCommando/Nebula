@@ -12,7 +12,6 @@
 	initial_flooring = null
 	initial_gas      = null
 	temperature      = TCMB
-	mineral          = /decl/material/solid/stone/slate
 	turf_flags       = TURF_ACID_IMMUNE | TURF_FLAG_BACKGROUND
 
 /turf/simulated/floor/volcanic/can_engrave()

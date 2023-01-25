@@ -21,13 +21,12 @@
 	power_channel = ENVIRON
 	idle_power_usage = 10
 	active_power_usage = 120 // No idea what the realistic amount would be.
+	directional_offset = "{'NORTH':{'y':-24}, 'SOUTH':{'y':28}, 'EAST':{'x':24}, 'WEST':{'x':-24}}"
 
 /obj/machinery/oxygen_pump/Initialize()
 	. = ..()
 	tank = new spawn_type (src)
 	contained = new mask_type (src)
-	if(!pixel_x && !pixel_y)
-		update_wall_offset()
 
 /obj/machinery/oxygen_pump/Destroy()
 	if(breather)
@@ -231,19 +230,3 @@
 			tank.distribute_pressure += cp
 		tank.distribute_pressure = min(max(round(tank.distribute_pressure), 0), TANK_MAX_RELEASE_PRESSURE)
 		return 1
-
-/obj/machinery/oxygen_pump/proc/update_wall_offset()
-	var/_pixel_x = 0
-	var/_pixel_y = 0
-	switch(dir)
-		if(NORTH)
-			_pixel_y -= WORLD_ICON_SIZE - 12
-		if(SOUTH)
-			_pixel_y += WORLD_ICON_SIZE - 8
-		if(EAST)
-			_pixel_x -= WORLD_ICON_SIZE - 8
-		if(WEST)
-			_pixel_x += WORLD_ICON_SIZE - 8
-	default_pixel_x = _pixel_x
-	default_pixel_y = _pixel_y
-	reset_offsets(0)

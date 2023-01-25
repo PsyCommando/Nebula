@@ -83,7 +83,7 @@
 	desc = "A large piece of space-resistant printed paper."
 	icon = 'icons/obj/contraband.dmi'
 	anchored = TRUE
-	directional_offset = "{'NORTH':{'y':32}, 'SOUTH':{'y':-32}, 'EAST':{'x':32}, 'WEST':{'x':-32}}"
+	directional_offset = "{'NORTH':{'y':-28}, 'SOUTH':{'y':28}, 'EAST':{'x':32}, 'WEST':{'x':-32}}"
 	var/poster_type
 	var/ruined = 0
 

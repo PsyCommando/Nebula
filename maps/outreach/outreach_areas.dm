@@ -37,7 +37,6 @@
 /area/exoplanet/outreach/underground
 	name            = "Outreach Underground"
 	area_flags      = AREA_FLAG_IS_BACKGROUND | AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	show_starlight  = FALSE
 	is_outside      = OUTSIDE_NO
 	sound_env       = CAVE
 	forced_ambience = null
@@ -344,59 +343,113 @@
 	area_flags = AREA_FLAG_MAINTENANCE
 
 /area/outreach/outpost/maint/passage
-	name = "OB 1B Maintenance Passage"
+	name = "OB 1B Maintenance"
 	icon_state = "maintcentral"
 
 /area/outreach/outpost/maint/passage/b2/northwest
-	name = "OB 2B NW Maint Passage"
+	name = "OB 2B NW Maint"
 	icon_state = "fpmaint"
 /area/outreach/outpost/maint/passage/b2/northeast
-	name = "OB 2B NE Maint Passage"
+	name = "OB 2B NE Maint"
 	icon_state = "fsmaint"
 /area/outreach/outpost/maint/passage/b2/southwest
-	name = "OB 2B SW Maint Passage"
+	name = "OB 2B SW Maint"
 	icon_state = "apmaint"
 /area/outreach/outpost/maint/passage/b2/southeast
-	name = "OB 2B SE Maint Passage"
+	name = "OB 2B SE Maint"
 	icon_state = "asmaint"
 
 /area/outreach/outpost/maint/passage/b1/northwest
-	name = "OB 1B NW Maint Passage"
+	name = "OB 1B NW Maint"
+	icon_state = "fpmaint"
+/area/outreach/outpost/maint/passage/b1/northwest/airlock
+	name = "OB 1B NE Alck Maint"
 	icon_state = "fpmaint"
 /area/outreach/outpost/maint/passage/b1/northeast
-	name = "OB 1B NE Maint Passage"
+	name = "OB 1B NE Maint"
+	icon_state = "fsmaint"
+/area/outreach/outpost/maint/passage/b1/northeast/airlock
+	name = "OB 1B NE Alck Maint"
 	icon_state = "fsmaint"
 /area/outreach/outpost/maint/passage/b1/southwest
-	name = "OB 1B SW Maint Passage"
+	name = "OB 1B SW Maint"
+	icon_state = "apmaint"
+/area/outreach/outpost/maint/passage/b1/southwest/airlock
+	name = "OB 1B SW Alck Maint"
 	icon_state = "apmaint"
 /area/outreach/outpost/maint/passage/b1/southeast
-	name = "OB 1B SE Maint Passage"
+	name = "OB 1B SE Maint"
 	icon_state = "asmaint"
+/area/outreach/outpost/maint/passage/b1/southeast/airlock
+	name = "OB 1B SE Alck Maint"
+	icon_state = "asmaint"
+/area/outreach/outpost/maint/passage/b1/secmaint
+	name = "OB 1B Sec Maint"
+	icon_state = "maint_security_port"
+/area/outreach/outpost/maint/passage/b1/mining
+	name = "OB 1B Mining Maint"
+	icon_state = "maintcentral"
+/area/outreach/outpost/maint/passage/b1/east/junct
+	name = "OB 1B E Maint Junction"
+	icon_state = "smaint"
+/area/outreach/outpost/maint/passage/b1/west/junct
+	name = "OB 1B W Maint Junction"
+	icon_state = "pmaint"
+/area/outreach/outpost/maint/passage/b1/north/atmos
+	name = "OB 1B Atmos Maint"
+	icon_state = "maint_engineering"
+/area/outreach/outpost/maint/passage/b1/north
+	name = "OB 1B N Maint"
+	icon_state = "fmaint"
+
 
 /area/outreach/outpost/maint/passage/ground/northwest
-	name = "OB GF NW Maint Passage"
+	name = "OB GF NW Maint"
 	icon_state = "fpmaint"
 /area/outreach/outpost/maint/passage/ground/northeast
-	name = "OB GF NE Maint Passage"
+	name = "OB GF NE Maint"
 	icon_state = "fsmaint"
 /area/outreach/outpost/maint/passage/ground/southwest
-	name = "OB GF SW Maint Passage"
+	name = "OB GF SW Maint"
 	icon_state = "apmaint"
 /area/outreach/outpost/maint/passage/ground/southeast
-	name = "OB GF SE Maint Passage"
+	name = "OB GF SE Maint"
 	icon_state = "asmaint"
+/area/outreach/outpost/maint/passage/ground/north
+	name = "OB GF N Maint"
+	icon_state = "fmaint"
+/area/outreach/outpost/maint/passage/ground/north/hangar
+	name = "OB GF N Hangar Maint"
+/area/outreach/outpost/maint/passage/ground/west
+	name = "OB GF W Maint"
+	icon_state = "pmaint"
+/area/outreach/outpost/maint/passage/ground/west/junct
+	name = "OB GF W Maint Junction"
+/area/outreach/outpost/maint/passage/ground/south
+	name = "OB GF S Maint"
+	icon_state = "amaint"
+/area/outreach/outpost/maint/passage/ground/south/offices
+	name = "OB GF S Offices Maint"
+/area/outreach/outpost/maint/passage/ground/east
+	name = "OB GF E Maint"
+	icon_state = "smaint"
+/area/outreach/outpost/maint/passage/ground/east/airlock
+	name = "OB GF E Alck Maint"
+/area/outreach/outpost/maint/passage/ground/east/eva
+	name = "OB GF E Alck Maint"
+	icon_state = "maint_eva"
 
 /area/outreach/outpost/maint/passage/f1/northwest
-	name = "OB 1F NW Maint Passage"
+	name = "OB 1F NW Maint"
 	icon_state = "fpmaint"
 /area/outreach/outpost/maint/passage/f1/northeast
-	name = "OB 1F NE Maint Passage"
+	name = "OB 1F NE Maint"
 	icon_state = "fsmaint"
 /area/outreach/outpost/maint/passage/f1/southwest
-	name = "OB 1F SW Maint Passage"
+	name = "OB 1F SW Maint"
 	icon_state = "apmaint"
 /area/outreach/outpost/maint/passage/f1/southeast
-	name = "OB 1F SE Maint Passage"
+	name = "OB 1F SE Maint"
 	icon_state = "asmaint"
 
 /area/outreach/outpost/maint/storage
@@ -744,6 +797,43 @@
 /area/outreach/outpost/vacant
 	name = "OB Vacant"
 	icon_state = "red2"
+
+/area/outreach/outpost/vacant/b1/south/east
+	name = "OB Vacant Room"
+
+/area/outreach/outpost/vacant/b1/south/east
+	name = "OB Vacant Room"
+
+/area/outreach/outpost/vacant/ground/depot
+	name = "OB GF Vacant Depot"
+	icon_state = "storage"
+/area/outreach/outpost/vacant/ground/office1
+	name = "OB GF Vacant Office #1"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office2
+	name = "OB GF Vacant Office #2"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office3
+	name = "OB GF Vacant Office #3"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office4
+	name = "OB GF Vacant Office #4"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office5
+	name = "OB GF Vacant Office #5"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office6
+	name = "OB GF Vacant Office #6"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office7
+	name = "OB GF Vacant Office #7"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office8
+	name = "OB GF Vacant Office #8"
+	icon_state = "law"
+/area/outreach/outpost/vacant/ground/office9
+	name = "OB GF Vacant Office #9"
+	icon_state = "law"
 
 ///////////////////////////////////////////////////
 // Disposals

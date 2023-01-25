@@ -82,9 +82,7 @@
 /area/outreach/outpost/hallway/north/floor1)
 "ao" = (
 /turf/simulated/wall/concrete,
-/area/outreach/outpost/vacant{
-	name = "OB 1F Vacant"
-	})
+/area/outreach/outpost/janitorial)
 "ap" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";
@@ -441,9 +439,7 @@
 /area/outreach/outpost/hallway/west/floor1)
 "bi" = (
 /turf/simulated/open,
-/area/outreach/outpost/vacant{
-	name = "OB 1F Vacant"
-	})
+/area/outreach/outpost/janitorial)
 "bj" = (
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -1924,9 +1920,7 @@
 /area/outreach/outpost/maint/passage/f1/southeast)
 "eb" = (
 /turf/simulated/wall/r_wall,
-/area/outreach/outpost/vacant{
-	name = "OB 1F Vacant"
-	})
+/area/outreach/outpost/janitorial)
 "ec" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable/white{

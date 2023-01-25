@@ -623,14 +623,10 @@
 /area/outreach/outpost/engineering/b2/smes)
 "bL" = (
 /turf/simulated/wall/concrete,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "bM" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/turf/simulated/wall,
+/area/outreach/outpost/disposals)
 "bN" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1266,14 +1262,12 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/basement2)
 "cW" = (
-/obj/machinery/alarm{
-	icon_state = "alarm0";
-	dir = 8
+/obj/machinery/conveyor{
+	dir = 2;
+	id_tag = "ob_b2_conveyor_disposal"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/turf/simulated/floor/plating,
+/area/outreach/outpost/disposals)
 "cX" = (
 /obj/machinery/alarm{
 	icon_state = "alarm0";
@@ -1320,23 +1314,20 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/b2)
 "dc" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/obj/machinery/conveyor{
+	dir = 8;
+	id_tag = "ob_b2_conveyor_disposal"
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/disposals)
 "dd" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
+/obj/structure/disposaloutlet{
+	icon_state = "outlet";
+	dir = 8
 	},
-/obj/machinery/power/apc/high{
-	icon_state = "apc0";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/disposals)
 "de" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
@@ -1860,18 +1851,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/b2)
 "ec" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 5
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "stripe";
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "ed" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -1951,11 +1936,12 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/basement2)
 "ek" = (
-/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "stripe";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "el" = (
 /obj/structure/sign/warning/moving_parts{
 	dir = 1;
@@ -2256,25 +2242,16 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/south/basement2)
 "eS" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
+/obj/structure/disposalpipe/segment,
+/obj/machinery/conveyor_switch/oneway{
+	id_tag = "ob_b2_conveyor_disposal"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "stripe";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "eT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";
@@ -2446,29 +2423,12 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/passage/b2/southeast)
 "fk" = (
-/obj/machinery/door/airlock/hatch/maintenance{
-	icon_state = "closed";
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
+/obj/machinery/alarm{
+	icon_state = "alarm0";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "fl" = (
 /obj/structure/flora/pottedplant/largebush,
 /obj/machinery/alarm{
@@ -3217,40 +3177,20 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/east/basement2)
 "gM" = (
-/obj/machinery/conveyor{
-	dir = 2;
-	id_tag = "ob_b2_conveyor_disposal"
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
-"gN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "stripe";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
+"gN" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "gO" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id_tag = "ob_b2_conveyor_disposal"
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "gP" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3386,10 +3326,15 @@
 /turf/simulated/wall,
 /area/outreach/outpost/stairwell/basement2)
 "hg" = (
-/turf/simulated/wall,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/high{
+	icon_state = "apc0";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "hh" = (
 /turf/simulated/wall,
 /area/outreach/outpost/maint/power/b2)
@@ -3397,15 +3342,16 @@
 /turf/simulated/wall,
 /area/outreach/outpost/maint/passage/b2/northwest)
 "hj" = (
-/obj/structure/disposaloutlet{
-	icon_state = "outlet";
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 6
 	},
-/obj/structure/disposalpipe/trunk,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "hk" = (
 /turf/simulated/wall,
 /area/outreach/outpost/hallway/north/basement2)
@@ -3447,51 +3393,72 @@
 /turf/simulated/floor/reinforced/airless,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "hs" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
-	dir = 9
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "ht" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
-"hu" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/conveyor_switch/oneway{
-	id_tag = "ob_b2_conveyor_disposal"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
-"hv" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
-"hw" = (
+/area/outreach/outpost/disposals)
+"hu" = (
+/obj/machinery/door/airlock/hatch/maintenance{
+	icon_state = "closed";
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/outreach/outpost/disposals)
+"hv" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
+"hw" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "hx" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/atmos/tank{
 	dir = 4;
@@ -3573,15 +3540,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/b2)
 "hG" = (
-/obj/machinery/light,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "hH" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";
@@ -3764,9 +3724,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/vacant{
-	name = "OB 2B Vacant 2"
-	})
+/area/outreach/outpost/disposals)
 "ib" = (
 /obj/machinery/light_switch{
 	icon_state = "light0";
@@ -23156,12 +23114,12 @@ cy
 ei
 dH
 bL
-hg
-hg
-hg
-hg
-hg
-hg
+bM
+bM
+bM
+bM
+bM
+bM
 bW
 bW
 es
@@ -23358,12 +23316,12 @@ at
 dx
 at
 bL
-gM
-gM
-gM
-gM
-hw
-hg
+cW
+cW
+cW
+cW
+hv
+bM
 bW
 bW
 es
@@ -23560,12 +23518,12 @@ bJ
 dx
 eW
 bL
-gO
-hs
-hv
-hv
-hv
-hg
+dc
+ec
+gM
+gM
+gM
+bM
 bW
 ft
 es
@@ -23762,12 +23720,12 @@ at
 dx
 hV
 bL
-gO
-ht
 dc
-ec
-hG
-hg
+ek
+gN
+hj
+hw
+bM
 bW
 gr
 es
@@ -23964,12 +23922,12 @@ cz
 fO
 cz
 bL
-hj
-hu
-ek
-gN
+dd
+eS
+gO
+hs
+hG
 bM
-hg
 gi
 hO
 hn
@@ -24167,11 +24125,11 @@ hR
 hT
 dl
 bL
-cW
-dd
-eS
-ia
+fk
 hg
+ht
+ia
+bM
 dp
 fu
 hn
@@ -24371,7 +24329,7 @@ iP
 dl
 bL
 bL
-fk
+hu
 bL
 bL
 bS
