@@ -81,7 +81,7 @@
 		exhale_type =         species.exhale_type  || /decl/material/gas/carbon_dioxide
 	else
 		//Species-less lungs should be illegal
-		CRASH("Got null species")
+		log_debug("Got null species")
 		max_pressure_diff =   initial(max_pressure_diff)
 		min_breath_pressure = initial(min_breath_pressure)
 		breath_type =         /decl/material/gas/oxygen
@@ -175,7 +175,7 @@
 	var/damage_ratio = damage/max_damage
 	if(damage_ratio > 0) //If full health don't do anything
 		safe_pressure_min *= (1 + rand(1,4)) * damage_ratio
-	
+
 	var/breatheffect = GET_CHEMICAL_EFFECT(owner, CE_BREATHLOSS)
 	if(!forced && breatheffect && !GET_CHEMICAL_EFFECT(owner, CE_STABLE)) //opiates are bad mmkay
 		safe_pressure_min *= 1 + breatheffect
@@ -188,7 +188,7 @@
 
 	var/inhaling = breath.gas[breath_type]
 	var/inhale_efficiency = min(round(((inhaling/breath.total_moles)*breath_pressure)/safe_pressure_min, 0.001), 3)
-	
+
 
 	// Not enough to breathe
 	if(inhale_efficiency < 1)

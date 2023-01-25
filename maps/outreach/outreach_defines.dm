@@ -1,3 +1,10 @@
+//Forward declare the tracks from persistence modpack, so CI stops crying
+/decl/music_track/dirtyoldfrogg
+/decl/music_track/neon_koto
+/decl/music_track/blood_loss
+/decl/music_track/marhaba
+
+//Outreach defs
 /datum/map/outreach
 	name            = "Outreach"
 	full_name       = "Outreach Outpost"
@@ -22,9 +29,9 @@
 	)
 	lobby_tracks = list(
 		/decl/music_track/dirtyoldfrogg,
-		// /decl/music_track/neon_koto,
-		// /decl/music_track/blood_loss,
-		// /decl/music_track/marhaba,
+		/decl/music_track/neon_koto,
+		/decl/music_track/blood_loss,
+		/decl/music_track/marhaba,
 	)
 
 	//#REMOVEME: Shouldn't get commited!
@@ -34,14 +41,3 @@
 
 /datum/map/outreach/get_map_info()
 	return "You are en route to Outreach, a desolate planet previously targeted for mining operations, but now largely abandoned. Colonists come from a wide variety of backgrounds, but universally with only the shirt on their backs."
-
-/datum/map/outreach/build_exoplanets()
-	log_debug("MAP: building exoplanets!") //#REMOVEME
-	if(!outreach_initialized)
-		for(var/z in global.overmap_sectors)
-			var/obj/effect/overmap/visitable/sector/exoplanet/outreach/O = global.overmap_sectors[z]
-			if(istype(O))
-				O.build_level() //We have to force outreach to update now, otherwise it won't set its atmosphere
-				outreach_initialized = TRUE
-				break
-	. = ..()

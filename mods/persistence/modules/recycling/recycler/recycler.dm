@@ -38,9 +38,9 @@
 	var/tmp/sound_idle            = 'sound/machines/creaky_loop.ogg'    ///Looped sound of the machine idling
 	var/tmp/sound_processing      = 'sound/machines/machine_wirr.ogg'   ///Sound played when something is being grinded by the machine
 	var/tmp/sound_outputs         = 'sound/machines/hiss.ogg'           ///Sound played when materials are released from the machine
-	
+
 	var/tmp/datum/sound_token/sound_looping    ///Sound token to the looping grinder sound
-	var/tmp/atom/movable/grinding              ///What we're currently grinding down. 
+	var/tmp/atom/movable/grinding              ///What we're currently grinding down.
 	var/tmp/emergency_stopped     = FALSE      ///Temporality stops the machine if it detects a mob
 	var/emergency_stop_time       = 5 SECONDS  ///Amount of time the recycler will pause when it encounters an object triggering its emergency stop mode.
 	var/overheating               = FALSE      ///If set to true the machine will overheat each times it eats something and spit sparks
@@ -50,7 +50,7 @@
 	var/efficiency                = 0.2        ///Percentage of materials recovered from the recycled item. Starting value is the maximum it'll go
 	var/tmp/time_last_output      = 0          ///Time we last outputed material dust
 	var/tmp/time_last_crush       = 0          ///Time we last crushed something
-	
+
 	/**list of all the solid material we've accumulated so far. Handled this way to prevent random bullshit reactions and allow planned bullshit reactions. */
 	var/list/solid_matter
 
@@ -116,7 +116,7 @@
 	if(use_power == POWER_USE_ACTIVE)
 		if((time_last_crush + 5 SECONDS) >= REALTIMEOFDAY)
 			update_use_power(POWER_USE_IDLE)
-	
+
 	//If we have materials to release, do it
 	if(LAZYLEN(solid_matter))
 		if((time_last_output + RECYCLER_OUTPUT_INTERVAL) > REALTIMEOFDAY)
@@ -199,12 +199,13 @@
 	crush(AM)
 	grinding = null
 
-/obj/machinery/recycler/proc/initialize_reagents()
+/obj/machinery/recycler/initialize_reagents(populate)
 	if(!reagents)
 		create_reagents(RECYCLER_INTERNAL_VOLUME)
 	else
 		reagents.maximum_volume = RECYCLER_INTERNAL_VOLUME
 		reagents.update_total()
+	. = ..()
 
 /obj/machinery/recycler/proc/is_running()
 	return operable() && use_power && !emergency_stopped
@@ -239,7 +240,7 @@
 		O.reagents.trans_to_obj(src, efficiency * min(O.reagents.total_volume, reagents.maximum_volume))
 		if(overflow && loc)
 			O.reagents.trans_to(loc, overflow)
-	
+
 	//Handle contents
 	for(var/atom/movable/AM in O.get_contained_external_atoms())
 		crush(AM, FALSE, recursive_depth + 1)

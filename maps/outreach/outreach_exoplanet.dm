@@ -1,3 +1,14 @@
+/datum/map/outreach/build_exoplanets()
+	log_debug("MAP: building exoplanets!") //#REMOVEME
+	if(!outreach_initialized)
+		for(var/z in global.overmap_sectors)
+			var/obj/effect/overmap/visitable/sector/exoplanet/outreach/O = global.overmap_sectors[z]
+			if(istype(O))
+				O.build_level() //We have to force outreach to update now, otherwise it won't set its atmosphere
+				outreach_initialized = TRUE
+				break
+	. = ..()
+
 /**Returns a list with the ratio (0 to 1) for each gases in the atmosphere of outreach. */
 /proc/OutreachAtmosRatios()
 	return list(
