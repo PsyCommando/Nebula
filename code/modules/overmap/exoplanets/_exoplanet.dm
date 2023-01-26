@@ -81,6 +81,9 @@
 
 	var/obj/abstract/weather_system/weather_system = /decl/state/weather/calm // Initial weather is passed to the system as its default state.
 
+	/**Makes it more reliable to find the z-level linked to this sector */
+	var/prefered_level_id
+
 /obj/effect/overmap/visitable/sector/exoplanet/proc/get_strata()
 	return crust_strata
 

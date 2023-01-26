@@ -70,6 +70,9 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 	"bamboo",
 )
 
+///////////////////////////////////////////////////////////////////////////
+// Planet Grass Turfs
+///////////////////////////////////////////////////////////////////////////
 /turf/exterior/kleibkhar_grass
 	name = "wild grass"
 	icon = 'icons/turf/exterior/wildgrass.dmi'
@@ -83,7 +86,7 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 	var/obj/effect/overmap/visitable/sector/exoplanet/E = global.overmap_sectors["[z]"]
 	if(istype(E) && E.grass_color)
 		color = E.grass_color
-	
+
 	// Turfs don't retain persistent IDs across load currently, so we just check if we're in a loaded world instead.
 	if(!SSpersistence.in_loaded_world)
 		generate_tile_prop()
@@ -91,12 +94,12 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 /turf/exterior/kleibkhar_grass/proc/generate_tile_prop()
 	if(rand(0, KLEIBKHAR_VEGETATION_CHANCE) != KLEIBKHAR_VEGETATION_CHANCE || length(contents))
 		return //No vegetation/prop for this tile
-	
+
 	//Pick a prop/plant
 	var/picked = pick(
-			prob(60); "plant", 
-			prob(60); "lichen", 
-			prob(40); "dirt", 
+			prob(60); "plant",
+			prob(60); "lichen",
+			prob(40); "dirt",
 			prob(25); "rock",
 			prob(25); "dead_tree",
 			prob(3); "seed_tree",
@@ -130,7 +133,7 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 				picked_seed = pick(global.kleibkhar_possible_mushroom_seeds)
 		if(picked_seed)
 			prop = new /obj/machinery/portable_atmospherics/hydroponics/soil/invisible(src, picked_seed, prob(50))
-	
+
 	//Add some randomness to the placement
 	prop.pixel_x += rand(-8, 8)
 	prop.pixel_y += rand(-8, 8)
@@ -164,9 +167,23 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 		footstep_type = /decl/footsteps/asteroid
 		color = null
 
-//
-//Terraforming
-//
+///////////////////////////////////////////////////////////////////////////
+// Mining Turfs
+///////////////////////////////////////////////////////////////////////////
+
+/turf/exterior/wall/random/kleibkhar
+	strata = /decl/strata/kleibkhar/subterrane
+	material = /decl/material/solid/stone/sandstone
+
+/turf/exterior/wall/kleibkhar
+	strata   = /decl/strata/kleibkhar/subterrane
+	material = /decl/material/solid/stone/sandstone
+	floor_type = /turf/exterior/barren/mining
+	open_turf_type = /turf/exterior/open
+
+///////////////////////////////////////////////////////////////////////////
+// Terraforming
+///////////////////////////////////////////////////////////////////////////
 
 //Mud working
 var/global/list/exterior_mud_dark_radial_choices

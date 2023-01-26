@@ -31,6 +31,7 @@
 	starting_money = 5000
 	department_money = 0
 	salary_modifier = 0.2
+	var/kleibkhar_initialized = FALSE
 
 /datum/map/kleibkhar/get_map_info()
 	return "Kleibkhar Independent Colony. A diverse new commercial venture on the fringe of known space."

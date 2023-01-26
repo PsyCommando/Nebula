@@ -1,49 +1,57 @@
 /datum/map/kleibkhar
 #ifndef UNIT_TEST
-	station_levels = list(1, 2, 3, 4)
-	contact_levels = list(1, 2, 3, 4)
-	player_levels = list(1, 2, 3, 4)
-	saved_levels = list(3, 4)
-	mining_levels = list(1, 2)
-
 	// Hotloading module
 	default_levels = list(
-		"1" = "maps/kleibkhar/kleibkhar-1.dmm",
-		"2" = "maps/kleibkhar/kleibkhar-2.dmm",
-		"3" = "maps/kleibkhar/kleibkhar-3.dmm",
-		"4" = "maps/kleibkhar/kleibkhar-4.dmm",
-		"5" = "maps/utility/cargo_shuttle_tmpl.dmm",
+		"maps/kleibkhar/kleibkhar-1.dmm",
+		"maps/kleibkhar/kleibkhar-2.dmm",
+		"maps/kleibkhar/kleibkhar-3.dmm",
+		"maps/kleibkhar/kleibkhar-4.dmm",
+		"maps/utility/cargo_shuttle_tmpl.dmm",
 	)
 
-	// A list of turfs and their default turfs for serialization optimization.
-	base_turf_by_z = list(
-		"1" = /turf/exterior/barren/mining,
-		"2" = /turf/exterior/barren/mining,
-		"3" = /turf/exterior/kleibkhar_grass,
-		"4" = /turf/exterior/open,
-		"5" = /turf/space,
-	)
 #else
-	station_levels = list(4, 5, 6, 7)
-	contact_levels = list(4, 5, 6, 7)
-	player_levels = list(4, 5, 6, 7)
-	saved_levels = list(6, 7)
-	mining_levels = list(4, 5)
-
 	default_levels = list(
-		"4" = "maps/kleibkhar/kleibkhar-1.dmm",
-		"5" = "maps/kleibkhar/kleibkhar-2.dmm",
-		"6" = "maps/kleibkhar/kleibkhar-3.dmm",
-		"7" = "maps/kleibkhar/kleibkhar-4.dmm",
-		"8" = "maps/utility/cargo_shuttle_tmpl.dmm",
+		"maps/kleibkhar/kleibkhar-1.dmm",
+		"maps/kleibkhar/kleibkhar-2.dmm",
+		"maps/kleibkhar/kleibkhar-3.dmm",
+		"maps/kleibkhar/kleibkhar-4.dmm",
+		"maps/utility/cargo_shuttle_tmpl.dmm",
 	)
 
-	// A list of turfs and their default turfs for serialization optimization.
-	base_turf_by_z = list(
-		"4" = /turf/exterior/barren/mining,
-		"5" = /turf/exterior/barren/mining,
-		"6" = /turf/exterior/kleibkhar_grass,
-		"7" = /turf/exterior/open,
-		"8" = /turf/space,
-	)
 #endif
+
+/////////////////////////////////////////////////////////////////////////////
+// Mining Levels
+/////////////////////////////////////////////////////////////////////////////
+/obj/abstract/level_data/player_level/kleibkhar_1
+	name           = "Kleibkhar Depths"
+	level_id       = "kleibkhar_1"
+	connects_to    = list("kleibkhar_2" = UP)
+	level_flags    = ZLEVEL_CONTACT | ZLEVEL_PLAYER | ZLEVEL_MINING
+	level_gen_type = /datum/random_map/automata/cave_system/kleibkhar/subterrane
+	base_turf      = /turf/exterior/barren/mining
+
+/obj/abstract/level_data/player_level/kleibkhar_2
+	name           = "Kleibkhar Underground"
+	level_id       = "kleibkhar_2"
+	connects_to    = list("kleibkhar_1" = DOWN, "kleibkhar_3" = UP)
+	level_flags    = ZLEVEL_CONTACT | ZLEVEL_PLAYER | ZLEVEL_MINING
+	level_gen_type = /datum/random_map/automata/cave_system/kleibkhar/subterrane
+	base_turf      = /turf/exterior/barren/mining
+
+/////////////////////////////////////////////////////////////////////////////
+// Station Levels
+/////////////////////////////////////////////////////////////////////////////
+/obj/abstract/level_data/player_level/kleibkhar_3
+	name        = "Kleibkhar Surface"
+	level_id    = "kleibkhar_3"
+	connects_to = list("kleibkhar_2" = DOWN, "kleibkhar_4" = UP)
+	level_flags = ZLEVEL_STATION | ZLEVEL_CONTACT | ZLEVEL_PLAYER | ZLEVEL_PERSISTENT
+	base_turf   = /turf/exterior/kleibkhar_grass
+
+/obj/abstract/level_data/player_level/kleibkhar_4
+	name        = "Kleibkhar Sky"
+	level_id    = "kleibkhar_4"
+	connects_to = list("kleibkhar_3" = DOWN)
+	level_flags = ZLEVEL_STATION | ZLEVEL_CONTACT | ZLEVEL_PLAYER | ZLEVEL_PERSISTENT
+	base_turf   = /turf/exterior/open
