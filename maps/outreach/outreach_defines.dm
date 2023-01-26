@@ -27,12 +27,7 @@
 	lobby_screens = list(
 		'maps/outreach/lobby/exoplanet.png'
 	)
-	lobby_tracks = list(
-		/decl/music_track/dirtyoldfrogg,
-		/decl/music_track/neon_koto,
-		/decl/music_track/blood_loss,
-		/decl/music_track/marhaba,
-	)
+	//Lobby tracks moved to outreach_music.dm otherwise would cause all sort of problems
 
 	//#REMOVEME: Shouldn't get commited!
 	num_exoplanets   = 0
