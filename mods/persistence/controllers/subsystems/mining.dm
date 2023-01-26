@@ -63,6 +63,9 @@ SUBSYSTEM_DEF(mining)
 /area
 	var/ignore_mining_regen = TRUE
 
+/obj/abstract/level_data
+	var/datum/random_map/automata/cave_system/level_gen_type //Map generator for mining regen subsystem
+
 /datum/controller/subsystem/mining/Initialize()
 	if(!length(global.using_map.mining_levels))
 		suspend()

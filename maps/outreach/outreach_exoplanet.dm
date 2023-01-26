@@ -201,9 +201,6 @@
 //////////////////////////////////////////////////////////////////////////
 // Mining Stuff
 //////////////////////////////////////////////////////////////////////////
-/obj/abstract/level_data
-	var/datum/random_map/automata/cave_system/level_gen_type //Map generator for mining regen subsystem
-
 /datum/random_map/automata/cave_system/outreach/abyss
 	iterations = 5
 	descriptor = "outreach abyssal caves"
