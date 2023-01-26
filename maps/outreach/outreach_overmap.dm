@@ -13,9 +13,11 @@
 
 /datum/overmap/outreach/populate_overmap()
 	. = ..()
+#ifndef UNIT_TEST
 	//Don't load or create anything if we loaded from save
 	if(SSpersistence.SaveExists())
 		return
+#endif
 	//Load from file of we want to
 	if(length(map_file))
 		report_progress("Loading overmap '[map_file]' to [assigned_z]")
