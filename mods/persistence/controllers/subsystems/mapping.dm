@@ -3,11 +3,12 @@
 
 /datum/controller/subsystem/mapping/Initialize(timeofday)
 	. = ..()
+	var/save_exists = FALSE
 #ifndef UNIT_TEST
-	var/save_exists = SSpersistence.SaveExists()
+	save_exists = SSpersistence.SaveExists()
 	if(save_exists)
 		report_progress_serializer("Existing save found.")
-	else 
+	else
 		report_progress_serializer("No existing save found.")
 #endif
 
@@ -27,7 +28,7 @@
 // #endif
 // 		maploader.load_map(file(map_file), 1, 1, text2num(z), no_changeturf = TRUE)
 // 		CHECK_TICK
-	
+
 	// Persistence overmaps use premapped overmaps at the moment, so we override here to delay building the overmaps until appropriate.
 	loaded_maps = TRUE
 	// if(length(global.overmaps_by_name))
