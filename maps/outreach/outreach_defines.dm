@@ -1,10 +1,3 @@
-//Forward declare the tracks from persistence modpack, so CI stops crying
-/decl/music_track/dirtyoldfrogg
-/decl/music_track/neon_koto
-/decl/music_track/blood_loss
-/decl/music_track/marhaba
-
-//Outreach defs
 /datum/map/outreach
 	name            = "Outreach"
 	full_name       = "Outreach Outpost"
