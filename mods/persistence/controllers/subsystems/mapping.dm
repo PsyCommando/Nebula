@@ -17,25 +17,8 @@
 	else
 		global.using_map.load_map()
 
-// 	// Load our maps dynamically.
-// 	for(var/z in global.using_map.default_levels)
-// 		var/map_file = global.using_map.default_levels[z]
-// #ifndef UNIT_TEST
-// 		if(save_exists && (text2num(z) in SSpersistence.saved_levels))
-// 			// Load a default map instead.
-// 			INCREMENT_WORLD_Z_SIZE
-// 			continue
-// #endif
-// 		maploader.load_map(file(map_file), 1, 1, text2num(z), no_changeturf = TRUE)
-// 		CHECK_TICK
-
-	// Persistence overmaps use premapped overmaps at the moment, so we override here to delay building the overmaps until appropriate.
 	loaded_maps = TRUE
-	// if(length(global.overmaps_by_name))
-	// 	for(var/name in global.overmaps_by_name)
-	// 		var/datum/overmap/O = global.overmaps_by_name[name]
-	// 		O.late_initialize()
-	// Build the list of static persisted levels from our map.
+
 #ifdef UNIT_TEST
 	report_progress_serializer("Unit testing, so not loading saved map")
 #else
