@@ -9,9 +9,9 @@
 	if(!length(repopulate_types))
 		repopulating = FALSE
 		return //If we don't have anything to repopulate just skip
-	var/const/rounded_max      = round(max_animal_count)
-	var/const/existing_animals = length(animals)
-	var/const/animals_to_spawn = clamp(rounded_max - existing_animals, 0, rounded_max)
+	var/rounded_max      = round(max_animal_count)
+	var/existing_animals = length(animals)
+	var/animals_to_spawn = clamp(rounded_max - existing_animals, 0, rounded_max)
 
 	for(var/i = 1 to animals_to_spawn)
 		if(prob(10))
