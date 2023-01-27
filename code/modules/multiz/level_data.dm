@@ -74,3 +74,6 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data)
 	name = "Player Level"
 	level_flags = (ZLEVEL_CONTACT|ZLEVEL_PLAYER)
 
+/obj/abstract/level_data/transit_level
+	name = "Transit Level"
+	level_flags = ZLEVEL_SEALED

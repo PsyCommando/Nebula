@@ -159,10 +159,10 @@
 	return engravings
 
 /obj/effect/overmap/visitable/sector/exoplanet/Process(wait, tick)
-
-	if(animals.len < 0.5*max_animal_count && !repopulating)
-		repopulating = 1
-		max_animal_count = round(max_animal_count * 0.5)
+	var/const/repop_threshold = round(0.5 * max_animal_count)
+	if(length(animals) < repop_threshold && !repopulating)
+		repopulating = TRUE
+		max_animal_count = repop_threshold //#TODO: Not sure if this is voluntary behavior, but this essentially means less and less will respawn each times we repop
 
 	if(repopulating)
 		handle_repopulation()

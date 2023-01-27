@@ -10,35 +10,53 @@
 	. = ..()
 
 /obj/effect/overmap/visitable/sector/exoplanet/kleibkhar
-	name = "\proper Kleibkhar"
-	desc = "A habitable border-world, home to a recent dime-a-dozen corporate colony."
-	lightlevel = 1.0
-	daycycle = 25 MINUTES
-	daycycle_column_delay = 10 SECONDS
-	night = FALSE
+	name               = "\proper Kleibkhar"
+	desc               = "A habitable border-world, home to a recent dime-a-dozen corporate colony."
+	prefered_level_id  = "kleibkhar_4"
+	planetary_area     = /area/exoplanet/kleibkhar
+	habitability_class = HABITABILITY_IDEAL
+	spawn_weight       = 0 //Spawned manually
+	start_x            = 27
+	start_y            = 23
 
-	start_x = 27
-	start_y = 23
+	night              = FALSE
+	lightlevel         = 1.0
+	daycycle           = 25 MINUTES
+	starlight_color    = COLOR_PALE_BLUE_GRAY
 
-	color = "#407c40"
-	grass_color = "#407c40"
-	planetary_area = /area/exoplanet/kleibkhar
-	rock_colors = list(COLOR_ASTEROID_ROCK, COLOR_GRAY80, COLOR_BROWN)
-	plant_colors = list("#215a00","#195a47","#5a7467","#9eab88","#6e7248", "RANDOM")
-	surface_color = COLOR_DARK_GREEN_GRAY
-	water_color = COLOR_BLUE_GRAY
-	crust_strata = /decl/strata/base_planet
+	color              = "#407c40"
+	grass_color        = "#407c40"
+	surface_color      = COLOR_DARK_GREEN_GRAY
+	water_color        = COLOR_BLUE_GRAY
+	rock_colors = list(
+		COLOR_ASTEROID_ROCK,
+		 COLOR_GRAY80,
+		 COLOR_BROWN
+	)
+	plant_colors = list(
+		"#215a00",
+		"#195a47",
+		"#5a7467",
+		"#9eab88",
+		"#6e7248",
+		"RANDOM"
+	)
 
+	crust_strata        = /decl/strata/base_planet
 	ruin_tags_whitelist = RUIN_NATURAL | RUIN_WATER
-	features_budget = 0
-	spawn_weight = 0 //Spawned manually
-
-	has_trees = FALSE
-
-	flora_diversity = 6
-	fauna_types = list(/mob/living/simple_animal/yithian, /mob/living/simple_animal/tindalos, /mob/living/simple_animal/hostile/retaliate/jelly)
-	megafauna_types = list(/mob/living/simple_animal/hostile/retaliate/parrot/space/megafauna, /mob/living/simple_animal/hostile/retaliate/goose/dire)
-	prefered_level_id = "kleibkhar_4"
+	features_budget     = 0
+	has_trees           = FALSE
+	flora_diversity     = 6
+	max_animal_count    = 10
+	fauna_types = list(
+		/mob/living/simple_animal/yithian,
+		/mob/living/simple_animal/tindalos,
+		/mob/living/simple_animal/hostile/retaliate/jelly
+	)
+	megafauna_types = list(
+		/mob/living/simple_animal/hostile/retaliate/parrot/space/megafauna,
+		/mob/living/simple_animal/hostile/retaliate/goose/dire
+	)
 
 /obj/effect/overmap/visitable/sector/exoplanet/kleibkhar/build_level(max_x, max_y)
 	docking_codes = "[global.using_map.dock_name]"

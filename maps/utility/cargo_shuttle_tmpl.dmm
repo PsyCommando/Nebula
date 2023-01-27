@@ -73,6 +73,10 @@
 	},
 /turf/simulated/floor/indestructible,
 /area/shuttle/supply_shuttle)
+"k" = (
+/obj/abstract/level_data/transit_level/cargo_shuttle_standalone,
+/turf/space/transit/east,
+/area/space)
 "l" = (
 /obj/effect/floor_decal/industrial/outline/orange,
 /obj/machinery/conveyor/indestructible{
@@ -133,7 +137,7 @@ a
 a
 a
 a
-a
+k
 "}
 (2,1,1) = {"
 a

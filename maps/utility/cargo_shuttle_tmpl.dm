@@ -9,6 +9,12 @@
 	shuttle_area = /area/shuttle/supply_shuttle
 	waypoint_offsite = "nav_cargo_start"
 
+//Ideally the supply shuttle template should be stitched onto a free slot on a utility z-level but for stand-alone uses this works
+/obj/abstract/level_data/transit_level/cargo_shuttle_standalone
+	name      = "Cargo shuttle"
+	level_id  = "cargo_shuttle_standalone"
+	base_turf = /turf/space
+
 //
 // SSOverride
 //

@@ -6,15 +6,22 @@
 	repopulate_types |= M.type
 
 /obj/effect/overmap/visitable/sector/exoplanet/proc/handle_repopulation()
-	for(var/i = 1 to round(max_animal_count - animals.len))
+	if(!length(repopulate_types))
+		repopulating = FALSE
+		return //If we don't have anything to repopulate just skip
+	var/const/rounded_max      = round(max_animal_count)
+	var/const/existing_animals = length(animals)
+	var/const/animals_to_spawn = clamp(rounded_max - existing_animals, 0, rounded_max)
+
+	for(var/i = 1 to animals_to_spawn)
 		if(prob(10))
 			var/turf/simulated/T = pick_area_turf(planetary_area, list(/proc/not_turf_contains_dense_objects))
 			var/mob_type = pick(repopulate_types)
 			var/mob/S = new mob_type(T)
 			track_animal(S)
 			adapt_animal(S)
-	if(animals.len >= max_animal_count)
-		repopulating = 0
+	if(existing_animals >= rounded_max)
+		repopulating = FALSE
 
 /obj/effect/overmap/visitable/sector/exoplanet/proc/track_animal(mob/A)
 	animals += A
@@ -33,7 +40,7 @@
 		//Set up gases for living things
 		var/list/all_gasses = decls_repository.get_decl_paths_of_subtype(/decl/material/gas)
 		if(!LAZYLEN(breathgas))
-			var/list/goodgases = all_gasses.Copy() 
+			var/list/goodgases = all_gasses.Copy()
 			var/gasnum = min(rand(1,3), goodgases.len)
 			for(var/i = 1 to gasnum)
 				var/gas = pick(goodgases)
@@ -87,7 +94,7 @@
 	var/obj/effect/overmap/visitable/sector/exoplanet/E = global.overmap_sectors["[z]"]
 	if(istype(E))
 		do_spawn(E)
-		
+
 /obj/abstract/landmark/exoplanet_spawn/proc/do_spawn(var/obj/effect/overmap/visitable/sector/exoplanet/planet)
 	if(LAZYLEN(planet.fauna_types))
 		var/beastie = pick(planet.fauna_types)
