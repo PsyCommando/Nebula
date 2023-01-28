@@ -503,9 +503,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
-"by" = (
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/outreach/outpost/maint/passage/b2/northwest)
 "bz" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2316,13 +2313,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/airless,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
-"fb" = (
-/obj/machinery/light/small{
-	icon_state = "bulb_map";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/outreach/outpost/maint/passage/b2/northwest)
 "fc" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "stripe";
@@ -4165,7 +4155,7 @@
 	icon_state = "alarm0";
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/maint/passage/b2/northwest)
 "iZ" = (
 /obj/structure/cable/yellow{
@@ -4627,6 +4617,16 @@
 	},
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/d2)
+"nD" = (
+/obj/machinery/light/small{
+	icon_state = "bulb_map";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/atmospherics/b2/tank_outer)
+"uA" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/atmospherics/b2/tank_outer)
 
 (1,1,1) = {"
 aa
@@ -19868,8 +19868,8 @@ bw
 aK
 aK
 bX
-iR
-iT
+uA
+iB
 iR
 iR
 iR
@@ -20070,8 +20070,8 @@ aY
 aK
 aK
 ad
-iR
-iR
+uA
+iB
 iR
 iR
 iR
@@ -20272,11 +20272,11 @@ aY
 aK
 aK
 aG
+uA
+iB
 iR
 iR
-by
-by
-by
+iR
 iR
 iR
 ar
@@ -20474,11 +20474,11 @@ aK
 aK
 aK
 ad
+uA
+iB
 iR
 iR
-by
-by
-by
+iR
 iR
 iR
 ar
@@ -20676,11 +20676,11 @@ aK
 aK
 aK
 ad
+uA
+iB
 iR
 iR
-by
-by
-by
+iR
 iR
 iR
 ar
@@ -20878,11 +20878,11 @@ aY
 aK
 aK
 ad
+uA
+iB
 iR
 iR
-by
-by
-by
+iR
 iR
 iR
 ar
@@ -21080,11 +21080,11 @@ bj
 aK
 aK
 ad
-iW
+nD
+iB
 iR
-by
 iY
-fb
+iW
 iV
 iV
 ar

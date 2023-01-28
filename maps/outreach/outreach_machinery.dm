@@ -317,4 +317,18 @@
 /obj/machinery/docking_beacon/mapped
 	anchored = TRUE
 
+////////////////////////////////////////////////////////////////////////
+// Defense Turret
+////////////////////////////////////////////////////////////////////////
+/obj/machinery/porta_turret/stationary/stun
+	ailock         = TRUE
+	lethal         = FALSE
+	check_weapons  = TRUE
+	auto_repair    = TRUE
+	controllock    = FALSE
+	maxhealth      = 280
+	health         = 280
+	installation   = /obj/item/gun/energy/gun/mounted
+	initial_access = list(list(access_security), list(access_bridge), list(access_ce))
+
 #undef ADMIN_PROTECTED_NET_GROUP
