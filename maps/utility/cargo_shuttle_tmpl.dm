@@ -1,12 +1,13 @@
 /area/shuttle/supply_shuttle
-	name = "Supply Shuttle"
+	name = "Cargo shuttle"
 	icon_state = "shuttle3"
 
 /obj/effect/shuttle_landmark/supply/start
 	landmark_tag ="nav_cargo_start"
 
 /datum/shuttle/autodock/ferry/supply/cargo
-	shuttle_area = /area/shuttle/supply_shuttle
+	name             = "Cargo shuttle"
+	shuttle_area     = /area/shuttle/supply_shuttle
 	waypoint_offsite = "nav_cargo_start"
 
 //Ideally the supply shuttle template should be stitched onto a free slot on a utility z-level but for stand-alone uses this works
@@ -15,12 +16,16 @@
 	level_id  = "cargo_shuttle_standalone"
 	base_turf = /turf/space
 
+/obj/machinery/computer/shuttle_control/cargo
+	shuttle_tag = "Cargo shuttle"
+
 //
 // SSOverride
 //
 /datum/controller/subsystem/supply/get_clear_turfs()
 	var/list/clear_turfs = ..()
 
+	//Only put cargo on floor that had outlines
 	for(var/turf/T in clear_turfs)
 		var/had_outline = FALSE
 		for(var/atom/movable/AM in T.contents)
@@ -99,6 +104,10 @@
 //
 // Turfs
 //
+
+////////////////////////////////////////////////////////////////////////
+// Indestructible Interior Floor
+////////////////////////////////////////////////////////////////////////
 /turf/simulated/floor/indestructible
 	name = "hull plating"
 	icon = 'icons/turf/flooring/tiles.dmi'
@@ -116,6 +125,9 @@
 /turf/simulated/floor/indestructible/attackby(var/obj/item/C, var/mob/user)
 	return
 
+////////////////////////////////////////////////////////////////////////
+// Indestructible Hull Walls
+////////////////////////////////////////////////////////////////////////
 /turf/simulated/wall/r_titanium/indestructible
 	name = "hull plating"
 
@@ -128,3 +140,28 @@
 	return
 /turf/simulated/wall/r_titanium/indestructible/attackby(var/obj/item/C, var/mob/user)
 	return
+
+////////////////////////////////////////////////////////////////////////
+// Indestructible Airless Floor
+////////////////////////////////////////////////////////////////////////
+
+/turf/simulated/floor/airless/indestructible
+	name = "external hull plating"
+/turf/simulated/floor/airless/indestructible/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	return
+/turf/simulated/floor/airless/indestructible/explosion_act(severity)
+	SHOULD_CALL_PARENT(FALSE)
+	return
+/turf/simulated/floor/airless/indestructible/attack_hand(mob/user)
+	return
+/turf/simulated/floor/airless/indestructible/attackby(var/obj/item/C, var/mob/user)
+	return
+
+////////////////////////////////////////////////////////////////////////
+// Indestructible Flaps
+////////////////////////////////////////////////////////////////////////
+/obj/structure/plasticflaps/airtight/indestructible
+	airtight = TRUE
+
+/obj/structure/plasticflaps/airtight/indestructible/attackby(obj/item/W, mob/user)
+	return //No interactions

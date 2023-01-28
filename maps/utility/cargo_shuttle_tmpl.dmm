@@ -12,23 +12,18 @@
 	dir = 8;
 	id_tag = "_cargo_shuttle_conveyors"
 	},
-/turf/simulated/floor/indestructible,
-/area/shuttle/supply_shuttle)
-"c" = (
-/turf/simulated/wall/r_titanium/indestructible,
-/area/shuttle/supply_shuttle)
-"d" = (
-/obj/structure/shuttle/engine/propulsion/burst{
-	dir = 8
-	},
 /obj/machinery/button/blast_door/indestructible{
 	dir = 8;
 	icon_state = "blastctrl";
 	id_tag = "_cargo_shuttle_doors";
-	pixel_x = 0;
-	pixel_y = -24
+	pixel_x = -8;
+	pixel_y = 24
 	},
+/obj/structure/plasticflaps/airtight/indestructible,
 /turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"c" = (
+/turf/simulated/wall/r_titanium/indestructible,
 /area/shuttle/supply_shuttle)
 "e" = (
 /obj/machinery/conveyor/indestructible{
@@ -64,6 +59,7 @@
 /turf/simulated/floor/indestructible,
 /area/shuttle/supply_shuttle)
 "j" = (
+/obj/machinery/computer/shuttle_control/cargo,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/indestructible{
 	dir = 8;
 	id_tag = "cargo_bay";
@@ -86,20 +82,8 @@
 /obj/effect/shuttle_landmark/supply/start,
 /turf/simulated/floor/indestructible,
 /area/shuttle/supply_shuttle)
-"m" = (
-/obj/structure/fake_computer{
-	dir = 8
-	},
-/turf/simulated/floor/indestructible,
-/area/shuttle/supply_shuttle)
 "n" = (
 /obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/floor/indestructible,
-/area/shuttle/supply_shuttle)
-"o" = (
-/obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
 	},
 /turf/simulated/floor/indestructible,
@@ -116,13 +100,100 @@
 	},
 /turf/simulated/floor/indestructible,
 /area/shuttle/supply_shuttle)
-"r" = (
+"q" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	dir = 8
+	},
+/turf/simulated/floor/airless/indestructible,
+/area/shuttle/supply_shuttle)
+"u" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 4;
 	icon_state = "heater";
 	pixel_x = -8;
 	pixel_y = 0
 	},
+/turf/simulated/floor/airless/indestructible,
+/area/shuttle/supply_shuttle)
+"w" = (
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/structure/railing/mapped{
+	icon_state = "railing_preview";
+	dir = 1
+	},
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"x" = (
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/structure/railing/mapped{
+	icon_state = "railing_preview";
+	dir = 1
+	},
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"z" = (
+/turf/simulated/wall/r_titanium/indestructible,
+/turf/space/transit/east,
+/area/shuttle/supply_shuttle)
+"F" = (
+/obj/machinery/door/blast/shutters/indestructible{
+	dir = 4;
+	icon_state = "shutter1";
+	id_tag = "_cargo_shuttle_doors"
+	},
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/structure/plasticflaps/airtight/indestructible,
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"N" = (
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"P" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"Q" = (
+/obj/machinery/door/blast/shutters/indestructible{
+	dir = 4;
+	icon_state = "shutter1";
+	id_tag = "_cargo_shuttle_doors"
+	},
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/machinery/conveyor_switch/indestructible{
+	id_tag = "_cargo_shuttle_conveyors";
+	pixel_x = -14;
+	pixel_y = -24
+	},
+/obj/structure/plasticflaps/airtight/indestructible,
+/turf/simulated/floor/indestructible,
+/area/shuttle/supply_shuttle)
+"S" = (
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/machinery/conveyor/indestructible{
+	dir = 8;
+	id_tag = "_cargo_shuttle_conveyors"
+	},
+/obj/structure/railing/mapped,
 /turf/simulated/floor/indestructible,
 /area/shuttle/supply_shuttle)
 
@@ -141,39 +212,39 @@ k
 "}
 (2,1,1) = {"
 a
-d
+a
+q
 c
 b
-b
-b
-b
-b
+F
+Q
 c
-o
+q
+a
 a
 "}
 (3,1,1) = {"
 a
-r
+a
+u
 c
+w
 e
-e
-e
-e
-e
+N
 c
-r
+u
+a
 a
 "}
 (4,1,1) = {"
 a
 a
 c
+c
+w
 e
-e
-e
-e
-e
+N
+c
 c
 a
 a
@@ -182,11 +253,11 @@ a
 a
 a
 c
+f
+x
 g
-g
-g
-g
-g
+S
+f
 c
 a
 a
@@ -195,11 +266,11 @@ a
 a
 a
 c
-g
-g
+f
+x
 l
-g
-g
+S
+f
 c
 a
 a
@@ -208,11 +279,11 @@ a
 a
 a
 c
+P
 g
 g
 g
-g
-g
+P
 c
 a
 a
@@ -221,11 +292,11 @@ a
 a
 a
 h
+P
 i
 n
-n
-n
 i
+P
 h
 a
 a
@@ -234,11 +305,11 @@ a
 a
 a
 c
-p
+c
 j
-m
 f
 p
+c
 c
 a
 a
@@ -246,13 +317,13 @@ a
 (10,1,1) = {"
 a
 a
+a
 c
 c
 c
 c
-c
-c
-c
+z
+a
 a
 a
 "}
