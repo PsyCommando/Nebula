@@ -59,7 +59,7 @@
 /obj/effect/floor_decal/industrial/hatch/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/basement1)
@@ -257,7 +257,7 @@
 "aK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -293,7 +293,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/passage/b1/northwest/airlock)
@@ -641,7 +641,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/light_switch{
 	icon_state = "light0";
@@ -894,7 +894,7 @@
 "cq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -1207,11 +1207,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/op_room)
@@ -1305,11 +1305,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/medbay/op_room)
@@ -1537,6 +1537,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/northeast/airlock)
+"dM" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/south)
 "dN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	icon_state = "11";
@@ -1548,7 +1559,11 @@
 /turf/simulated/floor/airless,
 /area/outreach/outpost/control/cooling)
 "dO" = (
-/obj/machinery/firealarm,
+/obj/machinery/oxygen_pump{
+	pixel_y = 0
+	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/orange,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
 "dP" = (
@@ -1747,7 +1762,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -1890,7 +1905,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -1904,7 +1919,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -2437,7 +2452,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -2484,7 +2499,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
@@ -2555,7 +2570,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -2694,11 +2709,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
@@ -2708,15 +2723,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
@@ -2739,7 +2754,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
@@ -3054,7 +3069,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -3080,6 +3095,17 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/hallway/west/basement1)
+"hf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/south)
 "hg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/door/firedoor/autoset,
@@ -3100,7 +3126,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/basement1)
@@ -3161,11 +3187,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
@@ -3411,15 +3437,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/south/basement1)
@@ -3450,7 +3476,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -3575,7 +3601,7 @@
 "ik" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -3730,11 +3756,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/tiled/white,
@@ -3886,7 +3912,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/basement1)
@@ -3967,7 +3993,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-4"
@@ -3991,7 +4017,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -4013,7 +4039,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -4034,7 +4060,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -4048,21 +4074,6 @@
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
 	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/west/basement1)
-"jm" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -4089,7 +4100,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -4185,11 +4196,11 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -4210,7 +4221,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -4432,7 +4443,7 @@
 "jW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	icon_state = "11";
@@ -4493,11 +4504,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/airlock/glass/civilian{
 	icon_state = "closed";
@@ -4505,7 +4516,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/cafeteria)
@@ -4542,6 +4553,15 @@
 /obj/structure/closet/toolcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/storage)
+"ke" = (
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/north)
 "kf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	icon_state = "11";
@@ -4601,7 +4621,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -4707,7 +4727,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -4793,11 +4813,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -4823,7 +4843,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -4831,7 +4851,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/control/command_hall)
@@ -4842,7 +4862,7 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -4850,10 +4870,19 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/security/b1/hallway)
+"kE" = (
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/north)
 "kF" = (
 /obj/machinery/door/firedoor/autoset,
 /obj/machinery/door/airlock/glass/medical{
@@ -4925,6 +4954,17 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/lab/storage)
+"kM" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 4
+	},
+/obj/machinery/light/small/wired,
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/west)
 "kN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -4981,6 +5021,17 @@
 "kT" = (
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
+"kU" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 4
+	},
+/obj/machinery/light/small/wired,
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/east)
 "kV" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -5002,7 +5053,7 @@
 "kW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/command_conference)
@@ -5124,7 +5175,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -5141,7 +5192,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
@@ -5154,6 +5205,20 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/command_conference)
+"lk" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 4
+	},
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/west)
 "ll" = (
 /obj/machinery/alarm,
 /obj/structure/cable/yellow{
@@ -5172,7 +5237,7 @@
 "ln" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/bed/chair/office/comfy/beige{
 	icon_state = "comfyofficechair";
@@ -5204,7 +5269,7 @@
 "lq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	icon_state = "map_scrubber_on";
@@ -5216,6 +5281,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/southwest/airlock)
+"lr" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 4
+	},
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/outreach/outpost/ext_vents/b1/east)
 "ls" = (
 /obj/machinery/atmospherics/pipe/cap/hidden/supply{
 	icon_state = "cap-supply";
@@ -5234,7 +5313,7 @@
 "lt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -5362,7 +5441,7 @@
 "lF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -5390,14 +5469,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/lab/entrance)
@@ -5419,11 +5498,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -5519,11 +5598,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor/plating,
@@ -5539,7 +5618,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -5622,7 +5701,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/power/b1)
@@ -5673,7 +5752,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -5685,7 +5764,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/lab/entrance)
@@ -5744,7 +5823,7 @@
 "mq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/body_scanconsole{
 	icon_state = "body_scannerconsole";
@@ -5826,25 +5905,21 @@
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/outreach/outpost/ext_vents/b1/north)
 "my" = (
-/obj/structure/cable/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/power/terminal,
-/obj/machinery/light/small/wired{
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/light/small{
 	icon_state = "bulb_map";
-	dir = 4
+	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/north)
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/control/cooling)
 "mz" = (
-/obj/structure/cable/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/power/terminal,
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/north)
+/obj/machinery/alarm,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/control/cooling)
 "mA" = (
 /obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
 	dir = 1;
@@ -5865,20 +5940,11 @@
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/outreach/outpost/ext_vents/b1/west)
 "mC" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
-	dir = 4
-	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 4
-	},
-/obj/machinery/light/small/wired,
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/west)
+/obj/machinery/firealarm,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/control/cooling)
 "mD" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -6023,20 +6089,17 @@
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/outreach/outpost/ext_vents/b1/east)
 "mV" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
+/obj/structure/cable/blue{
+	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
+/obj/machinery/camera/network/security{
+	icon_state = "camera";
 	dir = 4
 	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 8
-	},
-/obj/machinery/light/small/wired,
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/east)
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/control/cooling)
 "mW" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -6080,11 +6143,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
@@ -6453,11 +6516,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/basement1)
@@ -6485,7 +6548,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -6493,7 +6556,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/atmos/b1)
@@ -6527,7 +6590,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -6683,7 +6746,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -6699,11 +6762,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -6723,23 +6786,13 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/northeast/airlock)
 "oa" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
+/obj/machinery/atmospherics/tvalve/bypass{
+	dir = 4;
+	icon_state = "map_tvalve1";
+	name = "coolant flush valve"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
-	dir = 4
-	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 4
-	},
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/west)
+/turf/simulated/floor/tiled/techfloor,
+/area/outreach/outpost/control/cooling)
 "ob" = (
 /obj/effect/floor_decal/spline/plain/yellow,
 /obj/structure/disposalpipe/segment/bent{
@@ -6748,14 +6801,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/engineering/b1/storage)
-"oc" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/light/small{
-	icon_state = "bulb_map";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/outreach/outpost/control/cooling)
 "od" = (
 /obj/machinery/alarm/nobreach/airlock{
 	dir = 1;
@@ -6780,7 +6825,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
 	icon_state = "pipe-j1";
@@ -6833,24 +6878,6 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/north/basement1)
-"oi" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
-	dir = 4
-	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 8
-	},
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/east)
 "oj" = (
 /obj/structure/stairs/long/north,
 /obj/structure/railing/mapped/stairwell{
@@ -6883,16 +6910,6 @@
 "om" = (
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/maint/passage/b1/east/junct)
-"on" = (
-/obj/structure/cable/blue{
-	icon_state = "2-4"
-	},
-/obj/machinery/camera/network/security{
-	icon_state = "camera";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/outreach/outpost/control/cooling)
 "oo" = (
 /obj/structure/rack,
 /obj/item/inducer,
@@ -6947,7 +6964,7 @@
 "ot" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -7115,7 +7132,7 @@
 "oM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/body_scanconsole{
 	icon_state = "body_scannerconsole";
@@ -7328,7 +7345,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/passage/b1/north)
@@ -7343,11 +7360,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/basement1)
@@ -7385,7 +7402,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/passage/b1/north)
@@ -7410,11 +7427,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/item/stool/wood,
 /turf/simulated/floor/tiled/techmaint,
@@ -7459,7 +7476,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/concrete,
 /obj/machinery/door/firedoor/autoset{
@@ -7468,7 +7485,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining)
@@ -7483,11 +7500,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining)
@@ -7505,7 +7522,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/passage/b1/north)
@@ -7517,14 +7534,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining)
@@ -7535,11 +7552,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/hydroponics)
@@ -7585,26 +7602,26 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
 "pB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/hydroponics)
@@ -7629,11 +7646,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria/common)
@@ -7668,11 +7685,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining)
@@ -7685,7 +7702,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining)
@@ -7715,11 +7732,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -7749,7 +7766,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/foyer)
@@ -7766,13 +7783,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/bed/chair,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/foyer)
@@ -7782,7 +7799,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -7791,7 +7808,7 @@
 /obj/structure/bed/chair,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/foyer)
@@ -7919,7 +7936,7 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -7935,7 +7952,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
@@ -7966,7 +7983,7 @@
 /obj/machinery/light_switch,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/mining/b1/processing)
@@ -7985,11 +8002,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -8044,7 +8061,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -8279,11 +8296,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/basement1)
@@ -8303,7 +8320,7 @@
 "qV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -8353,12 +8370,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/concrete,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -8390,7 +8407,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/passage/b1/north)
@@ -8408,7 +8425,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	icon_state = "map-supply";
@@ -8466,11 +8483,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -8524,7 +8541,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/b1)
@@ -8774,11 +8791,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/security/b1)
@@ -8795,11 +8812,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/south/basement1)
@@ -8813,7 +8830,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -8832,7 +8849,7 @@
 "rN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -8897,7 +8914,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/passage/b1/north)
@@ -8923,7 +8940,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -9108,7 +9125,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/structure/cable/yellow{
@@ -9127,21 +9144,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/airlock/basement1/south)
-"sr" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 1
-	},
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/south)
 "ss" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -9180,7 +9182,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -9198,12 +9200,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/concrete,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/basement1)
@@ -9228,7 +9230,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -9265,7 +9267,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -9288,7 +9290,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -9316,21 +9318,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/lobby)
-"sG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b1/south)
 "sH" = (
 /obj/structure/cable/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9437,7 +9424,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/item/stool/wood,
 /turf/simulated/floor/tiled/techmaint,
@@ -9475,7 +9462,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -9527,11 +9514,11 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/basement1)
@@ -9586,7 +9573,7 @@
 "to" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -9633,7 +9620,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -9680,7 +9667,7 @@
 /obj/effect/floor_decal/industrial/hatch/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/south/basement1)
@@ -9790,24 +9777,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/basement1)
-"tM" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/basement1)
 "tN" = (
 /obj/machinery/door/airlock/glass/civilian{
 	icon_state = "closed";
@@ -9822,7 +9791,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -9830,7 +9799,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/b1/south/east)
@@ -9840,7 +9809,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -9848,7 +9817,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/b1/south/east)
@@ -9859,7 +9828,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/b1/south/east)
@@ -9909,7 +9878,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/hydroponics)
@@ -9952,17 +9921,6 @@
 /obj/item/chems/condiment/enzyme,
 /turf/simulated/floor/tiled/monotile,
 /area/outreach/outpost/cafeteria/kitchen/backroom)
-"tZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/vacant/b1/south/east)
 "ua" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -10272,21 +10230,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/foyer)
-"uP" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/basement1)
 "uQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -10333,14 +10276,14 @@
 /obj/effect/wallframe_spawn/no_grille,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/cafeteria/common)
 "uV" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria/common)
@@ -10424,7 +10367,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/janitorial/hall)
@@ -10441,11 +10384,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/janitorial/hall)
@@ -10459,7 +10402,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -10467,7 +10410,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/airlock/civilian{
 	icon_state = "closed";
@@ -10492,7 +10435,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -10520,7 +10463,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/foyer)
@@ -10609,7 +10552,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -10624,7 +10567,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -10632,7 +10575,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -10648,7 +10591,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/office)
@@ -11129,7 +11072,7 @@
 "wH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/mining/b1/storage)
@@ -11272,12 +11215,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/airlock/basement1/south)
-"wX" = (
-/obj/machinery/oxygen_pump{
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/outreach/outpost/control/cooling)
 "wY" = (
 /obj/machinery/alarm/nobreach/airlock{
 	dir = 1;
@@ -11386,7 +11323,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -11400,11 +11337,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -11490,7 +11427,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -11508,7 +11445,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -11523,11 +11460,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -11686,7 +11623,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -11882,7 +11819,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -12012,11 +11949,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/basement1)
@@ -12234,7 +12171,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/hallway/south/basement1)
@@ -12295,7 +12232,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -12318,7 +12255,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/basement1)
@@ -12333,7 +12270,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -12352,7 +12289,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/plating,
@@ -12381,7 +12318,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/security/b1/office)
@@ -12395,7 +12332,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/office)
@@ -12407,7 +12344,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/office)
@@ -12492,7 +12429,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -12546,11 +12483,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/airlock/highsecurity{
 	dir = 4;
@@ -12568,11 +12505,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
@@ -12653,11 +12590,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -12731,7 +12668,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/lobby)
@@ -12891,7 +12828,7 @@
 "Aa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/tiled/white,
@@ -12946,11 +12883,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/restrooms)
@@ -13110,7 +13047,7 @@
 "Ax" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/hallway)
@@ -13278,11 +13215,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/janitorial/hall)
@@ -13321,11 +13258,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/janitorial/hall)
@@ -13347,7 +13284,7 @@
 /obj/effect/floor_decal/spline/plain/red,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/camera/network/security{
 	icon_state = "camera";
@@ -13517,7 +13454,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -13602,7 +13539,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -13693,7 +13630,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
@@ -13709,11 +13646,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/east/junct)
@@ -13750,7 +13687,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -13764,7 +13701,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -13778,7 +13715,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/east/junct)
@@ -13983,7 +13920,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/janitorial/hall)
@@ -13997,7 +13934,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/janitorial/hall)
@@ -14154,14 +14091,6 @@
 /obj/structure/flora/pottedplant/dead,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
-"CK" = (
-/obj/machinery/atmospherics/tvalve/bypass{
-	dir = 4;
-	icon_state = "map_tvalve1";
-	name = "coolant bypass valve"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/outreach/outpost/control/cooling)
 "CL" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -14204,11 +14133,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/item/flashlight/lamp,
 /obj/structure/table,
@@ -14345,7 +14274,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/cell)
@@ -14364,7 +14293,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/security/b1/cell)
@@ -14378,7 +14307,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/red{
 	icon_state = "spline_plain";
@@ -14393,7 +14322,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -14457,7 +14386,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -15057,7 +14986,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -15479,18 +15408,18 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/restrooms)
 "Fb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -15599,11 +15528,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/laundry)
@@ -15613,11 +15542,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/laundry)
@@ -15638,7 +15567,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/laundry)
@@ -15808,7 +15737,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/bed/chair/office/dark{
 	icon_state = "officechair";
@@ -15823,7 +15752,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/firedoor/autoset{
@@ -16112,7 +16041,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -16460,11 +16389,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/cafeteria)
@@ -16512,7 +16441,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/cafeteria/kitchen)
@@ -16536,7 +16465,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -16604,7 +16533,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/cafeteria/kitchen/backroom)
@@ -16621,7 +16550,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/outreach/outpost/cafeteria/kitchen/backroom)
@@ -16631,7 +16560,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
@@ -16674,7 +16603,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -16693,7 +16622,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/outreach/outpost/cafeteria/kitchen/backroom)
@@ -16720,7 +16649,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/cafeteria/kitchen/freezer)
@@ -16734,14 +16663,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/outreach/outpost/cafeteria/kitchen/freezer)
 "IP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/freezer,
@@ -16804,11 +16733,11 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -16844,7 +16773,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -16953,11 +16882,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/passage/b1/east/junct)
@@ -17201,7 +17130,7 @@
 "Me" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -17230,7 +17159,7 @@
 "Mg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -17326,7 +17255,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
@@ -17388,10 +17317,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/hallway)
-"Mw" = (
-/obj/machinery/alarm,
-/turf/simulated/floor/tiled/techfloor,
-/area/outreach/outpost/control/cooling)
 "My" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -17578,7 +17503,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/security/b1)
@@ -17736,11 +17661,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/control/command_office)
@@ -17780,7 +17705,7 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -17788,7 +17713,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/control/command_hall)
@@ -17861,7 +17786,7 @@
 "Si" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/table/woodentable/walnut,
 /turf/simulated/floor/tiled/dark,
@@ -17942,7 +17867,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/control/command_hall)
@@ -18035,7 +17960,7 @@
 "VO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/table/woodentable/walnut,
 /obj/item/clipboard,
@@ -18139,11 +18064,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/hallway)
@@ -18202,7 +18127,7 @@
 /obj/effect/floor_decal/spline/plain/red,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
@@ -28809,13 +28734,13 @@ ab
 ab
 ab
 ab
-mC
+kM
 mR
 nj
 mR
 nR
 mR
-oa
+lk
 Mh
 zY
 zY
@@ -29421,8 +29346,8 @@ nu
 nt
 nh
 aM
-wX
-on
+dO
+mV
 og
 zm
 DV
@@ -29623,7 +29548,7 @@ az
 mR
 nw
 aM
-oc
+my
 oK
 BM
 DS
@@ -29825,9 +29750,9 @@ au
 dl
 nF
 aM
-Mw
+mz
 zW
-CK
+oa
 DU
 dC
 xz
@@ -30024,10 +29949,10 @@ bi
 be
 ap
 aD
-jm
+el
 pp
 aM
-dO
+mC
 zW
 Ea
 Eb
@@ -30428,7 +30353,7 @@ bj
 bj
 bj
 ep
-jm
+el
 gv
 aM
 aM
@@ -30630,7 +30555,7 @@ go
 iW
 bj
 qK
-jm
+el
 pc
 ak
 LZ
@@ -30832,7 +30757,7 @@ iH
 je
 bj
 gv
-jm
+el
 gv
 ak
 hG
@@ -31034,7 +30959,7 @@ ig
 Dn
 bj
 gv
-jm
+el
 gv
 ak
 jV
@@ -31438,7 +31363,7 @@ iK
 jh
 bj
 RS
-jm
+el
 pp
 ak
 BD
@@ -31640,7 +31565,7 @@ aX
 ji
 aX
 gv
-jm
+el
 gv
 dv
 ff
@@ -31842,7 +31767,7 @@ iL
 jj
 aX
 gv
-jm
+el
 gv
 dv
 eF
@@ -32044,7 +31969,7 @@ ca
 jk
 aX
 gv
-jm
+el
 gv
 dv
 lv
@@ -32246,7 +32171,7 @@ ca
 jk
 aX
 CA
-jm
+el
 gv
 dv
 lg
@@ -32650,7 +32575,7 @@ ca
 jz
 aX
 Kh
-jm
+el
 gv
 dv
 dv
@@ -32852,7 +32777,7 @@ iM
 jC
 gC
 gv
-jm
+el
 pW
 lD
 rx
@@ -37670,7 +37595,7 @@ ab
 ab
 ab
 hM
-my
+ke
 mA
 aB
 aH
@@ -37750,7 +37675,7 @@ Bl
 Bn
 Ix
 si
-sr
+dM
 Dr
 ae
 aq
@@ -37937,7 +37862,7 @@ Gr
 Gr
 Gr
 vU
-uP
+tc
 qi
 Gr
 Gr
@@ -38139,7 +38064,7 @@ sW
 NA
 qi
 uE
-uP
+tc
 qi
 vq
 td
@@ -38537,7 +38462,7 @@ tc
 JK
 qi
 qi
-tM
+hQ
 qi
 Cy
 NA
@@ -38882,7 +38807,7 @@ ab
 ab
 ab
 mx
-mz
+kE
 mA
 Np
 ai
@@ -38962,7 +38887,7 @@ Gf
 Gk
 KP
 si
-sG
+hf
 DH
 ae
 aq
@@ -39345,7 +39270,7 @@ BJ
 rJ
 tg
 tg
-tZ
+tP
 tg
 tg
 tg
@@ -44161,13 +44086,13 @@ ab
 ab
 ab
 ab
-mV
+kU
 mT
 ns
 mT
 xa
 mT
-oi
+lr
 ab
 ab
 ab

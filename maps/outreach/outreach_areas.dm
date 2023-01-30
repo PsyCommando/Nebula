@@ -310,6 +310,9 @@
 /area/outreach/outpost/hallway/central/floor1
 	name = "OH 1F Central Hallway"
 
+/area/outreach/outpost/hallway/south/ground/business_wing
+	name = "OH GF Business Hallway"
+
 ///////////////////////////////////////////////////
 //Stairwell
 ///////////////////////////////////////////////////
@@ -549,6 +552,7 @@
 		'sound/ambience/ambigen10.ogg',
 		'sound/ambience/ambigen11.ogg',
 	)
+
 ///////////////////////////////////////////////////
 //Atmos
 ///////////////////////////////////////////////////

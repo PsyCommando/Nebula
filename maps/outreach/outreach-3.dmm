@@ -15,6 +15,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/abstract/landmark/skip_wire_test,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
 "ab" = (
@@ -523,7 +524,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/hallway/north/ground)
@@ -537,7 +538,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/ground)
@@ -568,7 +569,7 @@
 "bJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -576,7 +577,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/hangar/north)
@@ -733,7 +734,7 @@
 "ci" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -820,7 +821,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -838,11 +839,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/north/ground)
@@ -857,7 +858,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/atmos/ground)
@@ -1008,7 +1009,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -1016,7 +1017,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/atmos/ground)
@@ -1097,7 +1098,7 @@
 "cX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1108,7 +1109,7 @@
 "cY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1139,9 +1140,7 @@
 	icon_state = "closed"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "dd" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1153,21 +1152,23 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/north/ground)
 "de" = (
-/obj/machinery/light_switch{
-	icon_state = "light0";
-	dir = 4
+/obj/machinery/door/firedoor/autoset,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/effect/wallframe_spawn/concrete,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "df" = (
 /turf/simulated/wall,
 /area/outreach/outpost/vacant/ground/office3)
 "dg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1176,17 +1177,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/hangar/north)
 "dh" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/machinery/light_switch{
+	icon_state = "light0";
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "di" = (
 /obj/machinery/light{
 	icon_state = "tube_map";
@@ -1232,14 +1228,15 @@
 /turf/simulated/floor/reinforced/airless,
 /area/exoplanet/outreach)
 "do" = (
-/obj/machinery/light{
-	icon_state = "tube_map";
-	dir = 4
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "dp" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
@@ -1375,10 +1372,6 @@
 	icon_state = "11";
 	dir = 6
 	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 4
-	},
 /obj/machinery/light/small/wired{
 	icon_state = "bulb_map";
 	dir = 1
@@ -1457,29 +1450,21 @@
 "dN" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/storage/ground)
 "dO" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/docking_beacon/mapped,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 4
-	},
-/obj/effect/catwalk_plated,
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/west/ground)
+/obj/structure/cable/cyan,
+/obj/effect/catwalk_plated/dark,
+/obj/abstract/landmark/skip_wire_test,
+/turf/simulated/floor/plating/outreach,
+/area/exoplanet/outreach)
 "dP" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -1593,17 +1578,12 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/north/ground)
 "ed" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	icon_state = "apc0";
-	dir = 8
+/obj/machinery/light{
+	icon_state = "tube_map";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "ee" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1656,7 +1636,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1683,26 +1663,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/west/ground)
-"em" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/effect/catwalk_plated,
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
@@ -1718,10 +1679,15 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/stairwell/ground)
 "eo" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	icon_state = "apc0";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "ep" = (
 /obj/machinery/door/airlock/glass/maintenance{
 	icon_state = "closed"
@@ -1912,7 +1878,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/eva/gf/north)
@@ -1937,7 +1903,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1946,7 +1912,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
@@ -1960,7 +1926,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1969,7 +1935,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
@@ -1979,7 +1945,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -1998,7 +1964,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2017,7 +1983,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2026,7 +1992,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/ground)
@@ -2040,7 +2006,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2049,7 +2015,7 @@
 /obj/effect/wallframe_spawn/concrete,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/ground)
@@ -2068,7 +2034,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	icon_state = "map-supply";
@@ -2084,7 +2050,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2122,7 +2088,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2140,7 +2106,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2149,7 +2115,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/ground)
@@ -2290,24 +2256,17 @@
 /area/outreach/outpost/vacant/ground/office7)
 "fo" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8"
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "fp" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2315,7 +2274,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2366,7 +2325,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/ground)
@@ -2437,7 +2396,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2455,7 +2414,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2469,7 +2428,7 @@
 "fD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2487,7 +2446,7 @@
 "fF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2496,15 +2455,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/ground)
 "fG" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
-	dir = 4
+/obj/structure/sign/number/seven{
+	icon_state = "number_7";
+	dir = 8
 	},
-/obj/item/caution/cone,
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "fH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -2586,20 +2542,13 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
 "fP" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	icon_state = "map_scrubber_on";
-	dir = 8
-	},
-/obj/item/caution/cone,
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "fQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2642,7 +2591,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/waste/ground)
@@ -2656,7 +2605,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/waste/ground)
@@ -2795,7 +2744,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/maint/passage/ground/north/hangar)
@@ -2835,7 +2784,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -2873,7 +2822,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -2965,7 +2914,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -2986,7 +2935,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3004,7 +2953,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3018,7 +2967,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3083,6 +3032,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
+"gU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j1";
+	dir = 1
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "gV" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/apc,
@@ -3117,7 +3088,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3126,7 +3097,7 @@
 /obj/effect/wallframe_spawn/concrete,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
@@ -3147,6 +3118,24 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
+"hc" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "hd" = (
 /obj/machinery/door/airlock/external/bolted{
 	icon_state = "closed";
@@ -3232,7 +3221,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/eva)
@@ -3269,7 +3258,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3278,16 +3267,18 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/ground)
 "hs" = (
-/obj/structure/sign/number/one,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 4
+	},
+/obj/item/caution/cone,
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "ht" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
@@ -3340,7 +3331,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
@@ -3351,7 +3342,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3398,7 +3389,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/ground)
@@ -3429,7 +3420,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -3480,7 +3471,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/eva)
@@ -3536,17 +3527,29 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/north/hangar)
 "hY" = (
-/obj/structure/sign/number/three,
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "hZ" = (
-/obj/structure/sign/number/five,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	icon_state = "map_scrubber_on";
+	dir = 8
+	},
+/obj/item/caution/cone,
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "ia" = (
 /turf/simulated/wall/r_wall,
 /area/outreach/outpost/vacant/ground/depot)
@@ -3633,24 +3636,24 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/northwest)
 "in" = (
-/obj/machinery/door/firedoor/autoset,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/caution/cone,
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "io" = (
 /obj/effect/floor_decal/corner/grey/bordercorner,
 /turf/exterior/concrete/reinforced,
 /area/exoplanet/outreach)
 "ip" = (
-/obj/structure/sign/number/two{
-	icon_state = "number_2";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/door/firedoor/autoset,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "iq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -3668,11 +3671,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/junction{
@@ -4188,7 +4191,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/eva/gf/north)
@@ -4249,7 +4252,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -4296,7 +4299,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -4369,7 +4372,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -4487,6 +4490,17 @@
 /turf/simulated/floor/airless,
 /area/exoplanet/outreach)
 "kl" = (
+/obj/machinery/door/firedoor/autoset,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"km" = (
 /obj/machinery/camera/network/security{
 	icon_state = "camera";
 	dir = 4
@@ -4496,26 +4510,24 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"km" = (
-/turf/simulated/wall/concrete,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kn" = (
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office3)
 "ko" = (
-/obj/machinery/light{
-	icon_state = "tube_map";
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kp" = (
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office5)
@@ -4530,15 +4542,8 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office7)
 "ks" = (
-/obj/machinery/light{
-	icon_state = "tube_map";
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/wall/concrete,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kt" = (
 /obj/machinery/light{
 	icon_state = "tube_map";
@@ -4581,15 +4586,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/ground/office7)
@@ -4599,15 +4604,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office7)
@@ -4630,81 +4635,42 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office7)
 "kB" = (
-/obj/machinery/door/firedoor/autoset{
-	icon_state = "open";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"kC" = (
-/obj/structure/sign/number/seven{
-	icon_state = "number_7";
-	dir = 8
+/obj/machinery/light{
+	icon_state = "tube_map";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"kC" = (
+/obj/structure/sign/number/one,
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kD" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kE" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	icon_state = "map-scrubbers";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 8
-	},
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
+/obj/machinery/light{
+	icon_state = "tube_map";
 	dir = 1
 	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kF" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	icon_state = "map-scrubbers";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/structure/sign/number/three,
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kG" = (
+/obj/structure/sign/number/five,
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"kH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -4712,65 +4678,29 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/item/caution/cone,
 /obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"kH" = (
-/obj/machinery/door/firedoor/autoset,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kI" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
+/obj/machinery/door/firedoor/autoset{
+	icon_state = "open";
 	dir = 8
 	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_ridged,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kJ" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kK" = (
-/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
-	icon_state = "cap-scrubbers";
-	dir = 4
+/obj/structure/disposalpipe/junction/mirrored{
+	icon_state = "pipe-j2";
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/cap/hidden/supply{
-	icon_state = "cap-supply";
-	dir = 4
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kL" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/apc{
@@ -4811,27 +4741,22 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office3)
 "kR" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/security{
-	icon_state = "camera";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/sign/number/eight{
+	icon_state = "number_8";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kT" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -4846,14 +4771,17 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/ground)
 "kU" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
+/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
+	icon_state = "cap-scrubbers";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/cap/hidden/supply{
+	icon_state = "cap-supply";
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "kV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -4911,7 +4839,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	icon_state = "map-supply";
@@ -4948,14 +4876,21 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/eva/gf/north)
 "lf" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	icon_state = "map_scrubber_on";
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lg" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -5080,15 +5015,21 @@
 /area/outreach/outpost/vacant/ground/office5)
 "lw" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lx" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -5107,16 +5048,23 @@
 /area/outreach/outpost/vacant/ground/office5)
 "lz" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/item/caution/cone,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j1";
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lA" = (
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/vacant/ground/office1)
@@ -5137,14 +5085,24 @@
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/vacant/ground/office3)
 "lD" = (
-/obj/structure/disposalpipe/junction/mirrored{
-	icon_state = "pipe-j2";
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lE" = (
 /obj/machinery/door/firedoor/autoset,
 /obj/structure/cable/yellow{
@@ -5172,24 +5130,25 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/ground/office5)
 "lG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lH" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
@@ -5200,14 +5159,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lI" = (
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/vacant/ground/office8)
@@ -5234,21 +5191,20 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
+/obj/item/caution/cone,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
 	dir = 4
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lN" = (
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -5263,15 +5219,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/ground/office8)
@@ -5281,15 +5237,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office8)
@@ -5336,38 +5292,50 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/ground/office2)
 "lU" = (
+/obj/machinery/door/firedoor/autoset{
+	icon_state = "open";
+	dir = 8
+	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j1";
+	dir = 4
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lV" = (
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/vacant/ground/office4)
 "lW" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "lX" = (
 /obj/machinery/door/firedoor/autoset,
 /obj/structure/cable/yellow{
@@ -5616,15 +5584,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/vacant/ground/office9)
@@ -5634,15 +5602,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office9)
@@ -5740,42 +5708,63 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/vacant/ground/depot)
 "mX" = (
-/obj/structure/sign/number/four{
-	icon_state = "number_4";
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 1
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "mY" = (
-/obj/structure/sign/number/six{
-	icon_state = "number_6";
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/disposalpipe/segment/bent,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"mZ" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"na" = (
+/obj/structure/sign/number/two{
+	icon_state = "number_2";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"mZ" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/sign/number/eight{
-	icon_state = "number_8";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"na" = (
-/obj/structure/sign/number/nine{
-	icon_state = "number_9";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "nb" = (
 /obj/machinery/power/apc{
 	icon_state = "apc0";
@@ -5826,7 +5815,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5878,7 +5867,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
@@ -5944,148 +5933,6 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/airlock)
 "nr" = (
-/obj/machinery/door/firedoor/autoset,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/effect/wallframe_spawn/concrete,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"ns" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nt" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nu" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/item/caution/cone,
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-s";
-	dir = 8
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nv" = (
-/obj/machinery/door/firedoor/autoset{
-	icon_state = "open";
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
-	dir = 4
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nw" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 8
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nx" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 1
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"ny" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -6096,55 +5943,109 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nz" = (
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"ns" = (
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nt" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 1
+	},
+/obj/machinery/camera/network/security{
+	icon_state = "camera";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nu" = (
+/obj/structure/sign/number/four{
+	icon_state = "number_4";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nv" = (
+/obj/structure/sign/number/six{
+	icon_state = "number_6";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nw" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/caution/cone,
+/obj/structure/disposalpipe/junction/yjunction{
+	icon_state = "pipe-y";
+	dir = 4
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/structure/disposalpipe/segment/bent,
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nA" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nx" = (
+/obj/machinery/door/firedoor/autoset{
+	icon_state = "open";
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
-	dir = 4
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"ny" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nz" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j1";
+	dir = 1
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"nB" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	icon_state = "pipe-t";
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nA" = (
+/obj/structure/sign/number/nine{
+	icon_state = "number_9";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"nB" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j1";
+	dir = 1
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "nC" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -6155,11 +6056,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/atmos/ground)
@@ -6205,7 +6106,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/ground)
@@ -6215,7 +6116,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -6240,7 +6141,7 @@
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/ground)
@@ -6282,7 +6183,7 @@
 "nM" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/vacant/ground/depot)
@@ -6376,66 +6277,13 @@
 /turf/simulated/wall,
 /area/outreach/outpost/vacant/ground/office6)
 "oa" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
-	dir = 1
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
 "ob" = (
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"oc" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	icon_state = "map-scrubbers";
-	dir = 8
-	},
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j1";
-	dir = 1
-	},
-/obj/effect/catwalk_plated,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"od" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/item/caution/cone,
-/obj/structure/disposalpipe/junction/yjunction{
-	icon_state = "pipe-y";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"oe" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	icon_state = "map-supply";
 	dir = 4
@@ -6447,10 +6295,15 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"of" = (
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"oc" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	icon_state = "map_scrubber_on";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"od" = (
 /obj/machinery/atmospherics/pipe/cap/hidden/supply{
 	icon_state = "cap-supply";
 	dir = 1
@@ -6465,22 +6318,32 @@
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
-"og" = (
-/obj/machinery/door/firedoor/autoset{
-	icon_state = "open";
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"oe" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	icon_state = "pipe-t";
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 8
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/south/ground/business_wing)
+"of" = (
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 5
 	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/hallway/south/ground{
-	name = "OH GF Business Wing"
-	})
+/obj/machinery/light/small/wired,
+/obj/machinery/button/access/wired/exterior{
+	dir = 4;
+	id_tag = "OH_l3_e_alck";
+	pixel_x = 0
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/outreach/outpost/ext_vents/ground)
 "oh" = (
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -6721,7 +6584,7 @@
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-s";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -6983,27 +6846,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/north/hangar)
-"pn" = (
-/obj/structure/cable/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
-	dir = 5
-	},
-/obj/machinery/power/terminal{
-	icon_state = "term";
-	dir = 4
-	},
-/obj/machinery/light/small/wired,
-/obj/machinery/button/access/wired/exterior{
-	dir = 4;
-	id_tag = "OH_l3_e_alck";
-	pixel_x = 0
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/outreach/outpost/ext_vents/ground)
 "po" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
@@ -7062,16 +6904,6 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating/outreach,
-/area/exoplanet/outreach)
-"pv" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/docking_beacon/mapped,
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/cyan,
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
@@ -23598,9 +23430,9 @@ db
 db
 db
 lA
-km
-km
-km
+ks
+ks
+ks
 lS
 mb
 mb
@@ -23800,9 +23632,9 @@ kh
 kM
 lm
 lA
-ko
-kK
-eo
+kB
+kU
+fP
 lS
 mc
 ms
@@ -23982,7 +23814,7 @@ dN
 cI
 dE
 bG
-em
+eM
 bG
 ib
 mT
@@ -24002,9 +23834,9 @@ kh
 kh
 ln
 lA
-hs
-lG
-ip
+kC
+lf
+na
 lS
 md
 mc
@@ -24184,7 +24016,7 @@ dN
 cO
 dE
 bG
-em
+eM
 bG
 ib
 mU
@@ -24204,9 +24036,9 @@ kh
 kN
 lo
 lB
+kD
 lw
-lH
-ny
+nr
 lT
 me
 mt
@@ -24406,9 +24238,9 @@ kh
 kh
 lp
 lA
-eo
-lM
-lW
+fP
+lz
+ns
 lS
 mf
 mc
@@ -24608,9 +24440,9 @@ kh
 kO
 kh
 lA
-eo
-lU
-eo
+fP
+lD
+fP
 lS
 mg
 mu
@@ -24810,9 +24642,9 @@ db
 db
 db
 lA
-eo
-lU
-eo
+fP
+lD
+fP
 lS
 mb
 mb
@@ -25012,9 +24844,9 @@ kn
 kP
 lq
 lC
-ks
-ns
-kR
+kE
+lG
+nt
 lV
 mh
 mv
@@ -25214,9 +25046,9 @@ kn
 kn
 lr
 lC
-hY
-lU
-mX
+kF
+lD
+nu
 lV
 mi
 mh
@@ -25396,7 +25228,7 @@ ce
 ce
 br
 bG
-dO
+ir
 it
 nS
 nT
@@ -25416,9 +25248,9 @@ kn
 kQ
 ls
 lE
-lw
-nt
-ny
+kD
+lH
+nr
 lX
 mj
 mw
@@ -25618,9 +25450,9 @@ kn
 kn
 lt
 lC
-eo
-lM
-lW
+fP
+lz
+ns
 lV
 mk
 mh
@@ -25820,9 +25652,9 @@ kn
 kW
 kn
 lC
-eo
-lU
-eo
+fP
+lD
+fP
 lV
 ml
 mx
@@ -26022,9 +25854,9 @@ df
 df
 df
 lC
-eo
-lU
-eo
+fP
+lD
+fP
 lV
 mm
 mm
@@ -26224,9 +26056,9 @@ kp
 lh
 lu
 fm
-ko
-lU
-eo
+kB
+lD
+fP
 lY
 mn
 my
@@ -26426,9 +26258,9 @@ kp
 kp
 lv
 fm
-hZ
-nu
-mY
+kG
+lM
+nv
 lY
 mo
 mn
@@ -26628,9 +26460,9 @@ kp
 li
 lx
 lF
-lz
-nt
-od
+kH
+lH
+nw
 lZ
 mp
 mz
@@ -26830,9 +26662,9 @@ kp
 lj
 ly
 fm
-kB
-nv
-og
+kI
+lU
+nx
 lY
 mq
 mA
@@ -27032,9 +26864,9 @@ fm
 fm
 fm
 fm
-ob
-nw
-eo
+kJ
+lW
+fP
 lY
 lY
 lY
@@ -27227,24 +27059,24 @@ oD
 ek
 fg
 dc
-de
-ed
+dh
 eo
-fG
-eo
-in
-kl
-lD
-nx
-kS
-eo
-in
-eo
-eo
-eo
-kU
-eo
+fP
+hs
+fP
+ip
 km
+kK
+mX
+ny
+fP
+ip
+fP
+fP
+fP
+oa
+fP
+ks
 gE
 gG
 gQ
@@ -27428,25 +27260,25 @@ oC
 oE
 nl
 kV
-nr
-dh
-kD
-kE
-kF
-kG
-kH
-kI
-kJ
+de
+do
+fo
+gU
+hY
+in
+kl
+ko
+kR
+mY
 nz
-oa
-dh
-kH
-dh
-dh
-oc
-oe
-of
-km
+do
+kl
+do
+do
+nB
+ob
+od
+ks
 gE
 gG
 gQ
@@ -27631,24 +27463,24 @@ oG
 ek
 fl
 dc
-do
-kC
-fo
+ed
+fG
+hc
+hZ
 fP
-eo
-in
-do
+ip
+ed
+kS
 mZ
+ns
+fP
+ip
+ed
 nA
-lW
-eo
-in
-do
-na
-fo
-lf
-nB
-km
+hc
+oc
+oe
+ks
 pX
 gG
 gQ
@@ -31256,7 +31088,7 @@ dD
 jo
 jc
 jx
-pn
+of
 jY
 nn
 oj
@@ -33292,7 +33124,7 @@ kd
 ax
 pt
 ju
-pv
+dO
 av
 av
 av
@@ -38140,7 +37972,7 @@ iD
 bU
 pt
 ju
-pv
+dO
 av
 av
 av
@@ -42988,7 +42820,7 @@ iD
 bU
 pu
 ju
-pv
+dO
 av
 av
 av
