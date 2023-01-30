@@ -154,3 +154,14 @@
 /obj/abstract/landmark/costume/savagehuntress/make_costumes()
 	new /obj/item/clothing/mask/spirit(src.loc)
 	new /obj/item/clothing/under/savage_hunter/female(src.loc)
+
+//Wire unit test skipper
+/obj/abstract/landmark/skip_wire_test
+	icon = 'icons/misc/map_editor.dmi'
+	icon_state = "skip_test"
+/obj/abstract/landmark/skip_wire_test/Initialize(ml)
+#ifdef UNIT_TEST
+	for(var/wire in (locate(/obj/structure/cable) in loc))
+		LAZYADD(global.station_wires_shall_be_connected_exceptions, list(wire.x, wire.y, wire.z, wire.dir))
+#endif
+	. = ..()

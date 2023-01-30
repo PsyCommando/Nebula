@@ -587,6 +587,7 @@
 	return 1
 
 //=======================================================================================
+var/global/list/station_wires_shall_be_connected_exceptions
 
 /datum/unit_test/station_wires_shall_be_connected
 	name = "MAP: Station wires shall be connected"
@@ -596,7 +597,8 @@
 	var/failures = 0
 
 	var/exceptions_by_turf = list()
-	for(var/exception in exceptions)
+	var/list/all_exceptions = exceptions + global.station_wires_shall_be_connected_exceptions
+	for(var/list/exception in all_exceptions)
 		var/turf/T = locate(exception[1], exception[2], exception[3])
 		if(!T)
 			CRASH("Invalid exception: [exception[1]] - [exception[2]] - [exception[3]]")
