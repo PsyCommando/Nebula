@@ -12,8 +12,9 @@
 /**Returns a list with the ratio (0 to 1) for each gases in the atmosphere of outreach. */
 /proc/OutreachAtmosRatios()
 	return list(
+		/decl/material/gas/oxygen         = 0.10,
 		/decl/material/gas/chlorine       = 0.17,
-		/decl/material/gas/nitrogen       = 0.63,
+		/decl/material/gas/nitrogen       = 0.53,
 		/decl/material/gas/carbon_dioxide = 0.11,
 		)
 
@@ -55,30 +56,6 @@
 
 	/**Makes it more reliable to find the z-level linked to this sector */
 	prefered_level_id = "outreach_4"
-
-#if 0
-/obj/effect/overmap/visitable/sector/exoplanet/outreach/Initialize(var/mapload, var/z_level)
-	. = ..(mapload, global.using_map.station_levels[4])
-	docking_codes = "[global.using_map.dock_name]"
-
-	// Build Level workaround
-	maxx = world.maxx
-	maxy = world.maxy
-	x_origin = TRANSITIONEDGE + 1
-	y_origin = TRANSITIONEDGE + 1
-	x_size = maxx - 2 * (TRANSITIONEDGE + 1)
-	y_size = maxy - 2 * (TRANSITIONEDGE + 1)
-	landing_points_to_place = min(round(0.1 * (x_size * y_size) / (shuttle_size * shuttle_size)), 3)
-	planetary_area = ispath(planetary_area) ? new planetary_area : planetary_area
-
-	generate_habitability()
-	generate_atmosphere()
-	generate_flora()
-	generate_map()
-	generate_planet_image()
-	generate_daycycle()
-	START_PROCESSING(SSobj, src)
-#endif
 
 /obj/effect/overmap/visitable/sector/exoplanet/outreach/select_strata()
 	return //We already have picked a strata
