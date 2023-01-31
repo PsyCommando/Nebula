@@ -2,6 +2,9 @@
 /datum/map/outreach
 	overmap_ids = list(OVERMAP_ID_SPACE = /datum/overmap/outreach)
 
+/obj/effect/overmap/star/outreach
+	name = "Castor"
+
 /////////////////////////////////////////////////////////////////////////////////
 // Overmap Details
 /////////////////////////////////////////////////////////////////////////////////
@@ -31,6 +34,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Supply Shuttle Handling
 /////////////////////////////////////////////////////////////////////////////////
+#if 0
 /datum/shuttle/autodock/ferry/supply/cargo
 	name = "Supply"
 	warmup_time = 10
@@ -43,6 +47,4 @@
 	docking_controller = "cargo_bay"
 	base_area = /area/supply_shuttle_dock
 	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/overmap/star/outreach
-	name = "Castor"
+#endif

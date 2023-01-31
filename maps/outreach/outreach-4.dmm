@@ -1167,6 +1167,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/central/floor1)
 "cB" = (

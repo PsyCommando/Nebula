@@ -4545,7 +4545,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
 	dir = 8

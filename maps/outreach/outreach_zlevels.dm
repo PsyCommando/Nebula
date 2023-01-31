@@ -9,7 +9,6 @@
 		"maps/outreach/outreach_south-1.dmm",
 		"maps/outreach/outreach_south-2.dmm",
 		"maps/outreach/outreach_south-3.dmm",
-		"maps/utility/cargo_shuttle_tmpl.dmm",
 	)
 
 #else
@@ -21,7 +20,6 @@
 		"maps/outreach/outreach_south-1.dmm",
 		"maps/outreach/outreach_south-2.dmm",
 		"maps/outreach/outreach_south-3.dmm",
-		"maps/utility/cargo_shuttle_tmpl.dmm",
 	)
 #endif
 

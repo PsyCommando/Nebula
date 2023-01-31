@@ -6460,6 +6460,18 @@
 "nA" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/airlock/basement1/west)
+"nB" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/outreach/outpost/control/command_hall)
 "nC" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -6598,6 +6610,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/secmaint)
+"nM" = (
+/obj/machinery/power/breakerbox/activated,
+/obj/structure/sign/warning/high_voltage{
+	dir = 8;
+	icon_state = "shock";
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/control)
 "nN" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 1;
@@ -13493,6 +13515,25 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/maint/passage/b1/north)
+"Bk" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/cap{
+	icon_state = "pipe-cap";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/control/command_hall)
 "Bl" = (
 /obj/structure/cable/yellow,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -13862,6 +13903,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/command_conference)
+"BT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/structure/disposalpipe/cap{
+	icon_state = "pipe-cap";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/vacant/b1/south/east)
 "BU" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -14775,17 +14831,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/control)
-"DR" = (
-/obj/machinery/power/breakerbox/activated,
-/obj/structure/cable/yellow,
-/obj/structure/sign/warning/high_voltage{
-	dir = 8;
-	icon_state = "shock";
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/simulated/floor/plating,
 /area/outreach/outpost/control)
 "DS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -17783,21 +17828,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/stairwell/basement1)
-"Sh" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/dark,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	icon_state = "map-supply";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/control/command_hall)
 "Si" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -17985,19 +18015,6 @@
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/command_conference)
-"Wg" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/effect/catwalk_plated,
-/obj/effect/catwalk_plated/dark,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/turf/simulated/floor/plating,
-/area/outreach/outpost/control/command_hall)
 "Wp" = (
 /obj/machinery/light,
 /obj/structure/table/woodentable/walnut,
@@ -32398,7 +32415,7 @@ Bq
 BC
 Gd
 zT
-DR
+nM
 FV
 FX
 dv
@@ -33009,7 +33026,7 @@ OP
 Aj
 gS
 iE
-Wg
+nB
 Ul
 Oi
 px
@@ -33211,7 +33228,7 @@ Xh
 Uh
 rx
 NI
-Sh
+Bk
 PQ
 Oi
 px
@@ -39083,7 +39100,7 @@ BJ
 rJ
 th
 tg
-tP
+BT
 tg
 tg
 BX

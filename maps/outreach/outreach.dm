@@ -9,7 +9,6 @@
 	//Map extensions
 	#include "../chargen/chargen_areas.dm"
 	#include "../chargen/chargen_objects.dm"
-	#include "../utility/cargo_shuttle_tmpl.dm"
 
 	//Away sites
 	// #include "../away/casino/casino.dm"

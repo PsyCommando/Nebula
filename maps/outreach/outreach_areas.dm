@@ -388,9 +388,6 @@
 /area/outreach/outpost/maint/passage/b1/east/junct
 	name = "OB 1B E Maint Junction"
 	icon_state = "smaint"
-/area/outreach/outpost/maint/passage/b1/west/junct
-	name = "OB 1B W Maint Junction"
-	icon_state = "pmaint"
 /area/outreach/outpost/maint/passage/b1/north/atmos
 	name = "OB 1B Atmos Maint"
 	icon_state = "maint_engineering"
@@ -471,8 +468,6 @@
 /area/outreach/outpost/maint/outer_wall
 	icon_state = "maint_exterior"
 
-/area/outreach/outpost/maint/outer_wall/b1
-	name = "OB 1B Maintenance Outer"
 /area/outreach/outpost/maint/outer_wall/ground
 	name = "OB GF Maintenance Outer"
 /area/outreach/outpost/maint/outer_wall/f1
@@ -575,12 +570,6 @@
 	sound_env  = HALLWAY
 	ambience   = null
 	forced_ambience = list('sound/ambience/ambiatm1.ogg')
-/area/outreach/outpost/atmospherics/b1/supply
-	name            = "OB 1B Atmos Air Supply"
-	icon_state      = "atmos"
-	sound_env       = HALLWAY
-	forced_ambience = list('sound/ambience/ambiatm1.ogg')
-
 /area/outreach/outpost/atmospherics/b2/tank_outer
 	name       = "OB 2B Atmos Tanks Perimeter"
 	icon_state = "atmos"
@@ -642,9 +631,6 @@
 ///////////////////////////////////////////////////
 //Cargo
 ///////////////////////////////////////////////////
-/area/outreach/outpost/cargo
-	name       = "OB 1B Cargo"
-	icon_state = "quart"
 
 ///////////////////////////////////////////////////
 //Airlock
@@ -699,13 +685,6 @@
 ///////////////////////////////////////////////////
 //Lockers
 ///////////////////////////////////////////////////
-/area/outreach/outpost/lockers
-	icon_state = "locker"
-	sound_env  = ROOM
-/area/outreach/outpost/lockers/north
-	name = "OB 1B North Lockers"
-/area/outreach/outpost/lockers/south
-	name = "OB 1B South Lockers"
 
 ///////////////////////////////////////////////////
 //Hangars
@@ -797,38 +776,21 @@
 //Unit Test Areas
 ///////////////////////////////////////////////////
 //Prevents unit tests from complaining about vents/scrubbers/etc
-/area/outreach/outpost/ext_vents
-	icon_state = "blue-red-d"
-	sound_env  = PLAIN
-/area/outreach/outpost/ext_vents/b2
-	name = "Outreach 2B Airlock Vents"
-/area/outreach/outpost/ext_vents/b1/east
-	name = "Outreach 1B East Airlock Vents"
-/area/outreach/outpost/ext_vents/b1/west
-	name = "Outreach 1B West Airlock Vents"
-/area/outreach/outpost/ext_vents/b1/north
-	name = "Outreach 1B North Airlock Vents"
-/area/outreach/outpost/ext_vents/b1/south
-	name = "Outreach 1B South Airlock Vents"
-/area/outreach/outpost/ext_vents/ground
-	name = "Outreach GF Airlock Vents"
-/area/outreach/outpost/ext_vents/f1
-	name = "Outreach 1F Airlock Vents"
 
 
-/area/outreach/outpost/southern_tunnel
-	name             = "OB GF South Tunnel"
-	icon_state       = "blue-red-d"
-	sound_env        = PARKING_LOT
-	ambience         = null
-	forced_ambience  = list(
-		'sound/effects/wind/desert0.ogg',
-		'sound/effects/wind/desert1.ogg',
-		'sound/effects/wind/desert2.ogg',
-		'sound/effects/wind/desert3.ogg',
-		'sound/effects/wind/desert4.ogg',
-		'sound/effects/wind/desert5.ogg',
-	)
+// /area/outreach/outpost/southern_tunnel
+// 	name             = "OB GF South Tunnel"
+// 	icon_state       = "blue-red-d"
+// 	sound_env        = PARKING_LOT
+// 	ambience         = null
+// 	forced_ambience  = list(
+// 		'sound/effects/wind/desert0.ogg',
+// 		'sound/effects/wind/desert1.ogg',
+// 		'sound/effects/wind/desert2.ogg',
+// 		'sound/effects/wind/desert3.ogg',
+// 		'sound/effects/wind/desert4.ogg',
+// 		'sound/effects/wind/desert5.ogg',
+// 	)
 
 ///////////////////////////////////////////////////
 //Elevators
