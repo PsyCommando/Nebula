@@ -119,10 +119,11 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            12000
 
 /obj/machinery/geothermal/Initialize(mapload, d, populate_parts = TRUE)
 	. = ..()
-	refresh_neighbors()
-	for(var/turf/T as anything in RANGE_TURFS(loc, 1))
-		for(var/obj/machinery/geothermal/neighbor in T)
-			neighbor.refresh_neighbors()
+	if(get_turf(loc))
+		refresh_neighbors()
+		for(var/turf/T as anything in RANGE_TURFS(loc, 1))
+			for(var/obj/machinery/geothermal/neighbor in T)
+				neighbor.refresh_neighbors()
 	STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
 	return INITIALIZE_HINT_LATELOAD
 
