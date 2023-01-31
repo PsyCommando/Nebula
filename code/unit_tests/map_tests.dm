@@ -606,8 +606,6 @@
 
 	for(var/obj/structure/cable/C in global.cable_list)
 		if(!QDELETED(C) && !all_ends_connected(C))
-			if(locate(/obj/abstract/landmark/skip_wire_test) in C.loc)
-				continue
 			failures++
 
 	if(failures)
@@ -632,6 +630,9 @@
 
 	// We don't care about non-station wires
 	if(!isStationLevel(source_turf.z))
+		return TRUE
+
+	if(locate(/obj/abstract/landmark/skip_wire_test) in source_turf)
 		return TRUE
 
 	for(var/dir in list(C.d1, C.d2))
