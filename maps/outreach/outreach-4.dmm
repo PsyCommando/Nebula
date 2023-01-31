@@ -64,6 +64,7 @@
 	icon_state = "stripe";
 	dir = 1
 	},
+/obj/structure/disposalpipe/cap,
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/north/floor1)
 "an" = (
@@ -940,6 +941,10 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/cap{
+	icon_state = "pipe-cap";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/west/floor1)
 "ck" = (
@@ -1436,6 +1441,10 @@
 /obj/effect/catwalk_plated,
 /obj/structure/cable/white{
 	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/cap{
+	icon_state = "pipe-cap";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/east/floor1)
@@ -2439,6 +2448,10 @@
 	},
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/cap{
+	icon_state = "pipe-cap";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/floor1)
 "fj" = (

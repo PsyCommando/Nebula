@@ -565,6 +565,10 @@
 	name       = "OB 1B Atmos Storage"
 	icon_state = "atmos"
 	sound_env  = STANDARD_STATION
+/area/outreach/outpost/atmospherics/b1/storage/canister
+	name       = "OB 1B Atmos Canister Storage"
+	icon_state = "atmos"
+	sound_env  = SMALL_ENCLOSED
 /area/outreach/outpost/atmospherics/b1/hall
 	name       = "OB 1B Atmospherics Hall"
 	icon_state = "atmos"

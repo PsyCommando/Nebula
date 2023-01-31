@@ -507,15 +507,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	icon_state = "11";
-	dir = 6
-	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "bz" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2171,11 +2164,8 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/airlock/basement2)
 "eK" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "eL" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	icon_state = "stripecorner";
@@ -2330,13 +2320,15 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	icon_state = "11";
-	dir = 5
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "fc" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "stripe";
@@ -2528,8 +2520,13 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/south/basement2)
 "fs" = (
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
+	dir = 8;
+	id_tag = "OH_l1_e_alck_pump_out_external"
+	},
+/obj/effect/floor_decal/industrial/hatch/orange,
+/turf/simulated/floor/plating/outreach,
+/area/exoplanet/outreach/underground/d2)
 "ft" = (
 /obj/machinery/alarm{
 	icon_state = "alarm0";
@@ -2556,6 +2553,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b2/southeast)
+"fw" = (
+/obj/effect/wallframe_spawn/borosilicate,
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/autoset{
+	icon_state = "open";
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id_tag = "geo_blast_doors";
+	name = "power room blast door"
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/engineering/b2/smes)
 "fx" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/airlock/basement2)
@@ -2621,7 +2634,7 @@
 "fE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
 	dir = 8;
@@ -2646,7 +2659,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "fH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2661,7 +2674,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "fI" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating/outreach,
@@ -2689,7 +2702,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/effect/floor_decal/industrial/hatch/orange,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "fL" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
@@ -3092,7 +3105,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "gE" = (
 /obj/effect/floor_decal/industrial/fire{
 	icon_state = "stripe";
@@ -3234,7 +3247,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/orange,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/area/exoplanet/outreach/underground/d2)
 "gU" = (
 /obj/machinery/light/small{
 	icon_state = "bulb_map";
@@ -3472,14 +3485,29 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/structure/cable/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/light/small/wired{
-	icon_state = "bulb_map";
+/obj/machinery/button/access/wired/exterior{
+	dir = 4;
+	id_tag = "OH_l1_e_alck";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/exoplanet/outreach/underground/d2)
+"hA" = (
+/obj/effect/catwalk_plated,
+/obj/effect/wallframe_spawn/borosilicate,
+/obj/machinery/door/firedoor/autoset{
+	icon_state = "open";
 	dir = 8
 	},
-/obj/structure/cable/yellow,
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id_tag = "geo_blast_doors";
+	name = "power room blast door"
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/engineering/b2/smes)
 "hB" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable/yellow,
@@ -3510,13 +3538,17 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/geothermals)
 "hE" = (
-/obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
-	dir = 8;
-	id_tag = "OH_l1_e_alck_pump_out_external"
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/hatch/orange,
-/turf/simulated/floor/plating/outreach,
-/area/outreach/outpost/ext_vents/b2)
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/machinery/light/small/wired{
+	icon_state = "bulb_map";
+	dir = 8
+	},
+/obj/structure/cable/yellow,
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/exoplanet/outreach/underground/d2)
 "hF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techmaint,
@@ -3793,18 +3825,14 @@
 /area/outreach/outpost/engineering/b2/geothermals)
 "in" = (
 /obj/effect/wallframe_spawn/borosilicate,
-/obj/structure/cable/white{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
 	dir = 8
 	},
-/obj/machinery/door/blast/regular/wired/open{
-	density = 1;
+/obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "geo_blast_doors"
+	id_tag = "geo_blast_doors";
+	name = "power room blast door"
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/smes)
@@ -3816,20 +3844,16 @@
 /turf/simulated/floor/plating,
 /area/exoplanet/outreach/underground/d2)
 "ip" = (
-/obj/effect/catwalk_plated,
-/obj/effect/wallframe_spawn/borosilicate,
-/obj/machinery/door/firedoor/autoset{
-	icon_state = "open";
-	dir = 8
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/machinery/door/blast/regular/wired/open{
-	density = 1;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "geo_blast_doors"
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	icon_state = "11";
+	dir = 5
 	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/engineering/b2/smes)
+/turf/simulated/floor/tiled/techfloor/grid/outreach,
+/area/exoplanet/outreach/underground/d2)
 "iq" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -4149,19 +4173,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/maint/passage/b2/northwest)
-"iZ" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/button/access/wired/exterior{
-	dir = 4;
-	id_tag = "OH_l1_e_alck";
-	pixel_x = 0
-	},
-/turf/simulated/floor/tiled/techfloor/grid/outreach,
-/area/outreach/outpost/ext_vents/b2)
 "ja" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";
@@ -4387,20 +4398,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/geothermals)
-"jx" = (
-/obj/effect/wallframe_spawn/borosilicate,
-/obj/machinery/door/firedoor/autoset{
-	icon_state = "open";
-	dir = 8
-	},
-/obj/machinery/door/blast/regular/wired/open{
-	density = 1;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "geo_blast_doors"
-	},
-/turf/simulated/floor/plating,
-/area/outreach/outpost/engineering/b2/smes)
 "jy" = (
 /obj/effect/floor_decal/industrial/fire{
 	icon_state = "stripe";
@@ -20263,19 +20260,19 @@ iR
 iR
 ar
 ar
+fw
+hA
+ar
+hA
+fw
+ar
+ar
+ar
+fw
 in
-ip
-ar
-ip
-in
-ar
-ar
 ar
 in
-jx
-ar
-jx
-in
+fw
 ar
 ar
 jA
@@ -28340,17 +28337,17 @@ jf
 jd
 jd
 bm
-eK
 by
+fb
 fG
 fH
 fK
 gD
 gT
-iZ
 hz
-fb
-eK
+hE
+ip
+by
 eC
 jd
 jf
@@ -28542,17 +28539,17 @@ jf
 jf
 jd
 jd
+eK
 fs
-hE
+eK
+jd
+jd
+jd
+jd
+jd
+eK
 fs
-jd
-jd
-jd
-jd
-jd
-fs
-hE
-fs
+eK
 jd
 jd
 jf
@@ -28744,17 +28741,17 @@ jf
 jf
 jf
 jd
-fs
-fs
-fs
+eK
+eK
+eK
 jd
 jd
 jd
 jd
 jd
-fs
-fs
-fs
+eK
+eK
+eK
 jd
 jd
 jf
