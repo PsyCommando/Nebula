@@ -159,9 +159,10 @@
 /obj/abstract/landmark/skip_wire_test
 	icon = 'icons/misc/map_editor.dmi'
 	icon_state = "skip_test"
+
 /obj/abstract/landmark/skip_wire_test/Initialize(ml)
 #ifdef UNIT_TEST
-	for(var/wire in (locate(/obj/structure/cable) in loc))
+	for(var/obj/structure/cable/wire in (locate(/obj/structure/cable) in loc))
 		LAZYADD(global.station_wires_shall_be_connected_exceptions, list(wire.x, wire.y, wire.z, wire.dir))
 #endif
 	. = ..()
