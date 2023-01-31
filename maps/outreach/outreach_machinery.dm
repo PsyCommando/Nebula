@@ -167,8 +167,11 @@
 	initial_network_id = "outnet"
 	tag_network_tag = "oh_actrl"
 	use_power = POWER_USE_ACTIVE
+	maximum_component_parts = list(
+		/obj/item/stock_parts = 200,
+	)
 	uncreated_component_parts = list(
-		/obj/item/stock_parts/smes_coil = 5,
+		/obj/item/stock_parts/smes_coil = 7,
 	)
 	var/list/area_names = list(
 		"OB 1B Servers Room",
@@ -176,6 +179,8 @@
 		"OB 1B Control Room",
 		"OB 2B Power Storage",
 		"OB 2B Geothermals",
+		"OB 2B Atmos Tanks Perimeter",
+		"OB 1B Atmospherics Hall",
 	)
 
 /obj/machinery/network/area_controller/outreach/Initialize()
@@ -196,7 +201,9 @@
 /obj/machinery/network/acl/outreach
 	initial_network_id = "outnet"
 	tag_network_tag    = "oh_acl"
-	preset_groups      = list(ADMIN_PROTECTED_NET_GROUP = list())
+	preset_groups      = list(
+		ADMIN_PROTECTED_NET_GROUP = list()
+	)
 
 /obj/machinery/network/router/outreach
 	initial_network_id = "outnet"
@@ -233,12 +240,19 @@
 	id = "ob_bus"
 	network = "outcom"
 	freq_listening = list()
-	autolinkers = list("ob_processor","ob_tcomm_server","ob_hub")
+	autolinkers = list(
+		"ob_processor",
+		"ob_tcomm_server",
+		"ob_hub"
+	)
 
 /obj/machinery/telecomms/processor/preset_one/outreach
 	id = "ob_processor"
 	network = "outcom"
-	autolinkers = list("ob_processor","ob_hub")
+	autolinkers = list(
+		"ob_processor",
+		"ob_hub"
+	)
 
 /obj/machinery/telecomms/server/presets/outreach
 	id = "ob_tcomm_server"
@@ -255,12 +269,19 @@
 		list(ENG_FREQ,  "Engineering",   COMMS_COLOR_ENGINEER),
 		list(SEC_FREQ,  "Security",      COMMS_COLOR_SECURITY)
 		)
-	autolinkers = list("ob_tcomm_server","ob_bus")
+	autolinkers = list(
+		"ob_tcomm_server",
+		"ob_bus"
+	)
 
 /obj/machinery/telecomms/hub/preset/outreach
 	id = "ob_hub"
 	network = "outcom"
-	autolinkers = list("ob_hub","ob_receiver", "ob_broadcaster")
+	autolinkers = list(
+		"ob_hub",
+		"ob_receiver",
+		"ob_broadcaster"
+	)
 
 ////////////////////////////////////////////////////////////////////////
 // Suit Cyclers
@@ -294,6 +315,9 @@
 	_output_maxed  = FALSE
 	_output_on     = TRUE
 	output_level   = 150000
+	maximum_component_parts = list(
+		/obj/item/stock_parts = 15,
+	)
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_capacity = 5,
 		/obj/item/stock_parts/smes_coil/super_io       = 1,

@@ -4462,6 +4462,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/exoplanet/outreach/underground/d2)
+"jC" = (
+/obj/structure/cable/yellow,
+/obj/machinery/power/smes/buildable/preset/outreach{
+	output_level = 250000
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/outreach/outpost/engineering/b2/smes)
 "jD" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/cable/yellow{
@@ -20894,7 +20904,7 @@ aw
 cg
 gv
 ir
-iS
+jC
 iS
 jm
 jq

@@ -476,6 +476,9 @@
 /datum/fabricator_recipe/imprinter/circuit/relay
 	path = /obj/item/stock_parts/circuitboard/relay
 
+/datum/fabricator_recipe/imprinter/circuit/modem
+	path = /obj/item/stock_parts/circuitboard/modem
+
 /datum/fabricator_recipe/imprinter/circuit/relay_wall_mounted
 	path = /obj/item/stock_parts/circuitboard/relay/wall_mounted
 
@@ -490,3 +493,9 @@
 
 /datum/fabricator_recipe/imprinter/circuit/photocopier
 	path = /obj/item/stock_parts/circuitboard/photocopier
+
+/datum/fabricator_recipe/imprinter/circuit/geothermal_generator
+	path = /obj/machinery/geothermal
+
+/datum/fabricator_recipe/imprinter/circuit/radiocarbon_spectrometer
+	path = /obj/machinery/radiocarbon_spectrometer
