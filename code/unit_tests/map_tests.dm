@@ -587,8 +587,6 @@
 	return 1
 
 //=======================================================================================
-var/global/list/station_wires_shall_be_connected_exceptions
-
 /datum/unit_test/station_wires_shall_be_connected
 	name = "MAP: Station wires shall be connected"
 	var/list/exceptions
@@ -597,8 +595,7 @@ var/global/list/station_wires_shall_be_connected_exceptions
 	var/failures = 0
 
 	var/exceptions_by_turf = list()
-	var/list/all_exceptions = exceptions + global.station_wires_shall_be_connected_exceptions
-	for(var/list/exception in all_exceptions)
+	for(var/list/exception in exceptions)
 		var/turf/T = locate(exception[1], exception[2], exception[3])
 		if(!T)
 			CRASH("Invalid exception: [exception[1]] - [exception[2]] - [exception[3]]")
@@ -609,6 +606,8 @@ var/global/list/station_wires_shall_be_connected_exceptions
 
 	for(var/obj/structure/cable/C in global.cable_list)
 		if(!QDELETED(C) && !all_ends_connected(C))
+			if(locate(/obj/abstract/landmark/skip_wire_test) in C.loc)
+				continue
 			failures++
 
 	if(failures)
