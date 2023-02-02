@@ -46,3 +46,6 @@
 	apc_test_exempt_areas[/area/outreach/outpost/hangar/north/shuttle_area] = NO_APC|NO_VENT|NO_SCRUBBER
 
 	apc_test_exempt_areas[/area/outreach/outpost/maint/outer_wall/ground] = NO_APC|NO_VENT|NO_SCRUBBER
+
+	//That's an intended multi-z area, stop whining
+	apc_test_excluded_areas |= /area/outreach/outpost/janitorial

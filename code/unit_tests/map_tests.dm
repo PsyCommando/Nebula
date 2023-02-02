@@ -18,6 +18,8 @@
 			continue
 		if(!isPlayerLevel(A.z))
 			continue
+		if(A.type in global.using_map.apc_test_excluded_areas)
+			continue
 		area_test_count++
 		var/area_good = 1
 		var/bad_msg = "--------------- [A.proper_name]([A.type])"
@@ -632,7 +634,7 @@
 	if(!isStationLevel(source_turf.z))
 		return TRUE
 
-	if(locate(/obj/abstract/landmark/skip_wire_test) in source_turf)
+	if(locate(/obj/abstract/landmark/skip_test) in source_turf)
 		return TRUE
 
 	for(var/dir in list(C.d1, C.d2))

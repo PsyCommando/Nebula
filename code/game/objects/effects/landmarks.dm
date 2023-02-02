@@ -155,7 +155,7 @@
 	new /obj/item/clothing/mask/spirit(src.loc)
 	new /obj/item/clothing/under/savage_hunter/female(src.loc)
 
-//Wire unit test skipper
-/obj/abstract/landmark/skip_wire_test
+//Map unit test skipper
+/obj/abstract/landmark/skip_test
 	icon = 'icons/misc/map_editor.dmi'
 	icon_state = "skip_test"
