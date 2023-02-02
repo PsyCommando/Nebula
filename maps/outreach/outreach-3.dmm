@@ -15,7 +15,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/catwalk_plated/dark,
-/obj/abstract/landmark/skip_wire_test,
+/obj/abstract/landmark/skip_test,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
 "ab" = (
@@ -1470,7 +1470,7 @@
 	},
 /obj/structure/cable/cyan,
 /obj/effect/catwalk_plated/dark,
-/obj/abstract/landmark/skip_wire_test,
+/obj/abstract/landmark/skip_test,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
 "dP" = (

@@ -2274,7 +2274,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/abstract/landmark/skip_wire_test,
+/obj/abstract/landmark/skip_test,
 /turf/simulated/floor/airless,
 /area/exoplanet/outreach/sky)
 "eR" = (
