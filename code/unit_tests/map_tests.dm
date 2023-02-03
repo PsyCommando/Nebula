@@ -18,7 +18,7 @@
 			continue
 		if(!isPlayerLevel(A.z))
 			continue
-		if(A.type in global.using_map.apc_test_excluded_areas)
+		if(is_type_in_list(A, global.using_map.apc_test_excluded_areas))
 			continue
 		area_test_count++
 		var/area_good = 1
