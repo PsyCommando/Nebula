@@ -565,6 +565,7 @@
 	icon_state = "tube_map";
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/west/ground)
 "bI" = (
@@ -1620,7 +1621,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3679,10 +3679,6 @@
 "iq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	icon_state = "map_vent_out";
-	dir = 1
 	},
 /obj/structure/disposalpipe/junction/yjunction{
 	icon_state = "pipe-y";
@@ -6999,6 +6995,13 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
+"pv" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	icon_state = "map_vent_out";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/hallway/west/ground)
 "pw" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/cable/cyan{
@@ -24310,8 +24313,8 @@ nQ
 oV
 dE
 bH
-eM
-bG
+eT
+pv
 ib
 mV
 nN

@@ -604,6 +604,7 @@
 	icon_state = "11-supply";
 	dir = 6
 	},
+/obj/structure/hygiene/drain,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/waste/b2)
 "bJ" = (
@@ -1124,12 +1125,9 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/hallway/north/basement2)
 "cH" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/steel_grid,
-/area/outreach/outpost/stairwell/basement2)
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/maint/atmos/b2)
 "cI" = (
 /obj/machinery/atmospherics/pipe/cap/hidden/supply{
 	icon_state = "cap-supply";
@@ -3361,16 +3359,13 @@
 /turf/simulated/wall,
 /area/outreach/outpost/maint/passage/b2/northwest)
 "hj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
-	dir = 6
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "11-scrubbers";
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/outreach/outpost/disposals)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/tiled/steel_grid,
+/area/outreach/outpost/stairwell/basement2)
 "hk" = (
 /turf/simulated/wall,
 /area/outreach/outpost/hallway/north/basement2)
@@ -4489,6 +4484,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/exoplanet/outreach/underground/d2)
+"jF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "11-supply";
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "11-scrubbers";
+	dir = 5
+	},
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/tiled/techmaint,
+/area/outreach/outpost/disposals)
 "jG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "11-supply";
@@ -4501,6 +4508,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/hygiene/drain,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/maint/power/b2)
 "jH" = (
@@ -22524,7 +22532,7 @@ dG
 bN
 cc
 ct
-cH
+hj
 cL
 dI
 hf
@@ -23737,7 +23745,7 @@ bL
 dc
 ek
 gN
-hj
+jF
 hw
 bM
 bW
@@ -25948,7 +25956,7 @@ ep
 gZ
 aV
 cR
-aV
+cH
 eN
 hS
 aJ

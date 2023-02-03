@@ -156,3 +156,74 @@
 
 /obj/structure/door/osmium
 	material = /decl/material/solid/metal/osmium
+
+///////////////////////////////////////////////////////////////////////////////////
+// Lockers
+///////////////////////////////////////////////////////////////////////////////////
+/obj/structure/closet/secure_closet/security/outreach
+	name = "security locker"
+	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/security
+/obj/structure/closet/secure_closet/security/outreach/WillContain()
+	return
+
+/obj/structure/closet/secure_closet/security/outreach/gear
+	name = "security gear locker"
+/obj/structure/closet/secure_closet/security/outreach/gear/WillContain()
+	return list(
+		/obj/item/storage/box/barricade_tape/police,
+		/obj/item/storage/box/barricade_tape/police,
+		/obj/item/storage/box/handcuffs,
+		/obj/item/storage/box/handcuffs,
+		/obj/item/storage/box/holobadge,
+		/obj/item/storage/box/holobadge,
+		/obj/item/storage/firstaid/combat,
+		/obj/item/storage/firstaid/combat,
+		/obj/item/storage/firstaid/combat,
+	)
+
+/obj/structure/closet/secure_closet/security/outreach/forensics
+	name = "security forensics locker"
+	closet_appearance = /decl/closet_appearance/secure_closet/security
+/obj/structure/closet/secure_closet/security/outreach/forensics/WillContain()
+	return list(
+		/obj/item/storage/briefcase/crimekit,
+		/obj/item/storage/briefcase/crimekit,
+		/obj/item/storage/evidence,
+		/obj/item/storage/evidence,
+		/obj/item/storage/box/fingerprints,
+		/obj/item/storage/box/fingerprints,
+		/obj/item/storage/box/evidence,
+		/obj/item/storage/box/evidence,
+		/obj/item/storage/box/gloves,
+		/obj/item/storage/box/gloves,
+		/obj/item/storage/box/csi_markers,
+		/obj/item/storage/box/csi_markers,
+		/obj/item/storage/box/swabs,
+		/obj/item/storage/box/swabs,
+		/obj/item/storage/box/tapes,
+		/obj/item/storage/box/camera_films,
+		/obj/item/taperecorder/empty,
+		/obj/item/taperecorder/empty,
+		/obj/item/camera,
+		/obj/item/camera,
+	)
+
+///////////////////////////////////////////////////////////////////////////////////
+// Boxes
+///////////////////////////////////////////////////////////////////////////////////
+/obj/item/storage/box/camera_films
+	name = "box of camera film rolls"
+/obj/item/storage/box/camera_films/WillContain()
+	var/obj/item/camera_film/F = /obj/item/camera_film
+	return list(
+		/obj/item/camera_film =  BASE_STORAGE_CAPACITY(initial(F.w_class)),
+		)
+
+/obj/item/storage/box/barricade_tape/police
+	name = "box of police tape"
+/obj/item/storage/box/barricade_tape/police/WillContain()
+	var/obj/item/stack/tape_roll/barricade_tape/police/P = /obj/item/stack/tape_roll/barricade_tape/police
+	return list(
+		/obj/item/stack/tape_roll/barricade_tape/police =  BASE_STORAGE_CAPACITY(initial(P.w_class)),
+		)
