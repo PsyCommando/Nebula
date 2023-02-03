@@ -495,7 +495,7 @@
 	path = /obj/item/stock_parts/circuitboard/photocopier
 
 /datum/fabricator_recipe/imprinter/circuit/geothermal_generator
-	path = /obj/machinery/geothermal
+	path = /obj/item/stock_parts/circuitboard/geothermal
 
 /datum/fabricator_recipe/imprinter/circuit/radiocarbon_spectrometer
-	path = /obj/machinery/radiocarbon_spectrometer
+	path = /obj/item/stock_parts/circuitboard/radiocarbon_spectrometer
