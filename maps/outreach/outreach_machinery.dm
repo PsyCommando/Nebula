@@ -1,5 +1,7 @@
 
 #define ADMIN_PROTECTED_NET_GROUP "custodians"
+#define OUTREACH_NETWORK_NAME     "outnet"
+#define OUTREACH_TCOMM_NET_NAME   "outcom"
 
 ////////////////////////////////////////////////////////////////////////
 // Wired airlock sensor
@@ -158,13 +160,13 @@
 	initial_id_tag     = "ob_uplink"
 	overmap_range      = 1
 	restrict_networks  = TRUE
-	permitted_networks = list("outnet")
+	permitted_networks = list(OUTREACH_NETWORK_NAME)
 
 /obj/machinery/computer/internet_uplink/outreach
 	initial_id_tag = "ob_uplink"
 
 /obj/machinery/network/area_controller/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag = "oh_actrl"
 	use_power = POWER_USE_ACTIVE
 	maximum_component_parts = list(
@@ -199,38 +201,38 @@
 	recalculate_power()
 
 /obj/machinery/network/acl/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_acl"
 	preset_groups      = list(
 		ADMIN_PROTECTED_NET_GROUP = list()
 	)
 
 /obj/machinery/network/router/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_router"
 
 /obj/machinery/network/modem/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_modem"
 
 /obj/machinery/network/mainframe/files/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_files"
 
 /obj/machinery/network/mainframe/account/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_accounts"
 
 /obj/machinery/network/mainframe/logs/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_logs"
 
 /obj/machinery/network/mainframe/records/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_records"
 
 /obj/machinery/network/mainframe/software/outreach
-	initial_network_id = "outnet"
+	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_softwares"
 
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +240,7 @@
 ////////////////////////////////////////////////////////////////////////
 /obj/machinery/telecomms/bus/preset_one/outreach
 	id = "ob_bus"
-	network = "outcom"
+	network = OUTREACH_TCOMM_NET_NAME
 	freq_listening = list()
 	autolinkers = list(
 		"ob_processor",
@@ -248,7 +250,7 @@
 
 /obj/machinery/telecomms/processor/preset_one/outreach
 	id = "ob_processor"
-	network = "outcom"
+	network = OUTREACH_TCOMM_NET_NAME
 	autolinkers = list(
 		"ob_processor",
 		"ob_hub"
@@ -276,7 +278,7 @@
 
 /obj/machinery/telecomms/hub/preset/outreach
 	id = "ob_hub"
-	network = "outcom"
+	network = OUTREACH_TCOMM_NET_NAME
 	autolinkers = list(
 		"ob_hub",
 		"ob_receiver",
@@ -316,7 +318,7 @@
 	_output_on     = TRUE
 	output_level   = 150000
 	maximum_component_parts = list(
-		/obj/item/stock_parts = 15,
+		/obj/item/stock_parts = 20,
 	)
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_capacity = 5,
