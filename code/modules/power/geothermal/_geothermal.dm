@@ -105,6 +105,7 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            12000
 	stock_part_presets             = list(
 		/decl/stock_part_preset/terminal_setup/offset_dir,
 	)
+	base_type = /obj/machinery/geothermal/buildable
 	var/tmp/neighbors              = 0
 	var/tmp/current_pressure       = 0
 	var/tmp/efficiency             = 0.5
