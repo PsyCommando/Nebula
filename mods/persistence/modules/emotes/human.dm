@@ -64,3 +64,17 @@
 			'sound/voice/emotes/human/laugh_f1.ogg',
 		),
 	)
+
+/decl/emote/audible/grunt
+	emote_sound = list(
+		MALE = list(
+			'sound/voice/emotes/human/grunt_m1.ogg',
+			'sound/voice/emotes/human/grunt_m2.ogg',
+			'sound/voice/emotes/human/grunt_m3.ogg',
+		),
+		FEMALE = list(
+			'sound/voice/emotes/human/grunt_f1.ogg',
+			'sound/voice/emotes/human/grunt_f2.ogg',
+			'sound/voice/emotes/human/grunt_f3.ogg',
+		),
+	)

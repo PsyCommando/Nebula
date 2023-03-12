@@ -10,7 +10,7 @@
 	take_external_damage(amount)
 
 /obj/item/organ/external/proc/take_external_damage(brute, burn, damage_flags, used_weapon, override_droplimb)
-	
+
 	if(!owner)
 		return
 
@@ -283,13 +283,15 @@
 	pain = max(0,min(max_damage,pain+amount))
 	if(owner && ((amount > 15 && prob(20)) || (amount > 30 && prob(60))))
 		owner.emote("scream")
+	else if(owner && ((amount > 5 && prob(20)) || (amount > 15 && prob(60))))
+		owner.emote("grunt")
 	return pain-last_pain
 
 /obj/item/organ/external/proc/stun_act(var/stun_amount, var/agony_amount)
 	if(agony_amount && owner && can_feel_pain())
 		agony_amount -= (GET_CHEMICAL_EFFECT(owner, CE_PAINKILLER)/2)//painkillers does wonders!
 		agony_amount += get_pain()
-		if(agony_amount < 5) 
+		if(agony_amount < 5)
 			return
 
 		if(check_pain_disarm())
