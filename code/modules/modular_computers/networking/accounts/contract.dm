@@ -287,7 +287,7 @@
 	var/decl/currency/display_currency = GET_DECL(currency_type)
 
 	. = "<html><head><title>TERMS OF AGREEMENT: [name]</title></head>"
-	. += "<body><center><h2>Terms of Agreement \'[name]\' between [owner.fullname] and [holder_fullname]</h2>"
+	. += "<body><center><h2>Terms of Agreement \'[name]\' between [owner.fullname] and [holder_fullname]</h2></center>"
 
 	if(job_title)
 		. += "<p> [holder_fullname] shall be entitled to the use of the title \'[job_title]\' during active employment. "
