@@ -1,3 +1,4 @@
+#define MAX_NAME_LENGTH 50
 // Each network contract datum represents a type of contract available to an account.
 /datum/network_contract
 	var/name
@@ -417,7 +418,7 @@
 	if(!parent.payment_amount || !parent.payment_period)
 		return short ? "N/A" : "No payments are currently scheduled."
 
-	var/next_pay = parent.payment_period - (last_pay - (SSmoney_accounts.get_current_time()))
+	var/next_pay = last_pay + parent.payment_period
 	var/next_pay_text = next_pay > 0 ? time2text(next_pay, "MMM DD hh:mm") : "A payment is scheduled shortly."
 
 	if(short)
@@ -509,8 +510,8 @@
 /datum/contract_modification/name/prompt_input(mob/user, datum/network_contract/parent, datum/computer_network/network)
 	new_name = input(user, "Enter the new name of the contract:", "Contract Name", parent.name)
 	new_name = sanitize(new_name)
-	if(length(new_name) > 30)
-		to_chat(user, SPAN_WARNING("The maximum length is 30 characters!"))
+	if(length(new_name) > MAX_NAME_LENGTH)
+		to_chat(user, SPAN_WARNING("The maximum length is [MAX_NAME_LENGTH] characters!"))
 		new_name = null
 		return FALSE
 
@@ -533,8 +534,8 @@
 /datum/contract_modification/job_title/prompt_input(mob/user, datum/network_contract/parent, datum/computer_network/network)
 	new_job_title = input(user, "Enter the new job title:", "Contract Job Title", parent.job_title)
 	new_job_title = sanitize(new_job_title)
-	if(length(new_job_title) > 30)
-		to_chat(user, SPAN_WARNING("The maximum length is 30 characters!"))
+	if(length(new_job_title) > MAX_NAME_LENGTH)
+		to_chat(user, SPAN_WARNING("The maximum length is [MAX_NAME_LENGTH] characters!"))
 		new_job_title = null
 		return FALSE
 
@@ -695,3 +696,5 @@
 	if(!istype(auth))
 		return
 	parent.remove_auth_contract(auth)
+
+#undef MAX_NAME_LENGTH
