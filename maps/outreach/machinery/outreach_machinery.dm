@@ -641,3 +641,9 @@
 
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/outreach/gas_tanks
 	id_tag = "oh_atmos_tank_emergency_scrubber"
+
+///Chlorine air tank
+/obj/machinery/atmospherics/unary/tank/chlorine
+	name = "Pressure Tank (Chlorine)"
+	icon_state = "cl"
+	filling = list(/decl/material/gas/chlorine = 1)
