@@ -13,6 +13,7 @@ SAVED_VAR(/datum/computer_file/data/account, backup)
 SAVED_VAR(/datum/computer_file/data/account, money_account)
 
 /datum/contract_instance/before_save()
+	. = ..()
 	// Update the hour count prior to save so no time is lost on load, since we don't save clocked in status.
 	if(holder && last_hour_count && (holder.clocked_in?.resolve() == src))
 		var/time_delta = SSmoney_accounts.get_current_time() - last_hour_count
