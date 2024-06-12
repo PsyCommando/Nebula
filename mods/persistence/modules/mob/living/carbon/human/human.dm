@@ -73,7 +73,7 @@
 
 /mob/living/carbon/human/should_save()
 	. = ..()
-	if(mind && !mind.finished_chargen)
+	if(!(mind?.has_finished_chargen()))
 		return FALSE // We don't save characters who aren't finished CG.
 
 // Don't let it update icons during initialize

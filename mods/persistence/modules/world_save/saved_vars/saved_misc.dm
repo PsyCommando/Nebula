@@ -140,7 +140,7 @@ SAVED_VAR(/datum/mind, initial_account_login)
 SAVED_VAR(/datum/mind, philotic_damage)
 SAVED_VAR(/datum/mind, age)
 SAVED_VAR(/datum/mind, unique_id)
-SAVED_VAR(/datum/mind, finished_chargen)
+SAVED_VAR(/datum/mind, chargen_state)
 SAVED_VAR(/datum/mind, memories)
 
 SAVED_VAR(/datum/memory, creation_source)

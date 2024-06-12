@@ -31,6 +31,7 @@
 #include "code\__defines\atmospherics.dm"
 #include "code\__defines\bodytype.dm"
 #include "code\__defines\callback.dm"
+#include "code\__defines\chargen.dm"
 #include "code\__defines\chemistry.dm"
 #include "code\__defines\client.dm"
 #include "code\__defines\colors.dm"
