@@ -35,6 +35,8 @@
 /obj/machinery/cryopod/chargen/proc/unready()
 	icon_state = occupied_icon_state
 	set_light(0, null)
+	if(close_sound)
+		playsound(src, close_sound, 40)
 
 // Chargen pod
 /obj/machinery/cryopod/chargen/proc/send_to_outpost()
