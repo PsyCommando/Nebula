@@ -14,6 +14,7 @@
 	department_types  = list(/decl/department/civilian)
 	outfit_type       = /decl/hierarchy/outfit/job/outreach
 	hud_icon          = "hudcolonist"
+	economic_power    = 0  //Set to 0 to prevent them having any starting money.
 	total_positions   = -1 //Infinite slots
 	skill_points      = 30 //They spawn with 30
 	announced         = FALSE
@@ -27,7 +28,7 @@
 // Post-Spawn Jobs
 ///////////////////////////////////////////////////////////////////
 // A bunch of typical jobs with typical access, icons, and coloring so changing someone's job to one of these actually
-// applies the job icon and etc..
+// applies the job icon and etc.. Mainly for admin use, and for the sec classification system to work.
 
 /datum/job/councilor
 	title            = "Councilor"
