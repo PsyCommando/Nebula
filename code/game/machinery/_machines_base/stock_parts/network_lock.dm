@@ -322,5 +322,4 @@
 /decl/stock_part_preset/network_lock/do_apply(obj/machinery/machine, obj/item/stock_parts/network_receiver/network_lock/part)
 	part.initial_network_id  = network_id
 	part.initial_network_key = network_passkey
-	part.groups = deepCopyList(allowed_groups)
-	part.auto_deny_all = TRUE
+	part.access_keys = deepCopyList(allowed_groups)
