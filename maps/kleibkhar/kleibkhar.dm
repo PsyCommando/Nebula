@@ -4,9 +4,8 @@
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/vox/_vox.dme"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
-	#include "../chargen/chargen_areas.dm"
-	#include "../chargen/chargen_objects.dm"
 	//#include "../utility/cargo_shuttle_tmpl.dm"
+	#include "../chargen/chargen_template.dm"
 
 	#include "kleibkhar_zlevels.dm"
 	#include "kleibkhar_areas.dm"

@@ -1,7 +1,6 @@
 #ifndef MODPACK_PERSISTENCE
 #define MODPACK_PERSISTENCE
 // BEGIN_INCLUDE
-#include "_maps.dm"
 #include "_persistence.dm"
 #include "random_phrase.dm"
 #include "__defines\area_saving.dm"

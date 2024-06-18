@@ -92,7 +92,7 @@
 	// #include "../away/smugglers/smugglers.dm"
 	// #include "../away/slavers/slavers_base.dm"
 	// #include "../away/yacht/yacht.dm"
-	#include "..\chargen\chargen.dm"
+	#include "../chargen/chargen_template.dm"
 
 	#include "turfs\outreach_turf_border.dm"
 	#include "turfs\outreach_turf_flooded.dm"
