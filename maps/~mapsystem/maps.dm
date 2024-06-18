@@ -148,6 +148,8 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		ACCESS_REGION_SUPPLY = list(access_change_ids)
 	)
 	var/secrets_directory
+	/// Network ID of the computer network used on the station if any.
+	var/spawn_network
 
 /datum/map/proc/get_lobby_track(var/exclude)
 	var/lobby_track_type
