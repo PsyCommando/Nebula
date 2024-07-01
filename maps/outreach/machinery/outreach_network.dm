@@ -35,6 +35,9 @@
 /decl/stock_part_preset/network_lock/outreach
 	network_id = OUTREACH_NETWORK_NAME
 
+/decl/stock_part_preset/network_lock/outreach/public
+	allowed_groups = null
+
 ///Access to command
 /decl/stock_part_preset/network_lock/outreach/command
 	allowed_groups = list(

@@ -275,6 +275,7 @@
 	stock_part_presets = list(
 		/decl/stock_part_preset/radio/receiver/airlock,
 		/decl/stock_part_preset/radio/event_transmitter/airlock,
+		/decl/stock_part_preset/network_lock/outreach/public,
 	)
 
 /obj/machinery/door/airlock/hatch/maintenance/outreach/medical
