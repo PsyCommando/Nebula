@@ -8,7 +8,7 @@
 	slot_flags         = 0
 	max_shells         = 50
 	caliber            = CALIBER_RIFLE
-	origin_tech        = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 2)
+	origin_tech        = "{'combat':6,'materials':2, 'esoteric':2}"
 	slot_flags         = 0 //need sprites for SLOT_BACK
 	ammo_type          = /obj/item/ammo_casing/rifle
 	load_method        = MAGAZINE

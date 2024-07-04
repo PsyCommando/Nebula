@@ -289,7 +289,7 @@
 /obj/item/ammo_magazine/box/machinegun
 	name             = "magazine box"
 	icon_state       = "machinegun"
-	origin_tech      = list(TECH_COMBAT = 2)
+	origin_tech      = "{'combat':2}"
 	mag_type         = MAGAZINE
 	caliber          = CALIBER_RIFLE
 	ammo_type        = /obj/item/ammo_casing/rifle

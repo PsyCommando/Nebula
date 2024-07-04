@@ -125,7 +125,7 @@
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
 	caliber = CALIBER_SHOTGUN
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
+	origin_tech = "{'combat':3,'materials':1}"
 	auto_eject = TRUE
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	one_hand_penalty = 8
@@ -174,7 +174,7 @@
 	name = "combat shotgun"
 	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders."
 	icon = 'icons/obj/guns/shotgun/combat.dmi'
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
+	origin_tech = "{'combat':5,'materials':2}"
 	max_shells = 7 //match the ammo box capacity, also it can hold a round in the chamber anyways, for a total of 8.
 	ammo_type = /obj/item/ammo_casing/shotgun
 	one_hand_penalty = 8
