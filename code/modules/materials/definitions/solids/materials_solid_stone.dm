@@ -94,6 +94,7 @@
 /decl/material/solid/stone/concrete
 	name                    = "concrete"
 	uid                     = "solid_concrete"
+	codex_name              = "poured concrete"
 	lore_text               = "The most ubiquitous building material of old Earth, now in space. Consists of mineral aggregate bound with some sort of cementing solution."
 	color                   = COLOR_GRAY
 	value                   = 0.9
@@ -118,18 +119,20 @@
 	return texture
 
 /decl/material/solid/stone/concrete/generate_recipes(reinforce_material)
+	. = list()
 	//Don't call parent, since concrete isn't really useable to craft many things
 	if(reinforce_material)
 		return
-	. += new/datum/stack_recipe/furniture/girder(src)
-	. += new/datum/stack_recipe/furniture/wall_frame(src)
-	. += new/datum/stack_recipe/fountain(src)
+	. += new /datum/stack_recipe/furniture/girder(src)
+	. += new /datum/stack_recipe/furniture/wall_frame(src)
+	. += new /datum/stack_recipe/fountain(src)
 
 ///Concrete with steel rebars essentially. Has to be a material, since composite materials are kind of a hack.
 /decl/material/solid/stone/concrete/reinforced
 	name                    = "reinforced concrete"
 	uid                     = "solid_reinforced_concrete"
 	lore_text               = "A mix of concrete with a reinforcing material to increase it's strenght."
+	codex_name              = null
 	color                   = COLOR_GRAY
 	value                   = 0.95
 	hardness                = MAT_VALUE_HARD + 8
