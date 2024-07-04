@@ -795,34 +795,40 @@
 	name = "box of spare police taperolls"
 	desc = "A box full of police barricade tape rolls."
 /obj/item/storage/box/taperolls/police/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/police = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/police/P = /obj/item/stack/tape_roll/barricade_tape/police
+	return list(/obj/item/stack/tape_roll/barricade_tape/police =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
 
 /obj/item/storage/box/taperolls/engineering
 	name = "box of spare police taperolls"
 	desc = "A box full of police barricade tape rolls."
 /obj/item/storage/box/taperolls/engineering/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/engineering = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/engineering/P = /obj/item/stack/tape_roll/barricade_tape/engineering
+	return list(/obj/item/stack/tape_roll/barricade_tape/engineering =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
 
 /obj/item/storage/box/taperolls/atmos
 	name = "box of spare atmos taperolls"
 	desc = "A box full of atmos barricade tape rolls."
 /obj/item/storage/box/taperolls/atmos/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/atmos = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/atmos/P = /obj/item/stack/tape_roll/barricade_tape/atmos
+	return list(/obj/item/stack/tape_roll/barricade_tape/atmos =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
 
 /obj/item/storage/box/taperolls/research
 	name = "box of spare research taperolls"
 	desc = "A box full of research barricade tape rolls."
 /obj/item/storage/box/taperolls/research/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/research = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/research/P = /obj/item/stack/tape_roll/barricade_tape/research
+	return list(/obj/item/stack/tape_roll/barricade_tape/research =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
 
 /obj/item/storage/box/taperolls/medical
 	name = "box of spare medical taperolls"
 	desc = "A box full of medical barricade tape rolls."
 /obj/item/storage/box/taperolls/medical/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/medical = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/medical/P = /obj/item/stack/tape_roll/barricade_tape/medical
+	return list(/obj/item/stack/tape_roll/barricade_tape/medical =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
 
 /obj/item/storage/box/taperolls/bureaucracy
 	name = "box of spare bureaucracy taperolls"
 	desc = "A box full of bureaucracy barricade tape rolls."
 /obj/item/storage/box/taperolls/bureaucracy/WillContain()
-	return list(/obj/item/stack/tape_roll/barricade_tape/bureaucracy = 8)
+	var/obj/item/stack/tape_roll/barricade_tape/bureaucracy/P = /obj/item/stack/tape_roll/barricade_tape/bureaucracy
+	return list(/obj/item/stack/tape_roll/barricade_tape/bureaucracy =  BASE_STORAGE_CAPACITY(initial(P.w_class)))
