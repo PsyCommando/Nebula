@@ -11,17 +11,17 @@
 		try
 			var/list/output = cached_json_decode(check_json)
 			if(!islist(output) || !length(output))
-				LAZYADD(failures, check_json)
+				LAZYADD(failures, "[subtype] - \"[check_json]\"")
 			else
 				for(var/tech in output)
 					if(!isnum(output[tech]) || output[tech] < 1)
-						LAZYADD(failures, check_json)
+						LAZYADD(failures, "[subtype] - \"[check_json]\"")
 					else
 						var/decl/research_field/field = SSfabrication.get_research_field_by_id(tech)
 						if(!istype(field) || !field.name)
 							LAZYADD(failures, "[subtype] - [tech]")
 		catch()
-			LAZYADD(failures, check_json)
+			LAZYADD(failures, "[subtype] - \"[check_json]\"")
 	if(LAZYLEN(failures))
 		fail("Some items had invalid tech levels present in origin_tech: [english_list(failures)].")
 	else
