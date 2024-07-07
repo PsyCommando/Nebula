@@ -1408,9 +1408,9 @@
 	icon_state = "pipe-s";
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical/outreach{
+/obj/machinery/door/airlock/glass/medical/outreach/head{
 	icon_state = "closed";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/medbay/office)
@@ -3034,7 +3034,6 @@
 	},
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/engineering/b1/storage)
 "agL" = (
@@ -5687,7 +5686,6 @@
 /obj/item/storage/box/parts_pack/manipulator,
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/spline/plain/yellow{
 	icon_state = "spline_plain";
 	dir = 6
@@ -12685,15 +12683,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/hallway)
 "ayr" = (
-/obj/effect/floor_decal/spline/plain/red,
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment/bent{
-	icon_state = "pipe-c";
-	dir = 4
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/catwalk_plated/dark,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	icon_state = "map-supply";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/turf/simulated/floor/plating,
 /area/outreach/outpost/security/b1)
 "ays" = (
 /obj/structure/disposalpipe/segment/bent{
@@ -17935,20 +17938,17 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/south/basement1)
 "aHr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "11-supply";
+/obj/effect/floor_decal/spline/plain/red,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment/bent{
+	icon_state = "pipe-c";
 	dir = 4
 	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
-/obj/effect/catwalk_plated/dark,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1)
 "aHs" = (
 /obj/machinery/light{
@@ -25961,7 +25961,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/eva/b1/south)
 "aVm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/door/airlock/glass/civilian/outreach/eva{
 	icon_state = "closed"
 	},
@@ -30389,14 +30388,13 @@
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
 "bdv" = (
-/obj/structure/table/woodentable/mahogany,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/spline/plain/paleblue{
 	icon_state = "spline_plain";
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/toy/desk/dippingbird,
+/obj/structure/closet/secure_closet/psychiatry,
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/office)
 "bdw" = (
@@ -30603,11 +30601,11 @@
 	icon_state = "apc0";
 	dir = 1
 	},
-/obj/structure/bed/psych/leather,
 /obj/effect/floor_decal/spline/plain/paleblue{
 	icon_state = "spline_plain";
 	dir = 5
 	},
+/obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/office)
 "bdP" = (
@@ -31197,6 +31195,8 @@
 	icon_state = "spline_plain";
 	dir = 8
 	},
+/obj/structure/table/woodentable/mahogany,
+/obj/item/toy/desk/dippingbird,
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/office)
 "beR" = (
@@ -31297,7 +31297,6 @@
 /turf/simulated/floor/carpet/red,
 /area/outreach/outpost/chapel)
 "bfe" = (
-/obj/structure/table/woodentable/mahogany,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 5
@@ -32854,10 +32853,6 @@
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/workshop)
 "bhU" = (
-/obj/structure/bed/chair{
-	icon_state = "chair";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 4
@@ -33769,12 +33764,12 @@
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/main_hall)
 "bjy" = (
-/obj/structure/closet/secure_closet/psychiatry,
 /obj/effect/floor_decal/spline/plain/paleblue{
 	icon_state = "spline_plain";
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/woodentable/mahogany,
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/office)
 "bjz" = (
@@ -34213,6 +34208,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain/paleblue,
+/obj/structure/bed/psych/leather,
 /turf/simulated/floor/tiled/white,
 /area/outreach/outpost/medbay/office)
 "bkt" = (
@@ -56012,8 +56008,8 @@ aBP
 amt
 aTs
 aPV
-aHr
 ayr
+aHr
 aAr
 aCm
 aEz

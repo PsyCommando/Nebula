@@ -11279,6 +11279,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+/obj/machinery/portable_atmospherics/powered/pump,
 /turf/simulated/floor/tiled/techfloor/outreach,
 /area/outreach/outpost/harvesting/tower3)
 "vR" = (
@@ -13863,12 +13864,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/airlock)
-"Bq" = (
-/obj/structure/cable/yellow{
-	icon_state = "16-0"
-	},
-/turf/simulated/wall/ocp_wall/prepainted,
-/area/outreach/outpost/harvesting/tower3)
 "Br" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -40087,7 +40082,7 @@ hl
 fk
 vF
 vF
-Bq
+vF
 vF
 vF
 lp
