@@ -152,7 +152,7 @@
 	storage_types = CLOSET_STORAGE_ITEMS
 	setup = 0
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 	icon = 'icons/obj/closets/bases/wall.dmi'
 	color = COLOR_NT_RED
 
@@ -182,7 +182,7 @@
 	storage_types = CLOSET_STORAGE_ITEMS
 	setup = 0
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 	icon = 'icons/obj/closets/bases/wall.dmi'
 
 /obj/structure/closet/medical_wall/Initialize()
@@ -204,7 +204,7 @@
 	storage_types = CLOSET_STORAGE_ITEMS
 	setup = 0
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 	icon = 'icons/obj/closets/bases/wall.dmi'
 	color = COLOR_WARM_YELLOW
 

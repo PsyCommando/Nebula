@@ -107,20 +107,23 @@
 	)
 
 /obj/structure/closet/l3closet/medical
-	closet_appearance = /decl/closet_appearance/bio/command
+	closet_appearance = /decl/closet_appearance/bio/medical
 
 /obj/structure/closet/l3closet/medical/WillContain()
+	return list(
+		/obj/item/clothing/suit/bio_suit/general = 3,
+		/obj/item/clothing/head/bio_hood/general = 3,
+		/obj/item/clothing/mask/gas/half         = 3,
+		/obj/item/tank/emergency/oxygen/engi     = 3,
+	)
+
+/obj/structure/closet/l3closet/medical/cmo
+	closet_appearance = /decl/closet_appearance/bio/command
+
+/obj/structure/closet/l3closet/medical/cmo/WillContain()
 	return list(
 		/obj/item/clothing/suit/bio_suit/cmo,
 		/obj/item/clothing/head/bio_hood/cmo,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/emergency/oxygen/engi
-	)
-
-/obj/structure/closet/l3closet/medical/multi/WillContain()
-	return list(
-		/obj/item/clothing/suit/bio_suit/cmo = 5,
-		/obj/item/clothing/head/bio_hood/cmo = 5,
-		/obj/item/clothing/mask/gas/half = 5,
-		/obj/item/tank/emergency/oxygen/engi = 5,
 	)
