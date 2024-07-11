@@ -23,8 +23,8 @@
 		mob_age = H.mind.age
 	dna = H.dna.Clone()
 	backup_date = world.realtime
-	var/prefix = copytext(num2hex(backup_date, 8),1,5)
-	var/postfix = copytext(num2text(world.timeofday, 6), 2, 7)
+	var/prefix = copytext(num2hex_padded(backup_date, 8),1,5)
+	var/postfix = copytext(num2hex_padded(world.timeofday, 6), 2, 7)
 	filename = "[prefix]_clone_[postfix]"
 	calculate_size()
 
