@@ -383,6 +383,7 @@
 #include "code\datums\config\config_types\config_client.dm"
 #include "code\datums\config\config_types\config_debug.dm"
 #include "code\datums\config\config_types\config_events.dm"
+#include "code\datums\config\config_types\config_game_economy.dm"
 #include "code\datums\config\config_types\config_game_option.dm"
 #include "code\datums\config\config_types\config_game_world.dm"
 #include "code\datums\config\config_types\config_health.dm"

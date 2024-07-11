@@ -6,16 +6,14 @@ SUBSYSTEM_DEF(autosave)
 	var/saves = 0 // Number of times we've autosaved.
 	var/saving = 0 // Whether or not we are saving right now.
 	var/announced = 0 // Whether or not we've announced we're about to save.
-
-	var/last_save			// world.time of the last save
-	var/autosave_interval	// Time between autosaves.
+	var/last_save // world.time of the last save
 
 /datum/controller/subsystem/autosave/Initialize(start_timeofday)
 	. = ..()
-	last_save         = world.time
-	autosave_interval = config.autosave_interval	// To prevent saving upon start.
+	last_save = world.time // To prevent saving upon start.
 
 /datum/controller/subsystem/autosave/stat_entry()
+	var/autosave_interval = get_config_value(/decl/config/num/autosave_interval)
 	var/msg
 	if(flags & SS_NO_FIRE || suspended || !can_fire)
 		msg = "Autosave Disabled!"
@@ -23,11 +21,13 @@ SUBSYSTEM_DEF(autosave)
 		msg = "Currently Saving..."
 	else
 		msg = "Next Autosave in [round(((last_save + autosave_interval) - world.time) / (1 MINUTE), 0.1)] Minutes."
+	if((last_save + autosave_interval) >= get_config_value(/decl/config/num/autosave_auto_restart))
+		msg = "[msg]\[!\]Restart Scheduled\[!\]"
 	..(msg)
 
 /datum/controller/subsystem/autosave/fire()
 	AnnounceSave()
-	if((last_save + autosave_interval) <= world.time)
+	if((last_save + get_config_value(/decl/config/num/autosave_interval)) <= world.time)
 		Save()
 
 /datum/controller/subsystem/autosave/proc/Save(var/check_for_restart = TRUE)
@@ -35,7 +35,8 @@ SUBSYSTEM_DEF(autosave)
 		message_admins(SPAN_DANGER("Attempted autosave while already making an autosave!"))
 		return
 	var/exception/last_except = null
-	var/restart_after_save      = (config.autosave_auto_restart > 0) && (world.time >= config.autosave_auto_restart)
+	var/auto_restart_time = get_config_value(/decl/config/num/autosave_auto_restart)
+	var/restart_after_save = (auto_restart_time > 0) && (world.time >= auto_restart_time)
 	saves  += 1
 	saving = TRUE
 
@@ -71,16 +72,16 @@ SUBSYSTEM_DEF(autosave)
 		world.Reboot()
 
 /datum/controller/subsystem/autosave/proc/AnnounceSave()
-	var/minutes_left = (last_save + autosave_interval - world.time) / (1 MINUTE)
+	var/minutes_left = (last_save + get_config_value(/decl/config/num/autosave_interval) - world.time) / (1 MINUTE)
 
 	if(!announced && minutes_left <= 5)
 		to_world(SPAN_AUTOSAVE("Autosave in 5 minutes!"))
-		if((world.time + minutes_left MINUTES) >= config.autosave_auto_restart)
+		if((world.time + minutes_left MINUTES) >= get_config_value(/decl/config/num/autosave_auto_restart))
 			to_world(SPAN_AUTOSAVE("The server will reboot after this save!"))
 		announced = 1
 	if(announced == 1 && minutes_left <= 1)
 		to_world(SPAN_AUTOSAVE("Autosave in 1 minute!"))
-		if((world.time + minutes_left MINUTES) >= config.autosave_auto_restart)
+		if((world.time + minutes_left MINUTES) >= get_config_value(/decl/config/num/autosave_auto_restart))
 			to_world(SPAN_AUTOSAVE("The server will reboot after this save!"))
 		announced = 2
 	if(announced == 2 && minutes_left >= 6)

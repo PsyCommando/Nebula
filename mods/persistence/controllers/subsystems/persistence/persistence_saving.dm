@@ -8,13 +8,15 @@
 
 ///Keeps the previous state of 'enter_allowed' and set it to false. Returns TRUE if entering was currently allowed.
 /datum/controller/subsystem/persistence/proc/_block_entering()
-	was_entering_allowed = config.enter_allowed
-	config.enter_allowed = FALSE
+	was_entering_allowed = get_config_value(/decl/config/toggle/on/enter_allowed)
+	set_config_value(/decl/config/toggle/on/enter_allowed, FALSE)
 	return was_entering_allowed
 
 ///Restore the previous state of 'enter_allowed'. Returns the restored value of 'enter_allowed'.
 /datum/controller/subsystem/persistence/proc/_restore_entering()
-	. = (config.enter_allowed = was_entering_allowed)
+	was_entering_allowed = get_config_value(/decl/config/toggle/on/enter_allowed)
+	set_config_value(/decl/config/toggle/on/enter_allowed, was_entering_allowed)
+	. = (was_entering_allowed)
 	was_entering_allowed = FALSE
 
 ///Handle pausing all subsystems before save

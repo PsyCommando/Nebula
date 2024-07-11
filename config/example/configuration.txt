@@ -247,19 +247,31 @@ ROUNDSTART_LEVEL_GENERATION
 ## Toggles the restrictive weldervision overlay when wearing welding goggles or a welding helmet.
 #WELDER_VISION 1
 
-### Economy ###
+##
+# Game Economy
+# Configuration options relating to the game economy.
+##
 
-## Values for these settings are given in days.
+## Duration in deciseconds. Default is 24h (864,000 deciseconds)
+#WITHDRAW_PERIOD 864000
 
-WITHDRAW_PERIOD 1
-INTEREST_PERIOD 1
+## Duration in deciseconds. Default is 24h (864,000 deciseconds)
+#INTEREST_PERIOD 864000
 
-## Delays for modifications to accounts.
-INTEREST_MOD_DELAY 2
-WITHDRAW_MOD_DELAY 3
-TRANSACTION_MOD_DELAY 2
-FRACTIONAL_RESERVE_MOD_DELAY 3
-ANTI_TAMPER_MOD_DELAY 2
+## Duration in deciseconds. Default is 48h (1,728,000 deciseconds)
+#INTEREST_MOD_DELAY 1728000
+
+## Duration in deciseconds. Default is 72h (2,592,000 deciseconds)
+#WITHDRAW_MOD_DELAY 2592000
+
+## Duration in deciseconds. Default is 48h (1,728,000 deciseconds)
+#TRANSACTION_MOD_DELAY 1728000
+
+## Duration in deciseconds. Default is 72h (2,592,000 deciseconds)
+FRACTIONAL_RESERVE_MOD_DELAY 2592000
+
+## Duration in deciseconds. Default is 48h (1,728,000 deciseconds)
+#ANTI_TAMPER_MOD_DELAY 1728000
 
 ##
 # HEALTH
@@ -649,15 +661,16 @@ ANTI_TAMPER_MOD_DELAY 2
 ## Time period (deciseconds) which voting session will last (default 1 minute).
 #VOTE_PERIOD 600
 
-################################
-## Persistence Stuff
-################################
+##
+# Serialization
+# Configuration options relating to serialization and autosave.
+##
 
-## Time in minutes between automated world saves. Default is every 120 minutes.
-#AUTOSAVE_INTERVAL 120
+## Time in deciseconds between automated world saves. Default is every 120 minutes (72,000 deciseconds).
+#AUTOSAVE_INTERVAL 72000
 
-## Uptime in hours after which the next autosave will force a server reboot. Default is 12 Hours. Setting to 0 disables it.
-#AUTOSAVE_AUTO_RESTART 12
+## Uptime in deciseconds after which the next autosave will force a server reboot. Default is 12 Hours (432,000 deciseconds). Setting to 0 disables it.
+#AUTOSAVE_AUTO_RESTART 432000
 
 ## !! - Use With Caution - !!
 ## Set what kind of errors will be skipped over during saving/loading if encountered. Default is "NONE".

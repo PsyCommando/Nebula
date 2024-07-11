@@ -1,34 +1,28 @@
-/datum/configuration
-	var/autosave_interval     = 2 HOURS
-	var/autosave_auto_restart = 12 HOURS
-	var/save_error_tolerance  = PERSISTENCE_ERROR_TOLERANCE_NONE
+/decl/configuration_category/serialization
+	name = "Serialization"
+	desc = "Configuration options relating to serialization and autosave."
+	associated_configuration = list(
+		/decl/config/num/autosave_interval,
+		/decl/config/num/autosave_auto_restart,
+		/decl/config/enum/save_error_tolerance,
+	)
 
-/datum/configuration/load_mod_config(name, value)
-	. = ..()
-	switch(name)
-		if("autosave_interval")
-			autosave_interval = text2num(value) MINUTES
-			. = TRUE
-		if("autosave_auto_restart")
-			autosave_auto_restart = text2num(value) HOURS
-			. =  TRUE
-		if("save_error_tolerance")
-			value = lowertext(value)
-			switch(value)
-				if("any")
-					save_error_tolerance = PERSISTENCE_ERROR_TOLERANCE_ANY
-				if("recoverable")
-					save_error_tolerance = PERSISTENCE_ERROR_TOLERANCE_RECOVERABLE
-				if("none")
-					save_error_tolerance = PERSISTENCE_ERROR_TOLERANCE_NONE
-				else
-					log_misc("Bad value for '[name]' : '[value]'! (Expected 'any', 'recoverable' or 'none')")
-			. =  TRUE
+/decl/config/num/autosave_interval
+	uid           = "autosave_interval"
+	desc          = "Time in deciseconds between automated world saves. Default is every 120 minutes (72,000 deciseconds)."
+	default_value = 2 HOURS
 
-///Hook to add persistence settings meant to be in the game_options file if any.
-/datum/configuration/load_mod_game_options(name, value)
-	. = ..()
+/decl/config/num/autosave_auto_restart
+	uid           = "autosave_auto_restart"
+	desc          = "Uptime in deciseconds after which the next autosave will force a server reboot. Default is 12 Hours (432,000 deciseconds). Setting to 0 disables it."
+	default_value = 12 HOURS
 
-///Hook to add persistence settings meant to be in the dbconfig file if any.
-/datum/configuration/load_mod_dbconfig(name, value)
-	. = ..()
+/decl/config/enum/save_error_tolerance
+	uid           = "save_error_tolerance"
+	desc          = "Set what kind of errors will be skipped over during saving/loading if encountered. Default is \"NONE\". This value is meant to be used for rescuing a broken save, or forcing a broken save to work. As it will most likely cause problems if used constantly. The possible values are: \"NONE\"->No errors allowed at all, \"RECOVERABLE\"->Only recoverable errors allowed, \"ANY\"->Any error, even connection error will be ignored."
+	default_value = PERSISTENCE_ERROR_TOLERANCE_NONE
+	enum_map      = list(
+		"none"        = PERSISTENCE_ERROR_TOLERANCE_NONE,
+		"any"         = PERSISTENCE_ERROR_TOLERANCE_ANY,
+		"recoverable" = PERSISTENCE_ERROR_TOLERANCE_RECOVERABLE,
+	)

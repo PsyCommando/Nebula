@@ -21,13 +21,6 @@
 		/decl/config/toggle/allow_holidays,
 		/decl/config/toggle/humans_need_surnames,
 		/decl/config/toggle/roundstart_level_generation,
-		/decl/config/num/withdraw_period,
-		/decl/config/num/interest_period,
-		/decl/config/num/interest_mod_delay,
-		/decl/config/num/withdraw_mod_delay,
-		/decl/config/num/transaction_mod_delay,
-		/decl/config/num/fractional_reserve_mod_delay,
-		/decl/config/num/anti_tamper_mod_delay,
 	)
 
 /decl/config/num/exterior_ambient_light
@@ -132,53 +125,3 @@
 /decl/config/toggle/roundstart_level_generation
 	uid = "roundstart_level_generation"
 	desc = "Enable/Disable random level generation. Will behave strangely if turned off with a map that expects it on."
-
-// Economy variables
-/decl/config/num/withdraw_period
-	uid = "withdraw_period"
-	default_value = 1 DAY
-	rounding = 1
-/decl/config/num/withdraw_period/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/interest_period
-	uid = "interest_period"
-	default_value = 1 DAY
-	rounding = 1
-/decl/config/num/interest_period/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/interest_mod_delay
-	uid = "interest_mod_delay"
-	default_value = 2 DAYS
-	rounding = 1
-/decl/config/num/interest_mod_delay/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/withdraw_mod_delay
-	uid = "withdraw_mod_delay"
-	default_value = 3 DAYS
-	rounding = 1
-/decl/config/num/withdraw_mod_delay/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/transaction_mod_delay
-	uid = "transaction_mod_delay"
-	default_value = 2 DAYS
-	rounding = 1
-/decl/config/num/transaction_mod_delay/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/fractional_reserve_mod_delay
-	uid = "fractional_reserve_mod_delay"
-	default_value = 3 DAYS
-	rounding = 1
-/decl/config/num/fractional_reserve_mod_delay/set_value(new_value)
-	return ..(new_value DAYS)
-
-/decl/config/num/anti_tamper_mod_delay
-	uid = "anti_tamper_mod_delay"
-	default_value = 2 DAYS
-	rounding = 1
-/decl/config/num/anti_tamper_mod_delay/set_value(new_value)
-	return ..(new_value DAYS)
