@@ -101,3 +101,11 @@
 
 /decl/stack_recipe/steel/furniture/tank
 	result_type       = /obj/item/pipe/tank
+
+/decl/stack_recipe/steel/furniture/iv_drip
+	result_type         = /obj/structure/iv_drip
+	one_per_turf        = TRUE
+	on_floor            = TRUE
+	difficulty          = MAT_VALUE_NORMAL_DIY
+	apply_material_name = FALSE
+	time                = 5 SECONDS

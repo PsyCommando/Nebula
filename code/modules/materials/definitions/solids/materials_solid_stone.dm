@@ -127,15 +127,6 @@
 /decl/material/solid/stone/concrete/get_wall_texture()
 	return texture
 
-/decl/material/solid/stone/concrete/generate_recipes(reinforce_material)
-	. = list()
-	//Don't call parent, since concrete isn't really useable to craft many things
-	if(reinforce_material)
-		return
-	. += new /datum/stack_recipe/furniture/girder(src)
-	. += new /datum/stack_recipe/furniture/wall_frame(src)
-	. += new /datum/stack_recipe/fountain(src)
-
 ///Concrete with steel rebars essentially. Has to be a material, since composite materials are kind of a hack.
 /decl/material/solid/stone/concrete/reinforced
 	name                    = "reinforced concrete"
