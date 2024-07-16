@@ -53,6 +53,10 @@
 
 ///Adds a few events listener to the player, and assign the player to this area.
 /area/chargen/proc/register_player_mob(mob/living/player)
+	//First, ensure the player is assigned the correct initial chargen state.
+	SSchargen.set_player_chargen_state(player, CHARGEN_STATE_FORM_INCOMPLETE)
+
+	//Then set our listeners and etc..
 	current_player = weakref(player)
 	events_repository.register(/decl/observ/exited,                player, src,         /area/chargen/proc/on_player_left_chargen)
 	events_repository.register(/decl/observ/destroyed,             player, src,         /area/chargen/proc/on_player_left_chargen)

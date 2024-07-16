@@ -11,7 +11,7 @@ var/global/list/player_minds = list()
 	var/tmp/datum/skillset/chargen_skillset 		// Temporary skillset used for character generation.
 	var/decl/hierarchy/chargen/origin/origin 	// The origin chosen for this character at chargen.
 	var/decl/hierarchy/chargen/role/role		// The role chosen for this character at chargen.
-	var/chargen_state = CHARGEN_STATE_FORM_INCOMPLETE
+	var/chargen_state = CHARGEN_STATE_NONE
 
 SAVED_VAR(/datum/mind, unique_id)
 SAVED_VAR(/datum/mind, age)
@@ -20,6 +20,7 @@ SAVED_VAR(/datum/mind, chargen_stack)
 
 SAVED_VAR(/datum/mind, origin)
 SAVED_VAR(/datum/mind, role)
+SAVED_VAR(/datum/mind, chargen_state)
 
 /datum/mind/New()
 	. = ..()
@@ -52,6 +53,12 @@ SAVED_VAR(/datum/mind, role)
  */
 /datum/mind/proc/has_finished_chargen()
 	return chargen_state >= CHARGEN_STATE_FINALIZED
+
+/**
+ * Returns whether the owner of this mind is currently supposed to be going through character gen.
+ */
+/datum/mind/proc/is_chargen_in_progress()
+	return (chargen_state != CHARGEN_STATE_NONE) && (chargen_state < CHARGEN_STATE_FINALIZED)
 
 /**
 
