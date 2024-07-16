@@ -404,11 +404,11 @@
 	The basic outfit all players spawn with on outreach.
  */
 /decl/hierarchy/outfit/job/outreach
-	name     = "Job - Outreach Colonist"
-	id_type  = /obj/item/card/id/network/civilian
-	uniform  = /obj/item/clothing/under/color/lightblue
-	l_ear    = /obj/item/radio/headset
-	shoes    = /obj/item/clothing/shoes/color/white
-	pda_type = null
-	r_ear    = null
-	flags    = OUTFIT_HAS_BACKPACK
+	name         = "Job - Outreach Colonist"
+	id_type      = /obj/item/card/id/network/civilian
+	uniform      = /obj/item/clothing/under/color/lightblue
+	l_ear        = /obj/item/radio/headset
+	shoes        = /obj/item/clothing/shoes/color/white
+	pda_type     = null
+	r_ear        = null
+	outfit_flags = OUTFIT_HAS_BACKPACK
