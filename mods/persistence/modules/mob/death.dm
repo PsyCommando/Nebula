@@ -1,4 +1,4 @@
-/mob/living/carbon/death()
+/mob/living/carbon/death(gibbed)
 	if(stat & DEAD)
 		return FALSE
 
@@ -6,6 +6,7 @@
 		saved_ckey = null
 
 	if(ckey && client)
+		//#FIXME: This is going to conflict with how brainmob is handled now.
 		var/obj/item/organ/internal/stack/stack = switchToStack(ckey, mind)
 		if(stack)
 			// They did have a stack.
