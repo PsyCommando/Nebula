@@ -23,6 +23,10 @@
 	                                            // For reference, a fully pressurized oxy tank at 50% gas release firing a health
 	                                            // analyzer with a force_divisor of 10 hit with a damage multiplier of 3000+.
 
+SAVED_VAR(/obj/item/gun/launcher/pneumatic, tank)
+SAVED_VAR(/obj/item/gun/launcher/pneumatic, item_storage)
+SAVED_VAR(/obj/item/gun/launcher/pneumatic, pressure_setting)
+
 /obj/item/gun/launcher/pneumatic/Initialize()
 	. = ..()
 	item_storage = new(src)

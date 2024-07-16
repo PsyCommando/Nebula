@@ -34,6 +34,8 @@
 	var/up = 0
 	var/base_state
 
+SAVED_VAR(/obj/item/clothing/head/welding, up)
+
 /obj/item/clothing/head/welding/attack_self()
 	if(!base_state)
 		base_state = icon_state

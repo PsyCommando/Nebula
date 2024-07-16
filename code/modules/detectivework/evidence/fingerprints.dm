@@ -43,6 +43,9 @@
 	var/full_print
 	var/completeness = 0
 
+SAVED_VAR(/datum/fingerprint, full_print)
+SAVED_VAR(/datum/fingerprint, completeness)
+
 /datum/fingerprint/proc/copy()
 	var/datum/fingerprint/C = new()
 	C.full_print = full_print

@@ -9,6 +9,9 @@
 	var/activation_emote
 	var/uses
 
+SAVED_VAR(/obj/item/implant/freedom, activation_emote)
+SAVED_VAR(/obj/item/implant/freedom, uses)
+
 /obj/item/implant/freedom/get_data()
 	return {"
 	<b>Implant Specifications:</b><BR>
@@ -27,7 +30,8 @@
 
 /obj/item/implant/freedom/Initialize()
 	. = ..()
-	uses = rand(1, 5)
+	if(!persistent_id)
+		uses = rand(1, 5)
 
 /obj/item/implant/freedom/trigger(emote, mob/living/carbon/source)
 	if (emote == activation_emote)

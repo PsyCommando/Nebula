@@ -76,6 +76,17 @@ var/global/list/assigned_blocks[DNA_SE_LENGTH]
 	var/lineage
 	//#TODO: Keep track of bodytype!!!!!
 
+SAVED_VAR(/datum/dna, uni_identity)
+SAVED_VAR(/datum/dna, struc_enzymes)
+SAVED_VAR(/datum/dna, unique_enzymes)
+SAVED_VAR(/datum/dna, UI)
+SAVED_VAR(/datum/dna, SE)
+SAVED_VAR(/datum/dna, b_type)
+SAVED_VAR(/datum/dna, real_name)
+SAVED_VAR(/datum/dna, species)
+SAVED_VAR(/datum/dna, heritable_sprite_accessories)
+SAVED_VAR(/datum/dna, lineage)
+
 // Make a copy of this strand.
 /datum/dna/PopulateClone(datum/dna/clone)
 	clone = ..()

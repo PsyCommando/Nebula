@@ -11,6 +11,13 @@
 	var/datum/dna/dna
 	var/backup_date
 
+SAVED_VAR(/datum/computer_file/data/cloning, mob_age)
+SAVED_VAR(/datum/computer_file/data/cloning, skill_list)
+SAVED_VAR(/datum/computer_file/data/cloning, languages)
+SAVED_VAR(/datum/computer_file/data/cloning, mind_id)
+SAVED_VAR(/datum/computer_file/data/cloning, dna)
+SAVED_VAR(/datum/computer_file/data/cloning, backup_date)
+
 // Initializes all the data on a backup with an existing mob.
 /datum/computer_file/data/cloning/proc/initialize_backup(var/mob/living/H)
 	languages = H.languages.Copy()

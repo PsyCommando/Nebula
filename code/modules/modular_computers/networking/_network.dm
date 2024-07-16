@@ -37,6 +37,13 @@
 	var/static/list/all_software_categories
 	var/list/chat_channels = list()
 
+SAVED_VAR(/datum/computer_network, network_key)
+SAVED_VAR(/datum/computer_network, network_features_enabled)
+SAVED_VAR(/datum/computer_network, intrusion_detection_enabled)
+SAVED_VAR(/datum/computer_network, intrusion_detection_alarm)
+SAVED_VAR(/datum/computer_network, banned_nids)
+SAVED_VAR(/datum/computer_network, chat_channels)
+
 /datum/computer_network/New(var/new_id)
 	if(!new_id)
 		new_id = "network[random_id(type, 100,999)]"

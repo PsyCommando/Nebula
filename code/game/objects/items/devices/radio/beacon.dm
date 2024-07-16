@@ -13,6 +13,9 @@ var/global/list/radio_beacons = list()
 	var/code = "electronic"
 	var/functioning = TRUE
 
+SAVED_VAR(/obj/item/radio/beacon, code)
+SAVED_VAR(/obj/item/radio/beacon, functioning)
+
 /obj/item/radio/beacon/Initialize()
 	. = ..()
 	global.radio_beacons += src

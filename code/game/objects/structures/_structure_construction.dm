@@ -2,6 +2,8 @@
 	var/wired
 	var/tool_interaction_flags
 
+SAVED_VAR(/obj/structure, wired)
+
 /obj/structure/proc/handle_default_wrench_attackby(var/mob/user, var/obj/item/wrench)
 	if((tool_interaction_flags & TOOL_INTERACTION_ANCHOR) && can_unanchor(user))
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)

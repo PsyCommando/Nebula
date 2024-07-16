@@ -22,6 +22,10 @@
 	var/power_cost = 950                                       // Cost per fire, should consume almost an entire basic cell.
 	var/power_per_tick                                         // Capacitor charge per process(). Updated based on capacitor rating.
 
+SAVED_VAR(/obj/item/gun/magnetic, capacitor)
+SAVED_VAR(/obj/item/gun/magnetic, loaded)
+SAVED_VAR(/obj/item/gun/magnetic, load_type)
+
 /obj/item/gun/magnetic/setup_power_supply(loaded_cell_type, accepted_cell_type, power_supply_extension_type, charge_value)
 	return ..(loaded_cell_type, /obj/item/cell, (removable_components ? /datum/extension/loaded_cell : /datum/extension/loaded_cell/unremovable), charge_value)
 

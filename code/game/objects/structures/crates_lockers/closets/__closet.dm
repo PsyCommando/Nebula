@@ -28,6 +28,11 @@ var/global/list/closets = list()
 	var/opened = FALSE
 	var/locked = FALSE
 
+SAVED_VAR(/obj/structure/closet, welded)
+SAVED_VAR(/obj/structure/closet, broken)
+SAVED_VAR(/obj/structure/closet, opened)
+SAVED_VAR(/obj/structure/closet, locked)
+
 /obj/structure/closet/Destroy()
 	global.closets -= src
 	. = ..()

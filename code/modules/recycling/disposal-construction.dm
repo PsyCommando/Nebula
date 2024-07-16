@@ -17,6 +17,8 @@
 	var/constructed_path = /obj/structure/disposalpipe
 	var/built_icon_state
 
+SAVED_VAR(/obj/structure/disposalconstruct, dpdir)
+
 /obj/structure/disposalconstruct/Initialize(mapload, var/P = null)
 	. = ..(mapload)
 	if(P)

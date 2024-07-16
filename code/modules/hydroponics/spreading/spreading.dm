@@ -59,6 +59,12 @@
 	var/mature_time		//minimum maturation time
 	var/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/plant
 
+SAVED_VAR(/obj/effect/vine, current_health)
+SAVED_VAR(/obj/effect/vine, max_growth)
+SAVED_VAR(/obj/effect/vine, parent)
+SAVED_VAR(/obj/effect/vine, seed)
+SAVED_VAR(/obj/effect/vine, plant)
+
 /obj/effect/vine/single
 	spread_chance = 0
 

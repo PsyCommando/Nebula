@@ -19,6 +19,12 @@
 	///The last cached color of the gas mixture
 	var/tmp/cached_mix_color
 
+SAVED_VAR(/datum/gas_mixture, gas)
+SAVED_VAR(/datum/gas_mixture, temperature)
+SAVED_VAR(/datum/gas_mixture, total_moles)
+SAVED_VAR(/datum/gas_mixture, volume)
+SAVED_VAR(/datum/gas_mixture, group_multiplier)
+
 /datum/gas_mixture/New(_volume, _temperature, _group_multiplier)
 	if(!isnull(_volume))
 		volume = _volume

@@ -64,6 +64,17 @@
 	var/analog_secured = list() // list of accesses used for encrypted analog, mainly for mercs/raiders
 	var/datum/radio_frequency/analog_radio_connection
 
+SAVED_VAR(/obj/item/radio, wires)
+SAVED_VAR(/obj/item/radio, panel_open)
+SAVED_VAR(/obj/item/radio, encryption_keys)
+SAVED_VAR(/obj/item/radio, on)
+SAVED_VAR(/obj/item/radio, frequency)
+SAVED_VAR(/obj/item/radio, traitor_frequency)
+SAVED_VAR(/obj/item/radio, broadcasting)
+SAVED_VAR(/obj/item/radio, listening)
+SAVED_VAR(/obj/item/radio, analog)
+SAVED_VAR(/obj/item/radio, analog_secured)
+
 /obj/item/radio/setup_power_supply(loaded_cell_type, accepted_cell_type, power_supply_extension_type, charge_value)
 	return ..(/obj/item/cell/device, /obj/item/cell/device, /datum/extension/loaded_cell, charge_value)
 
@@ -92,7 +103,7 @@
 	if(analog && frequency)
 		analog_radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
 
-/obj/item/radio/Initialize()
+/obj/item/radio/Initialize(ml, material_key)
 	. = ..()
 	wires = new(src)
 	setup_power_supply()
@@ -102,10 +113,19 @@
 	if(radio_device_type)
 		set_extension(src, /datum/extension/network_device/radio, initial_network_id, initial_network_key, RECEIVER_STRONG_WIRELESS)
 
+	if(!(persistent_id && length(encryption_keys)))
+		populate_encryption_keys()
+
+/** Create any defined encryption keys, leave alone those loaded from save. */
+/obj/item/radio/proc/populate_encryption_keys()
 	var/list/created_encryption_keys
 	for(var/keytype in encryption_keys)
 		LAZYADD(created_encryption_keys, new keytype(src))
 	encryption_keys = created_encryption_keys
+
+/obj/item/radio/after_deserialize()
+	encryption_key_capacity = max(encryption_key_capacity, length(encryption_keys))
+	. = ..()
 
 /obj/item/radio/proc/get_available_channels()
 	if(!channels)

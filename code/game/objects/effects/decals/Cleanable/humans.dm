@@ -30,6 +30,14 @@ var/global/list/image/splatter_cache=list()
 	var/list/blood_data
 	var/chemical = /decl/material/liquid/blood
 
+SAVED_VAR(/obj/effect/decal/cleanable/blood, base_icon)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, basecolor)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, amount)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, drytime)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, blood_size)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, blood_data)
+SAVED_VAR(/obj/effect/decal/cleanable/blood, chemical)
+
 /obj/effect/decal/cleanable/blood/reveal_blood()
 	if(!fluorescent)
 		fluorescent = FLUORESCENT_GLOWS

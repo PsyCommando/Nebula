@@ -32,6 +32,11 @@ var/global/list/cortical_stacks = list()
 	var/cortical_alias
 	var/last_alias_change
 
+SAVED_VAR(/obj/item/organ/internal/stack, stackmob)
+SAVED_VAR(/obj/item/organ/internal/stack, backup)
+SAVED_VAR(/obj/item/organ/internal/stack, cortical_alias)
+SAVED_VAR(/obj/item/organ/internal/stack, mind_id)
+
 /obj/item/organ/internal/stack/Initialize()
 	. = ..()
 	global.cortical_stacks |= src
@@ -129,7 +134,4 @@ var/global/list/cortical_stacks = list()
 			if(!stack.cortical_alias)
 				stack.cortical_alias = Gibberish(name, 100)
 
-SAVED_VAR(/obj/item/organ/internal/stack, stackmob)
-SAVED_VAR(/obj/item/organ/internal/stack, backup)
-SAVED_VAR(/obj/item/organ/internal/stack, cortical_alias)
-SAVED_VAR(/obj/item/organ/internal/stack, mind_id)
+

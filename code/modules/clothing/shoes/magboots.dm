@@ -16,6 +16,9 @@
 	var/obj/item/clothing/shoes/covering_shoes
 	var/online_slowdown = 3
 
+SAVED_VAR(/obj/item/clothing/shoes/magboots, magpulse)
+SAVED_VAR(/obj/item/clothing/shoes/magboots, covering_shoes)
+
 /obj/item/clothing/shoes/magboots/preserve_in_cryopod(var/obj/machinery/cryopod/pod)
 	return TRUE
 

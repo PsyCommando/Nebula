@@ -22,6 +22,8 @@
 	material = /decl/material/liquid/cleaner/soap
 	var/uses = 0
 
+SAVED_VAR(/obj/item/key/temporary, uses)
+
 /obj/item/key/temporary/Initialize(mapload, material_key, _data, _uses)
 	. = ..(mapload, material_key, _data)
 	uses = _uses

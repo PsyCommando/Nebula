@@ -5,6 +5,12 @@
 	var/list/instances		//What items are actually stored
 	var/atom/storing_object
 
+SAVED_VAR(/datum/stored_items, item_name)
+SAVED_VAR(/datum/stored_items, item_path)
+SAVED_VAR(/datum/stored_items, amount)
+SAVED_VAR(/datum/stored_items, instances)
+SAVED_VAR(/datum/stored_items, storing_object)
+
 /datum/stored_items/New(atom/_storing_object, _path, _name, _amount = 0)
 	if(_storing_object)
 		storing_object = _storing_object

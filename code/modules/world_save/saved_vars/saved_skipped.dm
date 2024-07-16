@@ -106,3 +106,11 @@
 	should_save = FALSE
 /turf/simulated/mimic_edge
 	should_save = FALSE
+
+//
+// Effects
+//
+
+//Is just an overlay made on fluid update by turfs
+/obj/effect/flood
+	should_save = FALSE

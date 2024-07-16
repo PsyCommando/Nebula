@@ -17,6 +17,17 @@
 	var/open			= FALSE	// Whether or not the lock panel is open.
 	var/error					// Any errors from user input. Temporary.
 
+SAVED_VAR(/datum/extension/lockable, locked)
+SAVED_VAR(/datum/extension/lockable, code)
+SAVED_VAR(/datum/extension/lockable, l_code)
+SAVED_VAR(/datum/extension/lockable, l_set)
+SAVED_VAR(/datum/extension/lockable, l_setshort)
+SAVED_VAR(/datum/extension/lockable, l_hacking)
+SAVED_VAR(/datum/extension/lockable, emagged)
+SAVED_VAR(/datum/extension/lockable, is_digital_lock)
+SAVED_VAR(/datum/extension/lockable, open)
+SAVED_VAR(/datum/extension/lockable, error)
+
 /datum/extension/lockable/New(holder, var/is_digital = FALSE)
 	..(holder)
 	is_digital_lock = is_digital

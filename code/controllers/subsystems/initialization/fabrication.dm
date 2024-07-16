@@ -11,6 +11,8 @@ SUBSYSTEM_DEF(fabrication)
 	var/list/fields_by_id =                list()
 	// Weakrefs to fabricators who want their initial recipies
 	var/list/fabricators_to_init =         list()
+	// #TODO: Research recipe stuff??
+	var/list/research_recipes
 
 /datum/controller/subsystem/fabrication/Initialize()
 

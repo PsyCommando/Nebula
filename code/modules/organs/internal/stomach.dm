@@ -8,6 +8,8 @@
 	var/datum/reagents/metabolism/ingested
 	var/next_cramp = 0
 
+SAVED_VAR(/obj/item/organ/internal/stomach, ingested)
+
 /obj/item/organ/internal/stomach/Destroy()
 	QDEL_NULL(ingested)
 	. = ..()

@@ -34,6 +34,10 @@
 	var/rolled_down = FALSE
 	var/rolled_sleeves = FALSE
 
+SAVED_VAR(/obj/item/clothing/under, displays_id)
+SAVED_VAR(/obj/item/clothing/under, rolled_down)
+SAVED_VAR(/obj/item/clothing/under, rolled_sleeves)
+
 /obj/item/clothing/under/Initialize()
 	. = ..()
 	if(check_state_in_icon("[BODYTYPE_HUMANOID]-[slot_w_uniform_str]-rolled", icon))

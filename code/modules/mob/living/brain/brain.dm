@@ -13,6 +13,8 @@
 		SPAN_DANGER("Major electrical distruption detected: System rebooting.")
 	)
 
+SAVED_VAR(/mob/living/brain, emp_damage)
+
 /mob/living/brain/get_default_emotes()
 	var/static/list/default_emotes = list(
 		/decl/emote/audible/alarm,

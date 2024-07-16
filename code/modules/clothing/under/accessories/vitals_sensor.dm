@@ -14,6 +14,9 @@
 		"Tracking beacon"
 	)
 
+SAVED_VAR(/obj/item/clothing/accessory/vitals_sensor, sensors_locked)
+SAVED_VAR(/obj/item/clothing/accessory/vitals_sensor, sensor_mode)
+
 /obj/item/clothing/accessory/vitals_sensor/Initialize()
 	. = ..()
 	if(isnull(sensor_mode) || sensor_mode < VITALS_SENSOR_OFF || sensor_mode > VITALS_SENSOR_TRACKING)

@@ -6,6 +6,8 @@
 
 	var/registered_name = null
 
+SAVED_VAR(/obj/structure/closet/secure_closet/personal, registered_name)
+
 /obj/structure/closet/secure_closet/personal/WillContain()
 	return list(
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),

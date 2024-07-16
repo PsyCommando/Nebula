@@ -22,6 +22,51 @@
 	if(. != INITIALIZE_HINT_QDEL)
 		post_setup(arglist(newargs))
 
+		//Persistence
+		LATE_INIT_IF_SAVED
+
+/mob/living/carbon/human/before_save()
+	. = ..()
+	CUSTOM_SV("move_intent", ispath(move_intent)? move_intent : move_intent?.type)
+
+/mob/living/carbon/human/after_deserialize()
+	. = ..()
+	backpack_setup = null //Make sure we don't repawn a new backpack
+
+/mob/living/carbon/human/LateInitialize()
+	. = ..()
+	if(!persistent_id)
+		return
+
+	set_move_intent(GET_DECL(LOAD_CUSTOM_SV("move_intent")))
+	CLEAR_SV("move_intent")
+
+	//Force equipped items to refresh their held icon
+	// for(var/obj/item/I in get_contained_external_atoms())
+	// 	I.hud_layerise()
+
+	//Important to regen icons here, since we skipped on that before load!
+	refresh_visible_overlays()
+
+	if(ignore_persistent_spawn())
+		return
+	if(!loc) // We're loading into null-space because we were in an unsaved level or intentionally in limbo. Move them to the last valid spawn.
+		if(istype(home_spawn))
+			if(home_spawn.loc)
+				forceMove(get_turf(home_spawn)) // Welcome home!
+				return
+			else // Your bed is in nullspace with you!
+				QDEL_NULL(home_spawn)
+		forceMove(get_spawn_turf()) // Sorry man. Your bed/cryopod was not set.
+
+// Don't let it update icons during initialize
+// Can't avoid upstream code from doing it, so just postpone it
+// /mob/living/carbon/human/update_icon()
+// 	if(!(atom_flags & ATOM_FLAG_INITIALIZED))
+// 		queue_icon_update() //Queue it later instead
+// 		return
+// 	. = ..()
+
 /mob/living/carbon/human/proc/setup_hud_overlays()
 	hud_list[HEALTH_HUD]      = new /image/hud_overlay('icons/mob/hud_med.dmi', src, "100")
 	hud_list[STATUS_HUD]      = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudhealthy")
@@ -1087,6 +1132,7 @@
 
 //Human mob specific init code. Meant to be used only on init.
 /mob/living/carbon/human/proc/setup(species_name = null, datum/dna/new_dna = null, decl/bodytype/new_bodytype = null)
+	//#FIXME: This will not work for creating characters loaded from save.
 	if(new_dna)
 		species_name = new_dna.species
 		src.dna = new_dna

@@ -17,8 +17,18 @@
 // The wrapped device(e.g. radio), only set if external_type isn't null
 /datum/robot_component/var/obj/item/wrapped = null
 
+SAVED_VAR(/datum/robot_component, installed)
+SAVED_VAR(/datum/robot_component, powered)
+SAVED_VAR(/datum/robot_component, toggled)
+SAVED_VAR(/datum/robot_component, brute_damage)
+SAVED_VAR(/datum/robot_component, electronics_damage)
+SAVED_VAR(/datum/robot_component, owner)
+SAVED_VAR(/datum/robot_component, external_type)
+SAVED_VAR(/datum/robot_component, wrapped)
+
 /datum/robot_component/New(mob/living/silicon/robot/R)
-	src.owner = R
+	if(R)
+		owner = R
 
 /datum/robot_component/proc/accepts_component(var/obj/item/thing)
 	. = istype(thing, external_type)
@@ -121,6 +131,8 @@
 	name = "power cell"
 	max_damage = 50
 	var/obj/item/cell/stored_cell = null
+
+SAVED_VAR(/datum/robot_component/cell, stored_cell)
 
 /datum/robot_component/cell/destroy()
 	..()

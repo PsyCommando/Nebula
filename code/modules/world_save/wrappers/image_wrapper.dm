@@ -11,6 +11,13 @@
 	var/pixel_y = 0
 	var/appearance_flags
 
+SAVED_VAR(/datum/wrapper/image, color)
+SAVED_VAR(/datum/wrapper/image, icon_state)
+SAVED_VAR(/datum/wrapper/image, alpha)
+SAVED_VAR(/datum/wrapper/image, layer)
+SAVED_VAR(/datum/wrapper/image, dir)
+SAVED_VAR(/datum/wrapper/image, appearance_flags)
+
 /datum/wrapper/image/on_serialize(var/image/I, var/serializer/curr_serializer)
 	key = "[I.icon]"
 

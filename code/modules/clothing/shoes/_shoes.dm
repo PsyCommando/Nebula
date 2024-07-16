@@ -30,6 +30,10 @@
 	/// A modifier applied to move delay when walking on snow.
 	var/snow_slowdown_mod   = 0
 
+SAVED_VAR(/obj/item/clothing/shoes, attached_cuffs)
+SAVED_VAR(/obj/item/clothing/shoes, hidden_item)
+SAVED_VAR(/obj/item/clothing/shoes, shine)
+
 /obj/item/clothing/shoes/Destroy()
 	. = ..()
 	if (hidden_item)

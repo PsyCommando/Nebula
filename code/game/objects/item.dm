@@ -86,6 +86,23 @@
 	var/tmp/use_single_icon
 	var/center_of_mass = @'{"x":16,"y":16}' //can be null for no exact placement behaviour
 
+SAVED_VAR(/obj/item, contaminated)
+SAVED_VAR(/obj/item, canremove)
+SAVED_VAR(/obj/item, hidden_uplink)
+SAVED_VAR(/obj/item, material)
+SAVED_VAR(/obj/item, current_health)
+SAVED_VAR(/obj/item, coating)
+
+//Used by things that can be collapsed and put into other inv slots
+SAVED_VAR(/obj/item, slot_flags)
+
+//Used by clothing that covers or not the face and can be toggled
+SAVED_VAR(/obj/item, flags_inv)
+SAVED_VAR(/obj/item, body_parts_covered)
+
+//Used by things becoming airtight or not
+SAVED_VAR(/obj/item, item_flags)
+
 /obj/item/proc/can_contaminate()
 	return !(obj_flags & ITEM_FLAG_NO_CONTAMINATION)
 
@@ -122,6 +139,14 @@
 		pixel_x = rand(-randpixel, randpixel)
 		pixel_y = rand(-randpixel, randpixel)
 	reconsider_single_icon()
+
+	//Outreach blood overlay load from save
+	if(persistent_id)
+		//Regen coating icon cache
+		if(coating)
+			generate_blood_overlay()
+			if(blood_overlay)
+				blood_overlay.color = coating.get_color()
 
 /obj/item/Destroy()
 

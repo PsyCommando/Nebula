@@ -73,20 +73,55 @@
 
 	var/list/unarmed_attacks
 
-	var/atom/movable/applied_pressure
+	var/tmp/atom/movable/applied_pressure
 	var/atom/movable/splinted
 
-	var/internal_organs_size = 0       // Currently size cost of internal organs in this body part
+	var/tmp/internal_organs_size = 0       // Currently size cost of internal organs in this body part
 
 	// HUD element variable, see organ_icon.dm get_damage_hud_image()
 	var/image/hud_damage_image
 	var/fingerprint
 
+SAVED_VAR(/obj/item/organ/external, brute_dam)
+SAVED_VAR(/obj/item/organ/external, burn_dam)
+SAVED_VAR(/obj/item/organ/external, last_dam)
+SAVED_VAR(/obj/item/organ/external, pain)
+SAVED_VAR(/obj/item/organ/external, limb_flags)
+SAVED_VAR(/obj/item/organ/external, body_part)
+SAVED_VAR(/obj/item/organ/external, icon_position)
+SAVED_VAR(/obj/item/organ/external, skin_tone)
+SAVED_VAR(/obj/item/organ/external, skin_colour)
+SAVED_VAR(/obj/item/organ/external, skin_blend)
+SAVED_VAR(/obj/item/organ/external, hair_colour)
+SAVED_VAR(/obj/item/organ/external, render_alpha)
+
+//Don't save sprite accessories, we've got a special handling for that var
+//SAVED_VAR(/obj/item/organ/external, _sprite_accessories)
+
+SAVED_VAR(/obj/item/organ/external, wound_update_accuracy)
+SAVED_VAR(/obj/item/organ/external, wounds)
+SAVED_VAR(/obj/item/organ/external, number_wounds)
+
+SAVED_VAR(/obj/item/organ/external, parent)
+SAVED_VAR(/obj/item/organ/external, children)
+SAVED_VAR(/obj/item/organ/external, internal_organs)
+SAVED_VAR(/obj/item/organ/external, implants)
+SAVED_VAR(/obj/item/organ/external, genetic_degradation)
+SAVED_VAR(/obj/item/organ/external, autopsy_data)
+SAVED_VAR(/obj/item/organ/external, encased)
+SAVED_VAR(/obj/item/organ/external, arterial_bleed_severity)
+SAVED_VAR(/obj/item/organ/external, cavity_max_w_class)
+SAVED_VAR(/obj/item/organ/external, hatch_state)
+SAVED_VAR(/obj/item/organ/external, stage)
+SAVED_VAR(/obj/item/organ/external, cavity)
+SAVED_VAR(/obj/item/organ/external, splinted)
+SAVED_VAR(/obj/item/organ/external, fingerprint)
+
 /obj/item/organ/external/proc/get_fingerprint()
 
 	if((limb_flags & ORGAN_FLAG_FINGERPRINT) && !BP_IS_PROSTHETIC(src))
-		if(!owner) // We need to generate a fingerprint as we've never been supplied one before.
-			fingerprint = md5(sequential_id(/mob))
+		if(!owner && !fingerprint) // We need to generate a fingerprint as we've never been supplied one before.
+			fingerprint = md5(sequential_id(/mob)) //#FIXME: This doesn't seem to make much sense?
 		return fingerprint
 
 	for(var/obj/item/organ/external/E in children)
@@ -109,6 +144,39 @@
 		pain_disability_threshold = (max_damage * 0.75)
 	if(force_limb_dir && force_limb_dir != SOUTH)
 		set_dir(force_limb_dir)
+	//Persistence Save load
+	if(persistent_id)
+		post_init_from_save()
+
+/obj/item/organ/external/proc/post_init_from_save()
+	//Dump everything
+	clear_sprite_accessories(TRUE)
+	//Load the accessories we saved
+	var/list/accessories_to_load = LOAD_CUSTOM_SV("sprite_accessories")
+	for(var/accessory_type in accessories_to_load)
+		var/decl/sprite_accessory/accessory_def = GET_DECL(accessory_type)
+		set_sprite_accessory(accessory_type, accessory_def.accessory_category, accessories_to_load[accessory_type], TRUE)
+		if(istype(owner))
+			var/decl/sprite_accessory/refresh_accessory = GET_DECL(accessory_type || accessory_def.accessory_category)
+			if(refresh_accessory)
+				refresh_accessory.refresh_mob(owner)
+
+	CLEAR_SV("sprite_accessories")
+	//For loose limbs only do this if we have no owner, because the proc would call stuff on the owner out of order otherwise
+	if(LAZYLEN(wounds) && !owner)
+		update_wounds()
+	//Has to run this here because the accessories might modify this.
+	update_icon()
+
+/obj/item/organ/external/before_save()
+	. = ..()
+	//Serialize the accessories (hairs, etc..)
+	var/list/accessories_to_save
+	for(var/category in _sprite_accessories)
+		var/list/category_contents = _sprite_accessories[category]
+		for(var/item_type in category_contents)
+			LAZYSET(accessories_to_save, item_type, category_contents[item_type]) //The value is a color for the accessory
+	CUSTOM_SV("sprite_accessories", accessories_to_save)
 
 /obj/item/organ/external/Destroy()
 	//Update the hierarchy BEFORE clearing all the vars and refs

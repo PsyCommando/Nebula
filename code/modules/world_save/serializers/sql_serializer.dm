@@ -199,6 +199,8 @@ var/global/list/serialization_time_spent_type
 			var/decl/VD = VV
 			VT = SERIALIZER_TYPE_DECL
 			VV = "[VD.type]"
+		else if(ispointer(VV))
+			CRASH("Pointer type is unsupported! ([VV])")
 		else if(get_wrapper(VV))
 			VT = SERIALIZER_TYPE_WRAPPER
 			var/wrapper_path = get_wrapper(VV)
@@ -307,6 +309,8 @@ var/global/list/serialization_time_spent_type
 			var/decl/key_d = key
 			KT = SERIALIZER_TYPE_DECL
 			KV = "[key_d.type]"
+		else if(ispointer(key))
+			CRASH("Pointer type is unsupported! ([key])")
 		else if(get_wrapper(key))
 			KT = SERIALIZER_TYPE_WRAPPER
 			var/wrapper_path = get_wrapper(key)
@@ -357,6 +361,8 @@ var/global/list/serialization_time_spent_type
 				var/decl/ED = EV
 				ET = SERIALIZER_TYPE_DECL
 				EV = "[ED.type]"
+			else if(ispointer(EV))
+				CRASH("Pointer type is unsupported! ([EV])")
 			else if(get_wrapper(EV))
 				ET = SERIALIZER_TYPE_WRAPPER
 				var/wrapper_path = get_wrapper(EV)

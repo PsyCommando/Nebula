@@ -43,6 +43,8 @@
 		else if(istype(VV, /decl))
 			var/decl/VD = VV
 			results[V] = "[SERIALIZER_TYPE_DECL]#[VD.type]"
+		else if(ispointer(VV))
+			CRASH("Pointer type is unsupported! ([VV])")
 		else if(istype(VV, /datum))
 			if(should_flatten(VV))
 				if(VV in object_parent)
@@ -126,6 +128,8 @@
 			else if(istype(V, /decl))
 				var/decl/VD = V
 				F_V = "[SERIALIZER_TYPE_DECL]#[VD.type]"
+			else if(ispointer(V))
+				CRASH("Pointer type is unsupported! ([V])")
 			else if(istype(V, /datum))
 				if(should_flatten(V))
 					if(V in list_parent)

@@ -41,6 +41,20 @@
 	var/equivalent_variance_threshold = 0.1        // Variance % below this value will be treated as equivalent when examining another mob.
 	var/comparison_variance_multiplier = 0.75      // A multiplier applied to variance values to tighten them in a bit and allow for major cross-species variations to have more significant strings.
 
+SAVED_VAR(/datum/appearance_descriptor, name)
+SAVED_VAR(/datum/appearance_descriptor, chargen_label)
+SAVED_VAR(/datum/appearance_descriptor, default_value)
+SAVED_VAR(/datum/appearance_descriptor, comparative_value_descriptor_equivalent)
+SAVED_VAR(/datum/appearance_descriptor, standalone_value_descriptors)
+SAVED_VAR(/datum/appearance_descriptor, comparative_value_descriptors_smaller)
+SAVED_VAR(/datum/appearance_descriptor, comparative_value_descriptors_larger)
+SAVED_VAR(/datum/appearance_descriptor, chargen_value_descriptors)
+SAVED_VAR(/datum/appearance_descriptor, chargen_min_index)
+SAVED_VAR(/datum/appearance_descriptor, chargen_max_index)
+SAVED_VAR(/datum/appearance_descriptor, skip_species_mention)
+SAVED_VAR(/datum/appearance_descriptor, equivalent_variance_threshold)
+SAVED_VAR(/datum/appearance_descriptor, comparison_variance_multiplier)
+
 /datum/appearance_descriptor/New(comparison_val = 1)
 	if(!isnull(comparison_val))
 		relative_value_comparison_multiplier = comparison_val

@@ -16,6 +16,8 @@
 	var/tmp/last_cached_eye_colour
 	var/tmp/last_eye_cache_key
 
+SAVED_VAR(/obj/item/organ/internal/eyes, eye_colour)
+
 /obj/item/organ/internal/eyes/proc/get_innate_flash_protection()
 	return bodytype.eye_innate_flash_protection
 

@@ -7,6 +7,9 @@
 	var/height
 	var/landmark_loc
 
+SAVED_VAR(/datum/wrapper/map_data, height)
+SAVED_VAR(/datum/wrapper/map_data, landmark_loc)
+
 /datum/wrapper/map_data/on_serialize(var/obj/abstract/map_data/M, var/serializer/curr_serializer)
 	key = "[M.type]"
 

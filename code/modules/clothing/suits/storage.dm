@@ -2,6 +2,9 @@
 	var/obj/item/storage/internal/pockets/pockets
 	var/slots = 2
 
+SAVED_VAR(/obj/item/clothing/suit/storage, pockets)
+SAVED_VAR(/obj/item/clothing/suit/storage, slots)
+
 /obj/item/clothing/suit/storage/Initialize()
 	. = ..()
 	pockets = new/obj/item/storage/internal/pockets(src, slots, ITEM_SIZE_SMALL) //fit only pocket sized items

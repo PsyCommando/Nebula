@@ -18,6 +18,7 @@
 #define SERIALIZER_TYPE_DATUM_FLAT  "FLAT_OBJ"
 #define SERIALIZER_TYPE_FLAT_REF    "FLAT_REF"
 #define SERIALIZER_TYPE_DECL        "DECL"
+#define SERIALIZER_TYPE_POINTER     "PTR"
 
 /////////////////////////////////////////////////////////
 // SQL table names

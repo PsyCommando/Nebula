@@ -23,6 +23,12 @@ var/global/obj/temp_reagents_holder = new
 	var/atom/my_atom
 	var/cached_color
 
+SAVED_VAR(/datum/reagents, reagent_volumes)
+SAVED_VAR(/datum/reagents, reagent_data)
+SAVED_VAR(/datum/reagents, total_volume)
+SAVED_VAR(/datum/reagents, maximum_volume)
+SAVED_VAR(/datum/reagents, my_atom)
+
 /datum/reagents/New(var/maximum_volume = 120, var/atom/my_atom)
 	src.maximum_volume = maximum_volume
 	src.my_atom = my_atom

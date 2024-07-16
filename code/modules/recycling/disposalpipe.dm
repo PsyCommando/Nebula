@@ -18,6 +18,9 @@
 	var/flipped_state // If it has a mirrored version, this is the typepath for it.
 	// new pipe, set the icon_state as on map
 
+SAVED_VAR(/obj/structure/disposalpipe, dpdir)
+SAVED_VAR(/obj/structure/disposalpipe, base_icon_state)
+
 /obj/structure/disposalpipe/Initialize()
 	. = ..()
 	alpha = 255

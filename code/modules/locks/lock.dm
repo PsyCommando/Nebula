@@ -7,6 +7,10 @@
 	var/lock_data = "" //basically a randomized string. The longer the string the more complex the lock.
 	var/atom/holder
 
+SAVED_VAR(/datum/lock, status)
+SAVED_VAR(/datum/lock, lock_data)
+SAVED_VAR(/datum/lock, holder)
+
 /datum/lock/New(var/atom/h, var/complexity = 1)
 	holder = h
 	if(istext(complexity))

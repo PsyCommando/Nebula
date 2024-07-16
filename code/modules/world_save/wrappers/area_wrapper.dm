@@ -5,6 +5,8 @@
 	// Area details
 	var/name
 
+SAVED_VAR(/datum/wrapper/area, name)
+
 /datum/wrapper/area/on_serialize(var/area/A, var/serializer/curr_serializer)
 	key = "[A.type]"
 	name = A.name

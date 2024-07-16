@@ -13,6 +13,10 @@
 	var/footstep_type
 	var/mob_offset
 
+SAVED_VAR(/obj/structure, reagents)
+SAVED_VAR(/obj/structure, current_health)
+SAVED_VAR(/obj/structure, req_access)
+
 /obj/structure/create_matter()
 	..()
 	if(material || reinf_material)

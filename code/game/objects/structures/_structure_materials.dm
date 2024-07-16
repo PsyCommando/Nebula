@@ -4,6 +4,10 @@
 	var/material_alteration
 	var/dismantled
 
+SAVED_VAR(/obj/structure, material)
+SAVED_VAR(/obj/structure, reinf_material)
+SAVED_VAR(/obj/structure, dismantled)
+
 /obj/structure/get_material()
 	. = material
 

@@ -10,6 +10,10 @@
 	//at 0.8 completely depleted after 60ish minutes of constant walking or 130 minutes of standing still
 	var/servo_cost = 0.8
 
+SAVED_VAR(/obj/item/organ/internal/cell, open)
+SAVED_VAR(/obj/item/organ/internal/cell, cell)
+SAVED_VAR(/obj/item/organ/internal/cell, servo_cost)
+
 /obj/item/organ/internal/cell/Initialize()
 	if(ispath(cell))
 		cell = new cell(src)

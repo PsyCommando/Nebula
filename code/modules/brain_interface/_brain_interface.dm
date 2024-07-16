@@ -22,6 +22,9 @@
 	var/locked = FALSE
 	var/obj/item/organ/internal/brain/holding_brain = /obj/item/organ/internal/brain
 
+SAVED_VAR(/obj/item/organ/internal/brain_interface, locked)
+SAVED_VAR(/obj/item/organ/internal/brain_interface, holding_brain)
+
 /obj/item/organ/internal/brain_interface/is_preserved()
 	return TRUE
 

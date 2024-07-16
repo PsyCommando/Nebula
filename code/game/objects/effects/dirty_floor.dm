@@ -9,6 +9,8 @@
 	alpha = 0
 	var/dirt_amount = 0
 
+SAVED_VAR(/obj/effect/decal/cleanable/dirt, dirt_amount)
+
 /obj/effect/decal/cleanable/dirt/Initialize()
 	. = ..()
 	name = ""

@@ -30,6 +30,9 @@
 
 	var/datum/reagents/metabolism/inhaled
 
+SAVED_VAR(/obj/item/organ/internal/lungs, oxygen_deprivation)
+SAVED_VAR(/obj/item/organ/internal/lungs, inhaled)
+
 /obj/item/organ/internal/lungs/Destroy()
 	QDEL_NULL(inhaled)
 	. = ..()

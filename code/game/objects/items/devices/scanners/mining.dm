@@ -4,6 +4,9 @@
 	var/list/resources
 	var/surveyed = FALSE
 
+SAVED_VAR(/datum/extension/buried_resources, resources)
+SAVED_VAR(/datum/extension/buried_resources, surveyed)
+
 /datum/extension/buried_resources/New(datum/holder, list/resource_list)
 	resources = resource_list
 	..()

@@ -31,6 +31,17 @@
 	var/mothershuttle //tag of mothershuttle
 	var/motherdock    //tag of mothershuttle landmark, defaults to starting location
 
+SAVED_VAR(/datum/shuttle, name)
+SAVED_VAR(/datum/shuttle, display_name)
+SAVED_VAR(/datum/shuttle, shuttle_area)
+SAVED_VAR(/datum/shuttle, current_location)
+SAVED_VAR(/datum/shuttle, flags)
+SAVED_VAR(/datum/shuttle, multiz)
+SAVED_VAR(/datum/shuttle, ceiling_type)
+SAVED_VAR(/datum/shuttle, force_ceiling_on_init)
+SAVED_VAR(/datum/shuttle, mothershuttle)
+SAVED_VAR(/datum/shuttle, motherdock)
+
 /datum/shuttle/New(map_hash, var/obj/effect/shuttle_landmark/initial_location)
 	..()
 	if(!display_name)

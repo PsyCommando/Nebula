@@ -5,6 +5,9 @@
 	var/genetype    // Label used when applying trait.
 	var/list/values // Values to copy into the target seed datum.
 
+SAVED_VAR(/datum/plantgene, genetype)
+SAVED_VAR(/datum/plantgene, values)
+
 /datum/seed
 	//Tracking.
 	var/uid                        // Unique identifier.
@@ -36,6 +39,24 @@
 	var/image/dead_overlay
 	var/image/harvest_overlay
 	var/list/growing_overlays
+
+//Seeds are procedurally generated and need to save everything
+SAVED_VAR(/datum/seed, name)
+SAVED_VAR(/datum/seed, seed_name)
+SAVED_VAR(/datum/seed, seed_noun)
+SAVED_VAR(/datum/seed, display_name)
+SAVED_VAR(/datum/seed, scanned)
+SAVED_VAR(/datum/seed, can_self_harvest)
+SAVED_VAR(/datum/seed, growth_stages)
+SAVED_VAR(/datum/seed, traits)
+SAVED_VAR(/datum/seed, mutants)
+SAVED_VAR(/datum/seed, chems)
+SAVED_VAR(/datum/seed, consume_gasses)
+SAVED_VAR(/datum/seed, exude_gasses)
+SAVED_VAR(/datum/seed, kitchen_tag)
+SAVED_VAR(/datum/seed, trash_type)
+SAVED_VAR(/datum/seed, splat_type)
+SAVED_VAR(/datum/seed, force_layer)
 
 /datum/seed/New()
 

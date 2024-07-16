@@ -2,6 +2,8 @@
 	var/key
 	var/wrapper_for
 
+SAVED_VAR(/datum/wrapper,  key)
+
 // called after object is deserialized while in the serializer. Return a reference to the game data key is pointing to.
 /datum/wrapper/proc/on_deserialize(var/serializer/curr_serializer)
 

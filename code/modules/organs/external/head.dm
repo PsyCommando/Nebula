@@ -20,6 +20,11 @@
 	var/forehead_graffiti
 	var/graffiti_style
 
+SAVED_VAR(/obj/item/organ/external/head, glowing_eyes)
+SAVED_VAR(/obj/item/organ/external/head, can_intake_reagents)
+SAVED_VAR(/obj/item/organ/external/head, forehead_graffiti)
+SAVED_VAR(/obj/item/organ/external/head, graffiti_style)
+
 /obj/item/organ/external/head/proc/get_organ_eyes_overlay()
 	if(!glowing_eyes && !owner?.has_chemical_effect(CE_GLOWINGEYES, 1))
 		return

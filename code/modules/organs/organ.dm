@@ -33,6 +33,19 @@
 	var/death_time                         // REALTIMEOFDAY at moment of death.
 	var/scale_max_damage_to_species_health // Whether or not we should scale the damage values of this organ to the owner species.
 
+SAVED_VAR(/obj/item/organ, organ_tag)
+SAVED_VAR(/obj/item/organ, parent_organ)
+SAVED_VAR(/obj/item/organ, status)
+SAVED_VAR(/obj/item/organ, owner)
+SAVED_VAR(/obj/item/organ, dna)
+SAVED_VAR(/obj/item/organ, species)
+SAVED_VAR(/obj/item/organ, bodytype)
+SAVED_VAR(/obj/item/organ, ailments)
+SAVED_VAR(/obj/item/organ, damage)
+SAVED_VAR(/obj/item/organ, min_broken_damage)
+SAVED_VAR(/obj/item/organ, rejecting)
+SAVED_VAR(/obj/item/organ, death_time)
+
 /obj/item/organ/Destroy()
 	if(owner)
 		owner.remove_organ(src, FALSE, FALSE, TRUE, TRUE, FALSE) //Tell our parent we're unisntalling in place

@@ -124,6 +124,10 @@
 	var/min_free_time = 50
 	var/max_free_time = 85
 
+SAVED_VAR(/obj/effect/energy_net, current_health)
+SAVED_VAR(/obj/effect/energy_net, countdown)
+SAVED_VAR(/obj/effect/energy_net, captured)
+
 /obj/effect/energy_net/safari
 	name = "animal net"
 	desc = "An energized net meant to subdue animals."

@@ -54,6 +54,10 @@
 	var/helmet_deploy_sound = 'sound/items/helmet_close.ogg'
 	var/helmet_retract_sound = 'sound/items/helmet_open.ogg'
 
+SAVED_VAR(/obj/item/clothing/suit/space/void, boots)
+SAVED_VAR(/obj/item/clothing/suit/space/void, helmet)
+SAVED_VAR(/obj/item/clothing/suit/space/void, tank)
+
 #define VOIDSUIT_INIT_EQUIPMENT(equipment_var, expected_path) \
 if(ispath(##equipment_var, ##expected_path )){\
 	##equipment_var = new equipment_var (src);\

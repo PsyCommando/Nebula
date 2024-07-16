@@ -15,6 +15,10 @@
 	var/open
 	var/list/external_pump
 
+SAVED_VAR(/obj/item/organ/internal/heart, pulse)
+SAVED_VAR(/obj/item/organ/internal/heart, open)
+SAVED_VAR(/obj/item/organ/internal/heart, external_pump)
+
 /obj/item/organ/internal/heart/on_holder_death(var/gibbed)
 	pulse = PULSE_NONE
 	update_icon()

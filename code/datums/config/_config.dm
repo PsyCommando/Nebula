@@ -161,6 +161,7 @@
 /decl/config/proc/handle_value_deconversion(var/new_value)
 	return new_value
 
+ //Dangerous: this is used to both set the value at runtime and to parse it from file. If the value format in the file differ from the one at runtime, this will garble the value. Ex: if you store the value as a number of hours in the config file, but the parsed value should be a number of deciseconds after it's parsed..
 /decl/config/proc/set_value(var/new_value)
 	value = handle_value_conversion(new_value)
 	sanitize_value()

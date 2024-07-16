@@ -20,6 +20,9 @@
 	var/oxygen_reserve = 6
 	VAR_PRIVATE/mob/living/_brainmob = /mob/living/brain
 
+SAVED_VAR(/obj/item/organ/internal/brain, _brainmob)
+SAVED_VAR(/obj/item/organ/internal/brain, oxygen_reserve)
+
 /obj/item/organ/internal/brain/get_brainmob(var/create_if_missing = FALSE)
 	if(!istype(_brainmob) && create_if_missing)
 		initialize_brainmob()

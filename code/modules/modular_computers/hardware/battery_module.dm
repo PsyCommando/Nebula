@@ -9,10 +9,13 @@
 	material = /decl/material/solid/metal/steel
 	var/battery_rating = 75
 
-/obj/item/stock_parts/computer/battery_module/Initialize()
+//#FIXME: This needs to be fixed to work with persistence.
+
+/obj/item/stock_parts/computer/battery_module/Initialize(ml, material_key)
 	. = ..()
 	setup_power_supply()
-	charge_to_full()
+	if(!persistent_id)
+		charge_to_full()
 
 /obj/item/stock_parts/computer/battery_module/diagnostics()
 	. = ..()
@@ -26,12 +29,12 @@
 	var/obj/item/cell/battery = get_cell()
 	if(battery)
 		battery.maxcharge = battery_rating
-		battery.charge = 0
+		battery.charge = 0 //#FIXME: Should be in the cell code
 
 /obj/item/stock_parts/computer/battery_module/proc/charge_to_full()
 	var/obj/item/cell/battery = get_cell()
 	if(battery)
-		battery.charge = battery.maxcharge
+		battery.charge = battery.maxcharge //#FIXME: Should be in the cell code
 
 /obj/item/stock_parts/computer/battery_module/advanced
 	name = "advanced battery"

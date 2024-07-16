@@ -86,6 +86,8 @@
 /obj/item/radio/intercom/locked
 	var/locked_frequency
 
+SAVED_VAR(/obj/item/radio/intercom/locked, locked_frequency)
+
 /obj/item/radio/intercom/locked/set_frequency()
 	..(locked_frequency)
 

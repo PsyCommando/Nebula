@@ -13,6 +13,10 @@
 
 	var/literacy_charges = 2 //used to limit the number of books a master literate mob can make
 
+SAVED_VAR(/datum/skillset, skill_list)
+SAVED_VAR(/datum/skillset, owner)
+SAVED_VAR(/datum/skillset, skill_buffs)
+
 var/global/list/all_skill_verbs
 /datum/skillset/New(mob/mob)
 	owner = mob

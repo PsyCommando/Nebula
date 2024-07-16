@@ -3,6 +3,9 @@
 	var/holder_p_id
 	var/list/extension_saved_vars = list()
 
+SAVED_VAR(/datum/wrapper/late/extension, holder_p_id)
+SAVED_VAR(/datum/wrapper/late/extension, extension_saved_vars)
+
 /datum/wrapper/late/extension/on_serialize(datum/extension/object, serializer/curr_serializer)
 	. = ..()
 	if(!object.holder)

@@ -8,10 +8,18 @@ var/global/list/player_minds = list()
 	var/philotic_damage = 0
 	var/chargen_stack = TRUE // Whether or not the mob starts with a cortical stack.
 
-	var/datum/skillset/chargen_skillset 		// Temporary skillset used for character generation.
+	var/tmp/datum/skillset/chargen_skillset 		// Temporary skillset used for character generation.
 	var/decl/hierarchy/chargen/origin/origin 	// The origin chosen for this character at chargen.
 	var/decl/hierarchy/chargen/role/role		// The role chosen for this character at chargen.
 	var/chargen_state = CHARGEN_STATE_FORM_INCOMPLETE
+
+SAVED_VAR(/datum/mind, unique_id)
+SAVED_VAR(/datum/mind, age)
+SAVED_VAR(/datum/mind, philotic_damage)
+SAVED_VAR(/datum/mind, chargen_stack)
+
+SAVED_VAR(/datum/mind, origin)
+SAVED_VAR(/datum/mind, role)
 
 /datum/mind/New()
 	. = ..()

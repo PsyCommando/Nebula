@@ -86,7 +86,7 @@
 	time_start = REALTIMEOFDAY
 	for(var/datum/mind/char_mind in global.player_minds)
 		var/mob/current_mob = char_mind.current
-		if(!current_mob || !char_mind.key || istype(char_mind.current, /mob/new_player) || !char_mind.has_finished_chargen())
+		if(!current_mob || !char_mind.key || istype(char_mind.current, /mob/new_player) || char_mind.is_chargen_in_progress())
 			// Just in case, delete this character from limbo.
 			one_off.RemoveFromLimbo(char_mind.unique_id, LIMBO_MIND)
 			continue

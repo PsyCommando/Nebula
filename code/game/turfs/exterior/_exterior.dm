@@ -28,6 +28,10 @@
 	var/is_fundament_turf = FALSE
 	var/reagent_type
 
+SAVED_VAR(/turf/exterior, owner)
+SAVED_VAR(/turf/exterior, dug)
+SAVED_VAR(/turf/exterior, is_fundament_turf)
+
 // Bit faster than return_air() for exoplanet exterior turfs
 /turf/exterior/get_air_graphic()
 	var/datum/level_data/level = SSmapping.levels_by_z[z]
@@ -73,6 +77,9 @@
 				else
 					target_turf.update_icon()
 	update_icon()
+
+	if(persistent_id)
+		reagent_type = null //Don't spawn new liquid on save load
 
 	if(reagent_type && height < 0)
 		add_to_reagents(reagent_type, abs(height))

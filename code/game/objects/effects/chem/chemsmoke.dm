@@ -10,6 +10,10 @@
 	var/splash_amount = 10 //atoms moving through a smoke cloud get splashed with up to 10 units of reagent
 	var/turf/destination
 
+SAVED_VAR(/obj/effect/effect/smoke/chem, splash_amount)
+SAVED_VAR(/obj/effect/effect/smoke/chem, destination)
+SAVED_VAR(/obj/effect/effect/smoke/chem, reagents)
+
 /obj/effect/effect/smoke/chem/Initialize(mapload, smoke_duration, turf/dest_turf = null, icon/cached_icon = null)
 	. = ..()
 

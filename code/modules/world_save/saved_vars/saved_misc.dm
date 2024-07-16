@@ -9,7 +9,7 @@ SAVED_VAR(/zone, air)
 ///////////////////////////////////////////////////////////////////////////////
 // ATOM
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/atom, contents)
+SAVED_VAR(/atom, contents) //#TODO: Use loc instead of contents.
 
 ///////////////////////////////////////////////////////////////////////////////
 //ATOM/MOVABLE
@@ -39,16 +39,10 @@ SAVED_VAR(/obj, blood_DNA)
 ///////////////////////////////////////////////////////////////////////////////
 
 SAVED_VAR(/turf/simulated, air)
-SAVED_VAR(/turf/simulated, dirt)
 SAVED_VAR(/turf/simulated, temperature)
 
 SAVED_VAR(/turf/simulated/floor, burnt)
 SAVED_VAR(/turf/simulated/floor, broken)
-
-SAVED_VAR(/turf/simulated/floor/asteroid, dug)
-
-SAVED_VAR(/turf/exterior, owner)
-SAVED_VAR(/turf/exterior, diggable)
 
 SAVED_VAR(/turf/exterior/wall, strata_override)
 SAVED_VAR(/turf/exterior/wall, paint_color)
@@ -67,273 +61,13 @@ SAVED_VAR(/turf/simulated/wall, girder_material)
 ///////////////////////////////////////////////////////////////////////////////
 //DATUMS
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/datum/extension/labels,  labels)
-
-SAVED_VAR(/datum/extension/forensic_evidence, evidence)
-SAVED_VAR(/datum/extension/forensic_evidence, last_updated)
-
-SAVED_VAR(/datum/extension/buried_resources, resources)
-SAVED_VAR(/datum/extension/buried_resources, surveyed)
-
-SAVED_VAR(/datum/forensics, data)
-
-SAVED_VAR(/datum/fingerprint, full_print)
-SAVED_VAR(/datum/fingerprint, completeness)
-
-SAVED_VAR(/datum/plantgene, genetype)
-SAVED_VAR(/datum/plantgene, values)
-
-SAVED_VAR(/datum/wrapper/image, color)
-SAVED_VAR(/datum/wrapper/image, icon_state)
-SAVED_VAR(/datum/wrapper/image, alpha)
-SAVED_VAR(/datum/wrapper/image, layer)
-SAVED_VAR(/datum/wrapper/image, dir)
-SAVED_VAR(/datum/wrapper/image, appearance_flags)
-
-SAVED_VAR(/datum/computer_file, holder)
-SAVED_VAR(/datum/computer_file, filename)
-SAVED_VAR(/datum/computer_file, read_access)
-SAVED_VAR(/datum/computer_file, write_access)
-SAVED_VAR(/datum/computer_file, mod_access)
-
-SAVED_FLATTEN(/datum/computer_file/data)
-SAVED_VAR(/datum/computer_file/data, stored_data)
-SAVED_VAR(/datum/computer_file/data, size)
-SAVED_VAR(/datum/computer_file/data, block_size)
-
-SAVED_VAR(/datum/computer_file/program, program_state)
-SAVED_VAR(/datum/computer_file/program, computer)
-
-SAVED_VAR(/datum/dna, uni_identity)
-SAVED_VAR(/datum/dna, struc_enzymes)
-SAVED_VAR(/datum/dna, unique_enzymes)
-SAVED_VAR(/datum/dna, UI)
-SAVED_VAR(/datum/dna, SE)
-SAVED_VAR(/datum/dna, b_type)
-SAVED_VAR(/datum/dna, real_name)
-SAVED_VAR(/datum/dna, lineage)
-SAVED_VAR(/datum/dna, species)
-SAVED_VAR(/datum/dna, body_markings)
-
-SAVED_VAR(/datum/fluidtrack, direction)
-SAVED_VAR(/datum/fluidtrack, basecolor)
-
-SAVED_VAR(/datum/gas_mixture, gas)
-SAVED_VAR(/datum/gas_mixture, temperature)
-SAVED_VAR(/datum/gas_mixture, total_moles)
-SAVED_VAR(/datum/gas_mixture, volume)
-SAVED_VAR(/datum/gas_mixture, group_multiplier)
-
-SAVED_VAR(/datum/mind, key)
-SAVED_VAR(/datum/mind, name)
-SAVED_VAR(/datum/mind, current)
-SAVED_VAR(/datum/mind, active)
-SAVED_VAR(/datum/mind, gen_relations_info)
-SAVED_VAR(/datum/mind, assigned_role)
-SAVED_VAR(/datum/mind, role_alt_title)
-SAVED_VAR(/datum/mind, assigned_job)
-SAVED_VAR(/datum/mind, objectives)
-SAVED_VAR(/datum/mind, has_been_rev)
-SAVED_VAR(/datum/mind, brigged_since)
-SAVED_VAR(/datum/mind, initial_account)
-SAVED_VAR(/datum/mind, initial_account_login)
-SAVED_VAR(/datum/mind, philotic_damage)
-SAVED_VAR(/datum/mind, age)
-SAVED_VAR(/datum/mind, unique_id)
-SAVED_VAR(/datum/mind, chargen_state)
-SAVED_VAR(/datum/mind, memories)
-
-SAVED_VAR(/datum/memory, creation_source)
-SAVED_VAR(/datum/memory, memory)
-SAVED_VAR(/datum/memory, tags)
-SAVED_VAR(/datum/memory, owner)
-SAVED_VAR(/datum/memory, _owner_name)
-SAVED_VAR(/datum/memory, _owner_ckey)
 
 SAVED_VAR(/datum/pipeline, air)
-
-SAVED_VAR(/datum/reagents/metabolism, metabolism_class)
-SAVED_VAR(/datum/reagents/metabolism, parent)
-
-SAVED_VAR(/datum/reagents, total_volume)
-SAVED_VAR(/datum/reagents, maximum_volume)
-SAVED_VAR(/datum/reagents, reagent_volumes)
-SAVED_VAR(/datum/reagents, reagent_data)
-SAVED_VAR(/datum/reagents, my_atom)
-
-SAVED_VAR(/datum/robot_component/cell, stored_cell)
-
-//Seeds are procedurally generated and need to save everything
-SAVED_VAR(/datum/seed, name)
-SAVED_VAR(/datum/seed, seed_name)
-SAVED_VAR(/datum/seed, seed_noun)
-SAVED_VAR(/datum/seed, display_name)
-SAVED_VAR(/datum/seed, can_self_harvest)
-SAVED_VAR(/datum/seed, growth_stages)
-SAVED_VAR(/datum/seed, traits)
-SAVED_VAR(/datum/seed, mutants)
-SAVED_VAR(/datum/seed, chems)
-SAVED_VAR(/datum/seed, consume_gasses)
-SAVED_VAR(/datum/seed, exude_gasses)
-SAVED_VAR(/datum/seed, kitchen_tag)
-SAVED_VAR(/datum/seed, trash_type)
-SAVED_VAR(/datum/seed, splat_type)
-SAVED_VAR(/datum/seed, force_layer)
-
-SAVED_VAR(/datum/seed_pile, name)
-SAVED_VAR(/datum/seed_pile, amount)
-SAVED_VAR(/datum/seed_pile, seed_type)
-SAVED_VAR(/datum/seed_pile, seeds)
-SAVED_VAR(/datum/seed_pile, ID)
-
-SAVED_VAR(/datum/shuttle, name)
-SAVED_VAR(/datum/shuttle, shuttle_area)
-SAVED_VAR(/datum/shuttle, current_location)
-SAVED_VAR(/datum/shuttle, moving_status)
-SAVED_VAR(/datum/shuttle, flags)
-
-SAVED_VAR(/datum/shuttle/autodock, current_dock_target)
-SAVED_VAR(/datum/shuttle/autodock, dock_target)
-SAVED_VAR(/datum/shuttle/autodock, docking_codes)
-SAVED_VAR(/datum/shuttle/autodock, next_location)
-
-SAVED_VAR(/datum/stored_items, item_name)
-SAVED_VAR(/datum/stored_items, item_path)
-SAVED_VAR(/datum/stored_items, amount)
-SAVED_VAR(/datum/stored_items, instances)
-SAVED_VAR(/datum/stored_items, storing_object)
-
-SAVED_VAR(/datum/turbolift, current_floor)
-SAVED_VAR(/datum/turbolift, doors)
-SAVED_VAR(/datum/turbolift, floors)
-SAVED_VAR(/datum/turbolift, control_panel_interior)
-
-SAVED_VAR(/datum/turbolift_floor, label)
-SAVED_VAR(/datum/turbolift_floor, name)
-SAVED_VAR(/datum/turbolift_floor, announce_str)
-SAVED_VAR(/datum/turbolift_floor, arrival_sound)
-SAVED_VAR(/datum/turbolift_floor, doors)
-SAVED_VAR(/datum/turbolift_floor, ext_panel)
-
-SAVED_VAR(/datum/wires, wire_count)
-SAVED_VAR(/datum/wires, wires_status)
-SAVED_VAR(/datum/wires, wires)
-SAVED_VAR(/datum/wires, signallers)
-
-SAVED_VAR(/datum/wound, current_stage)
-SAVED_VAR(/datum/wound, damage)
-SAVED_VAR(/datum/wound, bleed_timer)
-SAVED_VAR(/datum/wound, bleed_threshold)
-SAVED_VAR(/datum/wound, min_damage)
-SAVED_VAR(/datum/wound, bandaged)
-SAVED_VAR(/datum/wound, clamped)
-SAVED_VAR(/datum/wound, salved)
-SAVED_VAR(/datum/wound, disinfected)
-SAVED_VAR(/datum/wound, created)
-SAVED_VAR(/datum/wound, amount)
-SAVED_VAR(/datum/wound, germ_level)
-SAVED_VAR(/datum/wound, parent_organ)
-SAVED_VAR(/datum/wound, embedded_objects)
-SAVED_VAR(/datum/wound, desc_list)
-SAVED_VAR(/datum/wound, damage_list)
-
-SAVED_VAR(/datum/robot_component, installed)
-SAVED_VAR(/datum/robot_component, powered)
-SAVED_VAR(/datum/robot_component, toggled)
-SAVED_VAR(/datum/robot_component, brute_damage)
-SAVED_VAR(/datum/robot_component, electronics_damage)
-SAVED_VAR(/datum/robot_component, external_type)
-SAVED_VAR(/datum/robot_component, wrapped)
-
-SAVED_VAR(/datum/skillset, skill_list)
-SAVED_VAR(/datum/skillset, owner)
-SAVED_VAR(/datum/skillset, skill_buffs)
-SAVED_VAR(/datum/skillset, points_remaining)
-SAVED_VAR(/datum/skillset, time_active)
-SAVED_VAR(/datum/skillset, total_points_added)
-SAVED_VAR(/datum/skillset, min_skill_level)
-SAVED_VAR(/datum/skillset, textbook_skills)
-SAVED_VAR(/datum/skillset, last_read_time)
-
-SAVED_VAR(/datum/skill_buff, buffs)
-SAVED_VAR(/datum/skill_buff, limit)
-SAVED_VAR(/datum/skill_buff, skillset)
-
-SAVED_VAR(/datum/lock, status)
-SAVED_VAR(/datum/lock, lock_data)
-SAVED_VAR(/datum/lock, holder)
-
-SAVED_VAR(/datum/integrated_io, name)
-SAVED_VAR(/datum/integrated_io, holder)
-SAVED_VAR(/datum/integrated_io, data)
-SAVED_VAR(/datum/integrated_io, linked)
-SAVED_VAR(/datum/integrated_io, io_type)
-SAVED_VAR(/datum/integrated_io, pin_type)
-SAVED_VAR(/datum/integrated_io, ord)
-
-SAVED_VAR(/datum/report_field, name)
-SAVED_VAR(/datum/report_field, value)
-SAVED_VAR(/datum/report_field, can_edit)
-SAVED_VAR(/datum/report_field, required)
-SAVED_VAR(/datum/report_field, ID)
-SAVED_VAR(/datum/report_field, needs_big_box)
-SAVED_VAR(/datum/report_field, ignore_value)
-SAVED_VAR(/datum/report_field, write_access)
-SAVED_VAR(/datum/report_field, read_access)
-
-SAVED_VAR(/datum/computer_file/report, title)
-SAVED_VAR(/datum/computer_file/report, form_name)
-SAVED_VAR(/datum/computer_file/report, creator)
-SAVED_VAR(/datum/computer_file/report, file_time)
-SAVED_VAR(/datum/computer_file/report, fields)
-SAVED_VAR(/datum/computer_file/report, available_on_network)
-SAVED_VAR(/datum/computer_file/report, logo)
-
-SAVED_VAR(/datum/extension/lockable, locked)
-SAVED_VAR(/datum/extension/lockable, code)
-SAVED_VAR(/datum/extension/lockable, l_code)
-SAVED_VAR(/datum/extension/lockable, l_set)
-SAVED_VAR(/datum/extension/lockable, l_setshort)
-SAVED_VAR(/datum/extension/lockable, l_hacking)
-SAVED_VAR(/datum/extension/lockable, emagged)
-SAVED_VAR(/datum/extension/lockable, is_digital_lock)
-SAVED_VAR(/datum/extension/lockable, open)
-SAVED_VAR(/datum/extension/lockable, error)
-
-SAVED_VAR(/datum/computer_network, network_key)
-SAVED_VAR(/datum/computer_network, network_features_enabled)
-SAVED_VAR(/datum/computer_network, intrusion_detection_enabled)
-SAVED_VAR(/datum/computer_network, intrusion_detection_alarm)
-SAVED_VAR(/datum/computer_network, banned_nids)
-SAVED_VAR(/datum/computer_network, chat_channels)
-
-SAVED_VAR(/datum/computer_file/data/cloning, mob_age)
-SAVED_VAR(/datum/computer_file/data/cloning, skill_list)
-SAVED_VAR(/datum/computer_file/data/cloning, languages)
-SAVED_VAR(/datum/computer_file/data/cloning, mind_id)
-SAVED_VAR(/datum/computer_file/data/cloning, dna)
-SAVED_VAR(/datum/computer_file/data/cloning, backup_date)
-
-SAVED_VAR(/datum/extension/assembly, parts)
-SAVED_VAR(/datum/extension/assembly, enabled)
-SAVED_VAR(/datum/extension/assembly, damage)
-
-SAVED_VAR(/datum/wrapper,  key)
-
-SAVED_VAR(/datum/wrapper_holder,  wrapped)
-
-SAVED_VAR(/datum/wrapper/area, name)
-
-SAVED_VAR(/datum/wrapper/map_data, height)
-SAVED_VAR(/datum/wrapper/map_data, landmark_loc)
-
-SAVED_VAR(/datum/wrapper/late/extension, holder_p_id)
-SAVED_VAR(/datum/wrapper/late/extension, extension_saved_vars)
 
 ///////////////////////////////////////////////////////////////////////////////
 //MOB
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/mob/living, health)
+SAVED_VAR(/mob/living, current_health)
 SAVED_VAR(/mob/living, mob_bump_flag)
 SAVED_VAR(/mob/living, mob_swap_flags)
 SAVED_VAR(/mob/living, mob_push_flags)
@@ -398,45 +132,11 @@ SAVED_VAR(/mob/living/carbon, chem_effects)
 SAVED_VAR(/mob/living/carbon, chem_doses)
 SAVED_VAR(/mob/living/carbon, default_language)
 
-SAVED_VAR(/mob/living/carbon/brain,  container)
-SAVED_VAR(/mob/living/carbon/brain, timeofhostdeath)
-SAVED_VAR(/mob/living/carbon/brain, emp_damage)
-SAVED_VAR(/mob/living/carbon/brain, alert)
-
 SAVED_VAR(/mob/living/carbon/alien, language)
 
 SAVED_VAR(/mob/living/silicon, idcard)
 
-SAVED_VAR(/mob/living/silicon/robot, lights_on)
-SAVED_VAR(/mob/living/silicon/robot, sight_mode)
-SAVED_VAR(/mob/living/silicon/robot, custom_name)
-SAVED_VAR(/mob/living/silicon/robot, module_category)
-SAVED_VAR(/mob/living/silicon/robot, module)
-SAVED_VAR(/mob/living/silicon/robot, module_active)
-SAVED_VAR(/mob/living/silicon/robot, module_state_1)
-SAVED_VAR(/mob/living/silicon/robot, module_state_2)
-SAVED_VAR(/mob/living/silicon/robot, module_state_3)
-SAVED_VAR(/mob/living/silicon/robot, cell)
-SAVED_VAR(/mob/living/silicon/robot, components)
-SAVED_VAR(/mob/living/silicon/robot, mmi)
-SAVED_VAR(/mob/living/silicon/robot, opened)
-SAVED_VAR(/mob/living/silicon/robot, emagged)
-SAVED_VAR(/mob/living/silicon/robot, wiresexposed)
-SAVED_VAR(/mob/living/silicon/robot, locked)
-SAVED_VAR(/mob/living/silicon/robot, has_power)
-SAVED_VAR(/mob/living/silicon/robot, ident)
-SAVED_VAR(/mob/living/silicon/robot, modtype)
-SAVED_VAR(/mob/living/silicon/robot, killswitch)
-SAVED_VAR(/mob/living/silicon/robot, killswitch_time)
-SAVED_VAR(/mob/living/silicon/robot, weapon_lock)
-SAVED_VAR(/mob/living/silicon/robot, weaponlock_time)
-SAVED_VAR(/mob/living/silicon/robot, lockcharge)
-SAVED_VAR(/mob/living/silicon/robot, speed)
-SAVED_VAR(/mob/living/silicon/robot, scrambledcodes)
-SAVED_VAR(/mob/living/silicon/robot, tracking_entities)
-SAVED_VAR(/mob/living/silicon/robot, braintype)
-SAVED_VAR(/mob/living/silicon/robot, intenselight)
-SAVED_VAR(/mob/living/silicon/robot, vtec)
+
 
 SAVED_VAR(/mob/living/silicon/pai, ram)
 SAVED_VAR(/mob/living/silicon/pai, software)
@@ -478,6 +178,7 @@ SAVED_VAR(/mob/living/slime, ingested)
 ///////////////////////////////////////////////////////////////////////////////
 // ITEMS
 ///////////////////////////////////////////////////////////////////////////////
+
 SAVED_VAR(/obj/item/ammo_casing, BB)
 
 SAVED_VAR(/obj/item/flashlight, on)
@@ -559,7 +260,6 @@ SAVED_VAR(/obj/item/forensics/sample, evidence)
 SAVED_VAR(/obj/item/key, key_data)
 
 SAVED_VAR(/obj/item/baton, status)
-SAVED_VAR(/obj/item/baton, bcell)
 
 SAVED_VAR(/obj/item/paper, info)
 SAVED_VAR(/obj/item/paper, info_links)
@@ -613,7 +313,7 @@ SAVED_VAR(/obj/vehicle/train/cargo/engine, key)
 SAVED_VAR(/obj/vehicle/train, passenger_allowed)
 
 SAVED_VAR(/obj/vehicle, on)
-SAVED_VAR(/obj/vehicle, health)
+SAVED_VAR(/obj/vehicle, current_health)
 SAVED_VAR(/obj/vehicle, open)
 SAVED_VAR(/obj/vehicle, locked)
 SAVED_VAR(/obj/vehicle, stat)
@@ -642,8 +342,6 @@ SAVED_VAR(/obj/item/fuel_assembly, matter)
 SAVED_VAR(/obj/item/fuel_assembly, percent_depleted)
 SAVED_VAR(/obj/item/fuel_assembly, radioactivity)
 
-SAVED_VAR(/obj/item/key/soap, uses)
-
 SAVED_VAR(/obj/item/lock_construct, lock_data)
 
 SAVED_VAR(/obj/item/passport, info)
@@ -662,24 +360,6 @@ SAVED_VAR(/obj/item/flame/lighter, reagents)
 ///////////////////////////////////////////////////////////////////////////////
 // item/clothing
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/item/clothing/head/welding, up)
-
-SAVED_VAR(/obj/item/clothing/shoes/magboots, magpulse)
-
-SAVED_VAR(/obj/item/clothing/suit/space/void, boots)
-SAVED_VAR(/obj/item/clothing/suit/space/void, helmet)
-SAVED_VAR(/obj/item/clothing/suit/space/void, tank)
-
-SAVED_VAR(/obj/item/clothing/suit/storage, pockets)
-SAVED_VAR(/obj/item/clothing/suit/storage, slots)
-
-SAVED_VAR(/obj/item/clothing/shoes, shine)
-SAVED_VAR(/obj/item/clothing/shoes, hidden_item)
-SAVED_VAR(/obj/item/clothing/shoes, attached_cuffs)
-
-SAVED_VAR(/obj/item/clothing/under, sensor_mode)
-SAVED_VAR(/obj/item/clothing/under, rolled_down)
-SAVED_VAR(/obj/item/clothing/under, rolled_sleeves)
 
 ///////////////////////////////////////////////////////////////////////////////
 // item/assembly
@@ -716,28 +396,14 @@ SAVED_VAR(/obj/item/assembly_holder, master)
 ///////////////////////////////////////////////////////////////////////////////
 // item/disk
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/item/disk/botany, genes)
-SAVED_VAR(/obj/item/disk/botany, genesource)
-
-SAVED_VAR(/obj/item/disk/tech_disk, stored_tech)
 
 ///////////////////////////////////////////////////////////////////////////////
 // item/gun
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/item/gun/launcher/pneumatic, tank)
-SAVED_VAR(/obj/item/gun/launcher/pneumatic, item_storage)
-SAVED_VAR(/obj/item/gun/launcher/pneumatic, pressure_setting)
-
-SAVED_VAR(/obj/item/gun/magnetic, cell)
-SAVED_VAR(/obj/item/gun/magnetic, capacitor)
-SAVED_VAR(/obj/item/gun/magnetic, loaded)
-SAVED_VAR(/obj/item/gun/magnetic, load_type)
 
 ///////////////////////////////////////////////////////////////////////////////
 // item/implant
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/item/implant/freedom, activation_emote)
-
 
 ///////////////////////////////////////////////////////////////////////////////
 // CIRCUITS
@@ -870,74 +536,11 @@ SAVED_VAR(/obj/item/integrated_circuit/time/ticker, is_running)
 ///////////////////////////////////////////////////////////////////////////////
 //Effects
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/effect/decal/cleanable, age)
-SAVED_VAR(/obj/effect/decal/cleanable, cleanable_scent)
-SAVED_VAR(/obj/effect/decal/cleanable, scent_type)
-SAVED_VAR(/obj/effect/decal/cleanable, scent_intensity)
-SAVED_VAR(/obj/effect/decal/cleanable, scent_descriptor)
-SAVED_VAR(/obj/effect/decal/cleanable, scent_range)
 
-SAVED_VAR(/obj/effect/decal/cleanable/blood, base_icon)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, basecolor)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, amount)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, drytime)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, blood_size)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, chemical)
-SAVED_VAR(/obj/effect/decal/cleanable/blood, blood_data)
-
-SAVED_VAR(/obj/effect/energy_net, health)
-SAVED_VAR(/obj/effect/energy_net, countdown)
-SAVED_VAR(/obj/effect/energy_net, captured)
-
-SAVED_VAR(/obj/effect/vine, health)
-SAVED_VAR(/obj/effect/vine, parent)
-SAVED_VAR(/obj/effect/vine, seed)
-SAVED_VAR(/obj/effect/vine, plant)
-SAVED_VAR(/obj/effect/vine, max_growth)
-
-SAVED_VAR(/obj/effect/fusion_particle_catcher, parent)
-SAVED_VAR(/obj/effect/fusion_particle_catcher, mysize)
-
-SAVED_VAR(/obj/effect/fluid, last_flow_strength)
-SAVED_VAR(/obj/effect/fluid, last_flow_dir)
-SAVED_VAR(/obj/effect/fluid, reagents)
-
-SAVED_VAR(/obj/effect/effect/smoke/chem, splash_amount)
-SAVED_VAR(/obj/effect/effect/smoke/chem, destination)
-SAVED_VAR(/obj/effect/effect/smoke/chem, reagents)
 
 ///////////////////////////////////////////////////////////////////////////////
 // Structures
 ///////////////////////////////////////////////////////////////////////////////
-SAVED_VAR(/obj/structure, reagents)
-
-SAVED_VAR(/obj/structure, health)
-SAVED_VAR(/obj/structure, material)
-SAVED_VAR(/obj/structure, reinf_material)
-SAVED_VAR(/obj/structure, dismantled)
-SAVED_VAR(/obj/structure, req_access)
-
-SAVED_VAR(/obj/structure/closet/secure_closet/personal, registered_name)
-
-SAVED_VAR(/obj/structure/closet, broken)
-SAVED_VAR(/obj/structure/closet, opened)
-SAVED_VAR(/obj/structure/closet, locked)
-
-SAVED_VAR(/obj/structure/tank_rack, oxygen_tanks)
-SAVED_VAR(/obj/structure/tank_rack, hydrogen_tanks)
-
-SAVED_VAR(/obj/structure/disposalconstruct, dpdir)
-
-SAVED_VAR(/obj/structure/disposalpipe, dpdir)
-SAVED_VAR(/obj/structure/disposalpipe, base_icon_state)
-
-SAVED_VAR(/obj/structure/door_assembly, state)
-SAVED_VAR(/obj/structure/door_assembly, glass)
-SAVED_VAR(/obj/structure/door_assembly, glass_material)
-SAVED_VAR(/obj/structure/door_assembly, door_color)
-SAVED_VAR(/obj/structure/door_assembly, stripe_color)
-SAVED_VAR(/obj/structure/door_assembly, symbol_color)
-SAVED_VAR(/obj/structure/door_assembly, electronics)
 
 SAVED_VAR(/obj/structure/janitorialcart, mybag)
 SAVED_VAR(/obj/structure/janitorialcart, mymop)
@@ -1109,8 +712,7 @@ SAVED_VAR(/obj/machinery/door/window, base_state)
 
 SAVED_VAR(/obj/machinery/door, visible)
 SAVED_VAR(/obj/machinery/door, glass)
-SAVED_VAR(/obj/machinery/door, health)
-SAVED_VAR(/obj/machinery/door, maxhealth)
+SAVED_VAR(/obj/machinery/door, max_health)
 SAVED_VAR(/obj/machinery/door, close_door_at)
 SAVED_VAR(/obj/machinery/door, pry_mod)
 SAVED_VAR(/obj/machinery/door, block_air_zones)
@@ -1158,7 +760,6 @@ SAVED_VAR(/obj/machinery/faxmachine, scanner_item)
 SAVED_VAR(/obj/machinery/faxmachine, quick_dial)
 SAVED_VAR(/obj/machinery/faxmachine, fax_history)
 
-SAVED_VAR(/obj/machinery/portable_atmospherics/canister, health)
 SAVED_VAR(/obj/machinery/portable_atmospherics/canister, valve_open)
 SAVED_VAR(/obj/machinery/portable_atmospherics/canister, release_pressure)
 SAVED_VAR(/obj/machinery/portable_atmospherics/canister, canister_color)
@@ -1183,7 +784,6 @@ SAVED_VAR(/obj/machinery/portable_atmospherics/hydroponics, seed)
 SAVED_VAR(/obj/machinery/portable_atmospherics, air_contents)
 SAVED_VAR(/obj/machinery/portable_atmospherics, holding)
 
-SAVED_VAR(/obj/machinery/porta_turret, health)
 SAVED_VAR(/obj/machinery/porta_turret, locked)
 SAVED_VAR(/obj/machinery/porta_turret, installation)
 SAVED_VAR(/obj/machinery/porta_turret, check_access)
@@ -1353,7 +953,6 @@ SAVED_VAR(/obj/machinery/mining/drill, capacity)
 SAVED_VAR(/obj/machinery/mining/drill, supports)
 SAVED_VAR(/obj/machinery/mining/drill, supported)
 
-SAVED_VAR(/obj/machinery/rad_collector, health)
 SAVED_VAR(/obj/machinery/rad_collector, melted)
 SAVED_VAR(/obj/machinery/rad_collector, active)
 SAVED_VAR(/obj/machinery/rad_collector, locked)

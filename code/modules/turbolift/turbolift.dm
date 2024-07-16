@@ -27,6 +27,11 @@
 	var/busy_state                                      // Used for controller processing.
 	var/next_process
 
+SAVED_VAR(/datum/turbolift, current_floor)
+SAVED_VAR(/datum/turbolift, doors)
+SAVED_VAR(/datum/turbolift, floors)
+SAVED_VAR(/datum/turbolift, control_panel_interior)
+
 /datum/turbolift/proc/emergency_stop()
 	queued_floors.Cut()
 	target_floor = null

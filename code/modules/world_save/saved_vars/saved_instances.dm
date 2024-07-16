@@ -6,7 +6,6 @@
 //#TODO: Move to respective files
 
 SAVED_INSTANCIATE_ONLY(/obj/effect/decal/cleanable/lichen)
-SAVED_INSTANCIATE_ONLY(/obj/effect/decal/cleanable/dirt)
 SAVED_INSTANCIATE_ONLY(/obj/effect/decal/cleanable/ash)
 SAVED_INSTANCIATE_ONLY(/obj/effect/decal/cleanable/flour)
 SAVED_INSTANCIATE_ONLY(/obj/effect/decal/cleanable/generic)

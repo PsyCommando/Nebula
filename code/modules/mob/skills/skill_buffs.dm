@@ -4,6 +4,10 @@
 	var/limit                   //How many buffs of this type a skillset can have. null = no limit
 	var/datum/skillset/skillset //The skillset to which this buff belongs.
 
+SAVED_VAR(/datum/skill_buff, buffs)
+SAVED_VAR(/datum/skill_buff, limit)
+SAVED_VAR(/datum/skill_buff, skillset)
+
 /datum/skill_buff/New(buff)
 	buffs = buff
 	..()

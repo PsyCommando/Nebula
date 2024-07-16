@@ -60,6 +60,22 @@
 	var/list/initial_account_login = list("login" = "", "password" = "")
 	var/account_network	// Network id of the network the account was created on.
 
+SAVED_VAR(/datum/mind, key)
+SAVED_VAR(/datum/mind, name)
+SAVED_VAR(/datum/mind, current)
+SAVED_VAR(/datum/mind, active)
+SAVED_VAR(/datum/mind, gen_relations_info)
+SAVED_VAR(/datum/mind, assigned_role)
+SAVED_VAR(/datum/mind, assigned_special_role)
+SAVED_VAR(/datum/mind, role_alt_title)
+SAVED_VAR(/datum/mind, assigned_job)
+SAVED_VAR(/datum/mind, objectives)
+SAVED_VAR(/datum/mind, has_been_rev)
+SAVED_VAR(/datum/mind, brigged_since)
+SAVED_VAR(/datum/mind, initial_account)
+SAVED_VAR(/datum/mind, initial_account_login)
+SAVED_VAR(/datum/mind, account_network)
+
 /datum/mind/New(var/key)
 	src.key = key
 	..()
