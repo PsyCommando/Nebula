@@ -104,7 +104,7 @@
 		/mob/living/simple_animal/corgi,
 		/mob/living/simple_animal/opossum,
 		/mob/living/simple_animal/chick,
-		/mob/living/simple_animal/chicken,
+		/mob/living/simple_animal/fowl/chicken,
 		/mob/living/simple_animal/cow,
 		/obj/structure/closet,
 		/obj/structure/safe,
@@ -122,7 +122,7 @@
 		/obj/item/storage/secure,
 		/obj/item/storage/lockbox,
 		/obj/item/aicard,
-		/obj/item/mmi,
+		/obj/item/organ/internal/brain_interface,
 		/obj/item/paicard,
 	)
 
