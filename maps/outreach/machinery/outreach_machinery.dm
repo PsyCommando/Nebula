@@ -295,8 +295,7 @@
 	check_weapons  = TRUE
 	auto_repair    = TRUE
 	controllock    = FALSE
-	maxhealth      = 280
-	health         = 280
+	max_health     = 280
 	installation   = /obj/item/gun/energy/gun/mounted
 	initial_access = list(list(access_security), list(access_bridge), list(access_ce))
 
