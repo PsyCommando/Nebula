@@ -10402,7 +10402,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/blue,
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/conveyor/outreach/mining/transport{
 	icon_state = "conveyor0";
 	dir = 1
@@ -10849,7 +10849,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/command/office)
 "auU" = (
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/structure/cable/blue,
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -14928,7 +14928,7 @@
 	icon_state = "conveyor0";
 	dir = 1
 	},
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/d1)
 "aCw" = (
@@ -15222,7 +15222,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/conveyor/outreach/mining/transport_return,
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/d1)
 "aCW" = (
@@ -23878,7 +23878,7 @@
 	icon_state = "tube_map";
 	dir = 4
 	},
-/obj/structure/plasticflaps,
+/obj/structure/flaps,
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "stripe";
 	dir = 8
@@ -27127,7 +27127,7 @@
 	icon_state = "conveyor0";
 	dir = 1
 	},
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/door/firedoor/autoset,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -28489,7 +28489,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/outreach/outpost/laundry)
 "aZO" = (
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/door/firedoor/autoset,
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -28502,7 +28502,7 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/mining/b1/ore_sorting)
 "aZP" = (
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/door/firedoor/autoset,
 /obj/structure/cable/blue,
 /obj/structure/cable/blue{

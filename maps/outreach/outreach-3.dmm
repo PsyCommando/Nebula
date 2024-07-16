@@ -1307,7 +1307,7 @@
 	icon_state = "conveyor0";
 	dir = 8
 	},
-/obj/structure/plasticflaps,
+/obj/structure/flaps,
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/steel_grid,
@@ -1487,7 +1487,7 @@
 /area/outreach/outpost/maint/passage/ground/west2)
 "cV" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
-/obj/structure/plasticflaps,
+/obj/structure/flaps,
 /obj/machinery/conveyor/outreach/cargo/distribution{
 	icon_state = "conveyor0";
 	dir = 4
@@ -6520,7 +6520,7 @@
 	icon_state = "conveyor0";
 	dir = 4
 	},
-/obj/structure/plasticflaps,
+/obj/structure/flaps,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/cargo/desk_teleporter)
@@ -8220,7 +8220,7 @@
 	icon_state = "rwindow";
 	dir = 4
 	},
-/obj/structure/plasticflaps,
+/obj/structure/flaps,
 /obj/machinery/light{
 	icon_state = "tube_map";
 	dir = 8

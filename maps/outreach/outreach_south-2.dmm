@@ -674,7 +674,7 @@
 	icon_state = "conveyor0";
 	dir = 1
 	},
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/mines/access/b1)
 "bK" = (
@@ -727,7 +727,7 @@
 	},
 /obj/structure/cable/orange,
 /obj/machinery/conveyor/outreach/mining/transport_return,
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/mines/access/b1)
 "bP" = (

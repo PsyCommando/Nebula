@@ -16287,7 +16287,7 @@
 	icon_state = "open";
 	dir = 8
 	},
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/conveyor{
 	dir = 4;
 	icon_state = "conveyor0";
