@@ -12,7 +12,7 @@ SUBSYSTEM_DEF(fabrication)
 	// Weakrefs to fabricators who want their initial recipies
 	var/list/fabricators_to_init =         list()
 	// #TODO: Research recipe stuff??
-	var/list/research_recipes
+	var/list/research_recipes = list() // Fabricator class -> recipe
 
 /datum/controller/subsystem/fabrication/Initialize()
 
@@ -44,6 +44,27 @@ SUBSYSTEM_DEF(fabrication)
 	fabricators_to_init.Cut()
 
 	. = ..()
+
+	//Outreach research init
+	//#TODO: Update to new setup
+	/*
+	for(var/fab_class in all_recipes)
+		var/list/fab_recipes = all_recipes[fab_class]
+		research_recipes[fab_class] = fab_recipes.Copy()
+		if(fab_class in initial_recipes)
+			research_recipes[fab_class] -= initial_recipes[fab_class]
+
+		research_recipes[fab_class] -= get_unlocked_recipes(fab_class, get_default_initial_tech_levels())
+
+		for(var/datum/fabricator_recipe/recipe in research_recipes[fab_class])
+			if(recipe.research_excluded)
+				research_recipes[fab_class] -= recipe
+			else if(TECH_ESOTERIC in recipe.required_technology) // These techs must be unlocked via random chance during iteration
+				research_recipes[fab_class] -= recipe
+
+		if(!length(research_recipes[fab_class]))
+			research_recipes -= fab_class
+		*/
 
 /datum/controller/subsystem/fabrication/proc/get_research_field_by_id(var/rnd_id)
 	if(!length(fields_by_id))
