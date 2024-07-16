@@ -612,11 +612,10 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data_spawner)
 
 /datum/level_data/mining_level/proc/refresh_mining_turfs()
 	set waitfor = FALSE
-	for(var/turf/simulated/floor/asteroid/mining_turf as anything in mining_turfs)
-		mining_turf.updateMineralOverlays()
+	for(var/turf/exterior/wall/mining_turf as anything in mining_turfs)
+		mining_turf.update_material(FALSE)
 		CHECK_TICK
 	mining_turfs = null
-
 
 /datum/level_data/proc/get_subtemplate_areas(template_category, blacklist, whitelist)
 	return list(base_area)

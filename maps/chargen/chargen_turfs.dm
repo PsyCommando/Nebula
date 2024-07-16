@@ -10,7 +10,7 @@
 	return
 /turf/simulated/wall/chargen/update_damage()
 	return
-/turf/simulated/wall/chargen/melt()
+/turf/simulated/wall/chargen/handle_melting()
 	return
 /turf/simulated/wall/chargen/dismantle_wall()
 	return

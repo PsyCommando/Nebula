@@ -474,7 +474,7 @@
 	icon = 'icons/turf/flooring/concrete.dmi'
 	icon_base = "reinforced"
 	flags = TURF_REMOVE_SHOVEL | TURF_CAN_BREAK | TURF_ACID_IMMUNE
-	build_type = /obj/item/stack/material/reinforced
+	build_type = /obj/item/stack/material
 	build_material = /decl/material/solid/stone/concrete/reinforced
 	build_cost = 1
 	build_time = 20

@@ -43,8 +43,8 @@ var/global/list/outreach_initial_protected_areas = list(
 	name       = "Outreach Sky"
 	icon_state = "blueold"
 	alpha      = 128
-	base_turf  = /turf/exterior/open
-	open_turf  = /turf/exterior/open
+	base_turf  = /turf/open
+	open_turf  = /turf/open
 	sound_env  = PLAIN
 	ambience   = null
 	forced_ambience  = list(
@@ -139,13 +139,13 @@ var/global/list/outreach_initial_protected_areas = list(
 	icon_state    = "toilet"
 	area_flags    = AREA_FLAG_ION_SHIELDED | AREA_FLAG_RAD_SHIELDED
 	base_turf     = OUTREACH_SURFACE_TURF
-	open_turf     = /turf/exterior/open
+	open_turf     = /turf/open
 	abstract_type = /area/outreach
 
 ///Base area for anything that's not exposed to the outside and part of the outreach outpost.
 /area/outreach/outpost
 	name      = "Outpost"
-	open_turf = /turf/simulated/open
+	open_turf = /turf/open
 	base_turf = OUTREACH_SURFACE_TURF
 	///turf/simulated/floor/asteroid //Underground floors use this, and all floors above will use the open_turf instead
 

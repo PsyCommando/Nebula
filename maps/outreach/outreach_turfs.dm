@@ -142,13 +142,13 @@
 	name           = "weathered sandstone wall"
 	material       = /decl/material/solid/stone/sandstone
 	floor_type     = OUTREACH_SURFACE_TURF
-	open_turf_type = /turf/simulated/open
+	open_turf_type = /turf/open
 
 /turf/exterior/wall/outreach/subterrane
 	name           = "erroded sandstone wall"
 	material       = /decl/material/solid/stone/sandstone
 	floor_type     = OUTREACH_SURFACE_TURF
-	open_turf_type = /turf/simulated/open
+	open_turf_type = /turf/open
 
 /turf/exterior/wall/outreach/abyss
 	name           = "compacted slate wall"
@@ -162,14 +162,14 @@
 //Mining Floors
 /turf/exterior/barren/mining/outreach/mountain
 	color          = "#d9c179"
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 
 /turf/exterior/barren/mining/outreach/subterrane
 	color          = "#d9c179"
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 
 /turf/exterior/rock/volcanic/mining/outreach/abyss
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 
 //Mining Walls
 /turf/exterior/wall/random/outreach/mountain
@@ -195,7 +195,7 @@
 /turf/exterior/barren/subterrane/outreach
 	icon           = 'icons/turf/flooring/asteroid.dmi'
 	icon_state     = "asteroid"
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 
 /turf/exterior/chlorine_sand/outreach
 	name           = "chlorine salts"

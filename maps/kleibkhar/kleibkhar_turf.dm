@@ -176,7 +176,7 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 /turf/exterior/wall/kleibkhar
 	material = /decl/material/solid/stone/sandstone
 	floor_type = /turf/exterior/barren/mining
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 
 ///////////////////////////////////////////////////////////////////////////
 // Terraforming
