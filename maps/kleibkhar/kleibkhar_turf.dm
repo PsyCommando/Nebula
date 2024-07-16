@@ -205,7 +205,7 @@ var/global/list/exterior_mud_dark_radial_choices
 			to_chat(user, SPAN_WARNING("You can't manipulate the ground until you remove the plants here."))
 			return TRUE
 
-		var/obj/item/shovel/S = W
+		var/obj/item/tool/shovel/S = W
 		if(!LAZYLEN(exterior_mud_dark_radial_choices))
 			cache_radial_shovel_interactions()
 
