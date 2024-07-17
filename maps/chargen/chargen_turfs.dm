@@ -11,6 +11,7 @@
 /turf/simulated/wall/chargen/update_damage()
 	return
 /turf/simulated/wall/chargen/handle_melting()
+	SHOULD_CALL_PARENT(FALSE)
 	return
 /turf/simulated/wall/chargen/dismantle_wall()
 	return
