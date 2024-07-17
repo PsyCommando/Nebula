@@ -157,7 +157,6 @@
 #include "modules\mob\language\cortical.dm"
 #include "modules\mob\living\exosuit.dm"
 #include "modules\mob\living\living.dm"
-#include "modules\mob\living\carbon\_defines.dm"
 #include "modules\mob\living\carbon\carbon_saving.dm"
 #include "modules\mob\living\carbon\life.dm"
 #include "modules\mob\living\carbon\human\human.dm"
