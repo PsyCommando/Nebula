@@ -184,7 +184,6 @@
 #include "modules\modular_computers\networking\device_types\router.dm"
 #include "modules\modular_computers\networking\finance\bank.dm"
 #include "modules\modular_computers\networking\finance\money_cube.dm"
-#include "modules\modular_computers\networking\machines\_network_machine.dm"
 #include "modules\modular_computers\networking\machines\area_controller.dm"
 #include "modules\modular_computers\networking\machines\telecomms.dm"
 #include "modules\multiz\level_data.dm"
