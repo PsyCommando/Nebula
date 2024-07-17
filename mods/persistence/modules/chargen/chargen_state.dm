@@ -7,6 +7,30 @@
 // Mind Chargen State
 //
 
+/datum/mind
+	/// Whether or not the mob starts with a cortical stack.
+	var/chargen_stack = TRUE
+	/// Temporary skillset used for character generation.
+	var/tmp/datum/skillset/chargen_skillset
+	/// The origin chosen for this character at chargen.
+	var/decl/hierarchy/chargen/origin/origin
+	/// The role chosen for this character at chargen.
+	var/decl/hierarchy/chargen/role/role
+	///Where through the chargen process is this mind at? If not using chargen, state set to CHARGEN_STATE_NONE.
+	var/chargen_state = CHARGEN_STATE_NONE
+
+SAVED_VAR(/datum/mind, chargen_stack)
+SAVED_VAR(/datum/mind, origin)
+SAVED_VAR(/datum/mind, role)
+SAVED_VAR(/datum/mind, chargen_state)
+
+//Prevent saving when in chargen
+/mob/living/carbon/human/should_save()
+	. = ..()
+	// We don't save characters who are in chargen
+	if(mind?.is_chargen_in_progress())
+		return FALSE
+
 /**
 	Called by the observ event /decl/observ/chargen/state_changed, during chargen to keep everything in sync.
  */

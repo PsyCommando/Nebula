@@ -898,11 +898,6 @@ SAVED_VAR(/obj/machinery/computer/ship/sensors, trackers)
 
 SAVED_VAR(/obj/machinery/computer/ship, linked)
 
-SAVED_VAR(/obj/machinery/stellar_anchor, anchored_areas)
-SAVED_VAR(/obj/machinery/stellar_anchor, sector_name)
-SAVED_VAR(/obj/machinery/stellar_anchor, sector_type)
-SAVED_VAR(/obj/machinery/stellar_anchor, sector_color)
-
 SAVED_VAR(/obj/machinery/atmospherics/omni/mixer, max_flow_rate)
 SAVED_VAR(/obj/machinery/atmospherics/omni/mixer, set_flow_rate)
 SAVED_VAR(/obj/machinery/atmospherics/omni/mixer, max_output_pressure)
@@ -958,12 +953,6 @@ SAVED_VAR(/obj/machinery/rad_collector, active)
 SAVED_VAR(/obj/machinery/rad_collector, locked)
 SAVED_VAR(/obj/machinery/rad_collector, last_rads)
 SAVED_VAR(/obj/machinery/rad_collector, loaded_tank)
-
-SAVED_VAR(/obj/machinery/mantrap, occupant)
-SAVED_VAR(/obj/machinery/mantrap, entrance_dir)
-
-SAVED_VAR(/obj/machinery/cloning_pod, occupant)
-SAVED_VAR(/obj/machinery/cloning_pod, error)
 
 SAVED_VAR(/obj/machinery/docking_beacon, display_name)
 SAVED_VAR(/obj/machinery/docking_beacon, permitted_shuttles)

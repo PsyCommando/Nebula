@@ -17,6 +17,9 @@
 	var/mob/occupant
 	var/entrance_dir		  // The side on which the occupant entered.
 
+SAVED_VAR(/obj/machinery/mantrap, occupant)
+SAVED_VAR(/obj/machinery/mantrap, entrance_dir)
+
 /obj/machinery/mantrap/Process()
 	if(occupant && (stat & (NOPOWER|BROKEN)))
 		cancel_transport()

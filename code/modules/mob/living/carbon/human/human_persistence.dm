@@ -1,3 +1,4 @@
+
 /mob/living/carbon/human/proc/ignore_persistent_spawn()
 #ifdef UNIT_TEST
 	return TRUE
