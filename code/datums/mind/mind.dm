@@ -29,6 +29,9 @@
 
 */
 
+//Persistence
+var/global/list/player_minds = list()
+
 /datum/mind
 	var/key
 	var/name				//replaces mob/var/original_name
@@ -60,6 +63,19 @@
 	var/list/initial_account_login = list("login" = "", "password" = "")
 	var/account_network	// Network id of the network the account was created on.
 
+	//Persistence Stuff
+	// This is a unique UID that will forever identify this mind.
+	// No two minds are ever the same, and this ID will always identify 'this character'.
+	var/unique_id
+	var/age = 0 // How old the mob's mind is in years.
+	var/philotic_damage = 0
+	var/chargen_stack = TRUE // Whether or not the mob starts with a cortical stack.
+
+	var/tmp/datum/skillset/chargen_skillset 		// Temporary skillset used for character generation.
+	var/decl/hierarchy/chargen/origin/origin 	// The origin chosen for this character at chargen.
+	var/decl/hierarchy/chargen/role/role		// The role chosen for this character at chargen.
+	var/chargen_state = CHARGEN_STATE_NONE
+
 SAVED_VAR(/datum/mind, key)
 SAVED_VAR(/datum/mind, name)
 SAVED_VAR(/datum/mind, current)
@@ -76,11 +92,24 @@ SAVED_VAR(/datum/mind, initial_account)
 SAVED_VAR(/datum/mind, initial_account_login)
 SAVED_VAR(/datum/mind, account_network)
 
+SAVED_VAR(/datum/mind, unique_id)
+SAVED_VAR(/datum/mind, age)
+SAVED_VAR(/datum/mind, philotic_damage)
+SAVED_VAR(/datum/mind, chargen_stack)
+
+SAVED_VAR(/datum/mind, origin)
+SAVED_VAR(/datum/mind, role)
+SAVED_VAR(/datum/mind, chargen_state)
+
 /datum/mind/New(var/key)
 	src.key = key
 	..()
+	//persistence
+	unique_id = "[make_sequential_guid(/datum/mind)]"
+	global.player_minds += src
 
 /datum/mind/Destroy()
+	global.player_minds -= src
 	QDEL_NULL_LIST(memories)
 	QDEL_NULL_LIST(objectives)
 	SSticker.minds -= src

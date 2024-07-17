@@ -9,13 +9,13 @@ SUBSYSTEM_DEF(persistence)
 
 #ifdef NO_NEB_PERSISTENCE
 
-/datum/controller/subsystem/persistence/track_value()
+/datum/controller/subsystem/persistence/proc/track_value()
 	return
-/datum/controller/subsystem/persistence/is_tracking()
+/datum/controller/subsystem/persistence/proc/is_tracking()
 	return
-/datum/controller/subsystem/persistence/forget_value()
+/datum/controller/subsystem/persistence/proc/forget_value()
 	return
-/datum/controller/subsystem/persistence/show_info(mob/user)
+/datum/controller/subsystem/persistence/proc/show_info(mob/user)
 	to_chat(user, SPAN_INFO("Disabled with persistence modpack (how ironic)..."))
 	return
 

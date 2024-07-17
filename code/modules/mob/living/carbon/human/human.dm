@@ -25,6 +25,11 @@
 		//Persistence
 		LATE_INIT_IF_SAVED
 
+	//#TODO: That's not the best place to do this?
+	// Check if humans are asleep on startup.
+	if(!istype(client))
+		goto_sleep()
+
 /mob/living/carbon/human/before_save()
 	. = ..()
 	CUSTOM_SV("move_intent", ispath(move_intent)? move_intent : move_intent?.type)

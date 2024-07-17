@@ -16,6 +16,11 @@
 /proc/cmp_serialization_stats_dsc(var/datum/serialization_stat/S1, var/datum/serialization_stat/S2)
 	return S2.time_spent - S1.time_spent
 
+///Helper for printing serialization progress updates with a specific color to the logs
+/proc/report_progress_serializer(progress_message)
+	admin_notice(SPAN_SERIALIZER(progress_message), R_DEBUG)
+	to_world_log(SPAN_SERIALIZER(progress_message))
+
 ///Retally all area power on round start
 /hook/roundstart/proc/retally_all_power()
 	for(var/area/A)

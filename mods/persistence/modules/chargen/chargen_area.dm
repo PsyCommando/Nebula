@@ -60,6 +60,7 @@
 	current_player = weakref(player)
 	events_repository.register(/decl/observ/exited,                player, src,         /area/chargen/proc/on_player_left_chargen)
 	events_repository.register(/decl/observ/destroyed,             player, src,         /area/chargen/proc/on_player_left_chargen)
+	events_repository.register(/decl/observ/logged_out,            player, src,         /area/chargen/proc/on_player_logout)
 	events_repository.register(/decl/observ/chargen/state_changed, player.mind, src,    /area/chargen/proc/on_chargen_state_changed)
 
 	RAISE_EVENT(/decl/observ/chargen/player_registered, src, player)
@@ -68,6 +69,7 @@
 /area/chargen/proc/unregister_player_mob(mob/living/player)
 	events_repository.unregister(/decl/observ/exited,                player, src)
 	events_repository.unregister(/decl/observ/destroyed,             player, src)
+	events_repository.unregister(/decl/observ/logged_out,            player, src)
 	events_repository.unregister(/decl/observ/chargen/state_changed, player.mind, src)
 
 	RAISE_EVENT(/decl/observ/chargen/player_unregistered, src, player)
@@ -105,3 +107,11 @@
 	if(get_area(new_loc) == src)
 		return
 	SSchargen.release_spawn_pod(src)
+
+///Delete the mob if the player logs out inside the chargen area.
+/area/chargen/proc/on_player_logout(mob/leaver, client/client)
+	//#TODO: This could probably be turned into a proc on the mob.
+	leaver.key = null
+	leaver.last_ckey = initial(leaver.last_ckey)
+	if(!QDELETED(leaver))
+		qdel(leaver)

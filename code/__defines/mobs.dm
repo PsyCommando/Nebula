@@ -268,6 +268,7 @@
 #define STASIS_MISC     "misc"
 #define STASIS_CRYOBAG  "cryobag"
 #define STASIS_COLD     "cold"
+#define STASIS_SLEEP 	"sleeping"
 
 #define AURA_CANCEL 1
 #define AURA_FALSE  2
