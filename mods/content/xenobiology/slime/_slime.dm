@@ -41,6 +41,17 @@
 	var/core_removal_stage = 0 //For removing cores.
 	var/datum/reagents/metabolism/ingested
 
+SAVED_VAR(/mob/living/slime, toxloss)
+SAVED_VAR(/mob/living/slime, is_adult)
+SAVED_VAR(/mob/living/slime, cores)
+SAVED_VAR(/mob/living/slime, mutation_chance)
+SAVED_VAR(/mob/living/slime, powerlevel)
+SAVED_VAR(/mob/living/slime, amount_grown)
+SAVED_VAR(/mob/living/slime, hurt_temperature)
+SAVED_VAR(/mob/living/slime, die_temperature)
+SAVED_VAR(/mob/living/slime, core_removal_stage)
+SAVED_VAR(/mob/living/slime, ingested)
+
 /mob/living/slime/Destroy()
 	set_feeding_on()
 	for(var/atom/movable/AM in contents)

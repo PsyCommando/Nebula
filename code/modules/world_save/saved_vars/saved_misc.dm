@@ -164,17 +164,6 @@ SAVED_VAR(/mob/living/simple_animal/hostile, return_damage_max)
 SAVED_VAR(/mob/living/simple_animal/mushroom, seed)
 SAVED_VAR(/mob/living/simple_animal/mushroom, harvest_time)
 
-SAVED_VAR(/mob/living/slime, toxloss)
-SAVED_VAR(/mob/living/slime, is_adult)
-SAVED_VAR(/mob/living/slime, cores)
-SAVED_VAR(/mob/living/slime, mutation_chance)
-SAVED_VAR(/mob/living/slime, powerlevel)
-SAVED_VAR(/mob/living/slime, amount_grown)
-SAVED_VAR(/mob/living/slime, hurt_temperature)
-SAVED_VAR(/mob/living/slime, die_temperature)
-SAVED_VAR(/mob/living/slime, core_removal_stage)
-SAVED_VAR(/mob/living/slime, ingested)
-
 ///////////////////////////////////////////////////////////////////////////////
 // ITEMS
 ///////////////////////////////////////////////////////////////////////////////
