@@ -934,8 +934,6 @@ SAVED_VAR(/obj/machinery/computer/air_control, data)
 SAVED_VAR(/obj/machinery/network, overheated)
 SAVED_VAR(/obj/machinery/network, initial_network_id)
 SAVED_VAR(/obj/machinery/network, initial_network_key)
-SAVED_VAR(/obj/machinery/network, saved_network_tag)
-SAVED_VAR(/obj/machinery/network, saved_address)
 
 SAVED_VAR(/obj/machinery/network/mainframe,  initial_roles)
 
