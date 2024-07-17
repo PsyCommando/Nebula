@@ -154,18 +154,6 @@ var/global/list/kleibkhar_possible_tree_seeds = list(
 		return TRUE
 	. = ..()
 
-/turf/exterior/kleibkhar_grass/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if((temperature > T0C + 200 && prob(5)) || temperature > T0C + 1000)
-		melt()
-
-/turf/exterior/kleibkhar_grass/melt()
-	if(icon_state != "scorched")
-		SetName("scorched ground")
-		icon_state = "scorched"
-		icon_edge_layer = -1
-		footstep_type = /decl/footsteps/asteroid
-		color = null
-
 ///////////////////////////////////////////////////////////////////////////
 // Mining Turfs
 ///////////////////////////////////////////////////////////////////////////
