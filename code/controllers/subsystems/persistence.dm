@@ -265,20 +265,7 @@
 	if(first_except)
 		throw first_except
 
-/////////////////////////////////////////////////////////////////
-// Base Persistence Subsystem Overrides
-/////////////////////////////////////////////////////////////////
-/datum/controller/subsystem/persistence/Shutdown()
-	return
-/datum/controller/subsystem/persistence/track_value()
-	return
-/datum/controller/subsystem/persistence/is_tracking()
-	return
-/datum/controller/subsystem/persistence/forget_value()
-	return
-/datum/controller/subsystem/persistence/show_info(mob/user)
-	to_chat(user, SPAN_INFO("Disabled with persistence modpack (how ironic)..."))
-	return
+// Helper
 
 //Display to any server staff the timestamp of the currently loaded save in the status panel.
 /mob/Stat()
