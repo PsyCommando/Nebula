@@ -225,7 +225,7 @@
 	anchored           = TRUE
 	density            = FALSE
 	amount_dispensed   = 45
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 
 /obj/structure/reagent_dispensers/peppertank/populate_reagents()
 	add_to_reagents(/decl/material/liquid/capsaicin/condensed, reagents.maximum_volume)
@@ -299,7 +299,7 @@
 	icon_state         = "acidtank"
 	amount_dispensed   = 10
 	anchored           = TRUE
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 
 /obj/structure/reagent_dispensers/acid/populate_reagents()
 	add_to_reagents(/decl/material/liquid/acid, reagents.maximum_volume)
