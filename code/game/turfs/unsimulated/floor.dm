@@ -30,6 +30,7 @@
 //
 /turf/unsimulated/floor/tiled
 	icon = 'icons/turf/flooring/tiles.dmi'
+	icon_state = "steel"
 
 /turf/unsimulated/floor/tiled/dark
 	name = "dark floor"
