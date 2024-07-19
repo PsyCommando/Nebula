@@ -181,48 +181,6 @@
 	minimum_temperature = 75 CELSIUS
 	maximum_temperature = (75 CELSIUS) + 25
 
-/decl/chemical_reaction/surfactant
-	name = "Azosurfactant"
-	result = /decl/material/liquid/surfactant
-	required_reagents = list(/decl/material/liquid/fuel/hydrazine = 2, /decl/material/solid/carbon = 2, /decl/material/liquid/acid = 1)
-	result_amount = 5
-	mix_message = "The solution begins to foam gently."
-
-/decl/chemical_reaction/space_cleaner
-	name = "Space cleaner"
-	result = /decl/material/liquid/cleaner
-	required_reagents = list(/decl/material/gas/ammonia = 1, /decl/material/liquid/water = 1)
-	mix_message = "The solution becomes slick and soapy."
-	result_amount = 2
-
-/decl/chemical_reaction/contaminant_cleaner
-	name = "Akaline Detergent"
-	result = /decl/material/liquid/contaminant_cleaner
-	required_reagents = list(/decl/material/solid/sodium = 1, /decl/material/liquid/surfactant = 1)
-	result_amount = 2
-
-/decl/chemical_reaction/plantbgone
-	name = "Plant-B-Gone"
-	result = /decl/material/liquid/weedkiller
-	required_reagents = list(
-		/decl/material/liquid/bromide = 1,
-		/decl/material/liquid/water = 4
-	)
-	result_amount = 5
-
-/decl/chemical_reaction/foaming_agent
-	name = "Foaming Agent"
-	result = /decl/material/liquid/foaming_agent
-	required_reagents = list(/decl/material/solid/lithium = 1, /decl/material/liquid/fuel/hydrazine = 1)
-	result_amount = 1
-	mix_message = "The solution begins to foam vigorously."
-
-/decl/chemical_reaction/sodiumchloride
-	name = "Sodium Chloride"
-	result = /decl/material/solid/sodiumchloride
-	required_reagents = list(/decl/material/solid/sodium = 1, /decl/material/liquid/acid/hydrochloric = 1)
-	result_amount = 2
-
 /decl/chemical_reaction/stimulants
 	name = "Stimulants"
 	result = /decl/material/liquid/stimulants
