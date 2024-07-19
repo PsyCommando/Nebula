@@ -201,7 +201,7 @@
 	name           = "chlorine salts"
 	open_turf_type = OUTREACH_SURFACE_TURF //Don't allow just removing this easily
 
-/turf/exterior/water/outreach
+/turf/exterior/chlorine_sand/muriatic_acid_swamp
 	name           = "muriatic acid swamp"
 	reagent_type   = /decl/material/liquid/acid/hydrochloric
 	open_turf_type = /turf/exterior/chlorine_sand/outreach //Don't allow just removing this easily
@@ -237,7 +237,7 @@
 	var/list/allowed_turfs = list(
 		/turf/exterior/barren,
 		/turf/exterior/chlorine_sand,
-		/turf/exterior/water/outreach,
+		/turf/exterior/chlorine_sand/muriatic_acid_swamp,
 	)
 
 /decl/turf_initializer/outreach_surface/InitializeTurf(var/turf/exterior/T)
@@ -249,7 +249,7 @@
 	if(locate(/obj, T))
 		return
 
-	var/list/possible_spawns = istype(T, /turf/exterior/water)? (underwater_props_probs|underwater_mob_probs) : (surface_props_probs|mob_probs)
+	var/list/possible_spawns = istype(T, /turf/exterior/chlorine_sand/muriatic_acid_swamp)? (underwater_props_probs|underwater_mob_probs) : (surface_props_probs|mob_probs)
 	if(rand(0, 50) != 50)
 		return //No prop for this tile
 

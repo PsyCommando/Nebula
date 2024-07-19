@@ -75,7 +75,7 @@
 /turf/simulated/wall/r_ocp,
 /area/outreach/outpost/engineering/b2/smes)
 "ap" = (
-/turf/exterior/water/outreach,
+/turf/exterior/chlorine_sand/muriatic_acid_swamp,
 /area/exoplanet/outreach/underground/d2)
 "aq" = (
 /obj/structure/cable/yellow{

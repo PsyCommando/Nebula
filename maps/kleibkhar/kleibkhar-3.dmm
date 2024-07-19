@@ -451,7 +451,7 @@
 /turf/simulated/floor,
 /area/kleibkhar/outpost/solar_array)
 "bg" = (
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/kleibkhar)
 "bh" = (
 /obj/structure/cable/yellow{
@@ -1279,12 +1279,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/rack,
-/obj/item/shovel,
-/obj/item/shovel,
+/obj/item/tool/shovel,
+/obj/item/tool/shovel,
 /obj/item/stack/flag/red,
 /obj/item/storage/ore,
 /obj/item/storage/ore,
-/obj/item/pickaxe,
+/obj/item/tool/pickaxe,
 /obj/item/hoist_kit,
 /obj/machinery/light{
 	dir = 8;
@@ -2216,7 +2216,7 @@
 /area/exoplanet/kleibkhar)
 "fu" = (
 /obj/structure/table,
-/obj/item/storage/box/donut,
+/obj/item/storage/box/fancy/donut,
 /turf/simulated/floor/tiled,
 /area/kleibkhar/outpost/mess_hall)
 "fv" = (
@@ -2540,7 +2540,7 @@
 /area/kleibkhar/outpost/mess_hall)
 "gd" = (
 /obj/item/inflatable_duck,
-/turf/exterior/water,
+/turf/exterior/open_ocean,
 /area/exoplanet/kleibkhar)
 "ge" = (
 /obj/machinery/light,
@@ -3901,7 +3901,7 @@
 /area/exoplanet/kleibkhar)
 "js" = (
 /obj/structure/lattice,
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/kleibkhar)
 "jt" = (
 /obj/structure/railing/mapped{
@@ -4099,7 +4099,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "32-4"
 	},
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/kleibkhar)
 "jN" = (
 /obj/structure/railing/mapped{
@@ -4150,7 +4150,7 @@
 /turf/simulated/floor/plating,
 /area/exoplanet/kleibkhar)
 "Rh" = (
-/turf/exterior/water,
+/turf/exterior/open_ocean,
 /area/exoplanet/kleibkhar)
 "XM" = (
 /obj/machinery/computer/modular/preset/cardslot/command,

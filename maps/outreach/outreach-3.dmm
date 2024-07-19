@@ -56,7 +56,7 @@
 /turf/simulated/wall/concrete,
 /area/outreach/outpost/vacant/ground/swroom)
 "aj" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/vacant/ground/swroom)
 "ak" = (
 /obj/structure/cable/yellow{
@@ -487,7 +487,7 @@
 /obj/structure/sign/warning/fall{
 	pixel_y = 24
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/waste/ground)
 "bc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -528,7 +528,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/maint/passage/ground/north/hangar)
 "bg" = (
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach)
 "bh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
@@ -573,7 +573,7 @@
 	icon_state = "pipe-d";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/waste/ground)
 "bl" = (
 /obj/structure/cable/yellow{
@@ -1427,7 +1427,7 @@
 "cN" = (
 /obj/structure/ladder,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/power/ground)
 "cO" = (
 /obj/structure/cable/yellow{
@@ -1437,7 +1437,7 @@
 /obj/structure/sign/warning/fall{
 	pixel_y = 24
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/power/ground)
 "cP" = (
 /obj/machinery/telepad_cargo/sorting_hall,
@@ -3116,7 +3116,7 @@
 /turf/simulated/floor/reinforced/concrete,
 /area/exoplanet/outreach)
 "ga" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/ground/atmos)
 "gb" = (
 /obj/structure/cable/yellow{
@@ -4442,7 +4442,7 @@
 	icon_state = "tube_map";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/ground)
 "iH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5149,7 +5149,7 @@
 	icon_state = "up-supply";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/atmos/ground)
 "jY" = (
 /turf/simulated/wall,
@@ -6312,7 +6312,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/cargo/distribution)
 "mb" = (
-/turf/exterior/water/outreach,
+/turf/exterior/chlorine_sand/muriatic_acid_swamp,
 /area/exoplanet/outreach)
 "mc" = (
 /obj/effect/floor_decal/industrial/outline/orange,
@@ -6570,7 +6570,7 @@
 	icon_state = "pipe-u";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/atmos/ground)
 "mu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9585,7 +9585,7 @@
 	icon_state = "pipe-d";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/atmos/ground)
 "rW" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -11697,7 +11697,7 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office8)
 "wE" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/ground/command)
 "wF" = (
 /obj/structure/railing/mapped/stairwell{
@@ -13883,7 +13883,7 @@
 	icon_state = "railing_preview";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/passage/ground/south/offices)
 "Bu" = (
 /obj/effect/catwalk_plated/dark,
@@ -14201,7 +14201,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/hangar/north)
 "IP" = (
-/turf/simulated/open,
+/turf/open,
 /area/turbolift/outreach/ground_floor)
 "IR" = (
 /obj/machinery/atmospherics/pipe/zpipe/up{
@@ -14796,7 +14796,7 @@
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach)
 "Xo" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/ground)
 "Xp" = (
 /obj/machinery/light/small{

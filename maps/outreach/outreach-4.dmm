@@ -69,7 +69,7 @@
 /turf/simulated/floor/tiled/techfloor/airless,
 /area/exoplanet/outreach/sky)
 "aj" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/vacant/f1/swroom)
 "ak" = (
 /obj/effect/floor_decal/industrial/traffic/corner{
@@ -121,7 +121,7 @@
 	icon_state = "railing_preview";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/waste/f1)
 "ar" = (
 /obj/structure/sign/warning/nosmoking_1{
@@ -181,7 +181,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing/mapped,
 /obj/structure/disposalpipe/down,
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/waste/f1)
 "aw" = (
 /turf/simulated/wall,
@@ -241,7 +241,7 @@
 	},
 /obj/structure/lattice,
 /obj/effect/catwalk_plated,
-/turf/simulated/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "aE" = (
 /obj/machinery/alarm,
@@ -926,7 +926,7 @@
 /obj/structure/cable/white{
 	icon_state = "32-8"
 	},
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "bV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -1090,7 +1090,7 @@
 	},
 /obj/structure/lattice,
 /obj/effect/catwalk_plated,
-/turf/simulated/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "cq" = (
 /obj/structure/cable/yellow{
@@ -1161,7 +1161,7 @@
 /area/outreach/outpost/hallway/west/floor1)
 "cA" = (
 /obj/structure/railing/mapped/stairwell,
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/floor1/se)
 "cB" = (
 /obj/structure/cable/yellow{
@@ -1671,7 +1671,7 @@
 	icon_state = "down-scrubbers";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/atmos/f1)
 "dA" = (
 /turf/simulated/floor/tiled/steel_grid,
@@ -1919,7 +1919,7 @@
 	icon_state = "bulb_map";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/power/f1)
 "dX" = (
 /obj/machinery/door/firedoor/autoset{
@@ -2248,7 +2248,7 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/waste/f1)
 "eG" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/floor1/se)
 "eH" = (
 /obj/structure/railing/mapped/stairwell{
@@ -3200,7 +3200,7 @@
 	icon_state = "pipe-d";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/atmos/f1)
 "gA" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -3274,7 +3274,7 @@
 /area/exoplanet/outreach/sky)
 "gK" = (
 /obj/structure/catwalk,
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "gL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3286,12 +3286,12 @@
 	icon_state = "railing_preview";
 	dir = 1
 	},
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "gN" = (
 /obj/structure/railing/mapped,
 /obj/structure/catwalk,
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "gO" = (
 /obj/structure/railing/mapped{
@@ -3325,12 +3325,12 @@
 	icon_state = "railing_preview";
 	dir = 4
 	},
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "gR" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped,
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "gS" = (
 /obj/structure/railing/mapped{
@@ -3672,7 +3672,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "32-1"
 	},
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "hF" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/cabled/siphon/on/harvester/nb3,
@@ -4239,7 +4239,7 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/command/arrivals/lobby)
 "iM" = (
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "iN" = (
 /obj/structure/disposalpipe/segment{
@@ -4886,7 +4886,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/arrivals/lobby)
 "jY" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/floor1/command)
 "jZ" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
@@ -7757,7 +7757,7 @@
 /area/outreach/outpost/maint/power/f1)
 "yK" = (
 /obj/structure/lattice,
-/turf/exterior/open,
+/turf/open,
 /area/exoplanet/outreach/sky)
 "zl" = (
 /obj/structure/cable/yellow{
@@ -7811,7 +7811,7 @@
 /obj/structure/sign/warning/fall{
 	pixel_y = 24
 	},
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/maint/power/f1)
 "Bb" = (
 /obj/structure/cable/yellow{
@@ -7962,7 +7962,7 @@
 /turf/simulated/floor/airless,
 /area/exoplanet/outreach/sky)
 "HJ" = (
-/turf/simulated/open,
+/turf/open,
 /area/turbolift/outreach/f1)
 "HV" = (
 /obj/machinery/door/airlock/hatch/maintenance{
@@ -8114,7 +8114,7 @@
 /turf/simulated/floor/airless,
 /area/exoplanet/outreach/sky)
 "PB" = (
-/turf/simulated/open,
+/turf/open,
 /area/outreach/outpost/stairwell/floor1)
 "PC" = (
 /obj/effect/catwalk_plated,
