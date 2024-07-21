@@ -11,7 +11,7 @@
 		if(QDELETED(structure))
 			continue
 		if(!isStationLevel(structure.z))
-			continue
+			continue //#FIXME: Why are away sites, templates, ruins excluded&?
 		if(is_type_in_list(structure, exception_types))
 			continue
 		if(!structure.anchored)
