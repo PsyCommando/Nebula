@@ -126,8 +126,6 @@
 #include "modules\detectivework\microscope\_forensic_machine.dm"
 #include "modules\economy\account.dm"
 #include "modules\economy\economy.dm"
-#include "modules\emotes\audible.dm"
-#include "modules\emotes\human.dm"
 #include "modules\fabrication\_fabricator.dm"
 #include "modules\fabrication\fabricator_build.dm"
 #include "modules\fabrication\fabricator_intake.dm"

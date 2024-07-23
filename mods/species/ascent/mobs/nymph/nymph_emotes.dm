@@ -13,7 +13,7 @@
 		/decl/emote/visible/shiver,
 		/decl/emote/visible/collapse,
 		/decl/emote/audible/hiss,
-		/decl/emote/audible,
+		/decl/emote/audible/burp,
 		/decl/emote/audible/scretch,
 		/decl/emote/audible/choke,
 		/decl/emote/audible/gnarl,

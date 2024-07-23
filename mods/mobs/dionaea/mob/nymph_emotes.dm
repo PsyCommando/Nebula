@@ -16,7 +16,7 @@
 		/decl/emote/visible/spin,
 		/decl/emote/visible/sidestep,
 		/decl/emote/audible/hiss,
-		/decl/emote/audible,
+		/decl/emote/audible/burp,
 		/decl/emote/audible/scretch,
 		/decl/emote/audible/choke,
 		/decl/emote/audible/gnarl,

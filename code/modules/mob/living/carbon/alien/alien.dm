@@ -55,7 +55,7 @@
 		/decl/emote/visible/spin,
 		/decl/emote/visible/sidestep,
 		/decl/emote/audible/hiss,
-		/decl/emote/audible,
+		/decl/emote/audible/burp,
 		/decl/emote/audible/deathgasp_alien,
 		/decl/emote/audible/whimper,
 		/decl/emote/audible/gasp,

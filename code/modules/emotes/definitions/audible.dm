@@ -206,3 +206,83 @@
 	var/decl/species/my_species = user.get_species()
 	if(my_species)
 		return "$USER$ [my_species.get_species_death_message()]"
+
+/decl/emote/audible/snap
+	key = "snap"
+	emote_message_3p_target = "$USER$ snaps their fingers at $TARGET$."
+	emote_message_3p = "$USER$ snaps their fingers."
+	emote_sound = 'sound/effects/fingersnap.ogg'
+
+//#TODO: Make this get the needed sound effect from the mob.
+/decl/emote/audible/burp
+	key = "belch"
+	emote_message_3p = "$USER$ burps."
+	emote_message_3p_target = "$USER$ belches loudly towards $TARGET$."
+	emote_sound = list(
+		'sound/voice/emotes/human/burp1.ogg',
+		'sound/voice/emotes/human/burp2.ogg',
+		'sound/voice/emotes/human/burp3.ogg',
+		'sound/voice/emotes/human/burp4.ogg',
+		'sound/voice/emotes/human/burp5.ogg',
+		'sound/voice/emotes/human/burp6.ogg',
+	)
+
+/decl/emote/audible/whistle
+	emote_sound = list(
+		'sound/voice/emotes/human/whistle1.ogg',
+		'sound/voice/emotes/human/whistle2.ogg',
+	)
+
+/decl/emote/audible/scream/get_emote_sound(atom/user)
+	var/mob/living/M = user
+	if(!istype(M))
+		return
+	//#TODO: Make this get the needed sound effect from the mob.
+	var/gender = M.get_gender()
+	switch(gender)
+		if(MALE)
+			return list("sound" = list('sound/voice/emotes/human/scream_m1.ogg', 'sound/voice/emotes/human/scream_m2.ogg'), "vol" = emote_volume)
+		if(FEMALE)
+			return list("sound" = list('sound/voice/emotes/human/scream_f1.ogg', 'sound/voice/emotes/human/scream_f2.ogg', 'sound/voice/emotes/human/scream_f3.ogg'), "vol" = emote_volume)
+
+/decl/emote/audible/clap
+	emote_sound = list(
+		'sound/voice/emotes/clap1.ogg',
+		'sound/voice/emotes/clap2.ogg',
+	)
+
+/decl/emote/audible/chuckle/get_emote_sound(atom/user)
+	var/mob/living/M = user
+	if(!istype(M))
+		return
+	//#TODO: Make this get the needed sound effect from the mob.
+	var/gender = M.get_gender()
+	switch(gender)
+		if(MALE)
+			return list("sound" = 'sound/voice/emotes/human/chuckle_m1.ogg', "vol" = emote_volume)
+		if(FEMALE)
+			return list("sound" = 'sound/voice/emotes/human/chuckle_f1.ogg', "vol" = emote_volume)
+
+/decl/emote/audible/cough/get_emote_sound(atom/user)
+	var/mob/living/M = user
+	if(!istype(M))
+		return
+	//#TODO: Make this get the needed sound effect from the mob.
+	var/gender = M.get_gender()
+	switch(gender)
+		if(MALE)
+			return list("sound" = 'sound/voice/emotes/human/cough_m1.ogg', "vol" = emote_volume)
+		if(FEMALE)
+			return list("sound" = 'sound/voice/emotes/human/cough_f1.ogg', "vol" = emote_volume)
+
+/decl/emote/audible/laugh/get_emote_sound(atom/user)
+	var/mob/living/M = user
+	if(!istype(M))
+		return
+	//#TODO: Make this get the needed sound effect from the mob.
+	var/gender = M.get_gender()
+	switch(gender)
+		if(MALE)
+			return list("sound" = 'sound/voice/emotes/human/laugh_m1.ogg', "vol" = emote_volume)
+		if(FEMALE)
+			return list("sound" = 'sound/voice/emotes/human/laugh_f1.ogg', "vol" = emote_volume)
