@@ -52,7 +52,7 @@ INITIALIZE_IMMEDIATE(/obj/structure/fake_computer/chargen) //Init early
 	. = ..()
 	var/area/chargen/A = get_area(src)
 	if(!istype(A))
-		CRASH("[log_info_line(src)] was not inside a chargen area!")
+		CRASH("[log_info_line(src)] was not initialized inside a chargen area!")
 	set_area(A)
 
 /obj/structure/fake_computer/chargen/Destroy()

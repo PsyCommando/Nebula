@@ -15,7 +15,7 @@
 	if(istype(A))
 		A.register_chargen_state_change_listener(src, /obj/machinery/cryopod/chargen/proc/on_chargen_state_changed)
 	else
-		log_warning("[get_log_info_line(src)] chargen crypod spawned in non-chargen area [get_area(src)].")
+		CRASH("[log_info_line(src)] was not initialized inside a chargen area!")
 
 /obj/machinery/cryopod/chargen/proc/on_chargen_state_changed(area/source, new_state, old_state)
 	if(new_state == CHARGEN_STATE_FORM_COMPLETE)
