@@ -158,8 +158,8 @@
 		H.StoreMemory(remembered_info, /decl/memory_options/system)
 		H.mind.initial_account = M
 		for(var/obj/item/card/id/I in H.GetIdCards())
-			if(!I.associated_account_number)
-				I.associated_account_number = M.account_number
+			if(!I.associated_account_id)
+				I.associated_account_id = M.account_id
 				break
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()

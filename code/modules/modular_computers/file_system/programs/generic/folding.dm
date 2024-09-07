@@ -51,7 +51,7 @@
 			return TOPIC_HANDLED
 		var/datum/money_account/account = get_glob_account(I.associated_account_id)
 		if(!istype(account))
-			to_chat(usr, SPAN_WARNING("Unable to locate account for deposit using account number #[I.associated_account_number || "NULL"]."))
+			to_chat(usr, SPAN_WARNING("Unable to locate account for deposit using account number #[I.associated_account_id || "NULL"]."))
 			return TOPIC_HANDLED
 		var/earned = (current_interval / 10) * (SCIENCE_MONEY_PER_SECOND * computer.get_processing_power()) //Divide by 10 to convert from ticks to seconds
 		account.deposit(earned, "Completed FOLDING@SPACE project.")
