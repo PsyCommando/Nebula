@@ -4,6 +4,7 @@
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 	pass_flags = PASS_FLAG_TABLE
 	abstract_type = /obj/item
+	temperature_sensitive = TRUE
 
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/randpixel = 6
@@ -448,9 +449,9 @@ SAVED_VAR(/obj/item, item_flags)
 
 	if(istype(W, /obj/item/storage))
 		var/obj/item/storage/S = W
-		if(S.use_to_pickup)
+		if(S.use_to_pickup && isturf(loc))
 			//Mode is set to collect all items
-			if(S.collection_mode && isturf(loc))
+			if(S.collection_mode)
 				S.gather_all(loc, user)
 				return TRUE
 			if(S.can_be_inserted(src, user))
@@ -977,8 +978,8 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/setup_power_supply(loaded_cell_type, accepted_cell_type, power_supply_extension_type, charge_value)
 	SHOULD_CALL_PARENT(FALSE)
-	if(loaded_cell_type && accepted_cell_type)
-		set_extension(src, (power_supply_extension_type || /datum/extension/loaded_cell), accepted_cell_type, loaded_cell_type, charge_value)
+	if(loaded_cell_type || accepted_cell_type)
+		set_extension(src, (power_supply_extension_type || /datum/extension/loaded_cell), (accepted_cell_type || loaded_cell_type), loaded_cell_type, charge_value)
 
 /obj/item/proc/handle_loadout_equip_replacement(obj/item/old_item)
 	return
@@ -990,4 +991,4 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		try_burn_wearer(user, slot, 1)
 
 /obj/item/can_embed()
-	return !anchored && !is_robot_module(src)
+	return !anchored && (!ismob(loc) || canremove) && (!loc || isturf(loc) || ismob(loc)) && !is_robot_module(src)

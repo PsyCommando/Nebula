@@ -214,7 +214,7 @@
 	},
 /obj/machinery/network/requests_console{
 	department = "Detective's office";
-	pixel_x = 30;
+	pixel_x = 32;
 	initial_network_id = "molluscnet";
 	dir = 4
 	},
@@ -2948,7 +2948,7 @@
 /area/ministation/medical)
 "rU" = (
 /obj/structure/table,
-/obj/machinery/faxmachine,
+/obj/machinery/faxmachine/mapped,
 /turf/simulated/floor/tiled,
 /area/ministation/hop)
 "rW" = (

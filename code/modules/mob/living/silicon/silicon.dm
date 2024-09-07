@@ -50,9 +50,9 @@
 	global.silicon_mob_list += src
 	. = ..()
 
-	if(silicon_radio)
+	if(ispath(silicon_radio))
 		silicon_radio = new silicon_radio(src)
-	if(silicon_camera)
+	if(ispath(silicon_camera))
 		silicon_camera = new silicon_camera(src)
 	for(var/T in starting_stock_parts)
 		stock_parts += new T(src)
@@ -373,7 +373,7 @@
 			qdel(mind.objectives)
 			mind.assigned_special_role = null
 		clear_antag_roles(mind)
-	ghostize(0)
+	ghostize(CORPSE_CANNOT_REENTER)
 	qdel(src)
 
 /mob/living/silicon/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
