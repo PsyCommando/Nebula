@@ -5,6 +5,7 @@
 /////////////////////////////////////////////////////////////////
 
 /obj/machinery/cryopod/chargen
+	is_spawnable_type = FALSE //Prevent unit tests from trying to spawn these outside of a chargen area
 	///The spawn point provider that player completing chargen will be sent to.
 	var/spawn_decl = /decl/spawnpoint/arrival_chargen
 

@@ -49,10 +49,6 @@
 		/obj/machinery/power/smes,
 		// This is evil, evil code and destroys other tests.
 		/obj/effect/bhole,
-		//Chargen computer cannot be spawned outside chargen area
-		/obj/structure/fake_computer/chargen,
-		//Chargen pod cannot be spawned outside chargen area
-		/obj/machinery/cryopod/chargen,
 	)
 	// Instantiate all spawnable atoms
 	for(var/path in typesof(/obj/item, /obj/effect, /obj/structure, /obj/machinery, /obj/vehicle, /mob) - ignore)

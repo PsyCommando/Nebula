@@ -44,6 +44,7 @@
 ///A light weight console look-alike with as only purpose displaying a nano UI.
 /obj/structure/fake_computer/chargen
 	should_save = FALSE
+	is_spawnable_type = FALSE //Prevent unit tests from trying to spawn these outside of a chargen area
 	///The chargen form currently set to be displayed by the console.
 	var/datum/nano_module/chargen/current_form
 
