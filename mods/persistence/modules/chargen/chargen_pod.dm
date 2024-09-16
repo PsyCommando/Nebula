@@ -1,11 +1,21 @@
 //#define STARTING_POINTS 30
 
+//Make sure players cannot build this pod
+/obj/item/stock_parts/circuitboard/cryopod/get_buildable_types()
+	return ..() - /obj/machinery/cryopod/chargen
+
 /////////////////////////////////////////////////////////////////
 // Chargen Pod
 /////////////////////////////////////////////////////////////////
 
 /obj/machinery/cryopod/chargen
+	base_type         = /obj/machinery/cryopod/chargen //Prevents using the circuit board from the base cryopod
+	construct_state   = /decl/machine_construction/noninteractive //Prevents tampering, and needing components
+	frame_type        = null
+	interact_offline  = TRUE //Don't worry about power
+	stat_immune       = ~0 //Immune to everything
 	is_spawnable_type = FALSE //Prevent unit tests from trying to spawn these outside of a chargen area
+
 	///The spawn point provider that player completing chargen will be sent to.
 	var/spawn_decl = /decl/spawnpoint/arrival_chargen
 
@@ -25,7 +35,7 @@
 		unready()
 
 /**
- * Open the canopy and light up to let the player that just finished the form to get in!
+ * Open the canopy and light up to let the player that just finished the form get in!
  */
 /obj/machinery/cryopod/chargen/proc/ready_for_mingebag()
 	set_light(10, 1, COLOR_CYAN_BLUE)
@@ -39,7 +49,9 @@
 	if(close_sound)
 		playsound(src, close_sound, 40)
 
-// Chargen pod
+/**
+ * Setup the player and move them to the actual station.
+ */
 /obj/machinery/cryopod/chargen/proc/send_to_outpost()
 	if(!istype(occupant))
 		return
