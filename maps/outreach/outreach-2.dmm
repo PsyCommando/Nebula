@@ -35,8 +35,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l2_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_e_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -57,8 +57,8 @@
 /area/outreach/outpost/control/cooling)
 "aal" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -155,8 +155,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 4;
 	icon_state = "closed";
+	dir = 4;
 	id_tag = "OH_l4_e_alck_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -180,8 +180,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_outer"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -216,8 +216,8 @@
 /area/outreach/outpost/hallway/west/basement1)
 "aaF" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 8;
 	icon_state = "map_vent";
+	dir = 8;
 	id_tag = "OH_l2_n_alck_pump_out_internal"
 	},
 /obj/structure/sign/warning/internals_required,
@@ -236,17 +236,17 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
-	dir = 8;
 	icon_state = "airlock_control_off";
+	dir = 8;
 	id_tag = "OH_l2_n_alck";
-	tag_air_alarm = "OH_l2_n_alck_alarm";
+	tag_exterior_door = "OH_l2_n_alck_outer";
+	tag_interior_door = "OH_l2_n_alck_inner";
 	tag_airpump = "OH_l2_n_alck_pump";
 	tag_chamber_sensor = "OH_l2_n_alck_sensor";
-	tag_exterior_door = "OH_l2_n_alck_outer";
 	tag_exterior_sensor = "OH_l2_n_alck_exterior_sensor";
-	tag_interior_door = "OH_l2_n_alck_inner";
 	tag_interior_sensor = "OH_l2_n_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l2_n_alck_alarm";
 	tag_secure = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -300,13 +300,13 @@
 /area/outreach/outpost/lab/xeno/experiment)
 "aaO" = (
 /obj/machinery/alarm/nobreach/airlock{
-	dir = 4;
 	icon_state = "alarm0";
+	dir = 4;
 	id_tag = "OH_l2_n_alck_alarm"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 1;
 	icon_state = "map_vent";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_pump_out_internal"
 	},
 /obj/machinery/light/small/red{
@@ -392,13 +392,13 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "aba" = (
 /obj/machinery/computer/air_control{
-	input_tag = "ob_atmos_tnk2_inj";
-	input_toggle = 1;
 	name = "tank 2 atmospherics control console";
-	out_pressure_mode = 1;
-	output_tag = "ob_atmos_tnk2_vnt";
 	pressure_setting = 14559.6;
-	sensor_tag = "ob_atmos_tnk2_sns"
+	input_tag = "ob_atmos_tnk2_inj";
+	output_tag = "ob_atmos_tnk2_vnt";
+	sensor_tag = "ob_atmos_tnk2_sns";
+	out_pressure_mode = 1;
+	input_toggle = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -414,22 +414,22 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "abc" = (
 /obj/machinery/computer/air_control{
-	dir = 2;
-	icon_state = "computer";
-	input_tag = "ob_atmos_tnk1_inj";
-	input_toggle = 1;
 	name = "tank 1 atmospherics control console";
-	out_pressure_mode = 1;
-	output_tag = "ob_atmos_tnk1_vnt";
+	icon_state = "computer";
+	dir = 2;
 	pressure_setting = 14559.6;
-	sensor_tag = "ob_atmos_tnk1_sns"
+	input_tag = "ob_atmos_tnk1_inj";
+	output_tag = "ob_atmos_tnk1_vnt";
+	sensor_tag = "ob_atmos_tnk1_sns";
+	out_pressure_mode = 1;
+	input_toggle = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/outreach/outpost/atmospherics/b1/hall)
 "abd" = (
 /obj/machinery/computer/air_control{
-	input_tag = "ob_atmos_tnk4_inj";
 	name = "tank 4 atmospherics control console";
+	input_tag = "ob_atmos_tnk4_inj";
 	output_tag = "ob_atmos_tnk4_vnt";
 	sensor_tag = "ob_atmos_tnk4_sns"
 	},
@@ -486,10 +486,10 @@
 /area/outreach/outpost/stairwell/basement1/atmos)
 "abk" = (
 /obj/machinery/computer/air_control{
-	dir = 2;
-	icon_state = "computer";
-	input_tag = "ob_atmos_tnk3_inj";
 	name = "tank 3 atmospherics control console";
+	icon_state = "computer";
+	dir = 2;
+	input_tag = "ob_atmos_tnk3_inj";
 	output_tag = "ob_atmos_tnk3_vnt";
 	sensor_tag = "ob_atmos_tnk3_sns"
 	},
@@ -591,8 +591,8 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "abz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -604,8 +604,8 @@
 "abB" = (
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = "OH_l2_n_alck_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_n_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
@@ -681,8 +681,8 @@
 "abK" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -699,16 +699,16 @@
 /area/outreach/outpost/maint/passage/b1/northwest/research)
 "abM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
 "abN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor,
@@ -794,12 +794,12 @@
 /area/outreach/outpost/maint/waste/b1)
 "abV" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 1;
-	tag_filter_gas_north = "gas_carbon_dioxide";
-	tag_filter_gas_south = "gas_chlorine";
 	tag_north = 8;
 	tag_south = 8;
-	tag_west = 2
+	tag_east = 1;
+	tag_west = 2;
+	tag_filter_gas_north = "gas_carbon_dioxide";
+	tag_filter_gas_south = "gas_chlorine"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -920,8 +920,8 @@
 /area/outreach/outpost/lab/storage)
 "ack" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_inner"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -1001,12 +1001,12 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "acv" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 1;
-	tag_filter_gas_north = "gas_oxygen";
-	tag_filter_gas_south = "gas_nitrogen";
 	tag_north = 8;
 	tag_south = 8;
-	tag_west = 2
+	tag_east = 1;
+	tag_west = 2;
+	tag_filter_gas_north = "gas_oxygen";
+	tag_filter_gas_south = "gas_nitrogen"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -1207,13 +1207,13 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "acS" = (
 /obj/structure/sign/directions/medical{
-	dir = 4;
 	icon_state = "direction_med";
+	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/engineering{
-	dir = 4;
 	icon_state = "direction_eng";
+	dir = 4;
 	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -1226,13 +1226,13 @@
 "acT" = (
 /obj/machinery/atmospherics/omni/mixer{
 	name = "omni gas mixer (airmix)";
-	tag_east = 1;
-	tag_east_con = 0.21;
-	tag_north = 1;
 	tag_north_con = 0.79;
+	tag_east_con = 0.21;
+	tag_west_con = null;
+	tag_north = 1;
 	tag_south = 2;
-	tag_west = 0;
-	tag_west_con = null
+	tag_east = 1;
+	tag_west = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -1277,8 +1277,8 @@
 	},
 /obj/effect/floor_decal/industrial/outline/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -1450,8 +1450,8 @@
 	pixel_y = 24
 	},
 /obj/machinery/light/small{
-	dir = 8;
-	icon_state = "bulb_map"
+	icon_state = "bulb_map";
+	dir = 8
 	},
 /turf/open,
 /area/outreach/outpost/maint/power/b1)
@@ -1662,8 +1662,8 @@
 /obj/effect/floor_decal/industrial/outline/orange,
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -1734,11 +1734,11 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "adW" = (
 /obj/machinery/atmospherics/binary/passive_gate/on{
-	dir = 4;
-	icon_state = "map_on";
 	name = "pressure regulator (waste overflow)";
-	regulate_mode = 1;
-	target_pressure = 15000
+	icon_state = "map_on";
+	dir = 4;
+	target_pressure = 15000;
+	regulate_mode = 1
 	},
 /obj/effect/floor_decal/spline/plain/orange{
 	icon_state = "spline_plain";
@@ -1900,8 +1900,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -1929,7 +1929,7 @@
 "aew" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/crate/secure/biohazard/alt,
-/obj/item/mmi/radio_enabled,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
 /obj/machinery/light_switch{
 	icon_state = "light0";
 	dir = 8
@@ -2037,8 +2037,8 @@
 /area/outreach/outpost/control/cooling)
 "aeH" = (
 /obj/machinery/atmospherics/unary/freezer{
-	dir = 4;
 	icon_state = "freezer_0";
+	dir = 4;
 	set_temperature = 298;
 	use_power = 1
 	},
@@ -2275,9 +2275,9 @@
 /area/outreach/outpost/maint/passage/b1/northwest/airlock)
 "aff" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
+	name = "gas pump (to cooling loop)";
 	icon_state = "map_on";
-	name = "gas pump (to cooling loop)"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
@@ -2481,8 +2481,8 @@
 	dir = 10
 	},
 /obj/machinery/dummy_airlock_controller{
-	dir = 8;
 	icon_state = "airlock_control_off";
+	dir = 8;
 	id_tag = "OH_l2_e_alck"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2800,9 +2800,9 @@
 "agj" = (
 /obj/structure/disposalpipe/trunk,
 /obj/structure/disposaloutlet{
-	dir = 1;
+	name = "disposal outlet (deliveries)";
 	icon_state = "outlet";
-	name = "disposal outlet (deliveries)"
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/effect/decal/cleanable/dirt,
@@ -2904,8 +2904,8 @@
 /area/outreach/outpost/maint/power/b1)
 "agu" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 1;
 	icon_state = "off";
+	dir = 1;
 	id_tag = "ob_atmos_airmix_inj";
 	injecting = 0;
 	use_power = 1
@@ -2950,8 +2950,8 @@
 /area/outreach/outpost/maint/passage/b1/northeast/airlock)
 "agz" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/tank{
-	dir = 1;
 	icon_state = "map_vent";
+	dir = 1;
 	id_tag = "ob_atmos_airmix_vnt"
 	},
 /turf/simulated/floor/reinforced/airmix,
@@ -3207,8 +3207,8 @@
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 8;
-	id_tag = "OH_l2_w_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_w_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -3286,8 +3286,8 @@
 /area/outreach/outpost/sleeproom)
 "ahn" = (
 /obj/machinery/air_sensor{
-	id_tag = "ob_atmos_airmix_sns";
-	name = "gas sensor airmix tank"
+	name = "gas sensor airmix tank";
+	id_tag = "ob_atmos_airmix_sns"
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/outreach/outpost/atmospherics/b1/hall)
@@ -3449,8 +3449,8 @@
 /area/outreach/outpost/lab/xeno/experiment)
 "ahD" = (
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/security{
@@ -3621,9 +3621,9 @@
 /area/outreach/outpost/atmospherics/b1/storage)
 "ahU" = (
 /obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 1;
-	icon_state = "map_on";
 	name = "high power gas pump (waste)";
+	icon_state = "map_on";
+	dir = 1;
 	target_pressure = 15000
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3665,9 +3665,9 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "aib" = (
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8;
+	name = "gas pump (scrubber flush)";
 	icon_state = "map_off";
-	name = "gas pump (scrubber flush)"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/storage)
@@ -3727,8 +3727,8 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "aih" = (
 /obj/machinery/atmospherics/unary/heater{
-	dir = 4;
 	icon_state = "heater_0";
+	dir = 4;
 	set_temperature = 291;
 	use_power = 1
 	},
@@ -4055,8 +4055,8 @@
 "aiQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b1/storage)
@@ -4695,8 +4695,8 @@
 /area/outreach/outpost/security/b1/hallway/to_brig)
 "akc" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 8;
 	icon_state = "securearea";
+	dir = 8;
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/valve/shutoff,
@@ -4743,8 +4743,8 @@
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 1;
-	id_tag = "OH_l2_n_alck";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_n_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -4970,8 +4970,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/warning/engineering_access{
-	dir = 8;
 	icon_state = "securearea";
+	dir = 8;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -5101,10 +5101,10 @@
 "akM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
-	dir = 4;
+	name = "Air Vent (airlock)";
 	icon_state = "map_vent";
-	id_tag = "OH_l2_w_alck_pump_out_external";
-	name = "Air Vent (airlock)"
+	dir = 4;
+	id_tag = "OH_l2_w_alck_pump_out_external"
 	},
 /obj/effect/floor_decal/industrial/hatch/orange,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -5196,8 +5196,8 @@
 	},
 /obj/machinery/airlock_sensor/wired{
 	dir = 1;
-	id_tag = "OH_l2_n_alck_exterior_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_n_alck_exterior_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -5337,8 +5337,8 @@
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 8;
-	id_tag = "OH_l2_w_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_w_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/wired,
@@ -5361,8 +5361,8 @@
 /area/exoplanet/outreach/underground/d1)
 "all" = (
 /obj/machinery/button/blast_door{
-	dir = 1;
 	icon_state = "blastctrl";
+	dir = 1;
 	id_tag = "OH_brig_desk_shutters"
 	},
 /obj/effect/floor_decal/spline/plain/red,
@@ -5538,9 +5538,9 @@
 /area/outreach/outpost/command/hall/inner)
 "aly" = (
 /obj/machinery/atmospherics/binary/passive_gate{
-	dir = 4;
+	name = "pressure regulator (distro overflow)";
 	icon_state = "map_off";
-	name = "pressure regulator (distro overflow)"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5923,8 +5923,8 @@
 /area/outreach/outpost/medbay/lobby)
 "amh" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 4;
 	icon_state = "securearea";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/structure/disposalpipe/segment/bent{
@@ -6071,8 +6071,8 @@
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 1;
-	id_tag = "OH_l2_n_alck";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_n_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -6118,8 +6118,8 @@
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/network/pager/security{
-	dir = 8;
-	icon_state = "doorbell"
+	icon_state = "doorbell";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/office)
@@ -6163,17 +6163,17 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
-	dir = 2;
 	icon_state = "airlock_control_off";
+	dir = 2;
 	id_tag = "OH_l2_e_alck";
-	tag_air_alarm = "OH_l2_e_alck_alarm";
+	tag_exterior_door = "OH_l2_e_alck_outer";
+	tag_interior_door = "OH_l2_e_alck_inner";
 	tag_airpump = "OH_l2_e_alck_pump";
 	tag_chamber_sensor = "OH_l2_e_alck_sensor";
-	tag_exterior_door = "OH_l2_e_alck_outer";
 	tag_exterior_sensor = "OH_l2_e_alck_exterior_sensor";
-	tag_interior_door = "OH_l2_e_alck_inner";
 	tag_interior_sensor = "OH_l2_e_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l2_e_alck_alarm";
 	tag_secure = 1
 	},
 /obj/machinery/camera/network/security,
@@ -6281,8 +6281,8 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/button/access/wired/exterior{
-	id_tag = "OH_l2_s_alck";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_s_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -6307,8 +6307,8 @@
 "amN" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = "OH_l2_n_alck_interior_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_n_alck_interior_sensor"
 	},
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/tiled/steel_grid,
@@ -6333,17 +6333,17 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
-	dir = 2;
 	icon_state = "airlock_control_off";
+	dir = 2;
 	id_tag = "OH_l2_w_alck";
-	tag_air_alarm = "OH_l2_w_alck_alarm";
+	tag_exterior_door = "OH_l2_w_alck_outer";
+	tag_interior_door = "OH_l2_w_alck_inner";
 	tag_airpump = "OH_l2_w_alck_pump";
 	tag_chamber_sensor = "OH_l2_w_alck_sensor";
-	tag_exterior_door = "OH_l2_w_alck_outer";
 	tag_exterior_sensor = "OH_l2_w_alck_exterior_sensor";
-	tag_interior_door = "OH_l2_w_alck_inner";
 	tag_interior_sensor = "OH_l2_w_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l2_w_alck_alarm";
 	tag_secure = 1
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -6442,8 +6442,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/airlock_sensor/wired{
 	dir = 8;
-	id_tag = "OH_l2_w_alck_exterior_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_w_alck_exterior_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -6515,8 +6515,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_e_alck_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -6551,8 +6551,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_w_alck_outer"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -6570,9 +6570,9 @@
 "anl" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l2_w_alck_sensor";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_w_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
@@ -6599,8 +6599,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/airlock_sensor/wired{
 	dir = 4;
-	id_tag = "OH_l2_e_alck_exterior_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_e_alck_exterior_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -6638,8 +6638,8 @@
 "anr" = (
 /obj/machinery/light,
 /obj/structure/sign/warning/engineering_access{
-	dir = 1;
 	icon_state = "securearea";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -6650,16 +6650,16 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_e_alck_outer"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/airlock/basement1/east)
 "ant" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 1;
 	icon_state = "map_vent";
+	dir = 1;
 	id_tag = "OH_l2_w_alck_pump"
 	},
 /obj/machinery/camera/network/security{
@@ -6695,8 +6695,8 @@
 /area/outreach/outpost/medbay/main_hall)
 "anw" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 4;
 	icon_state = "closed";
+	dir = 4;
 	id_tag = "OH_l4_e_alck_inner"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -6723,9 +6723,9 @@
 "anz" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l2_e_alck_sensor";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_e_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
@@ -6735,9 +6735,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
+	name = "gas pump (from cooling loop)";
 	icon_state = "map_on";
-	name = "gas pump (from cooling loop)"
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -6792,9 +6792,9 @@
 "anF" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l2_w_alck_interior_sensor";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_w_alck_interior_sensor"
 	},
 /obj/effect/floor_decal/industrial/hatch/orange,
 /turf/simulated/floor/tiled/steel_grid,
@@ -6897,8 +6897,8 @@
 /area/outreach/outpost/airlock/basement1/east)
 "anO" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_e_alck_inner"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -6921,8 +6921,8 @@
 /area/exoplanet/outreach/underground/d1)
 "anR" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_w_alck_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -7006,8 +7006,8 @@
 /obj/structure/banner_frame/blue,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light_switch/on{
-	dir = 8;
-	icon_state = "light0"
+	icon_state = "light0";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/command/hall/inner)
@@ -7061,13 +7061,13 @@
 /area/outreach/outpost/atmospherics/b1/hall)
 "aod" = (
 /obj/machinery/alarm/nobreach/airlock{
-	dir = 1;
 	icon_state = "alarm0";
+	dir = 1;
 	id_tag = "OH_l1_e_alck_alarm"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 8;
 	icon_state = "map_vent";
+	dir = 8;
 	id_tag = "OH_l2_w_alck_pump_out_internal"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7313,13 +7313,13 @@
 	dir = 10
 	},
 /obj/structure/sign/directions/security{
-	dir = 8;
 	icon_state = "direction_sec";
+	dir = 8;
 	pixel_y = 24
 	},
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -7353,8 +7353,8 @@
 /area/outreach/outpost/command/conference)
 "aoD" = (
 /obj/structure/sign/directions/medical{
-	dir = 4;
 	icon_state = "direction_med";
+	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/flora/pottedplant/largebush,
@@ -7467,8 +7467,8 @@
 /area/outreach/outpost/maint/passage/b1/northeast/airlock)
 "aoO" = (
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -7499,8 +7499,8 @@
 /area/outreach/outpost/mining/b1/foyer)
 "aoQ" = (
 /obj/structure/sign/directions/medical{
-	dir = 4;
 	icon_state = "direction_med";
+	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -7753,7 +7753,7 @@
 	icon_state = "spline_plain";
 	dir = 1
 	},
-/obj/item/book/manual/nt_regs,
+/obj/item/book/manual/detective,
 /obj/item/stamp/denied,
 /obj/item/stamp/boss,
 /turf/simulated/floor/tiled/dark,
@@ -8142,9 +8142,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 1;
+	name = "high power gas pump (airlock flush)";
 	icon_state = "map_off";
-	name = "high power gas pump (airlock flush)"
+	dir = 1
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
@@ -8562,8 +8562,8 @@
 /area/outreach/outpost/medbay/lockers)
 "aqO" = (
 /obj/structure/sign/warning/high_voltage{
-	dir = 8;
 	icon_state = "shock";
+	dir = 8;
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -9402,8 +9402,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l2_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_e_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -9652,8 +9652,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/wired/exterior{
-	id_tag = "OH_l2_s_alck";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_s_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -9783,8 +9783,8 @@
 /area/outreach/outpost/command/hall)
 "asU" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 8;
 	icon_state = "securearea";
+	dir = 8;
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -10458,8 +10458,8 @@
 /area/outreach/outpost/mining/b1/foyer)
 "aug" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
-	dir = 8;
-	icon_state = "console-off"
+	icon_state = "console-off";
+	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/blue{
 	icon_state = "spline_plain";
@@ -10799,8 +10799,8 @@
 	dir = 4
 	},
 /obj/machinery/airlock_sensor/wired{
-	id_tag = "OH_l2_s_alck_exterior_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_s_alck_exterior_sensor"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/exoplanet/outreach/underground/d1)
@@ -11096,14 +11096,14 @@
 /area/outreach/outpost/stairwell/basement1)
 "avq" = (
 /obj/machinery/button/alternate/door/bolts{
-	dir = 1;
+	name = "bolt cell button";
 	icon_state = "doorctrl";
-	id_tag = "OH_brig_cell_bolt";
-	name = "bolt cell button"
+	dir = 1;
+	id_tag = "OH_brig_cell_bolt"
 	},
 /obj/machinery/computer/modular/preset/security{
-	dir = 8;
-	icon_state = "console-off"
+	icon_state = "console-off";
+	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/red{
 	icon_state = "spline_plain";
@@ -11118,8 +11118,8 @@
 	dir = 8
 	},
 /obj/machinery/button/flasher/security_desk{
-	dir = 8;
-	icon_state = "launcherbtt"
+	icon_state = "launcherbtt";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/office)
@@ -11565,8 +11565,8 @@
 /obj/machinery/atmospherics/valve/shutoff,
 /obj/effect/floor_decal/industrial/shutoff,
 /obj/structure/sign/department/janitor{
-	dir = 4;
 	icon_state = "janitor";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/structure/disposalpipe/segment,
@@ -11931,8 +11931,8 @@
 /area/exoplanet/outreach/underground/d1)
 "awY" = (
 /obj/machinery/alarm/nobreach/airlock{
-	dir = 1;
 	icon_state = "alarm0";
+	dir = 1;
 	id_tag = "OH_l2_e_alck_alarm"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -11949,8 +11949,8 @@
 /area/outreach/outpost/maint/passage/b1/east)
 "axa" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l2_e_alck_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -13175,9 +13175,9 @@
 /area/outreach/outpost/security/b1/office)
 "azl" = (
 /obj/machinery/atmospherics/binary/pump{
-	dir = 1;
-	icon_state = "map_off";
 	name = "gas pump (airlock flush)";
+	icon_state = "map_off";
+	dir = 1;
 	target_pressure = 15000
 	},
 /obj/effect/catwalk_plated,
@@ -14240,16 +14240,16 @@
 /area/outreach/outpost/maint/atmos/b1)
 "aBi" = (
 /obj/structure/sign/warning/moving_parts{
-	dir = 1;
 	icon_state = "movingparts";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-8"
 	},
 /obj/structure/sign/warning/high_voltage{
-	dir = 8;
 	icon_state = "shock";
+	dir = 8;
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -14447,8 +14447,8 @@
 /area/outreach/outpost/control/generators)
 "aBC" = (
 /obj/structure/sign/department/telecomms{
-	dir = 4;
 	icon_state = "tcomm";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/spline/plain/blue{
@@ -14466,8 +14466,8 @@
 "aBE" = (
 /obj/machinery/power/breakerbox/activated,
 /obj/structure/sign/warning/high_voltage{
-	dir = 8;
 	icon_state = "shock";
+	dir = 8;
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -15106,8 +15106,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_s_alck_inner"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -15843,8 +15843,8 @@
 /area/outreach/outpost/control)
 "aDR" = (
 /obj/structure/sign/warning/server_room{
-	dir = 4;
 	icon_state = "server";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/spline/plain/blue{
@@ -16467,8 +16467,8 @@
 /area/exoplanet/outreach/underground/d1)
 "aES" = (
 /obj/structure/sign/department/security/alt{
-	dir = 4;
 	icon_state = "sec_cuff";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/structure/disposalpipe/segment,
@@ -16671,8 +16671,8 @@
 /area/outreach/outpost/mining/b1/storage)
 "aFn" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 4;
-	name = "high power gas pump (airlock flush)"
+	name = "high power gas pump (airlock flush)";
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -16688,13 +16688,13 @@
 /area/outreach/outpost/security/b1/brig)
 "aFp" = (
 /obj/structure/sign/directions/medical{
-	dir = 1;
 	icon_state = "direction_med";
+	dir = 1;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/security{
-	dir = 1;
 	icon_state = "direction_sec";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16727,8 +16727,8 @@
 /area/outreach/outpost/maint/passage/b1/southeast/airlock)
 "aFs" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_s_alck_inner"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -16795,8 +16795,8 @@
 	},
 /obj/effect/catwalk_plated,
 /obj/machinery/light/small{
-	dir = 8;
-	icon_state = "bulb_map"
+	icon_state = "bulb_map";
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -17202,8 +17202,8 @@
 	},
 /obj/effect/catwalk_plated,
 /obj/machinery/dummy_airlock_controller{
-	dir = 1;
 	icon_state = "airlock_control_off";
+	dir = 1;
 	id_tag = "OH_l2_s_alck"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -17227,20 +17227,20 @@
 /area/outreach/outpost/mining/b1/eva)
 "aGj" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 8;
 	icon_state = "map_vent";
+	dir = 8;
 	id_tag = "OH_l2_s_alck_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
 	id_tag = "OH_l2_s_alck";
-	tag_air_alarm = "OH_l2_s_alck_alarm";
+	tag_exterior_door = "OH_l2_s_alck_outer";
+	tag_interior_door = "OH_l2_s_alck_inner";
 	tag_airpump = "OH_l2_s_alck_pump";
 	tag_chamber_sensor = "OH_l2_s_alck_sensor";
-	tag_exterior_door = "OH_l2_s_alck_outer";
 	tag_exterior_sensor = "OH_l2_s_alck_exterior_sensor";
-	tag_interior_door = "OH_l2_s_alck_inner";
 	tag_interior_sensor = "OH_l2_s_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l2_s_alck_alarm";
 	tag_secure = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -17276,8 +17276,8 @@
 "aGn" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = "OH_l2_s_alck_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l2_s_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
@@ -17287,8 +17287,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 1;
 	icon_state = "map_vent";
+	dir = 1;
 	id_tag = "OH_l2_s_alck_pump"
 	},
 /obj/structure/sign/eshowers{
@@ -17296,9 +17296,9 @@
 	dir = 4
 	},
 /obj/structure/hygiene/shower/emergency{
-	color = "#c9a344";
+	icon_state = "eshower";
 	dir = 4;
-	icon_state = "eshower"
+	color = "#c9a344"
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/tiled/techmaint,
@@ -17321,8 +17321,8 @@
 /area/outreach/outpost/mining/b1/processing_hall)
 "aGr" = (
 /obj/machinery/alarm/nobreach/airlock{
-	dir = 8;
 	icon_state = "alarm0";
+	dir = 8;
 	id_tag = "OH_l2_s_alck_alarm"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -17481,13 +17481,13 @@
 /area/outreach/outpost/maint/passage/b1/northwest/research)
 "aGD" = (
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = 24
 	},
 /obj/structure/sign/directions/medical{
-	dir = 4;
 	icon_state = "direction_med";
+	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -17527,8 +17527,8 @@
 /area/outreach/outpost/maint/passage/b1/northwest/research)
 "aGG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /obj/machinery/alarm,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -17845,8 +17845,8 @@
 /area/outreach/outpost/lab/entrance)
 "aHi" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_s_alck_outer"
 	},
 /obj/structure/cable/yellow{
@@ -17913,8 +17913,8 @@
 /area/outreach/outpost/security/b1/cell/B)
 "aHo" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 1;
 	icon_state = "closed";
+	dir = 1;
 	id_tag = "OH_l2_s_alck_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -19114,13 +19114,13 @@
 /area/outreach/outpost/atmospherics/b1/storage)
 "aJl" = (
 /obj/machinery/computer/air_control{
-	dir = 4;
 	icon_state = "computer";
+	dir = 4;
 	input_tag = "ob_atmos_airmix_inj";
-	input_toggle = 1;
-	out_pressure_mode = 1;
 	output_tag = "ob_atmos_airmix_vnt";
-	sensor_tag = "ob_atmos_airmix_sns"
+	sensor_tag = "ob_atmos_airmix_sns";
+	out_pressure_mode = 1;
+	input_toggle = 1
 	},
 /obj/effect/floor_decal/spline/plain/orange,
 /turf/simulated/floor/tiled/techfloor,
@@ -19168,7 +19168,7 @@
 	icon_state = "spline_plain";
 	dir = 5
 	},
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/lab/xeno/storage)
 "aJr" = (
@@ -19887,8 +19887,8 @@
 /area/outreach/outpost/maint/atmos/b1)
 "aKI" = (
 /obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
-	dir = 1;
 	icon_state = "map_vent";
+	dir = 1;
 	id_tag = "OH_l2_n_alck_pump_out_external"
 	},
 /obj/effect/floor_decal/industrial/hatch/orange,
@@ -20408,9 +20408,9 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l2_e_alck_interior_sensor";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_e_alck_interior_sensor"
 	},
 /obj/structure/disposalpipe/segment/bent{
 	icon_state = "pipe-c";
@@ -20655,8 +20655,8 @@
 /area/outreach/outpost/hallway/south/basement1)
 "aMi" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 4;
 	icon_state = "securearea";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -20706,9 +20706,9 @@
 "aMm" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = "OH_l2_s_alck_interior_sensor";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l2_s_alck_interior_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment/bent{
@@ -21291,8 +21291,8 @@
 "aNk" = (
 /obj/structure/lattice,
 /obj/structure/sign/deck/second{
-	dir = 1;
 	icon_state = "deck-2";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
@@ -21717,8 +21717,8 @@
 	dir = 5
 	},
 /obj/machinery/dummy_airlock_controller{
-	dir = 4;
 	icon_state = "airlock_control_off";
+	dir = 4;
 	id_tag = "OH_l2_w_alck"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21864,9 +21864,9 @@
 "aOl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 1;
+	name = "high power gas pump (airlock flush)";
 	icon_state = "map_off";
-	name = "high power gas pump (airlock flush)"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/maint/passage/b1/northwest/airlock)
@@ -22724,10 +22724,10 @@
 "aPP" = (
 /obj/effect/floor_decal/spline/plain/brown,
 /obj/structure/rack/dark,
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
 /turf/simulated/floor/tiled,
 /area/outreach/outpost/mining/b1/storage)
 "aPQ" = (
@@ -23487,9 +23487,9 @@
 /area/outreach/outpost/mining/b1/processing)
 "aQZ" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 4;
+	name = "high power gas pump (airlock flush)";
 	icon_state = "map_off";
-	name = "high power gas pump (airlock flush)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/mining/b1/processing)
@@ -23543,9 +23543,9 @@
 /area/outreach/outpost/mining/b1/ore_sorting)
 "aRf" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 4;
+	name = "high power gas pump (airlock flush)";
 	icon_state = "map_off";
-	name = "high power gas pump (airlock flush)"
+	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/brown,
 /obj/machinery/light,
@@ -26111,8 +26111,8 @@
 /area/outreach/outpost/command/hall)
 "aVG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
@@ -28640,8 +28640,8 @@
 /area/outreach/outpost/eva/b1/east)
 "baa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -28767,13 +28767,13 @@
 /area/outreach/outpost/hallway/east/basement1)
 "bam" = (
 /obj/structure/sign/directions/medical{
-	dir = 4;
 	icon_state = "direction_med";
+	dir = 4;
 	pixel_y = 24
 	},
 /obj/structure/sign/directions/security{
-	dir = 4;
 	icon_state = "direction_sec";
+	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -29544,8 +29544,8 @@
 	},
 /obj/effect/catwalk_plated,
 /obj/machinery/light/small{
-	dir = 8;
-	icon_state = "bulb_map"
+	icon_state = "bulb_map";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/b1/southwest/airlock)
@@ -29820,8 +29820,8 @@
 /area/outreach/outpost/eva/b1/east)
 "bcw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/eva/b1/east)
@@ -30152,9 +30152,9 @@
 /area/outreach/outpost/command/hall)
 "bdd" = (
 /obj/machinery/atmospherics/tvalve/bypass{
-	dir = 4;
+	name = "coolant flush valve";
 	icon_state = "map_tvalve1";
-	name = "coolant flush valve"
+	dir = 4
 	},
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/steel_grid,
@@ -30180,12 +30180,12 @@
 /area/outreach/outpost/medbay/storage)
 "bdg" = (
 /obj/structure/rack,
-/obj/item/mmi/radio_enabled,
-/obj/item/mmi/radio_enabled,
-/obj/item/mmi/radio_enabled,
-/obj/item/mmi/radio_enabled,
-/obj/item/mmi/radio_enabled,
-/obj/item/mmi/radio_enabled,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
+/obj/item/organ/internal/brain_interface/radio_enabled/empty,
 /obj/item/paicard,
 /obj/item/robot_parts/robot_suit/flyer,
 /obj/item/robot_parts/chest,
@@ -30667,7 +30667,7 @@
 /obj/item/stamp/cmo,
 /obj/item/pen,
 /obj/item/book/manual/medical_diagnostics_manual,
-/obj/item/book/manual/stasis,
+/obj/item/book/manual/medical_diagnostics_manual,
 /obj/item/gps/medical,
 /obj/structure/table/woodentable/mahogany,
 /obj/effect/floor_decal/spline/plain/paleblue{
@@ -34965,8 +34965,8 @@
 	},
 /obj/effect/decal/cleanable/filth,
 /obj/item/trash/cigbutt/jerichos{
-	pixel_w = 5;
-	pixel_y = 3
+	pixel_y = 3;
+	pixel_w = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/command/office/second)
@@ -35319,8 +35319,8 @@
 /area/outreach/outpost/maint/passage/b1/east/junct)
 "bmG" = (
 /obj/structure/sign/department/chemistry{
-	dir = 4;
 	icon_state = "chemistry";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/structure/disposalpipe/segment,
@@ -36663,8 +36663,8 @@
 	},
 /obj/effect/catwalk_plated,
 /obj/machinery/light/small{
-	dir = 8;
-	icon_state = "bulb_map"
+	icon_state = "bulb_map";
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,

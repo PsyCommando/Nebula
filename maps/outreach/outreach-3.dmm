@@ -212,25 +212,25 @@
 "aB" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "EVA refill gas filter north";
-	tag_east = 2;
-	tag_filter_gas_west = "gas_oxygen";
 	tag_south = 1;
-	tag_west = 8
+	tag_east = 2;
+	tag_west = 8;
+	tag_filter_gas_west = "gas_oxygen"
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/eva)
 "aC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/eva)
 "aD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/maint/passage/ground/east/eva)
@@ -499,8 +499,8 @@
 /area/outreach/outpost/maint/passage/ground/east/airlock)
 "be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -556,13 +556,13 @@
 "bj" = (
 /obj/structure/flora/pottedplant/largebush,
 /obj/structure/sign/directions/medical{
-	dir = 8;
 	icon_state = "direction_med";
+	dir = 8;
 	pixel_y = 24
 	},
 /obj/structure/sign/directions/security{
-	dir = 8;
 	icon_state = "direction_sec";
+	dir = 8;
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -731,15 +731,15 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "OH_l3_e_alck_interior_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l3_e_alck_interior_sensor"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/east/ground)
 "bD" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l3_e_alck_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -1161,8 +1161,8 @@
 "cq" = (
 /obj/effect/floor_decal/industrial/hatch/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/hallway/east/ground)
@@ -1171,8 +1171,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l3_e_alck_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l3_e_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/reinforced,
@@ -1326,9 +1326,9 @@
 "cF" = (
 /obj/structure/disposalpipe/trunk,
 /obj/structure/disposaloutlet{
-	dir = 8;
+	name = "disposal outlet (incoming cargo)";
 	icon_state = "outlet";
-	name = "disposal outlet (incoming cargo)"
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	icon_state = "rwindow";
@@ -1732,9 +1732,9 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/disposal/deliveryChute{
-	dir = 8;
+	name = "delivery chute (tagged delivery)";
 	icon_state = "intake";
-	name = "delivery chute (tagged delivery)"
+	dir = 8
 	},
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/steel_grid,
@@ -1900,9 +1900,9 @@
 	},
 /obj/effect/wallframe_spawn/concrete,
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	icon_state = "map_on";
 	name = "gas pump (eva oxy)";
+	icon_state = "map_on";
+	dir = 8;
 	target_pressure = 15000
 	},
 /turf/simulated/floor/plating,
@@ -1920,8 +1920,8 @@
 /area/outreach/outpost/maint/power/ground)
 "dG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3884,8 +3884,8 @@
 "hA" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "EVA refill gas filter south";
-	tag_east = 2;
 	tag_north = 1;
+	tag_east = 2;
 	tag_west = 8
 	},
 /turf/simulated/floor/plating,
@@ -3927,8 +3927,8 @@
 /area/outreach/outpost/stairwell/ground/se)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/machinery/meter,
 /obj/effect/decal/cleanable/dirt,
@@ -4877,8 +4877,8 @@
 /area/outreach/outpost/hallway/west/ground)
 "jz" = (
 /obj/machinery/light_switch/on{
-	dir = 8;
-	icon_state = "light0"
+	icon_state = "light0";
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
@@ -4890,13 +4890,13 @@
 	},
 /obj/structure/flora/pottedplant/largebush,
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = 24
 	},
 /obj/structure/sign/directions/supply{
-	dir = 8;
 	icon_state = "direction_supply";
+	dir = 8;
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -5936,14 +5936,14 @@
 /area/exoplanet/outreach)
 "lq" = (
 /obj/machinery/door/airlock/external/glass{
+	icon_state = "closed";
 	density = 1;
 	dir = 8;
-	icon_state = "closed";
 	id_tag = "OH_l3_e_alck_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "11"
+	icon_state = "11";
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -6121,9 +6121,9 @@
 /area/outreach/outpost/cargo/distribution)
 "lJ" = (
 /obj/machinery/button/blast_door{
+	name = "shutters control";
 	dir = 1;
-	id_tag = "ob_gf_shed_s_shutters";
-	name = "shutters control"
+	id_tag = "ob_gf_shed_s_shutters"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -6259,9 +6259,9 @@
 /area/outreach/outpost/cargo/hall)
 "lX" = (
 /obj/structure/disposaloutlet{
-	dir = 2;
+	name = "disposal outlet (delivery desk)";
 	icon_state = "outlet";
-	name = "disposal outlet (delivery desk)"
+	dir = 2
 	},
 /obj/structure/disposalpipe/trunk{
 	icon_state = "pipe-t";
@@ -6403,10 +6403,10 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/button/blast_door/wired{
-	dir = 1;
+	name = "shutters control";
 	icon_state = "blastctrl";
-	id_tag = "ob_gf_shed_n_shutters";
-	name = "shutters control"
+	dir = 1;
+	id_tag = "ob_gf_shed_n_shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/reinforced/outreach,
@@ -6553,8 +6553,8 @@
 "mt" = (
 /obj/structure/lattice,
 /obj/structure/sign/deck/third{
-	dir = 1;
 	icon_state = "deck-3";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
@@ -6724,9 +6724,9 @@
 /area/outreach/outpost/cargo/distribution)
 "mL" = (
 /obj/machinery/disposal/deliveryChute{
-	dir = 8;
+	name = "delivery chute (delivery desk only)";
 	icon_state = "intake";
-	name = "delivery chute (delivery desk only)"
+	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
 	icon_state = "pipe-t";
@@ -8086,8 +8086,8 @@
 /area/outreach/outpost/cargo/workshop)
 "oW" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l3_e_alck_outer"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8635,13 +8635,13 @@
 	dir = 1
 	},
 /obj/structure/sign/directions/engineering{
-	dir = 8;
 	icon_state = "direction_eng";
+	dir = 8;
 	pixel_y = -24
 	},
 /obj/structure/sign/directions/supply{
-	dir = 8;
 	icon_state = "direction_supply";
+	dir = 8;
 	pixel_y = -32
 	},
 /obj/structure/disposalpipe/segment{
@@ -8892,7 +8892,7 @@
 /area/exoplanet/outreach)
 "qx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/exterior/mud/dark,
+/turf/exterior/clay,
 /area/exoplanet/outreach)
 "qy" = (
 /obj/machinery/power/terminal,
@@ -9455,8 +9455,8 @@
 /area/outreach/outpost/hallway/east/ground)
 "rI" = (
 /obj/structure/sign/department/eva{
-	dir = 1;
 	icon_state = "eva";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/structure/disposalpipe/segment/bent{
@@ -10323,8 +10323,8 @@
 "tA" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/material_processing/stacker{
-	dir = 1;
 	icon_state = "stacker";
+	dir = 1;
 	output_turf = 1
 	},
 /obj/effect/floor_decal/spline/plain/brown{
@@ -10470,8 +10470,8 @@
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l3_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l3_e_alck"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -10482,8 +10482,8 @@
 "tT" = (
 /obj/effect/floor_decal/industrial/hatch/orange,
 /obj/machinery/atmospherics/unary/vent_pump/cabled/airlock{
-	dir = 8;
 	icon_state = "map_vent";
+	dir = 8;
 	id_tag = "OH_l3_e_alck_pump_out_external"
 	},
 /obj/structure/cable/yellow{
@@ -10521,8 +10521,8 @@
 	},
 /obj/machinery/airlock_sensor/wired{
 	dir = 4;
-	id_tag = "OH_l3_e_alck_exterior_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l3_e_alck_exterior_sensor"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -10548,8 +10548,8 @@
 /obj/machinery/light/small/wired,
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l3_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l3_e_alck"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -10642,8 +10642,8 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/button/blast_door{
-	id_tag = "ob_gf_shed_n_shutters";
-	name = "shutters control"
+	name = "shutters control";
+	id_tag = "ob_gf_shed_n_shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/airless,
@@ -10693,10 +10693,10 @@
 /area/exoplanet/outreach)
 "uq" = (
 /obj/machinery/button/blast_door/wired{
-	dir = 1;
+	name = "shutters control";
 	icon_state = "blastctrl";
-	id_tag = "ob_gf_shed_n_shutters";
-	name = "shutters control"
+	dir = 1;
+	id_tag = "ob_gf_shed_n_shutters"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -10727,10 +10727,10 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/button/blast_door/wired{
-	dir = 2;
+	name = "shutters control";
 	icon_state = "blastctrl";
-	id_tag = "ob_gf_shed_s_shutters";
-	name = "shutters control"
+	dir = 2;
+	id_tag = "ob_gf_shed_s_shutters"
 	},
 /turf/simulated/floor/reinforced/outreach,
 /area/exoplanet/outreach)
@@ -10772,10 +10772,10 @@
 /area/exoplanet/outreach)
 "uy" = (
 /obj/machinery/button/blast_door/wired{
-	dir = 2;
+	name = "shutters control";
 	icon_state = "blastctrl";
-	id_tag = "ob_gf_shed_s_shutters";
-	name = "shutters control"
+	dir = 2;
+	id_tag = "ob_gf_shed_s_shutters"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -12616,8 +12616,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light_switch/on{
-	dir = 8;
-	icon_state = "light0"
+	icon_state = "light0";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/engineering/gf/entrance)
@@ -12852,9 +12852,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/button/blast_door{
+	name = "shutters control";
 	dir = 1;
-	id_tag = "ob_gf_shed_s_shutters";
-	name = "shutters control"
+	id_tag = "ob_gf_shed_s_shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/airless,
@@ -13154,9 +13154,9 @@
 /area/outreach/outpost/cargo/warehouse)
 "zJ" = (
 /obj/machinery/door/airlock/external/glass{
+	icon_state = "closed";
 	density = 1;
 	dir = 8;
-	icon_state = "closed";
 	id_tag = "OH_l3_e_alck_inner"
 	},
 /obj/structure/cable/yellow{
@@ -14327,17 +14327,17 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
-	dir = 2;
 	icon_state = "airlock_control_off";
+	dir = 2;
 	id_tag = "OH_l3_e_alck";
-	tag_air_alarm = "OH_l3_e_alck_alarm";
+	tag_exterior_door = "OH_l3_e_alck_outer";
+	tag_interior_door = "OH_l3_e_alck_inner";
 	tag_airpump = "OH_l3_e_alck_pump";
 	tag_chamber_sensor = "OH_l3_e_alck_sensor";
-	tag_exterior_door = "OH_l3_e_alck_outer";
 	tag_exterior_sensor = "OH_l3_e_alck_exterior_sensor";
-	tag_interior_door = "OH_l3_e_alck_inner";
 	tag_interior_sensor = "OH_l3_e_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l3_e_alck_alarm";
 	tag_secure = 1
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -14461,9 +14461,9 @@
 	},
 /obj/effect/wallframe_spawn/concrete,
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	icon_state = "map_on";
 	name = "gas pump (eva oxy)";
+	icon_state = "map_on";
+	dir = 8;
 	target_pressure = 15000
 	},
 /turf/simulated/floor/plating,
@@ -14487,8 +14487,8 @@
 /area/outreach/outpost/vacant/ground/office2)
 "Pm" = (
 /obj/machinery/button/blast_door{
-	id_tag = "ob_gf_shed_n_shutters";
-	name = "shutters control"
+	name = "shutters control";
+	id_tag = "ob_gf_shed_n_shutters"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -14593,7 +14593,7 @@
 /turf/simulated/floor/plating,
 /area/outreach/outpost/storage_shed/gf/south)
 "Rw" = (
-/turf/exterior/mud/dark,
+/turf/exterior/clay,
 /area/exoplanet/outreach)
 "RD" = (
 /obj/machinery/disposal,
