@@ -12,11 +12,11 @@
 	if(status & PART_STAT_ACTIVE)
 		machine.update_power_channel(cached_channel)
 		unset_status(machine, PART_STAT_ACTIVE)
-	qdel(terminal) // Will call unset_terminal().
+	QDEL_NULL(terminal) // Will call unset_terminal().
 	..()
 
 /obj/item/stock_parts/power/terminal/Destroy()
-	qdel(terminal)
+	QDEL_NULL(terminal)
 	. = ..()
 
 /obj/item/stock_parts/power/terminal/machine_process(var/obj/machinery/machine)
@@ -87,7 +87,7 @@
 		return     // This location is fine
 	// TODO: disconnect and drop the terminal as an item instead of deleting it.
 	machine.visible_message(SPAN_WARNING("The terminal is ripped out of \the [machine]!"))
-	qdel(terminal) // will handle everything via the destroyed event
+	QDEL_NULL(terminal) // will handle everything via the destroyed event
 
 /obj/item/stock_parts/power/terminal/proc/make_terminal(var/obj/machinery/machine)
 	if(!machine)
