@@ -12226,7 +12226,6 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/obj/machinery/turret/network/outreach/stun,
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -14456,7 +14455,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/turret/network/outreach/stun,
 /obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/hall)
@@ -14492,7 +14490,6 @@
 	icon_state = "spline_plain";
 	dir = 4
 	},
-/obj/machinery/turret/network/outreach/stun,
 /obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/hall)
@@ -15855,7 +15852,6 @@
 	icon_state = "tube_map";
 	dir = 8
 	},
-/obj/machinery/turret/network/outreach/stun,
 /obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/control)
@@ -17171,7 +17167,6 @@
 	icon_state = "spline_plain";
 	dir = 8
 	},
-/obj/machinery/turret/network/outreach/stun,
 /obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/control/hall)
@@ -21232,7 +21227,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/armory/warden_office)
 "aNe" = (
-/obj/machinery/turret/network/outreach/stun,
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/reinforced,
 /area/outreach/outpost/security/b1/armory)
 "aNf" = (
@@ -30198,7 +30193,6 @@
 /obj/item/robot_parts/robot_component/diagnosis_unit,
 /obj/item/robot_parts/robot_component/radio,
 /obj/item/robot_parts/robot_component/actuator,
-/obj/item/robot_module/medical/surgeon,
 /obj/effect/floor_decal/spline/plain/paleblue{
 	icon_state = "spline_plain";
 	dir = 4

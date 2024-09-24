@@ -74,7 +74,7 @@
 /obj/machinery/cryopod/chargen/proc/on_occupant_forcemoved_out(mob/living/carbon/human/occupant)
 	//#FIXME: Once cryopods are less shitty and properly clean up the client.eye remove this..
 	if(occupant.client)
-		occupant.client.eye = src.occupant.client.mob
+		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	set_occupant(null)
 

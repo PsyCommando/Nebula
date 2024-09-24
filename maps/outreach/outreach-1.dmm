@@ -50,6 +50,9 @@
 /obj/machinery/door/firedoor/autoset,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/glass/civilian{
+	icon_state = "closed"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/hallway/west/basement2)
 "ai" = (
@@ -118,9 +121,9 @@
 /area/exoplanet/outreach/underground/d2)
 "av" = (
 /obj/machinery/door/blast/regular/wired/open{
+	icon_state = "open";
 	density = 1;
 	dir = 4;
-	icon_state = "open";
 	id_tag = "geo_blast_doors"
 	},
 /obj/effect/wallframe_spawn/reinforced_borosilicate/ocp,
@@ -170,9 +173,9 @@
 /area/exoplanet/outreach/underground/d2)
 "aA" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/cabled{
+	name = "outer large air vent";
 	dir = 4;
-	id_tag = "oh_b2_geo_airlock_outer_vent";
-	name = "outer large air vent"
+	id_tag = "oh_b2_geo_airlock_outer_vent"
 	},
 /turf/simulated/floor/plating/outreach,
 /area/exoplanet/outreach/underground/d2)
@@ -369,8 +372,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "ba" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
 	icon_state = "off";
+	dir = 8;
 	id_tag = "ob_atmos_tnk1_inj";
 	use_power = 1
 	},
@@ -378,8 +381,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "bb" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/atmos/tank{
-	dir = 4;
 	icon_state = "map_vent";
+	dir = 4;
 	id_tag = "ob_atmos_tnk2_vnt";
 	use_power = 1
 	},
@@ -426,8 +429,8 @@
 /area/exoplanet/outreach/underground/d2)
 "bi" = (
 /obj/machinery/air_sensor{
-	id_tag = "ob_atmos_tnk1_sns";
-	name = "gas sensor tank 1"
+	name = "gas sensor tank 1";
+	id_tag = "ob_atmos_tnk1_sns"
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
@@ -504,8 +507,8 @@
 /area/outreach/outpost/hallway/north/basement2)
 "bt" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/atmos/tank{
-	dir = 4;
 	icon_state = "map_vent";
+	dir = 4;
 	id_tag = "ob_atmos_tnk1_vnt";
 	use_power = 1
 	},
@@ -520,15 +523,15 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "bv" = (
 /obj/machinery/air_sensor{
-	id_tag = "ob_atmos_tnk2_sns";
-	name = "gas sensor tank 2"
+	name = "gas sensor tank 2";
+	id_tag = "ob_atmos_tnk2_sns"
 	},
 /turf/simulated/floor/reinforced/nitrogen,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "bw" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
 	icon_state = "off";
+	dir = 8;
 	id_tag = "ob_atmos_tnk4_inj"
 	},
 /turf/simulated/floor/reinforced/chlorine,
@@ -602,9 +605,9 @@
 	dir = 8
 	},
 /obj/machinery/button/access/wired/exterior{
+	name = "airlock access button";
 	dir = 8;
-	id_tag = "oh_b2_geo_airlock";
-	name = "airlock access button"
+	id_tag = "oh_b2_geo_airlock"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/outreach/outpost/engineering/b2/geothermals)
@@ -773,8 +776,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass/outreach/bolted{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "oh_b2_geo_airlock_outer_door"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -862,8 +865,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular/wired/open{
-	density = 1;
 	icon_state = "open";
+	density = 1;
 	id_tag = "geo_blast_doors"
 	},
 /obj/effect/wallframe_spawn/reinforced_borosilicate/ocp,
@@ -1241,8 +1244,8 @@
 /area/outreach/outpost/hallway/north/basement2)
 "cQ" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 8;
 	icon_state = "securearea";
+	dir = 8;
 	pixel_x = 32
 	},
 /obj/structure/disposalpipe/segment,
@@ -1428,8 +1431,8 @@
 /area/outreach/outpost/hallway/north/basement2)
 "dg" = (
 /obj/structure/sign/warning/moving_parts{
-	dir = 1;
 	icon_state = "movingparts";
+	dir = 1;
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2007,8 +2010,8 @@
 /area/outreach/outpost/maint/passage/b2/northwest)
 "em" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 4;
 	icon_state = "closed";
+	dir = 4;
 	id_tag = "OH_l4_e_alck_outer"
 	},
 /obj/machinery/door/firedoor/autoset{
@@ -2158,8 +2161,8 @@
 /area/exoplanet/outreach/underground/d2)
 "eD" = (
 /obj/structure/sign/deck/first{
-	dir = 1;
 	icon_state = "deck-1";
+	dir = 1;
 	pixel_y = -32
 	},
 /obj/machinery/light/small,
@@ -2259,8 +2262,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l1_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l1_e_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -2595,9 +2598,9 @@
 	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "power room blast door";
 	dir = 4;
-	id_tag = "geo_blast_doors";
-	name = "power room blast door"
+	id_tag = "geo_blast_doors"
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/smes)
@@ -2637,8 +2640,8 @@
 	dir = 4
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "OH_l1_e_alck_interior_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l1_e_alck_interior_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_grid,
@@ -2652,8 +2655,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l1_e_alck_inner"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2703,17 +2706,17 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	cycle_to_external_air = 1;
-	dir = 2;
 	icon_state = "airlock_control_off";
+	dir = 2;
 	id_tag = "OH_l1_e_alck";
-	tag_air_alarm = "OH_l1_e_alck_alarm";
+	tag_exterior_door = "OH_l1_e_alck_outer";
+	tag_interior_door = "OH_l1_e_alck_inner";
 	tag_airpump = "OH_l1_e_alck_pump";
 	tag_chamber_sensor = "OH_l1_e_alck_sensor";
-	tag_exterior_door = "OH_l1_e_alck_outer";
 	tag_exterior_sensor = "OH_l1_e_alck_exterior_sensor";
-	tag_interior_door = "OH_l1_e_alck_inner";
 	tag_interior_sensor = "OH_l1_e_alck_interior_sensor";
+	cycle_to_external_air = 1;
+	tag_air_alarm = "OH_l1_e_alck_alarm";
 	tag_secure = 1
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2741,8 +2744,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l1_e_alck_outer"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2773,16 +2776,16 @@
 /area/exoplanet/outreach/underground/d2)
 "fL" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 4;
 	name = "high power gas pump (airlock flush)";
+	dir = 4;
 	target_pressure = 15000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/atmospherics/b2/gas_tank_maintenance)
 "fM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4;
-	icon_state = "map_universal"
+	icon_state = "map_universal";
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2791,8 +2794,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "fN" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 4;
 	icon_state = "closed";
+	dir = 4;
 	id_tag = "OH_l4_e_alck_outer"
 	},
 /obj/machinery/door/firedoor/autoset{
@@ -2991,6 +2994,9 @@
 "gf" = (
 /obj/machinery/door/firedoor/autoset,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/glass/civilian{
+	icon_state = "closed"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/hallway/west/basement2)
 "gg" = (
@@ -3055,8 +3061,8 @@
 "gm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/warning/high_voltage{
-	dir = 4;
 	icon_state = "shock";
+	dir = 4;
 	pixel_x = -32;
 	pixel_y = 0
 	},
@@ -3125,9 +3131,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8;
-	icon_state = "map_off";
 	name = "gas pump (airlock flush)";
+	icon_state = "map_off";
+	dir = 8;
 	target_pressure = 15000
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3222,8 +3228,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/airlock_sensor/wired{
 	dir = 4;
-	id_tag = "OH_l1_e_alck_exterior_sensor";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l1_e_alck_exterior_sensor"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
 /area/exoplanet/outreach/underground/d2)
@@ -3524,8 +3530,8 @@
 /area/outreach/outpost/maint/passage/b2/southeast)
 "hq" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
 	icon_state = "off";
+	dir = 8;
 	id_tag = "ob_atmos_tnk2_inj";
 	use_power = 1
 	},
@@ -3533,8 +3539,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "hr" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/atmos/tank{
-	dir = 4;
 	icon_state = "map_vent";
+	dir = 4;
 	id_tag = "ob_atmos_tnk4_vnt"
 	},
 /turf/simulated/floor/reinforced/chlorine,
@@ -3623,9 +3629,9 @@
 	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "power room blast door";
 	dir = 4;
-	id_tag = "geo_blast_doors";
-	name = "power room blast door"
+	id_tag = "geo_blast_doors"
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/smes)
@@ -3810,8 +3816,8 @@
 /area/outreach/outpost/engineering/b2/geothermals)
 "hR" = (
 /obj/structure/sign/warning/engineering_access{
-	dir = 8;
 	icon_state = "securearea";
+	dir = 8;
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3856,8 +3862,8 @@
 /area/outreach/outpost/hallway/south/basement2)
 "hU" = (
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l1_e_alck_inner"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3866,23 +3872,23 @@
 "hV" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "OH_l1_e_alck_sensor";
-	pixel_y = 0
+	pixel_y = 0;
+	id_tag = "OH_l1_e_alck_sensor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/airlock/basement2)
 "hW" = (
 /obj/machinery/airlock_sensor{
-	dir = 1;
-	id_tag = "oh_b2_geo_airlock_chamber_sensor";
 	name = "chamber airlock sensor";
-	pixel_y = 0
+	dir = 1;
+	pixel_y = 0;
+	id_tag = "oh_b2_geo_airlock_chamber_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/cabled{
+	name = "outer large air vent";
 	dir = 1;
-	id_tag = "oh_b2_geo_airlock_outer_vent";
-	name = "outer large air vent"
+	id_tag = "oh_b2_geo_airlock_outer_vent"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/engineering/b2/geothermals_airlock)
@@ -3901,8 +3907,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
-	dir = 8;
 	icon_state = "closed";
+	dir = 8;
 	id_tag = "OH_l1_e_alck_outer"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4086,9 +4092,9 @@
 	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "power room blast door";
 	dir = 4;
-	id_tag = "geo_blast_doors";
-	name = "power room blast door"
+	id_tag = "geo_blast_doors"
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/engineering/b2/smes)
@@ -4255,8 +4261,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/button/access/wired/exterior{
 	dir = 4;
-	id_tag = "OH_l1_e_alck";
-	pixel_x = 0
+	pixel_x = 0;
+	id_tag = "OH_l1_e_alck"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid/outreach,
@@ -4389,8 +4395,8 @@
 /area/outreach/outpost/atmospherics/b2/gas_tank_maintenance)
 "iV" = (
 /obj/machinery/door/blast/regular/wired/open{
-	density = 1;
 	icon_state = "open";
+	density = 1;
 	id_tag = "geo_blast_doors"
 	},
 /obj/structure/cable/yellow,
@@ -4718,9 +4724,9 @@
 /area/exoplanet/outreach/underground/d2)
 "jA" = (
 /obj/machinery/door/blast/regular/wired/open{
+	icon_state = "open";
 	density = 1;
 	dir = 4;
-	icon_state = "open";
 	id_tag = "geo_blast_doors"
 	},
 /obj/structure/cable/yellow{
@@ -4822,8 +4828,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/button/blast_door{
-	dir = 4;
 	icon_state = "blastctrl";
+	dir = 4;
 	id_tag = "geo_blast_doors"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4882,8 +4888,8 @@
 /area/exoplanet/outreach/underground/d2)
 "jR" = (
 /obj/machinery/door/blast/regular/wired/open{
-	density = 1;
 	icon_state = "open";
+	density = 1;
 	id_tag = "geo_blast_doors"
 	},
 /obj/structure/cable/yellow{
@@ -4897,8 +4903,8 @@
 /area/outreach/outpost/engineering/b2/geothermals)
 "jS" = (
 /obj/machinery/door/blast/regular/wired/open{
-	density = 1;
 	icon_state = "open";
+	density = 1;
 	id_tag = "geo_blast_doors"
 	},
 /obj/structure/cable/yellow{
@@ -5393,8 +5399,8 @@
 "kT" = (
 /obj/effect/floor_decal/industrial/hatch/orange,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/cabled{
-	dir = 8;
 	icon_state = "map_vent";
+	dir = 8;
 	id_tag = "OH_l1_e_alck_pump_out_external"
 	},
 /turf/simulated/floor/plating/outreach,
@@ -5402,8 +5408,8 @@
 "kU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/department/engineering{
-	dir = 4;
 	icon_state = "engineering";
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -5485,8 +5491,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "lc" = (
 /obj/machinery/air_sensor{
-	id_tag = "ob_atmos_tnk4_sns";
-	name = "gas sensor tank 4"
+	name = "gas sensor tank 4";
+	id_tag = "ob_atmos_tnk4_sns"
 	},
 /turf/simulated/floor/reinforced/chlorine,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
@@ -5550,16 +5556,16 @@
 	id_tag = "oh_b2_geo_airlock_alarm"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/cabled{
+	name = "inner large air vent";
 	dir = 1;
-	id_tag = "oh_b2_geo_airlock_inner_vent";
-	name = "inner large air vent"
+	id_tag = "oh_b2_geo_airlock_inner_vent"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/engineering/b2/geothermals_airlock)
 "lk" = (
 /obj/machinery/door/blast/regular/wired/open{
-	density = 1;
 	icon_state = "open";
+	density = 1;
 	id_tag = "geo_blast_doors"
 	},
 /obj/structure/cable/yellow{
@@ -5802,16 +5808,16 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller/outreach{
-	id_tag = "oh_b2_geo_airlock";
 	name = "Geothermals Airlock Controller";
-	tag_air_alarm = "oh_b2_geo_airlock_alarm";
-	tag_chamber_sensor = "oh_b2_geo_airlock_chamber_sensor";
+	id_tag = "oh_b2_geo_airlock";
 	tag_exterior_door = "oh_b2_geo_airlock_outer_door";
-	tag_exterior_sensor = "oh_b2_geo_airlock_outer_sensor";
 	tag_interior_door = "oh_b2_geo_airlock_inner_door";
+	tag_chamber_sensor = "oh_b2_geo_airlock_chamber_sensor";
+	tag_exterior_sensor = "oh_b2_geo_airlock_outer_sensor";
 	tag_interior_sensor = "oh_b2_geo_airlock_inner_sensor";
 	tag_pump_out_external = "oh_b2_geo_airlock_exterior_vent";
-	tag_pump_out_internal = "oh_b2_geo_airlock_interior_vent"
+	tag_pump_out_internal = "oh_b2_geo_airlock_interior_vent";
+	tag_air_alarm = "oh_b2_geo_airlock_alarm"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
@@ -5822,8 +5828,8 @@
 "lF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external/glass/outreach{
-	dir = 4;
 	icon_state = "closed";
+	dir = 4;
 	id_tag = "oh_b2_geo_airlock_inner_door"
 	},
 /obj/structure/cable/yellow{
@@ -5941,16 +5947,16 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "lR" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
 	icon_state = "off";
+	dir = 8;
 	id_tag = "ob_atmos_tnk3_inj"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "lS" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/atmos/tank{
-	dir = 4;
 	icon_state = "map_vent";
+	dir = 4;
 	id_tag = "ob_atmos_tnk3_vnt"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
@@ -5964,8 +5970,8 @@
 /area/outreach/outpost/atmospherics/b2/tank_outer)
 "lU" = (
 /obj/machinery/air_sensor{
-	id_tag = "ob_atmos_tnk3_sns";
-	name = "gas sensor tank 3"
+	name = "gas sensor tank 3";
+	id_tag = "ob_atmos_tnk3_sns"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/outreach/outpost/atmospherics/b2/tank_outer)
@@ -6225,16 +6231,16 @@
 /area/outreach/outpost/atmospherics/b2/gas_tank_maintenance)
 "mw" = (
 /obj/machinery/airlock_sensor{
-	dir = 1;
-	id_tag = "oh_b2_geo_airlock_inner_sensor";
 	name = "interior airlock sensor";
-	pixel_y = 0
+	dir = 1;
+	pixel_y = 0;
+	id_tag = "oh_b2_geo_airlock_inner_sensor"
 	},
 /obj/machinery/button/access/interior{
-	dir = 4;
+	name = "airlock access button";
 	icon_state = "button";
-	id_tag = "oh_b2_geo_airlock";
-	name = "airlock access button"
+	dir = 4;
+	id_tag = "oh_b2_geo_airlock"
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor,
