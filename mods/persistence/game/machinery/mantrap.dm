@@ -66,7 +66,7 @@ SAVED_VAR(/obj/machinery/mantrap, entrance_dir)
 	playsound(src, 'sound/machines/AirlockClose_heavy.ogg', 25, 1)
 	update_use_power(POWER_USE_ACTIVE)
 	queue_icon_update()
-	addtimer(CALLBACK(src, .proc/transport_occupant), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(transport_occupant)), 10 SECONDS)
 
 /obj/machinery/mantrap/proc/transport_occupant()
 	update_use_power(POWER_USE_IDLE)
