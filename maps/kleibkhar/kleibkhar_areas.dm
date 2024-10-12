@@ -10,6 +10,10 @@
 	name = "Outpost"
 	base_turf = /turf/exterior/barren
 
+/area/kleibkhar/outpost/arrivals
+	name = "Arrivals"
+	icon_state = "start"
+
 /area/kleibkhar/outpost/sleeproom
 	name = "Cyrogenic Storage"
 	icon_state = "cryo"
