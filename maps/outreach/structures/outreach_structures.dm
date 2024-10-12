@@ -303,7 +303,7 @@
 
 /obj/structure/closet/secure_closet/hydroponics/outreach
 	name = "botanist's locker"
-	req_access = list(access_hydroponics, OUTREACH_USR_GRP_BOTANY)
+	req_access = list(access_hydroponics)
 	closet_appearance = /decl/closet_appearance/secure_closet/hydroponics
 	//mapper preview
 	color = COLOR_GREEN_GRAY
@@ -326,7 +326,7 @@
 /obj/structure/closet/secure_closet/outreach/chemistry
 	name              = "chemistry locker"
 	closet_appearance = /decl/closet_appearance/secure_closet/rd
-	req_access        = list(access_research, OUTREACH_USR_GRP_RESEARCH_CHEM)
+	req_access        = list(access_research)
 
 /obj/structure/closet/secure_closet/outreach/chemistry/WillContain()
 	return list(
@@ -382,7 +382,7 @@
 	color = COLOR_YELLOW_GRAY
 
 /obj/structure/closet/secure_closet/outreach/command
-	req_access = list(list(access_bridge), list(OUTREACH_USR_GRP_COMMAND_RECORDS))
+	req_access = list(list(access_bridge))
 
 
 
