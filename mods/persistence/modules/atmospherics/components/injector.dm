@@ -5,7 +5,7 @@
 		/obj/item/stock_parts/radio/transmitter/on_event/buildable,
 	)
 	stock_part_presets = list(
-		/decl/stock_part_preset/terminal_setup,
+		/decl/stock_part_preset/terminal_setup/offset_dir,
 	)
 
 // /obj/machinery/atmospherics/unary/outlet_injector/cabled/populate_parts(full_populate)
