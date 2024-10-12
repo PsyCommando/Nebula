@@ -5602,6 +5602,10 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/concrete,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-s";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/stairwell/ground/se)
 "kH" = (

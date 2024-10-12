@@ -722,9 +722,6 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/structure/cable/orange,
 /obj/machinery/conveyor/outreach/mining/transport_return,
 /obj/structure/flaps/airtight,

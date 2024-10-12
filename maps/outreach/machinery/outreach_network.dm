@@ -450,6 +450,7 @@
 /obj/machinery/network/bank/outreach
 	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_bank"
+	base_type = /obj/machinery/network/bank
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/network_receiver/network_lock/buildable,
 	)
@@ -464,6 +465,7 @@
 /obj/machinery/network/trade_controller/outreach
 	initial_network_id = OUTREACH_NETWORK_NAME
 	tag_network_tag    = "oh_mfrm_trade"
+	base_type = /obj/machinery/network/trade_controller
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/network_receiver/network_lock/buildable,
 	)
@@ -478,6 +480,7 @@
 /obj/machinery/design_database/outreach
 	initial_network_id  = OUTREACH_NETWORK_NAME
 	initial_network_tag = "oh_design_db"
+	base_type = /obj/machinery/design_database
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/network_receiver/network_lock/buildable,
 	)
@@ -492,6 +495,7 @@
 /obj/machinery/computer/design_console/outreach
 	initial_network_id  = OUTREACH_NETWORK_NAME
 	initial_network_tag = "oh_design_db"
+	base_type = /obj/machinery/computer/design_console
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/network_receiver/network_lock/buildable,
 	)

@@ -3,17 +3,15 @@
 	. = ..()
 	apc_test_exempt_areas[/area/turbolift/outreach/f1]                       = NO_SCRUBBER|NO_VENT|NO_APC
 	apc_test_exempt_areas[/area/outreach/outpost/airlock]                    = NO_SCRUBBER|NO_VENT
-	apc_test_exempt_areas[/area/outreach/outpost/maint/passage/f1/southwest] = NO_SCRUBBER|NO_VENT
-	apc_test_exempt_areas[/area/outreach/outpost/maint/passage/f1/northwest] = NO_SCRUBBER|NO_VENT
 	apc_test_exempt_areas[/area/outreach/outpost/storage_shed]               = NO_SCRUBBER|NO_VENT
 	apc_test_exempt_areas[/area/outreach/outpost/maint/outer_wall]           = NO_SCRUBBER|NO_VENT|NO_APC
-	apc_test_exempt_areas[/area/outreach/outpost/vacant]                     = NO_SCRUBBER|NO_VENT
-	apc_test_exempt_areas[/area/outreach/outpost/vacant/ground/depot]        = 0
-	apc_test_exempt_areas[/area/outreach/outpost/vacant/b1/south/east]       = 0
 	apc_test_exempt_areas[/area/outreach/outpost/vacant/f1/swroom]           = NO_SCRUBBER|NO_VENT|NO_APC
 	apc_test_exempt_areas[/area/outreach/outpost/vacant/ground/swroom]       = NO_SCRUBBER|NO_VENT|NO_APC
 	apc_test_exempt_areas[/area/outreach/outpost/hangar/north/shuttle_area]  = NO_SCRUBBER|NO_VENT|NO_APC
 	apc_test_exempt_areas[/area/outreach/outpost/control/servers]            = NO_SCRUBBER|NO_VENT
+	apc_test_exempt_areas[/area/outreach/outpost/control/servers/access]     = 0
+	apc_test_exempt_areas[/area/outreach/outpost/harvesting]                 = NO_SCRUBBER|NO_VENT|NO_APC
+	apc_test_exempt_areas[/area/outreach/outpost/engineering/b2/geothermals_airlock] = NO_SCRUBBER|NO_VENT
 
 	apc_test_excluded_areas = list(
 		/area/exoplanet,

@@ -543,7 +543,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -734,7 +734,7 @@
 "bX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2020,7 +2020,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2057,7 +2057,7 @@
 /obj/machinery/alarm,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -5837,7 +5837,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/engineering/b2/geothermals_airlock)
