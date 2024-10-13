@@ -1918,7 +1918,7 @@
 /area/outreach/outpost/maint/passage/b1/northwest/research)
 "aes" = (
 /turf/simulated/wall/concrete,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aet" = (
 /turf/simulated/wall/r_ocp,
 /area/outreach/outpost/maint/passage/b1/north/airlock)
@@ -2017,10 +2017,6 @@
 /turf/simulated/wall/r_wall/prepainted/command,
 /area/outreach/outpost/control/generators)
 "aeG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	icon_state = "11";
-	dir = 4
-	},
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
@@ -2037,6 +2033,10 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/prepainted/command,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/control/cooling)
 "aeH" = (
@@ -3205,9 +3205,6 @@
 "ahf" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
 	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 8;
@@ -5340,9 +5337,6 @@
 /area/outreach/outpost/command/office/third)
 "alj" = (
 /obj/structure/cable/yellow,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/machinery/button/access/wired/exterior{
 	dir = 8;
 	pixel_x = 0;
@@ -5623,27 +5617,27 @@
 	icon_state = "11-scrubbers";
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/machinery/button/blast_door/server_cooling,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
 "alF" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
 "alG" = (
@@ -6947,7 +6941,7 @@
 "anT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/servers/access)
@@ -8056,11 +8050,11 @@
 	dir = 1
 	},
 /obj/machinery/suit_cycler,
+/obj/machinery/recharger/wallcharger,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/recharger/wallcharger,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/eva)
 "apQ" = (
@@ -8080,11 +8074,11 @@
 	dir = 1
 	},
 /obj/machinery/suit_cycler,
+/obj/machinery/recharger/wallcharger,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/recharger/wallcharger,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/eva)
 "apS" = (
@@ -8373,11 +8367,11 @@
 	icon_state = "tube_map";
 	dir = 1
 	},
+/obj/machinery/recharger/wallcharger,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/recharger/wallcharger,
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/mining/b1/eva)
 "aqw" = (
@@ -10117,11 +10111,11 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/outreach/outpost/mining)
 "atC" = (
+/obj/machinery/alarm,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/alarm,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/servers/access)
 "atD" = (
@@ -11287,11 +11281,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/security/b1/breakroom/backroom)
 "avJ" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/servers/access)
 "avK" = (
@@ -12224,15 +12218,15 @@
 /area/outreach/outpost/maint/passage/b1/northwest/atmos)
 "axz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/servers/access)
 "axA" = (
@@ -13030,7 +13024,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "ayZ" = (
 /obj/structure/table/woodentable/walnut,
 /obj/effect/decal/cleanable/dirt,
@@ -13323,7 +13317,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "azw" = (
 /obj/effect/floor_decal/spline/plain/red{
 	icon_state = "spline_plain";
@@ -13494,12 +13488,12 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -13944,7 +13938,7 @@
 /area/outreach/outpost/security/b1/hallway/to_brig)
 "aAJ" = (
 /turf/simulated/wall,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aAK" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -16051,12 +16045,12 @@
 /area/outreach/outpost/control)
 "aEe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/structure/cable/blue{
 	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
@@ -24465,7 +24459,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aSN" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	icon_state = "spline_plain";
@@ -26587,7 +26581,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aWw" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -26632,7 +26626,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aWC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_grid,
@@ -26867,7 +26861,7 @@
 "aWW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aWX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -26934,7 +26928,7 @@
 /area/outreach/outpost/hydroponics)
 "aXe" = (
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aXf" = (
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/tiled/steel_grid,
@@ -27044,7 +27038,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aXp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -27068,7 +27062,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aXr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/spline/plain/green,
@@ -27080,7 +27074,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aXt" = (
 /obj/structure/flora/pottedplant/floorleaf,
 /obj/effect/decal/cleanable/dirt,
@@ -27200,7 +27194,7 @@
 	},
 /obj/structure/hygiene/drain,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aXG" = (
 /obj/structure/sign/department/hydro,
 /obj/structure/table/steel,
@@ -27499,7 +27493,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aYh" = (
 /obj/structure/hygiene/toilet{
 	icon_state = "toilet00";
@@ -27517,7 +27511,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aYi" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -27907,7 +27901,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aYM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -27928,7 +27922,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aYP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
@@ -28512,7 +28506,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "aZO" = (
 /obj/structure/flaps/airtight,
 /obj/machinery/door/firedoor/autoset,
@@ -29155,10 +29149,6 @@
 /area/outreach/outpost/command/office/second)
 "baU" = (
 /obj/structure/disposaloutlet,
-/obj/structure/disposalpipe/trunk{
-	icon_state = "pipe-t";
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	icon_state = "stripecee";
 	dir = 1
@@ -29170,6 +29160,10 @@
 /obj/structure/disposalpipe/trunk{
 	icon_state = "pipe-t";
 	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	icon_state = "pipe-t";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/command/supplies)
@@ -30021,7 +30015,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bcP" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -30029,7 +30023,7 @@
 /obj/machinery/power/apc,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bcQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -30039,7 +30033,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bcR" = (
 /obj/machinery/light_switch{
 	icon_state = "light0";
@@ -30048,7 +30042,7 @@
 /obj/item/plunger,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bcS" = (
 /obj/machinery/door/firedoor/autoset{
 	icon_state = "open";
@@ -30076,7 +30070,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bcU" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/plain/green{
@@ -31671,11 +31665,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/outreach/outpost/control)
 "bfE" = (
+/obj/machinery/camera/network/security,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "11";
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/camera/network/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/servers/access)
 "bfF" = (
@@ -33586,7 +33580,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/outreach/outpost/laundry)
+/area/outreach/outpost/restrooms)
 "bjh" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	icon_state = "spline_plain";
@@ -33895,13 +33889,13 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	icon_state = "11";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/outreach/outpost/control/cooling)
@@ -36719,17 +36713,17 @@
 /obj/structure/closet/bombclosetsecurity,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/security/b1/hallway/to_brig)
-"puz" = (
+"sAv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/outreach/outpost/maint/passage/b1/east)
+"xSD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 9
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/outreach/outpost/maint/passage/b1/east)
-"tQi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/maint/passage/b1/east)
 
@@ -61493,8 +61487,8 @@ awg
 awg
 awl
 awg
-tQi
-puz
+sAv
+xSD
 awH
 awZ
 azz

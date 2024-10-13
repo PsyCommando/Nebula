@@ -3687,7 +3687,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office7)
@@ -10104,7 +10104,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outreach/outpost/cargo/qm)
@@ -13445,7 +13445,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/outreach/outpost/vacant/ground/office8)
