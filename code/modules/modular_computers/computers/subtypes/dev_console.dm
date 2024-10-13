@@ -13,7 +13,6 @@
 		/obj/item/stock_parts/network_receiver = 2,
 		/obj/item/stock_parts/shielding        = 2,
 		/obj/item/stock_parts/radio            = 2,
-
 		/obj/item/stock_parts/computer/ai_slot           = 1,
 		/obj/item/stock_parts/computer/processor_unit    = 1,
 		/obj/item/stock_parts/computer/card_slot         = 1,
@@ -29,7 +28,6 @@
 		/obj/item/stock_parts/computer/scanner/medical   = 1,
 		/obj/item/stock_parts/computer/scanner/paper     = 1,
 		/obj/item/stock_parts/computer/scanner/reagent   = 1,
-
 		/obj/item/stock_parts/computer/tesla_link     = 0,
 		/obj/item/stock_parts/computer/battery_module = 0,
 		/obj/item/stock_parts = 10,
