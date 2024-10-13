@@ -33835,12 +33835,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/mining/b1/processing_hall)
 "bjE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	icon_state = "11";
-	dir = 8
-	},
 /obj/structure/closet/secure_closet/outreach/eva,
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	icon_state = "11";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/outreach/outpost/eva/b1/south)
 "bjF" = (
@@ -36713,17 +36713,17 @@
 /obj/structure/closet/bombclosetsecurity,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/security/b1/hallway/to_brig)
-"sAv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/outreach/outpost/maint/passage/b1/east)
-"xSD" = (
+"eOX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "11-scrubbers";
 	dir = 9
 	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/outreach/outpost/maint/passage/b1/east)
+"ilu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/outreach/outpost/maint/passage/b1/east)
 
@@ -61487,8 +61487,8 @@ awg
 awg
 awl
 awg
-sAv
-xSD
+ilu
+eOX
 awH
 awZ
 azz
