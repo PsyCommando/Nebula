@@ -1,6 +1,7 @@
 /obj/machinery/computer/design_console
 	name = "design database console"
 	desc = "A console for interfacing with a research and development design network."
+	base_type = /obj/machinery/computer/design_console
 
 	var/initial_network_id
 	var/initial_network_key

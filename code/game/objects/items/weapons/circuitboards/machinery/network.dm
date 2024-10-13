@@ -86,6 +86,7 @@
 /obj/item/stock_parts/circuitboard/relay/long_range
 	name = "circuitboard (long-ranged relay)"
 	build_path = /obj/machinery/network/relay/long_range
+	board_type = "machine"
 	origin_tech = @'{"programming":4,"magnets":5,"wormholes":5}'
 	req_components = list(
 		/obj/item/stock_parts/subspace/ansible = 1,
@@ -98,6 +99,7 @@
 /obj/item/stock_parts/circuitboard/banking_mainframe
 	name = "circuitboard (banking mainframe)"
 	build_path = /obj/machinery/network/bank
+	board_type = "machine"
 	origin_tech = "{'programming':4,'magnets':3}"
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 1,
@@ -111,6 +113,7 @@
 /obj/item/stock_parts/circuitboard/trade_controller
 	name = "circuitboard (trade control device)"
 	build_path = /obj/machinery/network/trade_controller
+	board_type = "machine"
 	origin_tech = "{'programming':4,'magnets':3}"
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 1,
@@ -119,5 +122,6 @@
 
 /obj/item/stock_parts/circuitboard/telepad
 	name = "circuitboard (cargo telepad)"
+	board_type = "machine"
 	build_path = /obj/machinery/telepad_cargo
 
