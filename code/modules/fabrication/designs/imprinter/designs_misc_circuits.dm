@@ -507,3 +507,12 @@
 
 /datum/fabricator_recipe/imprinter/circuit/central_atmos
 	path = /obj/item/stock_parts/circuitboard/central_atmos
+
+/datum/fabricator_recipe/imprinter/circuit/banking_mainframe
+	path = /obj/item/stock_parts/circuitboard/banking_mainframe
+
+/datum/fabricator_recipe/imprinter/circuit/trade_controller
+	path = /obj/item/stock_parts/circuitboard/trade_controller
+
+/datum/fabricator_recipe/imprinter/circuit/telepad
+	path = /obj/item/stock_parts/circuitboard/telepad
