@@ -30,7 +30,6 @@
 		/obj/item/stock_parts/computer/scanner/paper     = 1,
 		/obj/item/stock_parts/computer/scanner/reagent   = 1,
 
-		//Forbidden computer crap
 		/obj/item/stock_parts/computer/tesla_link     = 0,
 		/obj/item/stock_parts/computer/battery_module = 0,
 		/obj/item/stock_parts = 10,
