@@ -1,5 +1,6 @@
 /obj/machinery/computer/modular
 	name = "modular console"
+	//There's a lot of stuff that goes in these
 	maximum_component_parts = list(
 		/obj/item/stock_parts/keyboard       = 1,
 		/obj/item/stock_parts/console_screen = 1,
@@ -28,10 +29,10 @@
 		/obj/item/stock_parts/computer/scanner/medical   = 1,
 		/obj/item/stock_parts/computer/scanner/paper     = 1,
 		/obj/item/stock_parts/computer/scanner/reagent   = 1,
-		/obj/item/stock_parts/computer/tesla_link     = 0,
-		/obj/item/stock_parts/computer/battery_module = 0,
+		/obj/item/stock_parts/computer/tesla_link        = 0,
+		/obj/item/stock_parts/computer/battery_module    = 0,
 		/obj/item/stock_parts = 10,
-	)	//There's a lot of stuff that goes in these
+	)
 	icon = 'icons/obj/modular_computers/modular_console.dmi'
 	icon_state = "console-off"
 	var/list/interact_sounds  = list("keyboard", "keystroke")
